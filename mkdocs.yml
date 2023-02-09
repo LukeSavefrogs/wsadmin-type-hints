@@ -11,6 +11,10 @@ plugins:
       lang: en
       features:
         - search.highlight
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+      type: timeago
 
 
   - mkdocstrings
