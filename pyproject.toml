@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "wsadmin-objects"
+version = "0.1.0"
+description = "Provide type hint for `wsadmin` object methods"
+authors = ["Luca Salvarani <lucasalvarani99@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "wsadmin_objects"}]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+mkdocs = "^1.4.2"
+mkdocs-material = "^9.0.11"
+mkdocstrings = {extras = ["python"], version = "^0.20.0"}
+pip = "^23.0"
+install = "^1.3.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
