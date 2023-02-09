@@ -3,10 +3,20 @@ repo_url: https://github.com/LukeSavefrogs/wsadmin-objects
 
 theme:
   name: material
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
   icon:
     repo: fontawesome/brands/github 
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - toc.follow
+    - navigation.top
 
 plugins:
+  - mkdocstrings
   - search:
       lang: en
       features:
@@ -16,5 +26,12 @@ plugins:
       fallback_to_build_date: true
       type: timeago
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/LukeSavefrogs
+      name: Find me on Github
 
-  - mkdocstrings
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/lucasalvarani/
+      name: Find me on LinkedIn
