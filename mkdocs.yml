@@ -1,5 +1,5 @@
 site_name: "Python wsadmin"
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_url: https://github.com/LukeSavefrogs/wsadmin-objects
 
 theme:
   name: material
