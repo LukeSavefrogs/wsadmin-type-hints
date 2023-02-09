@@ -3,6 +3,8 @@ repo_url: https://github.com/LukeSavefrogs/wsadmin-objects
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github 
 
 plugins:
   - search:
