@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wsadmin-type-hints"
-version = "0.1.0"
+version = "0.1.1"
 description = "Provide type hints for `wsadmin` object methods"
 authors = ["Luca Salvarani <lucasalvarani99@gmail.com>"]
 license = "MIT"
@@ -16,6 +16,9 @@ python = ">=3.7"
 
 [tool.poetry.group.dev.dependencies]
 poethepoet = "^0.18.1"
+
+
+[tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
 mkdocs-material = "^9.0.11"
 mkdocstrings = {extras = ["python"], version = "^0.20.0"}
