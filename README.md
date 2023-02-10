@@ -1,6 +1,8 @@
 # `types-wsadmin`
 Python type stubs for `wsadmin` Jython commands.
 
+[📚 **Read the full documentation**](https://lukesavefrogs.github.io/types-wsadmin/)
+
 ## Disclaimer
 
 This projects uses type hints, which were introduced in **Python 3.5**, so ensure you're using a supported version of python.
