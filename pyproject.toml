@@ -5,7 +5,7 @@ description = "Provide type hint for `wsadmin` object methods"
 authors = ["Luca Salvarani <lucasalvarani99@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "wsadmin_objects"}]
+packages = [{include = "types_wsadmin"}]
 
 [tool.poetry.dependencies]
 python = ">=3.7"
