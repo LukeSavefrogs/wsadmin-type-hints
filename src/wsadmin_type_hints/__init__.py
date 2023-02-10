@@ -18,6 +18,7 @@ else:
 ```
 """
 
+
 __all__ = [
 	"AdminApp",
 	"AdminConfig",
@@ -25,6 +26,7 @@ __all__ = [
 	"AdminControl",
 	"Help",
 ]
+
 
 # import sys
 # if sys.version_info <= (3, 5):
@@ -48,3 +50,5 @@ except NameError:
 
 	# -----              Helper module              -----
 	from . import Help
+
+	print(Help.__doc__)
