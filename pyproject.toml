@@ -8,6 +8,14 @@ readme = "README.md"
 packages = [
 	{ include = "wsadmin_type_hints", from = "src" }
 ]
+homepage = "https://lukesavefrogs.github.io/wsadmin-type-hints/"
+repository = "https://github.com/LukeSavefrogs/wsadmin-type-hints/"
+documentation = "https://lukesavefrogs.github.io/wsadmin-type-hints/"
+keywords = ["wsadmin", "ibm", "stubs", "types", "jython"]
+
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/LukeSavefrogs/wsadmin-type-hints/issues"
 
 
 [tool.poetry.dependencies]
