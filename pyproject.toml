@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "wsadmin-objects"
+name = "types-wsadmin"
 version = "0.1.0"
 description = "Provide type hint for `wsadmin` object methods"
 authors = ["Luca Salvarani <lucasalvarani99@gmail.com>"]
@@ -25,3 +25,13 @@ build-backend = "poetry.core.masonry.api"
 [tool.poe.tasks.docs]
 help = "Start the local server to test the documentation."
 cmd  = "mkdocs serve"
+
+
+[tool.mypy]
+strict = true
+warn_no_return = false
+warn_return_any = false
+disallow_untyped_defs = false
+warn_incomplete_stub = false
+
+# disable_error_code = "no-untyped-def,empty-body"
