@@ -8,7 +8,7 @@ This speeds up the development of `wsadmin` **Jython** scripts inside an IDE sin
 - `AdminTask`
 - `Help`
 
-[📚 **Read the full documentation**](https://lukesavefrogs.github.io/types-wsadmin/)
+[📚 **Read the full documentation**](https://lukesavefrogs.github.io/wsadmin-type-hints/)
 
 # Disclaimer
 This is an unofficial package created for speeding up the development process and is not in any way affiliated with IBM®. All trademarks and registered trademarks are the property of their respective company owners.
