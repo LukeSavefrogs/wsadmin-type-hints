@@ -8,6 +8,8 @@ This **speeds up** the development of `wsadmin` **Jython** scripts inside an IDE
 - `AdminTask`
 - `Help`
 
+[📚 **Read the full documentation**](https://lukesavefrogs.github.io/wsadmin-type-hints/)
+
 ## Features
 - **List all module commands** through intellisense:
 
@@ -42,7 +44,6 @@ else:
 The `try..except` block is used to differentiate between the development and production environment.
 
 
-[📚 **Read the full documentation**](https://lukesavefrogs.github.io/wsadmin-type-hints/)
 
 # Disclaimer
 This is an unofficial package created for speeding up the development process and is not in any way affiliated with IBM®. All trademarks and registered trademarks are the property of their respective company owners.
