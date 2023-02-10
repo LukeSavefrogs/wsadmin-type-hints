@@ -35,11 +35,11 @@ This **speeds up** the development of `wsadmin` **Jython** scripts inside an IDE
 Use it like this:
 ```python
 try:
-	(AdminControl, AdminConfig, AdminApp, AdminTask, Help)
+    (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-	from wsadmin_type_hints import *
+    from wsadmin_type_hints import *
 else:
-	print("AdminControl is already defined, i'm not needed here 😃")
+    print("AdminControl is already defined, i'm not needed here 😃")
 ```
 The `try..except` block is used to differentiate between the development and production environment.
 
