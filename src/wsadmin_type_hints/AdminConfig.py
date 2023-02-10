@@ -40,7 +40,7 @@ def attributes(object_type: str) -> str:
 		object_type (str): name of the object type. Use `AdminConfig.types()` to get a list of available types.
 
 	Returns:
-		str: Multiline string the top level attributes for the given type.
+		str: Multiline string with the top level attributes for the given type.
 	"""
 	pass
 
