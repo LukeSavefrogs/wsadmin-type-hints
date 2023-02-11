@@ -1,3 +1,5 @@
+[![Documentation](https://github.com/LukeSavefrogs/wsadmin-type-hints/actions/workflows/documentation.yml/badge.svg)](https://lukesavefrogs.github.io/wsadmin-type-hints/)
+
 # `wsadmin-type-hints`
 Python package providing **type hints** for `wsadmin` **Jython** commands.
 
