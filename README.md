@@ -13,11 +13,11 @@ This **speeds up** the development of `wsadmin` **Jython** scripts inside an IDE
 ## Features
 - **List all module commands** through intellisense:
 
-	![List module commands](images/60817fad50b7491f2d03e29e93568bfb74dd0ce265319675f2fb83cad67a46fa.png "List all module commands")
+	![List module commands](docs/images/60817fad50b7491f2d03e29e93568bfb74dd0ce265319675f2fb83cad67a46fa.png "List all module commands")
 
 - Check **parameter and return types**, as well as a brief description of the command (using [Google syntax](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)):
 
-	![Parameters](images/e84d4763b6a93d5950af4b85e9b43d04f8fda9b35a9c4d16ed0f52084dd27195.png "Parameter and return types")  
+	![Parameters](docs/images/e84d4763b6a93d5950af4b85e9b43d04f8fda9b35a9c4d16ed0f52084dd27195.png "Parameter and return types")  
 
 ## Quick start
 ### Download
