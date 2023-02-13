@@ -50,5 +50,3 @@ except NameError:
 
 	# -----              Helper module              -----
 	from . import Help
-
-	print(Help.__doc__)
