@@ -1,5 +1,5 @@
 # Useful resources
-## Official IBM® documentation
+## Official IBM documentation
 - Online [`wsadmin`](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=90-scripting-application-serving-environment-wsadmin){: target=_blank} documentation
 - (PDF) Jython scripting with [`wsadmin` tutorial](https://www.ibm.com/support/pages/system/files/inline-files/WP100963_-_Jython_Scripting_with_wsadmin_tutorial.pdf){: target=_blank}
 - (PDF) [Scripting various types of applications](https://manuals.plus/m/a3f2027765fec18d3a3e7771b7e679a6256fa65578c6e2cbc4ec283914d1e703.pdf){: target=_blank} - Very big file (**> 700 pages**) with lots of info on how to automate a **large range of operations** by making use of the `wsadmin`.
