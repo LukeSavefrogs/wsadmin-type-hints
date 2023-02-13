@@ -1,12 +1,11 @@
 """Use the AdminControl object to invoke operational commands that manage objects for the application server.
 
-Many of the AdminControl commands have multiple signatures so that they can either invoke in a raw mode using parameters that are specified by Java Management Extensions (JMX), or by using strings for parameters. In addition to operational commands, the AdminControl object supports some utility commands for tracing, reconnecting with a server, and converting data types.
+Many of the AdminControl commands have multiple signatures so that they can either invoke in a raw mode using 
+parameters that are specified by Java Management Extensions (JMX), or by using strings for parameters. 
+In addition to operational commands, the AdminControl object supports some utility commands for tracing, 
+reconnecting with a server, and converting data types.
 
-Avoid trouble: 
-When using the commands available in the AdminControl object in large topologies, query and search with process=dmgr and type=Cluster. This method of searching is more efficient, less time consuming, and avoids searching all nodes.
-
-Source:
-https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admincontrol-object-using-wsadmin
+For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admincontrol-object-using-wsadmin
 """
 
 def completeObjectName(object_name, template=""):

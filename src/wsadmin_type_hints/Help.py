@@ -4,8 +4,7 @@ information about the currently running MBeans with the `wsadmin` tool.
 
 Use the Help object as an aid in writing and running scripts with the `AdminControl` object.
 
-Source:
-https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-help-object-using-wsadmin
+For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-help-object-using-wsadmin
 """
 def AdminApp(): # undocumented
 	pass

@@ -3,32 +3,7 @@ Use the `AdminConfig` object to invoke configuration commands and to create or
 change elements of the WebSphere® Application Server configuration, for example, 
 creating a data source.
 
-You can start the scripting client without a running server, if you only want to 
-use local operations. 
-To run in local mode, use the `-conntype NONE` option to start the scripting client. 
-You receive a message that you are running in the local mode. 
-If a server is currently running, do not run the `AdminConfig` tool in local mode. 
-Configuration changes that are made in local mode are not be reflected in the running
-server configuration. 
-If you save a conflicting configuration, you could corrupt the configuration.
-
-In a deployment manager environment, configuration updates are available only if 
-a scripting client is connected to a deployment manager.
-
-When connected to a node agent or a managed application server, you are not able 
-to update the configuration because the configurations for these server processes
-are copies of the master configuration that resides in the deployment manager. 
-The copies are created on a node machine when a configuration synchronization occurs
-between the deployment manager and the node agent.
-Make configuration changes to the server processes by connecting a scripting client 
-to a deployment manager. 
-
-For this reason, to change a configuration, do not run a scripting client in 
-local mode on a node machine.
-It is not a supported configuration.
-
-Source:
-https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin
+For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin
 """
 from typing import Any
 from .wsadmin_types import _OpaqueDigestObject
