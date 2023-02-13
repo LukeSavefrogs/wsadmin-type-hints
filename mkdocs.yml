@@ -15,6 +15,7 @@ theme:
     - toc.follow
     - navigation.top
     - content.code.copy
+    - content.tabs.link
 
   palette: 
     # Palette toggle for light mode
@@ -69,3 +70,13 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+
+
+# See also https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
