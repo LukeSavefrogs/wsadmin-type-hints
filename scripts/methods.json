@@ -1,0 +1,2688 @@
+[
+    {
+        "name": "WebSphere Application Server Network Deployment traditional 9.0.5.x",
+        "version": "9.0.5",
+        "modules": [
+            {
+                "name": "Help",
+                "description": "You can use the Jython or Jacl scripting languages to find\ngeneral help and dynamic online information about the currently running\nMBeans with the wsadmin tool. Use the Help object as an aid in writing\nand running scripts with the AdminControl object.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html",
+                    "lastUpdate": "2022-12-13"
+                },
+                "methods": [
+                    {
+                        "name": "AdminApp",
+                        "description": "Use the AdminApp command\nto view a summary of each available method for the AdminApp object.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminApp",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd1__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "AdminConfig",
+                        "description": "Use the AdminConfig command\nto view a summary of each available method for the AdminConfig object.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminConfig",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd2__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "AdminControl",
+                        "description": "Use the AdminControl command\nto view a summary of the help commands and ways to invoke an administrative\ncommand.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminControl",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd3__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "AdminTask",
+                        "description": "Use the AdminTask command\nto view a summary of help commands and ways to invoke an administrative\ncommand with the AdminTask object.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminTask",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd4__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "all",
+                        "description": "Use the all command to view\na summary of the information that the MBean defines by name.",
+                        "parent": "Help",
+                        "fullName": "Help.all",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd5__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "attributes",
+                        "description": "Use the attributes command\nto view a summary of all the attributes that the MBean defines by\nname. If you provide the MBean name parameter, the command displays\ninformation about the attributes, operations, constructors, description,\nnotifications, and classname of the specified MBean. If you specify\nthe MBean name and attribute name, the command displays information\nabout the specified attribute for the specified MBean.",
+                        "parent": "Help",
+                        "fullName": "Help.attributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd6__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "classname",
+                        "description": "Use the classname command\nto view a class name that the MBean defines by name.",
+                        "parent": "Help",
+                        "fullName": "Help.classname",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd7__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "constructors",
+                        "description": "Use the constructors command\nto view a summary of all of the constructors that the MBean defines\nby name.",
+                        "parent": "Help",
+                        "fullName": "Help.constructors",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd8__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "description": "Use the description command\nto view a description that the MBean defines by name.",
+                        "parent": "Help",
+                        "fullName": "Help.description",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd9__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to\nview a summary of all the available methods for the Help object.",
+                        "parent": "Help",
+                        "fullName": "Help.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd10__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "description": "Use the message command\nto view information for a message ID.",
+                        "parent": "Help",
+                        "fullName": "Help.message",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd11__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "notifications",
+                        "description": "Use the notifications command\nto view a summary of all the notifications that the MBean defines\nby name.",
+                        "parent": "Help",
+                        "fullName": "Help.notifications",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd12__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "operations",
+                        "description": "Use the operations command\nwith the MBean name parameter to view a summary of all the operations\nthat the MBean defines by name. Specify a value for the MBean name\nand operation name to display the signature of the operation for the\nMBean that is defined by name.",
+                        "parent": "Help",
+                        "fullName": "Help.operations",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd13__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminConfig",
+                "description": "Use the AdminConfig object to invoke configuration commands\nand to create or change elements of the WebSphere\u00ae Application Server configuration,\nfor example, creating a data source.\n\nYou can start the scripting client without a running server, if you want to use only local\noperations. To run in local mode, use the -conntype NONE option to start the\nscripting client. You receive a message that you are running in the local mode. If a server is\nrunning, do not run the AdminConfig tool in local mode. Configuration changes that are made in local\nmode are not reflected in the running server configuration. If you save a conflicting configuration,\nyou might corrupt the configuration.\n\nIn a deployment manager environment, configuration\nupdates are available only if a scripting client is connected to a\ndeployment manager.\n\nWhen connected to a node agent or a managed application server, you are not able\nto update the configuration because the configurations for these server processes are copies of the\nmaster configuration that resides in the deployment manager. The copies are created on a node\nmachine when a configuration synchronization occurs between the deployment manager and the node\nagent. Make configuration changes to the server processes by connecting a scripting client to a\ndeployment manager. For this reason, to change a configuration, do not run a scripting client in\nlocal mode on a node machine. It is not a supported configuration.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html",
+                    "lastUpdate": "2022-12-13"
+                },
+                "methods": [
+                    {
+                        "name": "attributes",
+                        "description": "Use the attributes command to return a list of the top-level attributes for a\ngiven type.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.attributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd1__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "checkin",
+                        "description": "Use the checkin command to check a file into the configuration repository that\nis described by the document Uniform Resource Identifier (URI). This method applies to deployment\nmanager configurations only.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.checkin",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd2__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "convertToCluster",
+                        "description": "Use the convertToCluster command\nto convert a server so that it is the first member of a new server\ncluster.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.convertToCluster",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd3__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "create",
+                        "description": "Use the create command to create configuration objects.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.create",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd4__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "createClusterMember",
+                        "description": "Use the createClusterMember command to create a new server object on the node\nthat the node id parameter specifies. This server is created as a new member of the existing cluster\nthat is specified by the cluster id parameter, and contains attributes that are specified in the\nmember attributes parameter. The server is created by using the server template that is specified by\nthe template id attribute, and that contains the name specified by the memberName attribute. The\nmemberName attribute is required. The template options are available only for the first cluster\nmember that you create. All cluster members that you create after the first member are\nidentical.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.createClusterMember",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd5__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "createDocument",
+                        "description": "Use the createDocument command\nto create a new document in the configuration repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.createDocument",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd6__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "createUsingTemplate",
+                        "description": "Use the createUsingTemplate command to create a type of object with the given\nparent, by using a template. You can use this command only for creation of a server with\nAPPLICATION_SERVER type. If you want to create a server with a type other than\nAPPLICATION_SERVER, use the createGenericServer or the\ncreateWebServer command.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.createUsingTemplate",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd7__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "defaults",
+                        "description": "Use the defaults command\nto display the default values for attributes of a given type. This\nmethod displays all of the possible attributes contained by an object\nof a specific type. If the attribute has a default value, this method\nalso displays the type and default value for each attribute.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.defaults",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd8__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "deleteDocument",
+                        "description": "Use the deleteDocument command\nto delete a document from the configuration repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.deleteDocument",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd9__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "existsDocument",
+                        "description": "Use the existsDocument command\nto test for the existence of a document in the configuration repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.existsDocument",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd10__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "extract",
+                        "description": "Use the extract command to extract a configuration repository file that is\ndescribed by the document URI and places it in the file named by filename. This\nmethod applies to deployment manager configurations only.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.extract",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd11__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getCrossDocumentValidationEnabled",
+                        "description": "Use\nthe getCrossDocumentValidationEnabled command to\nreturn a message with the current cross-document enablement setting.\nThis method returns true if cross-document validation is enabled.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getCrossDocumentValidationEnabled",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd12__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getid",
+                        "description": "Use the getid command\nto return the configuration ID of an object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getid",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd13__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getObjectName",
+                        "description": "Use the getObjectName command\nto return a string version of the object name for the corresponding\nrunning MBean. This method returns an empty string if no corresponding\nrunning MBean exists.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getObjectName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd14__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getObjectType",
+                        "description": "Use the getObjectType command\nto display the object type for the object configuration ID of interest.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getObjectType",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd39__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getSaveMode",
+                        "description": "Target object",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getSaveMode",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd15__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getValidationLevel",
+                        "description": "Use the getValidationLevel command to return the validation that is used when\nfiles are extracted from the repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getValidationLevel",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd16__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getValidationSeverityResult",
+                        "description": "Use the getValidationSeverityResult command\nto return the number of validation messages with the given severity\nfrom the most recent validation.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getValidationSeverityResult",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd17__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "hasChanges",
+                        "description": "Use the hasChanges command to determine whether unsaved configuration changes\nexist.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.hasChanges",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd18__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command\nto display static help information for the AdminConfig object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd19__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "installResourceAdapter",
+                        "description": "Use the installResourceAdapter command to install a Java 2 Connector (J2C)\nresource adapter with the given Resource Adapter Archive (RAR) file name and an option string in the\nnode. When you edit the installed application with the embedded RAR, existing J2C connection\nfactory, J2C activation specs, and J2C administrative objects only are edited. No new J2C objects\nare created.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.installResourceAdapter",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd20__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "list",
+                        "description": "Use the list command to return a list of objects of a given type,  or narrow\ndown the search query by giving a type and a scoped parent, or giving a type and a wildcard\ncharacter (*) or Java regular expression (.*) pattern in the command syntax to customize the search\nquery.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.list",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd21__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "listTemplates",
+                        "description": "Use the listTemplates command\nto display a list of template object IDs. You can use wildcard characters\n(*) or Java regular expressions (.*) in the command syntax to customize\nthe search query.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.listTemplates",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd22__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "modify",
+                        "description": "Use the modify command\nto support the modification of object attributes.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.modify",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd23__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "parents",
+                        "description": "Use the parents command\nto obtain information about object types.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.parents",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd24__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "queryChanges",
+                        "description": "Use the queryChanges command\nto return a list of unsaved configuration files.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.queryChanges",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd25__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "remove",
+                        "description": "Use the remove command\nto remove a configuration object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.remove",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd26__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "description": "Use the required command\nto display the required attributes that are contained by an object\nof a certain type.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.required",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd27__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "reset",
+                        "description": "Use the reset command\nto reset the temporary workspace that holds updates to the configuration.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.reset",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd28__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "resetAttributes",
+                        "description": "Use the resetAttributes command\nto reset specific attributes for the configuration object of interest.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.resetAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd40__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "save",
+                        "description": "Use the save command\nto save changes to the configuration repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.save",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd29__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setCrossDocumentValidationEnabled",
+                        "description": "Use\nthe setCrossDocumentValidationEnabled command to\nset the cross-document validation enabled mode. Values include true or false.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.setCrossDocumentValidationEnabled",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd30__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setSaveMode",
+                        "description": "Use the setSaveMode command\nto modify the behavior of the save command.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.setSaveMode",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd31__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setValidationLevel",
+                        "description": "Use the setValidationLevel command\nto set the validation that is used when files are extracted from the\nrepository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.setValidationLevel",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd32__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "show",
+                        "description": "Use the show command\nto return the top-level attributes of the given object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.show",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd33__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "showall",
+                        "description": "Use the showall command\nto recursively show the attributes of a given configuration object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.showall",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd34__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "showAttribute",
+                        "description": "Use the showAttribute command to display only the value for the single\nattribute that you specify.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.showAttribute",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd35__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "types",
+                        "description": "Use the types command to return a list of the configuration object types that\nyou can manipulate or customize the search query by giving an additional wildcard characters (*) or\nJava regular expressions (.*) pattern in the command syntax.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.types",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd36__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "uninstallResourceAdapter",
+                        "description": "Use the uninstallResourceAdapter command to uninstall a Java 2 Connector (J2C)\nresource adapter with the given J2C resource adapter configuration ID and an option list. When you\nremove a J2CResourceAdapter object from the configuration repository, the installed directory is\nremoved at the time of synchronization. A stop request is sent to the J2CResourceAdapter MBean that\nwas removed.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.uninstallResourceAdapter",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd37__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "unsetAttributes",
+                        "description": "Use the unsetAttributes command\nto reset specific attributes for a configuration object to the default\nvalues.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.unsetAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd41__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "validate",
+                        "description": "Use the validate command\nto request the configuration validation results based on the files\nin your workspace, the value of the cross-document validation enabled\nflag, and the validation level setting. Optionally, you can specify\na configuration ID to set the scope. If you specify a configuration\nID, the scope of this request is the object named by the configuration\nID parameter.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.validate",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd38__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminControl",
+                "description": "Use the AdminControl object to invoke operational commands\nthat manage objects for the application server.\n\nMany of the AdminControl commands have multiple signatures so that\nthey can either invoke in a raw mode using parameters that are specified\nby Java Management Extensions (JMX), or by using strings for parameters.\nIn addition to operational commands, the AdminControl object supports\nsome utility commands for tracing, reconnecting with a server, and\nconverting data types.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html",
+                    "lastUpdate": "2022-12-13"
+                },
+                "methods": [
+                    {
+                        "name": "completeObjectName",
+                        "description": "Use the completeObjectName command to create a string representation of a\ncomplete ObjectName value that is based on a fragment. This command does not communicate with the\nserver to find a matching ObjectName value. If the system finds several MBeans that match the\nfragment, the command returns the first one.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.completeObjectName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd1__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getAttribute",
+                        "description": "Use the getAttribute command\nto return the value of the attribute for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttribute",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd2__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getAttribute_jmx",
+                        "description": "Use the getAttribute_jmx command\nto return the value of the attribute for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttribute_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd3__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getAttributes",
+                        "description": "Use the getAttributes command\nto return the attribute values for the names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd4__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getAttributes_jmx",
+                        "description": "Use the getAttributes_jmx command\nto return the attribute values for the names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttributes_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd5__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getCell",
+                        "description": "Use the getCell command\nto return the name of the connected cell.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getCell",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd6__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getConfigId",
+                        "description": "Use the getConfigId command\nto create a configuration ID from an ObjectName or an ObjectName fragment.\nEach MBean does not have corresponding configuration objects. If several\nMBeans correspond to an ObjectName fragment, a warning is created\nand a configuration ID builds for the first MBean that the system\nfinds.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getConfigId",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd7__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getDefaultDomain",
+                        "description": "Use the getDefaultDomain command\nto return the default domain name from the server.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getDefaultDomain",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd8__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getDomainName",
+                        "description": "Use the getDomainName command\nto return the domain name from the server.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getDomainName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd9__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getHost",
+                        "description": "Use the getHost command\nto return the name of your host.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getHost",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd10__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getMBeanCount",
+                        "description": "Use the getMBeanCount command\nto return the number of MBeans that are registered in the server.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getMBeanCount",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd11__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getMBeanInfo_jmx",
+                        "description": "Use the getMBeanInfo_jmx command\nto return the Java Management Extension MBeanInfo structure that corresponds\nto an ObjectName value. No string signature exists for this command,\nbecause the Help object displays most of the information available\nfrom the getMBeanInfo_jmx command.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getMBeanInfo_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd12__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getNode",
+                        "description": "Use the getNode command\nto return the name of the connected node.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getNode",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd13__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getObjectInstance",
+                        "description": "Use the getObjectInstance command\nto return the object instance that matches the input object name.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getObjectInstance",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd14__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getPort",
+                        "description": "Use the getPort command\nto return the name of the port used for the scripting connection.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getPort",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd15__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getPropertiesForDataSource",
+                        "description": "The getPropertiesForDataSource command\nis deprecated, and no replacement exists. This command incorrectly\nassumes the availability of a configuration service when running in\nconnected mode.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getPropertiesForDataSource",
+                        "deprecated": true,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd16__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getType",
+                        "description": "Use the getType command\nto return the connection type used for the scripting connection.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getType",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd17__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to\nreturn general help text for the AdminControl object.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd18__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "invoke",
+                        "description": "Use the invoke command\nto invoke a specific MBean operation based on the number of parameters\nthat operation requires. If this constraint is not sufficient to select\na unique operation, use invoke_jmx. The supplied parameters are converted\nto the object types required by the selected operation's signature\nbefore the operation is invoked. Any returned value is converted to\nits string representation.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.invoke",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd19__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "invoke_jmx",
+                        "description": "Use the invoke_jmx command\nto invoke the object operation by conforming the parameter list to\nthe signature. The command returns the result of the invocation.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.invoke_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd20__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "isRegistered",
+                        "description": "Use the isRegistered command\nto determine if a specific object name is registered.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.isRegistered",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd21__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "isRegistered_jmx",
+                        "description": "Use the isRegistered_jmx command\nto determine if a specific object name is registered.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.isRegistered_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd22__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "makeObjectName",
+                        "description": "Use the makeObjectName command\nto create an ObjectName value that is based on the strings input.\nThis command does not communicate with the server, so the ObjectName\nvalue that results might not exist. If the string you supply contains\nan extra set of double quotes, they are removed. If the string does\nnot begin with a Java Management Extensions (JMX) domain, or a string\nfollowed by a colon, then the WebSphere\u00ae Application Server string appends\nto the name.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.makeObjectName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd23__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "queryMBeans",
+                        "description": "Use the queryMBeans command\nto query for a list of object instances that match the object name\nthat you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.queryMBeans",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd24__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "queryNames",
+                        "description": "Use the queryNames command\nto query for a list of each of the ObjectName objects based on the\nname template.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.queryNames",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd25__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "queryNames_jmx",
+                        "description": "Use the queryNames_jmx command\nto query for a list of each of the ObjectName objects based on the\nname template and the query conditions that you specify.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.queryNames_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd26__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "reconnect",
+                        "description": "Use the reconnect command\nto reconnect to the server, and to clear information out of the local\ncache.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.reconnect",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd27__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setAttribute",
+                        "description": "Use the setAttribute command\nto set the attribute value for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttribute",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd28__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setAttribute_jmx",
+                        "description": "Use the setAttribute_jmx command\nto set the attribute value for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttribute_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd29__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setAttributes",
+                        "description": "Use the setAttributes command\nto set the attribute values for the object names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd30__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "setAttributes_jmx",
+                        "description": "Use the setAttributes_jmx command\nto set the attribute values for the object names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttributes_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd31__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "startServer",
+                        "description": "Target object",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.startServer",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd32__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "stopServer",
+                        "description": "Target object",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.stopServer",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd33__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "testConnection",
+                        "description": "Use the testConnection command\nto test a data source connection. This command works with the data\nsource that resides in the configuration repository. If the data source\nto be tested is in the temporary workspace that holds the update to\nthe repository, you must save the update to the configuration repository\nbefore running this command. Use this command with the configuration\nID that corresponds to the data source and the WAS40DataSource object\ntypes.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.testConnection",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd35__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "trace",
+                        "description": "Use the trace command\nto set the trace specification for the scripting process to the value\nthat you specify.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.trace",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd34__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminApp",
+                "description": "Use the AdminApp object to install, modify, and administer applications.\n\nThe AdminApp object interacts with the WebSphere\u00ae Application Server\nmanagement and configuration services to make application inquiries and changes. This interaction\nincludes installing and uninstalling applications, listing modules, exporting, and so on.\n\nYou can start the scripting client when no server is running, if you want to use only local\noperations. To run in local mode, use the -conntype NONE option to start the\nscripting client. You receive a message that you are running in the local mode. Running the AdminApp\nobject in local mode when a server is currently running is not recommended. This is because any\nconfiguration changes made in local mode will not be reflected in the running server configuration\nand vice versa. If you save a conflicting configuration, you could corrupt the configuration.\n\nIn a deployment manager environment, configuration updates are\navailable only if a scripting client is connected to a deployment manager.\n\nWhen connected to a node agent or a managed application server, you\nare not able to update the configuration because the configuration for these server processes are\ncopies of the master configuration which resides in the deployment manager. The copies are created\non a node machine when a configuration synchronization occurs between the deployment manager and the\nnode agent. Make configuration changes to the server processes by connecting a scripting client to a\ndeployment manager. For this reason, to change a configuration, do not run a scripting client in\nlocal mode on a node machine. It is not a supported configuration.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html",
+                    "lastUpdate": "2022-12-13"
+                },
+                "methods": [
+                    {
+                        "name": "deleteUserAndGroupEntries",
+                        "description": "Use the deleteUserAndGroupEntries command to delete users or groups for all\nroles, and to delete user IDs and passwords for all of the RunAs roles that are defined in the\napplication.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.deleteUserAndGroupEntries",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd1__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "edit",
+                        "description": "Use the edit command to edit an application or module in batch mode. The\nedit command changes the application specified by the application name argument\nusing the options specified by the options argument. No options are required for the\nedit command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.edit",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd2__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "editInteractive",
+                        "description": "Use the editInteractive command to edit an application or module in\ninteractive mode. The editInteractive command changes the application deployment.\nSpecify these changes in the options parameter. No options are required for the\neditInteractive command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.editInteractive",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd3__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "export",
+                        "description": "Use the export command to export the application name parameter to a file that\nyou specify by the file name.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.export",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd4__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "exportDDL",
+                        "description": "Use the exportDDL command to extract the data definition language (DDL) from\nthe application name parameter to the directory name parameter that a directory specifies. The\noptions parameter is optional.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.exportDDL",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd5__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "exportFile",
+                        "description": "Use the exportFile command to export the contents of a single file specified\nby the uniform resource identifier (URI) from the application of interest.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.exportFile",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd20__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getDeployStatus",
+                        "description": "Use the getDeployStatus\ncommand to display the deployment status of the application. After installing or updating a large\napplication, use this command to display detailed status information for application binary file\nexpansion. You cannot start the application until the system extracts the application\nbinaries.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.getDeployStatus",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd21__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to display general help information about the AdminApp\nobject.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd6__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "install",
+                        "description": "Use the install command to install\nan application in non-interactive mode, given a fully qualified file name and a string of\ninstallation options. The options parameter is optional.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.install",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd7__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "installInteractive",
+                        "description": "Use the\ninstallInteractive command to install an application in interactive mode, given a\nfully qualified file name and a string of installation options. The options parameter is\noptional.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.installInteractive",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd8__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "isAppReady",
+                        "description": "Use the isAppReady command to\ndetermine if the specified application has been distributed and is ready to be run. Returns a value\nof true if the application is ready, or a value of false if the\napplication is not ready. A script that invokes isAppReady typically installs or updates an\napplication, and then loops around the call until the call returns a value of true before starting\nthe application. This command is not supported when the wsadmin tool is not connected to a\nserver.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.isAppReady",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd22__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "list",
+                        "description": "Use the list command to list the applications that are installed in the\nconfiguration.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.list",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd9__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "listModules",
+                        "description": "Use the listModules command to list the modules in an application.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.listModules",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd10__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "options",
+                        "description": "Use the options command to display a list of options for installing an\nenterprise archive (EAR) file.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.options",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd11__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "publishWSDL",
+                        "description": "Use the publishWSDL command to publish Web Services Description Language\n(WSDL) files for the application that is specified in the application name parameter to the file\nthat is specified in the file name parameter.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.publishWSDL",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd12__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "searchJNDIReferences",
+                        "description": "Use the searchJNDIReferences command to list applications that refer to the\nJava Naming and Directory Interface (JNDI) name on a specific node.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.searchJNDIReferences",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd13__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "taskInfo",
+                        "description": "Use the taskInfo command to provide information about a particular task option\nfor an application file. Many task names changed between V5.x and V6.x for a similar or the exact\nsame operation. You might need to update existing scripts if you are migrating from V5.x to V6.x.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.taskInfo",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd14__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "uninstall",
+                        "description": "Use the uninstall command\nuninstall an existing application.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.uninstall",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd15__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "update",
+                        "description": "Use the update command to update an application in non-interactive mode. This\ncommand supports the addition, removal, and update of application subcomponents or the entire\napplication. Provide the application name, content type, and update options.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.update",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd18__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "updateAccessIDs",
+                        "description": "Use the updateAccessIDs command to update the access ID information for users\nand groups that are assigned to various roles that are defined in the application. The system reads\nthe access IDs from the user registry and saves the IDs in the application bindings. This operation\nimproves runtime performance of the application. Use this command after installing an application or\nafter editing security role-specific information for an installed application. This method cannot be\ninvoked when the -conntype option for the wsadmin tool is set to NONE. You must be\nconnected to a server to invoke this command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.updateAccessIDs",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd16__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "updateInteractive",
+                        "description": "Use the updateInteractive command to add, remove, and update application\nsubcomponents or an entire application. When you update an application module or an entire\napplication using interactive mode, the steps that you use to configure binding information are\nsimilar to those that apply to the installInteractive command. If you update a\nfile or a partial application, the steps that you use to configure the binding information are not\navailable. In this case, the steps are the same as the ones you use with the\nupdate command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.updateInteractive",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd19__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "view",
+                        "description": "Use the view command to view the task that is specified by the task name\nparameter for the application or module that is specified by the application name parameter. Use\n-tasknames as the option to get a list of valid task names for the application. Otherwise, specify\none or more task names as the option.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.view",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd17__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminTask",
+                "description": "Use the AdminTask object to run administrative commands with the wsadmin\ntool.\n\nAdministrative commands are loaded dynamically when you start the wsadmin tool. The\nadministrative commands that are available for you to use, and what you can do with them, depends on\nthe edition of the product that you use.\n\nYou can start the scripting client without having a server running by using the -conntype\nNONE option with the wsadmin tool. The AdminTask administrative commands are available in\nboth connected and local modes. If a server is currently running, it is not recommended to run the\nAdminTask commands in local mode because any configuration changes made in local mode are not\nreflected in the running server configuration and vice versa. If you save a conflicting\nconfiguration, you can corrupt the configuration.\n\nIn a deployment manager environment, configuration updates are available only if\na scripting client is connected to a deployment manager. When connected to a node agent or a managed\napplication server, you cannot update the configuration because the configuration for these server\nprocesses are copies of the master configuration, which resides in the deployment manager. The\ncopies are created on a node machine when a configuration synchronization occurs between the\ndeployment manager and the node agent. Make configuration changes to the server processes by\nconnecting a scripting client to a deployment manager. To change a configuration, do not run a\nscripting client in local mode on a node machine because this is not supported.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html",
+                    "lastUpdate": "2022-12-13"
+                },
+                "methods": [
+                    {
+                        "name": "createTCPEndPoint",
+                        "description": "The createTCPEndPoint command creates a new endpoint that you can associate with a TCP inbound\nchannel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.createTCPEndPoint",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd5__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "getTCPEndPoint",
+                        "description": "The getTCPEndPoint command obtains the named end point that is associated with either a TCP\ninbound channel or a chain that contains a TCP inbound channel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.getTCPEndPoint",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd6__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "The help command provides a summary of the help commands and ways to invoke an\nadministrative command. You can use wildcard characters (*) or Java regular expressions (.*) in the\ncommand syntax to customize the search query.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd7__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "listTCPEndPoints",
+                        "description": "The listTCPEndPoints command lists all the\nnamed end points that can be associated with a TCP inbound channel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.listTCPEndPoints",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd10__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "listTCPThreadPools",
+                        "description": "The listTCPThreadPools command lists all of\nthe thread pools that can be associated with a TCP inbound channel or TCP outbound channel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.listTCPThreadPools",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd11__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    },
+                    {
+                        "name": "updateAppOnCluster",
+                        "description": "The updateAppOnCluster command can be used\nto synchronize nodes and restart cluster members for an application update that is deployed to a\ncluster. After an application update, this command can be used to synchronize the nodes without\nstopping all the cluster members on all the nodes at one time. This command synchronizes one node at\na time. Each node is synchronized by stopping the cluster members on which the application is\ntargeted, performing a node synchronization operation, and restarting the cluster\nmembers.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.updateAppOnCluster",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/9.0.5?topic=SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd16__title__1",
+                            "lastUpdate": "2022-12-13"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "WebSphere Application Server Network Deployment 8.5.5.x",
+        "version": "8.5.5",
+        "modules": [
+            {
+                "name": "Help",
+                "description": "You can use the Jython or Jacl scripting languages to find\ngeneral help and dynamic online information about the currently running\nMBeans with the wsadmin tool. Use the Help object as an aid in writing\nand running scripts with the AdminControl object.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html",
+                    "lastUpdate": "2023-02-13"
+                },
+                "methods": [
+                    {
+                        "name": "AdminApp",
+                        "description": "Use the AdminApp command\nto view a summary of each available method for the AdminApp object.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminApp",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd1__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "AdminConfig",
+                        "description": "Use the AdminConfig command\nto view a summary of each available method for the AdminConfig object.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminConfig",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd2__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "AdminControl",
+                        "description": "Use the AdminControl command\nto view a summary of the help commands and ways to invoke an administrative\ncommand.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminControl",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd3__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "AdminTask",
+                        "description": "Use the AdminTask command\nto view a summary of help commands and ways to invoke an administrative\ncommand with the AdminTask object.",
+                        "parent": "Help",
+                        "fullName": "Help.AdminTask",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd4__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "all",
+                        "description": "Use the all command to view\na summary of the information that the MBean defines by name.",
+                        "parent": "Help",
+                        "fullName": "Help.all",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd5__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "attributes",
+                        "description": "Use the attributes command\nto view a summary of all the attributes that the MBean defines by\nname. If you provide the MBean name parameter, the command displays\ninformation about the attributes, operations, constructors, description,\nnotifications, and classname of the specified MBean. If you specify\nthe MBean name and attribute name, the command displays information\nabout the specified attribute for the specified MBean.",
+                        "parent": "Help",
+                        "fullName": "Help.attributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd6__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "classname",
+                        "description": "Use the classname command\nto view a class name that the MBean defines by name.",
+                        "parent": "Help",
+                        "fullName": "Help.classname",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd7__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "constructors",
+                        "description": "Use the constructors command\nto view a summary of all of the constructors that the MBean defines\nby name.",
+                        "parent": "Help",
+                        "fullName": "Help.constructors",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd8__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "description": "Use the description command\nto view a description that the MBean defines by name.",
+                        "parent": "Help",
+                        "fullName": "Help.description",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd9__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to\nview a summary of all the available methods for the Help object.",
+                        "parent": "Help",
+                        "fullName": "Help.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd10__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "description": "Use the message command\nto view information for a message ID.",
+                        "parent": "Help",
+                        "fullName": "Help.message",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd11__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "notifications",
+                        "description": "Use the notifications command\nto view a summary of all the notifications that the MBean defines\nby name.",
+                        "parent": "Help",
+                        "fullName": "Help.notifications",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd12__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "operations",
+                        "description": "Use the operations command\nwith the MBean name parameter to view a summary of all the operations\nthat the MBean defines by name. Specify a value for the MBean name\nand operation name to display the signature of the operation for the\nMBean that is defined by name.",
+                        "parent": "Help",
+                        "fullName": "Help.operations",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_helpobject.html#rxml_helpobject__cmd13__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminConfig",
+                "description": "Use the AdminConfig object to invoke configuration commands\nand to create or change elements of the WebSphere\u00ae Application Server configuration,\nfor example, creating a data source.\n\nYou can start the scripting client without a running server, if you only want to use local\noperations. To run in local mode, use the -conntype NONE option to start the scripting client. You\nreceive a message that you are running in the local mode. If a server is currently running, do not\nrun the AdminConfig tool in local mode. Configuration changes that are made in local mode are not be\nreflected in the running server configuration. If you save a conflicting configuration, you could\ncorrupt the configuration.\n\nIn a deployment manager environment, configuration updates are available only if\na scripting client is connected to a deployment manager.\n\nWhen connected to a node agent or a managed application server, you are not able\nto update the configuration because the configurations for these server processes are copies of the\nmaster configuration that resides in the deployment manager. The copies are created on a node\nmachine when a configuration synchronization occurs between the deployment manager and the node\nagent. Make configuration changes to the server processes by connecting a scripting client to a\ndeployment manager. For this reason, to change a configuration, do not run a scripting client in\nlocal mode on a node machine. It is not a supported configuration.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html",
+                    "lastUpdate": "2023-02-13"
+                },
+                "methods": [
+                    {
+                        "name": "attributes",
+                        "description": "Use the attributes command to return a list of the top-level attributes for a\ngiven type.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.attributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd1__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "checkin",
+                        "description": "Use the checkin command to check a file into the configuration repository that\nis described by the document Uniform Resource Identifier (URI). This method only applies to\ndeployment manager configurations.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.checkin",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd2__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "convertToCluster",
+                        "description": "Use the convertToCluster command to convert a server so that it is the first\nmember of a new server cluster.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.convertToCluster",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd3__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "create",
+                        "description": "Use the create command to create configuration objects.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.create",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd4__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "createClusterMember",
+                        "description": "Use the createClusterMember command to create a new server object on the node\nthat the node id parameter specifies. This server is created as a new member of the existing cluster\nthat is specified by the cluster id parameter, and contains attributes that are specified in the\nmember attributes parameter. The server is created using the server template that is specified by\nthe template id attribute, and that contains the name specified by the memberName attribute. The\nmemberName attribute is required. The template options are available only for the first cluster\nmember that you create. All cluster members that you create after the first member will be\nidentical.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.createClusterMember",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd5__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "createDocument",
+                        "description": "Use the createDocument command to create a new document in the configuration\nrepository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.createDocument",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd6__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "createUsingTemplate",
+                        "description": "Use the createUsingTemplate command to create a type of object with the given\nparent, using a template. You can only use this command for creation of a server with\nAPPLICATION_SERVER type. If you want to create a server with a type other than\nAPPLICATION_SERVER, use the createGenericServer or the\ncreateWebServer command.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.createUsingTemplate",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd7__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "defaults",
+                        "description": "Use the defaults command to display the default values for attributes of a\ngiven type. This method displays all of the possible attributes contained by an object of a specific\ntype. If the attribute has a default value, this method also displays the type and default value for\neach attribute.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.defaults",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd8__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "deleteDocument",
+                        "description": "Use the deleteDocument command to delete a document from the configuration\nrepository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.deleteDocument",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd9__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "existsDocument",
+                        "description": "Use the existsDocument command to test for the existence of a document in the\nconfiguration repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.existsDocument",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd10__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "extract",
+                        "description": "Use the extract command to extract a configuration repository file that is\ndescribed by the document URI and places it in the file named by filename. This\nmethod only applies to deployment manager configurations.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.extract",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd11__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getCrossDocumentValidationEnabled",
+                        "description": "Use the getCrossDocumentValidationEnabled command to return a message with the\ncurrent cross-document enablement setting. This method returns true if cross-document validation is\nenabled.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getCrossDocumentValidationEnabled",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd12__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getid",
+                        "description": "Use the getid command to return the configuration ID of an object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getid",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd13__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getObjectName",
+                        "description": "Use the getObjectName command to return a string version of the object name\nfor the corresponding running MBean. This method returns an empty string if no corresponding running\nMBean exists.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getObjectName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd14__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getObjectType",
+                        "description": "Use the getObjectType command to display the object type for the object\nconfiguration ID of interest.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getObjectType",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd39__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getSaveMode",
+                        "description": "Target object",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getSaveMode",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd15__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getValidationLevel",
+                        "description": "Use the getValidationLevel command to return the validation used when files\nare extracted from the repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getValidationLevel",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd16__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getValidationSeverityResult",
+                        "description": "Use the getValidationSeverityResult command to return the number of validation\nmessages with the given severity from the most recent validation.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.getValidationSeverityResult",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd17__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "hasChanges",
+                        "description": "Use the hasChanges command to determine if unsaved configuration changes\nexist.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.hasChanges",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd18__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to display static help information for the AdminConfig\nobject.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd19__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "installResourceAdapter",
+                        "description": "Use the installResourceAdapter command to install a Java 2 Connector (J2C)\nresource adapter with the given Resource Adapter Archive (RAR) file name and an option string in the\nnode. When you edit the installed application with the embedded RAR, only existing J2C connection\nfactory, J2C activation specs, and J2C administrative objects will be edited. No new J2C objects\nwill be created.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.installResourceAdapter",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd20__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "list",
+                        "description": "Use the list command to return a list of objects of a given type, possibly\nscoped by a parent. You can use wildcard characters (*) or Java regular expressions (.*) in the\ncommand syntax to customize the search query.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.list",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd21__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "listTemplates",
+                        "description": "Use the listTemplates command to display a list of template object IDs. You\ncan use wildcard characters (*) or Java regular expressions (.*) in the command syntax to customize\nthe search query.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.listTemplates",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd22__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "modify",
+                        "description": "Use the modify command to support the modification of object attributes.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.modify",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd23__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "parents",
+                        "description": "Use the parents command to obtain information about object types.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.parents",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd24__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "queryChanges",
+                        "description": "Use the queryChanges command to return a list of unsaved configuration\nfiles.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.queryChanges",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd25__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "remove",
+                        "description": "Use the remove command to remove a configuration object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.remove",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd26__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "description": "Use the required command to display the required attributes that are contained\nby an object of a certain type.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.required",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd27__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "reset",
+                        "description": "Use the reset command to reset the temporary workspace that holds updates to\nthe configuration.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.reset",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd28__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "resetAttributes",
+                        "description": "Use the resetAttributes command to reset specific attributes for the\nconfiguration object of interest.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.resetAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd40__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "save",
+                        "description": "Use the save command to save changes to the configuration repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.save",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd29__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setCrossDocumentValidationEnabled",
+                        "description": "Use the setCrossDocumentValidationEnabled command to set the cross-document\nvalidation enabled mode. Values include true or false.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.setCrossDocumentValidationEnabled",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd30__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setSaveMode",
+                        "description": "Use the setSaveMode command to modify the behavior of the\nsave command.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.setSaveMode",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd31__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setValidationLevel",
+                        "description": "Use the setValidationLevel command to set the validation that is used when\nfiles are extracted from the repository.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.setValidationLevel",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd32__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "show",
+                        "description": "Use the show command to return the top-level attributes of the given\nobject.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.show",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd33__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "showall",
+                        "description": "Use the showall command to recursively show the attributes of a given\nconfiguration object.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.showall",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd34__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "showAttribute",
+                        "description": "Use the showAttribute command to display only the value for the single\nattribute that you specify.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.showAttribute",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd35__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "types",
+                        "description": "Use the types command to return a list of the configuration object types that\nyou can manipulate. You can use wildcard characters (*) or Java regular expressions (.*) in the\ncommand syntax to customize the search query.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.types",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd36__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "uninstallResourceAdapter",
+                        "description": "Use the uninstallResourceAdapter command to uninstall a Java 2 Connector (J2C)\nresource adapter with the given J2C resource adapter configuration ID and an option list. When you\nremove a J2CResourceAdapter object from the configuration repository, the installed directory will\nbe removed at the time of synchronization. A stop request will be sent to the J2CResourceAdapter\nMBean that was removed.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.uninstallResourceAdapter",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd37__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "unsetAttributes",
+                        "description": "Use the unsetAttributes command to reset specific attributes for a\nconfiguration object to the default values.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.unsetAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd41__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "validate",
+                        "description": "Use the validate command to request the configuration validation results based\non the files in your workspace, the value of the cross-document validation enabled flag, and the\nvalidation level setting. Optionally, you can specify a configuration ID to set the scope. If you\nspecify a configuration ID, the scope of this request is the object named by the configuration ID\nparameter.",
+                        "parent": "AdminConfig",
+                        "fullName": "AdminConfig.validate",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminconfig1.html#rxml_adminconfig1__cmd38__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminControl",
+                "description": "Use the AdminControl object to invoke operational commands\nthat manage objects for the application server.\n\nMany of the AdminControl commands have multiple signatures so that\nthey can either invoke in a raw mode using parameters that are specified\nby Java Management Extensions (JMX), or by using strings for parameters.\nIn addition to operational commands, the AdminControl object supports\nsome utility commands for tracing, reconnecting with a server, and\nconverting data types.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html",
+                    "lastUpdate": "2023-02-13"
+                },
+                "methods": [
+                    {
+                        "name": "completeObjectName",
+                        "description": "Use the completeObjectName command\nto create a string representation of a complete ObjectName value that\nis based on a fragment. This command does not communicate with the\nserver to find a matching ObjectName value. If the system finds several\nMBeans that match the fragment, the command returns the first one.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.completeObjectName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd1__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getAttribute",
+                        "description": "Use the getAttribute command\nto return the value of the attribute for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttribute",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd2__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getAttribute_jmx",
+                        "description": "Use the getAttribute_jmx command\nto return the value of the attribute for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttribute_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd3__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getAttributes",
+                        "description": "Use the getAttributes command\nto return the attribute values for the names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd4__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getAttributes_jmx",
+                        "description": "Use the getAttributes_jmx command\nto return the attribute values for the names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getAttributes_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd5__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getCell",
+                        "description": "Use the getCell command\nto return the name of the connected cell.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getCell",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd6__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getConfigId",
+                        "description": "Use the getConfigId command\nto create a configuration ID from an ObjectName or an ObjectName fragment.\nEach MBean does not have corresponding configuration objects. If several\nMBeans correspond to an ObjectName fragment, a warning is created\nand a configuration ID builds for the first MBean that the system\nfinds.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getConfigId",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd7__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getDefaultDomain",
+                        "description": "Use the getDefaultDomain command\nto return the default domain name from the server.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getDefaultDomain",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd8__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getDomainName",
+                        "description": "Use the getDomainName command\nto return the domain name from the server.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getDomainName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd9__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getHost",
+                        "description": "Use the getHost command\nto return the name of your host.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getHost",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd10__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getMBeanCount",
+                        "description": "Use the getMBeanCount command\nto return the number of MBeans that are registered in the server.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getMBeanCount",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd11__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getMBeanInfo_jmx",
+                        "description": "Use the getMBeanInfo_jmx command\nto return the Java Management Extension MBeanInfo structure that corresponds\nto an ObjectName value. No string signature exists for this command,\nbecause the Help object displays most of the information available\nfrom the getMBeanInfo_jmx command.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getMBeanInfo_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd12__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getNode",
+                        "description": "Use the getNode command\nto return the name of the connected node.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getNode",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd13__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getObjectInstance",
+                        "description": "Use the getObjectInstance command\nto return the object instance that matches the input object name.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getObjectInstance",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd14__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getPort",
+                        "description": "Use the getPort command\nto return the name of the port used for the scripting connection.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getPort",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd15__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getPropertiesForDataSource",
+                        "description": "The getPropertiesForDataSource command\nis deprecated, and no replacement exists. This command incorrectly\nassumes the availability of a configuration service when running in\nconnected mode.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getPropertiesForDataSource",
+                        "deprecated": true,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd16__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getType",
+                        "description": "Use the getType command\nto return the connection type used for the scripting connection.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.getType",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd17__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to\nreturn general help text for the AdminControl object.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd18__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "invoke",
+                        "description": "Use the invoke command\nto invoke a specific MBean operation based on the number of parameters\nthat operation requires. If this constraint is not sufficient to select\na unique operation, use invoke_jmx. The supplied parameters are converted\nto the object types required by the selected operation's signature\nbefore the operation is invoked. Any returned value is converted to\nits string representation.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.invoke",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd19__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "invoke_jmx",
+                        "description": "Use the invoke_jmx command\nto invoke the object operation by conforming the parameter list to\nthe signature. The command returns the result of the invocation.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.invoke_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd20__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "isRegistered",
+                        "description": "Use the isRegistered command\nto determine if a specific object name is registered.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.isRegistered",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd21__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "isRegistered_jmx",
+                        "description": "Use the isRegistered_jmx command\nto determine if a specific object name is registered.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.isRegistered_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd22__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "makeObjectName",
+                        "description": "Use the makeObjectName command\nto create an ObjectName value that is based on the strings input.\nThis command does not communicate with the server, so the ObjectName\nvalue that results might not exist. If the string you supply contains\nan extra set of double quotes, they are removed. If the string does\nnot begin with a Java Management Extensions (JMX) domain, or a string\nfollowed by a colon, then the WebSphere\u00ae Application Server string appends\nto the name.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.makeObjectName",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd23__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "queryMBeans",
+                        "description": "Use the queryMBeans command\nto query for a list of object instances that match the object name\nthat you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.queryMBeans",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd24__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "queryNames",
+                        "description": "Use the queryNames command\nto query for a list of each of the ObjectName objects based on the\nname template.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.queryNames",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd25__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "queryNames_jmx",
+                        "description": "Use the queryNames_jmx command\nto query for a list of each of the ObjectName objects based on the\nname template and the query conditions that you specify.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.queryNames_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd26__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "reconnect",
+                        "description": "Use the reconnect command\nto reconnect to the server, and to clear information out of the local\ncache.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.reconnect",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd27__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setAttribute",
+                        "description": "Use the setAttribute command\nto set the attribute value for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttribute",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd28__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setAttribute_jmx",
+                        "description": "Use the setAttribute_jmx command\nto set the attribute value for the name that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttribute_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd29__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setAttributes",
+                        "description": "Use the setAttributes command\nto set the attribute values for the object names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttributes",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd30__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "setAttributes_jmx",
+                        "description": "Use the setAttributes_jmx command\nto set the attribute values for the object names that you provide.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.setAttributes_jmx",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd31__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "startServer",
+                        "description": "Target object",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.startServer",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd32__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "stopServer",
+                        "description": "Target object",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.stopServer",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd33__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "testConnection",
+                        "description": "Use the testConnection command\nto test a data source connection. This command works with the data\nsource that resides in the configuration repository. If the data source\nto be tested is in the temporary workspace that holds the update to\nthe repository, you must save the update to the configuration repository\nbefore running this command. Use this command with the configuration\nID that corresponds to the data source and the WAS40DataSource object\ntypes.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.testConnection",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd35__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "trace",
+                        "description": "Use the trace command\nto set the trace specification for the scripting process to the value\nthat you specify.",
+                        "parent": "AdminControl",
+                        "fullName": "AdminControl.trace",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admincontrol.html#rxml_admincontrol__cmd34__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminApp",
+                "description": "Use the AdminApp object to install, modify, and administer\napplications.\n\nThe AdminApp object interacts with the WebSphere\u00ae Application Server\nmanagement and configuration services to make application inquiries and changes. This interaction\nincludes installing and uninstalling applications, listing modules, exporting, and so on.\n\nYou can start the scripting client when no server is running, if you want to use only local\noperations. To run in local mode, use the -conntype NONE option to start the\nscripting client. You receive a message that you are running in the local mode. Running the AdminApp\nobject in local mode when a server is currently running is not recommended. This is because any\nconfiguration changes made in local mode will not be reflected in the running server configuration\nand vice versa. If you save a conflicting configuration, you could corrupt the configuration.\n\nIn a deployment manager environment, configuration updates are\navailable only if a scripting client is connected to a deployment manager.\n\nWhen connected to a node agent or a managed application server, you\nare not able to update the configuration because the configuration for these server processes are\ncopies of the master configuration which resides in the deployment manager. The copies are created\non a node machine when a configuration synchronization occurs between the deployment manager and the\nnode agent. Make configuration changes to the server processes by connecting a scripting client to a\ndeployment manager. For this reason, to change a configuration, do not run a scripting client in\nlocal mode on a node machine. It is not a supported configuration.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html",
+                    "lastUpdate": "2023-02-13"
+                },
+                "methods": [
+                    {
+                        "name": "deleteUserAndGroupEntries",
+                        "description": "Use the deleteUserAndGroupEntries command to delete users or groups for all\nroles, and to delete user IDs and passwords for all of the RunAs roles that are defined in the\napplication.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.deleteUserAndGroupEntries",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd1__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "edit",
+                        "description": "Use the edit command to edit an application or module in batch mode. The\nedit command changes the application specified by the application name argument\nusing the options specified by the options argument. No options are required for the\nedit command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.edit",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd2__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "editInteractive",
+                        "description": "Use the editInteractive command to edit an application or module in\ninteractive mode. The editInteractive command changes the application deployment.\nSpecify these changes in the options parameter. No options are required for the\neditInteractive command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.editInteractive",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd3__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "export",
+                        "description": "Use the export command to export the application name parameter to a file that\nyou specify by the file name.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.export",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd4__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "exportDDL",
+                        "description": "Use the exportDDL command to extract the data definition language (DDL) from\nthe application name parameter to the directory name parameter that a directory specifies. The\noptions parameter is optional.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.exportDDL",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd5__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "exportFile",
+                        "description": "Use the exportFile command to export the contents of a single file specified\nby the uniform resource identifier (URI) from the application of interest.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.exportFile",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd20__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getDeployStatus",
+                        "description": "Use the getDeployStatus\ncommand to display the deployment status of the application. After installing or updating a large\napplication, use this command to display detailed status information for application binary file\nexpansion. You cannot start the application until the system extracts the application\nbinaries.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.getDeployStatus",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd21__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "Use the help command to display general help information about the AdminApp\nobject.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd6__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "install",
+                        "description": "Use the install command to install\nan application in non-interactive mode, given a fully qualified file name and a string of\ninstallation options. The options parameter is optional.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.install",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd7__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "installInteractive",
+                        "description": "Use the\ninstallInteractive command to install an application in interactive mode, given a\nfully qualified file name and a string of installation options. The options parameter is\noptional.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.installInteractive",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd8__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "isAppReady",
+                        "description": "Use the isAppReady command to\ndetermine if the specified application has been distributed and is ready to be run. Returns a value\nof true if the application is ready, or a value of false if the\napplication is not ready. A script that invokes isAppReady typically installs or updates an\napplication, and then loops around the call until the call returns a value of true before starting\nthe application. This command is not supported when the wsadmin tool is not connected to a\nserver.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.isAppReady",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd22__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "list",
+                        "description": "Use the list command to list the applications that are installed in the\nconfiguration.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.list",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd9__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "listModules",
+                        "description": "Use the listModules command to list the modules in an application.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.listModules",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd10__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "options",
+                        "description": "Use the options command to display a list of options for installing an\nenterprise archive (EAR) file.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.options",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd11__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "publishWSDL",
+                        "description": "Use the publishWSDL command to publish Web Services Description Language\n(WSDL) files for the application that is specified in the application name parameter to the file\nthat is specified in the file name parameter.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.publishWSDL",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd12__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "searchJNDIReferences",
+                        "description": "Use the searchJNDIReferences command to list applications that refer to the\nJava Naming and Directory Interface (JNDI) name on a specific node.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.searchJNDIReferences",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd13__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "taskInfo",
+                        "description": "Use the taskInfo command to provide information about a particular task option\nfor an application file. Many task names changed between V5.x and V6.x for a similar or the exact\nsame operation. You might need to update existing scripts if you are migrating from V5.x to V6.x.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.taskInfo",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd14__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "uninstall",
+                        "description": "Use the uninstall command\nuninstall an existing application.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.uninstall",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd15__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "update",
+                        "description": "Use the update command to update an application in non-interactive mode. This\ncommand supports the addition, removal, and update of application subcomponents or the entire\napplication. Provide the application name, content type, and update options.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.update",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd18__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "updateAccessIDs",
+                        "description": "Use the updateAccessIDs command to update the access ID information for users\nand groups that are assigned to various roles that are defined in the application. The system reads\nthe access IDs from the user registry and saves the IDs in the application bindings. This operation\nimproves runtime performance of the application. Use this command after installing an application or\nafter editing security role-specific information for an installed application. This method cannot be\ninvoked when the -conntype option for the wsadmin tool is set to NONE. You must be\nconnected to a server to invoke this command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.updateAccessIDs",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd16__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "updateInteractive",
+                        "description": "Use the updateInteractive command to add, remove, and update application\nsubcomponents or an entire application. When you update an application module or an entire\napplication using interactive mode, the steps that you use to configure binding information are\nsimilar to those that apply to the installInteractive command. If you update a\nfile or a partial application, the steps that you use to configure the binding information are not\navailable. In this case, the steps are the same as the ones you use with the\nupdate command.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.updateInteractive",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd19__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "view",
+                        "description": "Use the view command to view the task that is specified by the task name\nparameter for the application or module that is specified by the application name parameter. Use\n-tasknames as the option to get a list of valid task names for the application. Otherwise, specify\none or more task names as the option.",
+                        "parent": "AdminApp",
+                        "fullName": "AdminApp.view",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_adminapp.html#rxml_adminapp__cmd17__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "AdminTask",
+                "description": "Use the AdminTask object to run administrative commands\nwith the wsadmin tool.\n\nAdministrative commands are loaded dynamically when you start the\nwsadmin tool. The administrative commands that are available for you\nto use, and what you can do with them, depends on the edition of the\nproduct that you use.\n\nYou can start the scripting client without having a server running\nby using the -conntype NONE option with the wsadmin\ntool. The AdminTask administrative commands are available in both\nconnected and local modes. If a server is currently running, it is\nnot recommended to run the AdminTask commands in local mode because\nany configuration changes made in local mode are not reflected in\nthe running server configuration and vice versa. If you save a conflicting\nconfiguration, you can corrupt the configuration.\n\nIn a deployment manager environment, configuration\nupdates are available only if a scripting client is connected to a\ndeployment manager. When connected to a node agent or a managed application\nserver, you cannot update the configuration because the configuration\nfor these server processes are copies of the master configuration,\nwhich resides in the deployment manager. The copies are created on\na node machine when a configuration synchronization occurs between\nthe deployment manager and the node agent. Make configuration changes\nto the server processes by connecting a scripting client to a deployment\nmanager. To change a configuration, do not run a scripting client\nin local mode on a node machine because this is not supported.",
+                "documentation": {
+                    "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html",
+                    "lastUpdate": "2023-02-13"
+                },
+                "methods": [
+                    {
+                        "name": "createTCPEndPoint",
+                        "description": "The createTCPEndPoint\ncommand creates a new endpoint that you can associate with a TCP inbound\nchannel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.createTCPEndPoint",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd5__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "getTCPEndPoint",
+                        "description": "The getTCPEndPoint command\nobtains the named end point that is associated with either a TCP inbound\nchannel or a chain that contains a TCP inbound channel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.getTCPEndPoint",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd6__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "help",
+                        "description": "The help command\nprovides a summary of the help commands and ways to invoke an administrative\ncommand. You can use wildcard characters (*) or Java regular expressions\n(.*) in the command syntax to customize the search query.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.help",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd7__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "listTCPEndPoints",
+                        "description": "The listTCPEndPoints\ncommand lists all the named end points that can be associated with\na TCP inbound channel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.listTCPEndPoints",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd10__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "listTCPThreadPools",
+                        "description": "The listTCPThreadPools\ncommand lists all of the thread pools that can be associated with\na TCP inbound channel or TCP outbound channel.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.listTCPThreadPools",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd11__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    },
+                    {
+                        "name": "updateAppOnCluster",
+                        "description": "The updateAppOnCluster\ncommand can be used to synchronize nodes and restart cluster members\nfor an application update that is deployed to a cluster. After an\napplication update, this command can be used to synchronize the nodes\nwithout stopping all the cluster members on all the nodes at one time.\nThis command synchronizes one node at a time. Each node is synchronized\nby stopping the cluster members on which the application is targeted,\nperforming a node synchronization operation, and restarting the cluster\nmembers.",
+                        "parent": "AdminTask",
+                        "fullName": "AdminTask.updateAppOnCluster",
+                        "deprecated": false,
+                        "documentation": {
+                            "url": "https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_admintask.html#rxml_admintask__cmd16__title__1",
+                            "lastUpdate": "2023-02-13"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
