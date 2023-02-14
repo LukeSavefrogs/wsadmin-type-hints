@@ -4,3 +4,11 @@
 	--md-typeset-a-color: #a8d1f8;
 	/* --md-typeset-a-color: #55d8ff; */
 }
+
+
+/* 
+Source: https://mkdocstrings.github.io/recipes/#prevent-selection-of-prompts-and-output-in-python-code-blocks
+*/
+.language-pycon .gp, .language-pycon .go { /* Generic.Prompt, Generic.Output */
+    user-select: none !important;
+}
