@@ -1,5 +1,5 @@
 site_name: "Python wsadmin"
-site_description: ""
+site_description: "Python package providing type hints for wsadmin Jython commands."
 site_author: "Luca Salvarani"
 
 repo_url: https://github.com/LukeSavefrogs/wsadmin-type-hints
