@@ -1,5 +1,14 @@
 site_name: "Python wsadmin"
+site_description: ""
+site_author: "Luca Salvarani"
+
 repo_url: https://github.com/LukeSavefrogs/wsadmin-objects
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - API Reference: reference/
+  - Useful resources: resources.md
 
 theme:
   name: material
@@ -8,12 +17,14 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    repo: fontawesome/brands/github 
+    repo: fontawesome/brands/github
   features:
     - navigation.instant
     - navigation.tracking
-    - toc.follow
     - navigation.top
+    - navigation.tabs
+    - toc.follow
+    - toc.integrate
     - content.code.copy
     - content.tabs.link
 
@@ -33,7 +44,16 @@ theme:
         name: Switch to light mode
 
 plugins:
+  # Automatic code reference
   - mkdocstrings
+  - gen-files:
+      scripts:
+      - docs/scripts/generate_api_reference.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+  
+  # Other plugins
   - search:
       lang: en
       features:
@@ -67,6 +87,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
+      use_pygments: true
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
