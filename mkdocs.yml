@@ -10,6 +10,11 @@ nav:
   - API Reference: reference/
   - Useful resources: resources.md
 
+watch:
+  - docs/
+  - mkdocs.yml
+  - src/        # Only used to preview the documentation
+
 theme:
   name: material
   language: en
