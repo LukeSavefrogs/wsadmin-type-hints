@@ -2,7 +2,7 @@ site_name: "Python wsadmin"
 site_description: ""
 site_author: "Luca Salvarani"
 
-repo_url: https://github.com/LukeSavefrogs/wsadmin-objects
+repo_url: https://github.com/LukeSavefrogs/wsadmin-type-hints
 
 nav:
   - Home: index.md
@@ -58,6 +58,7 @@ plugins:
       lang: en
       features:
         - search.highlight
+
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
