@@ -8,19 +8,19 @@ with them, depends on the edition of the product that you use.
 For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin
 """
 def createTCPEndPoint(): # undocumented
-	pass
+    pass
 
 def getTCPEndPoint(): # undocumented
-	pass
+    pass
 
 def help(): # undocumented
-	pass
+    pass
 
 def listTCPEndPoints(): # undocumented
-	pass
+    pass
 
 def listTCPThreadPools(): # undocumented
-	pass
+    pass
 
 def updateAppOnCluster(): # undocumented
-	pass
+    pass

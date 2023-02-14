@@ -10,21 +10,21 @@ Include `wsadmin.sh` Jython language objects:
 Use it like this:
 ```python
 try:
-	(AdminControl, AdminConfig, AdminApp, AdminTask, Help)
+    (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-	from wsadmin_language import *
+    from wsadmin_language import *
 else:
-	print("AdminControl is already defined, no shim needed")
+    print("AdminControl is already defined, no shim needed")
 ```
 """
 
 
 __all__ = [
-	"AdminApp",
-	"AdminConfig",
-	"AdminTask",
-	"AdminControl",
-	"Help",
+    "AdminApp",
+    "AdminConfig",
+    "AdminTask",
+    "AdminControl",
+    "Help",
 ]
 
 
@@ -36,17 +36,17 @@ __all__ = [
 # Additional try/except to ensure that even if installed in a real environment,
 # the original modules do not get overwritten.
 try:
-	(AdminControl, AdminConfig, AdminApp, AdminTask, Help)
+    (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-	# ----- Interact with a configuration object    -----
-	from . import AdminApp
-	from . import AdminConfig
-	from . import AdminTask
+    # ----- Interact with a configuration object    -----
+    from . import AdminApp
+    from . import AdminConfig
+    from . import AdminTask
 
 
-	# -----     Interact with a runtime object      -----
-	from . import AdminControl
+    # -----     Interact with a runtime object      -----
+    from . import AdminControl
 
 
-	# -----              Helper module              -----
-	from . import Help
+    # -----              Helper module              -----
+    from . import Help

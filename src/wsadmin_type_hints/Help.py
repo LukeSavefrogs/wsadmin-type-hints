@@ -2,45 +2,45 @@
 You can use the Jython or Jacl scripting languages to find general help and dynamic online
 information about the currently running MBeans with the `wsadmin` tool. 
 
-Use the Help object as an aid in writing and running scripts with the `AdminControl` object.
+Use the `Help` object as an aid in writing and running scripts with the `AdminControl` object.
 
 For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-help-object-using-wsadmin
 """
 def AdminApp(): # undocumented
-	pass
+    pass
 
 def AdminConfig(): # undocumented
-	pass
+    pass
 
 def AdminControl(): # undocumented
-	pass
+    pass
 
 def AdminTask(): # undocumented
-	pass
+    pass
 
 def all(mbean_name): # undocumented
-	pass
+    pass
 
 def attributes(mbean_name, attribute_name): # undocumented
-	pass
+    pass
 
 def classname(mbean_name): # undocumented
-	pass
+    pass
 
 def constructors(mbean_name): # undocumented
-	pass
+    pass
 
 def description(mbean_name): # undocumented
-	pass
+    pass
 
 def help(): # undocumented
-	pass
+    pass
 
 def message(message_id): # undocumented
-	pass
+    pass
 
 def notifications(mbean_name): # undocumented
-	pass
+    pass
 
 def operations(mbean_name, operation_name): # undocumented
-	pass
+    pass

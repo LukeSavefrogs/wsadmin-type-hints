@@ -9,67 +9,67 @@ exporting, and so on.
 For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminapp-object-using-wsadmin
 """
 def deleteUserAndGroupEntries(): # undocumented
-	pass
+    pass
 
 def edit(): # undocumented
-	pass
+    pass
 
 def editInteractive(): # undocumented
-	pass
+    pass
 
 def export(): # undocumented
-	pass
+    pass
 
 def exportDDL(): # undocumented
-	pass
+    pass
 
 def exportFile(): # undocumented
-	pass
+    pass
 
 def getDeployStatus(): # undocumented
-	pass
+    pass
 
 def help(): # undocumented
-	pass
+    pass
 
 def install(): # undocumented
-	pass
+    pass
 
 def installInteractive(): # undocumented
-	pass
+    pass
 
 def isAppReady(): # undocumented
-	pass
+    pass
 
 def list(): # undocumented
-	pass
+    pass
 
 def listModules(): # undocumented
-	pass
+    pass
 
 def options(): # undocumented
-	pass
+    pass
 
 def publishWSDL(): # undocumented
-	pass
+    pass
 
 def searchJNDIReferences(): # undocumented
-	pass
+    pass
 
 def taskInfo(): # undocumented
-	pass
+    pass
 
 def uninstall(): # undocumented
-	pass
+    pass
 
 def update(): # undocumented
-	pass
+    pass
 
 def updateAccessIDs(): # undocumented
-	pass
+    pass
 
 def updateInteractive(): # undocumented
-	pass
+    pass
 
 def view(): # undocumented
-	pass
+    pass

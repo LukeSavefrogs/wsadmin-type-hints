@@ -9,151 +9,151 @@ from typing import Any
 from .wsadmin_types import _OpaqueDigestObject
 
 def attributes(object_type: str) -> str:
-	"""Get a multiline string containing the top level attributes for the given type.
+    """Get a multiline string containing the top level attributes for the given type.
 
-	Args:
-		object_type (str): name of the object type. Use `AdminConfig.types()` to get a list of available types.
+    Args:
+        object_type (str): name of the object type. Use `AdminConfig.types()` to get a list of available types.
 
-	Returns:
-		str: Multiline string with the top level attributes for the given type.
-	"""
-	pass
+    Returns:
+        str: Multiline string with the top level attributes for the given type.
+    """
+    pass
 
 # TODO: Check return type
 def checkin(document_uri: str, file_name: str, opaque_object: _OpaqueDigestObject) -> Any:
-	"""Checks a file that the document URI describes into the configuration repository.
-	This method only applies to deployment manager configurations.
+    """Checks a file that the document URI describes into the configuration repository.
+    This method only applies to deployment manager configurations.
 
-	Args:
-		document_uri (str): The document URI, relative to the root of the configuration repository.
-		file_name (str): The name of the source file to check.
-		opaque_object (_OpaqueDigestObject): The object returned by a prior call to the `AdminConfig.extract()` command.
-	"""
-	pass
+    Args:
+        document_uri (str): The document URI, relative to the root of the configuration repository.
+        file_name (str): The name of the source file to check.
+        opaque_object (_OpaqueDigestObject): The object returned by a prior call to the `AdminConfig.extract()` command.
+    """
+    pass
 
 def convertToCluster(): # undocumented
-	pass
+    pass
 
 def create(): # undocumented
-	pass
+    pass
 
 def createClusterMember(): # undocumented
-	pass
+    pass
 
 def createDocument(): # undocumented
-	pass
+    pass
 
 def createUsingTemplate(): # undocumented
-	pass
+    pass
 
 def defaults(): # undocumented
-	pass
+    pass
 
 def deleteDocument(): # undocumented
-	pass
+    pass
 
 def existsDocument(): # undocumented
-	pass
+    pass
 
 def extract(document_uri: str, filename: str) -> _OpaqueDigestObject:
-	"""Extracts a configuration repository file that is described by the document URI and places it in the file named by filename. 
-	This method only applies to deployment manager configurations.
+    """Extracts a configuration repository file that is described by the document URI and places it in the file named by filename. 
+    This method only applies to deployment manager configurations.
 
-	Args:
-		document_uri (str): The document URI, relative to the root of the configuration repository. This MUST exist in the repository.
-		filename (str): The name of the source file to check. If it exists already, it will be overwritten.
+    Args:
+        document_uri (str): The document URI, relative to the root of the configuration repository. This MUST exist in the repository.
+        filename (str): The name of the source file to check. If it exists already, it will be overwritten.
 
-	Returns:
-		_OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
-	"""
-	pass
+    Returns:
+        _OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
+    """
+    pass
 
 def getCrossDocumentValidationEnabled(): # undocumented
-	pass
+    pass
 
 def getid(): # undocumented
-	pass
+    pass
 
 def getObjectName(): # undocumented
-	pass
+    pass
 
 def getObjectType(): # undocumented
-	pass
+    pass
 
 def getSaveMode(): # undocumented
-	pass
+    pass
 
 def getValidationLevel(): # undocumented
-	pass
+    pass
 
 def getValidationSeverityResult(): # undocumented
-	pass
+    pass
 
 def hasChanges(): # undocumented
-	pass
+    pass
 
 def help(): # undocumented
-	pass
+    pass
 
 def installResourceAdapter(): # undocumented
-	pass
+    pass
 
 def list(): # undocumented
-	pass
+    pass
 
 def listTemplates(): # undocumented
-	pass
+    pass
 
 def modify(): # undocumented
-	pass
+    pass
 
 def parents(): # undocumented
-	pass
+    pass
 
 def queryChanges(): # undocumented
-	pass
+    pass
 
 def remove(): # undocumented
-	pass
+    pass
 
 def required(): # undocumented
-	pass
+    pass
 
 def reset(): # undocumented
-	pass
+    pass
 
 def resetAttributes(): # undocumented
-	pass
+    pass
 
 def save(): # undocumented
-	pass
+    pass
 
 def setCrossDocumentValidationEnabled(): # undocumented
-	pass
+    pass
 
 def setSaveMode(): # undocumented
-	pass
+    pass
 
 def setValidationLevel(): # undocumented
-	pass
+    pass
 
 def show(): # undocumented
-	pass
+    pass
 
 def showall(): # undocumented
-	pass
+    pass
 
 def showAttribute(): # undocumented
-	pass
+    pass
 
 def types(): # undocumented
-	pass
+    pass
 
 def uninstallResourceAdapter(): # undocumented
-	pass
+    pass
 
 def unsetAttributes(): # undocumented
-	pass
+    pass
 
 def validate(): # undocumented
-	pass
+    pass
