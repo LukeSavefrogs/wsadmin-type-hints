@@ -29,7 +29,6 @@ theme:
     - navigation.top
     - navigation.tabs
     - toc.follow
-    - toc.integrate
     - content.code.copy
     - content.tabs.link
 
