@@ -11,22 +11,24 @@
       
       
       
+        <link rel="prev" href="../AdminControl/">
       
-        <link rel="next" href="getting-started/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../Help/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
-        <title>Python wsadmin</title>
+        <title>AdminTask - Python wsadmin</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -42,13 +44,13 @@
       
     
     
-      <link rel="stylesheet" href="css/timeago.css">
+      <link rel="stylesheet" href="../../../css/timeago.css">
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#wsadmin_type_hints.AdminTask" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +93,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Python wsadmin" class="md-header__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
+    <a href="../../.." title="Python wsadmin" class="md-header__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              AdminTask
             
           </span>
         </div>
@@ -202,12 +204,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -219,7 +219,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="getting-started/" class="md-tabs__link">
+    <a href="../../../getting-started/" class="md-tabs__link">
       Getting started
     </a>
   </li>
@@ -228,13 +228,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="reference/wsadmin_type_hints/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         API Reference
       </a>
     </li>
@@ -247,7 +249,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="resources/" class="md-tabs__link">
+    <a href="../../../resources/" class="md-tabs__link">
       Useful resources
     </a>
   </li>
@@ -276,7 +278,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Python wsadmin" class="md-nav__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
+    <a href="../../.." title="Python wsadmin" class="md-nav__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -305,59 +307,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#gallery" class="md-nav__link">
-    Gallery
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disclaimer" class="md-nav__link">
-    Disclaimer
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -370,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/" class="md-nav__link">
+      <a href="../../../getting-started/" class="md-nav__link">
         Getting started
       </a>
     </li>
@@ -383,14 +337,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -399,7 +355,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           API Reference
@@ -410,21 +366,23 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
       
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="reference/wsadmin_type_hints/">wsadmin_type_hints</a>
+          <a href="../">wsadmin_type_hints</a>
           
             <label for="__nav_3_1">
               <span class="md-nav__icon md-icon"></span>
@@ -432,7 +390,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           wsadmin_type_hints
@@ -445,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/AdminApp/" class="md-nav__link">
+      <a href="../AdminApp/" class="md-nav__link">
         AdminApp
       </a>
     </li>
@@ -459,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/AdminConfig/" class="md-nav__link">
+      <a href="../AdminConfig/" class="md-nav__link">
         AdminConfig
       </a>
     </li>
@@ -473,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/AdminControl/" class="md-nav__link">
+      <a href="../AdminControl/" class="md-nav__link">
         AdminControl
       </a>
     </li>
@@ -485,11 +443,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/AdminTask/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AdminTask
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         AdminTask
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.AdminTask" class="md-nav__link">
+    wsadmin_type_hints.AdminTask
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -501,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/Help/" class="md-nav__link">
+      <a href="../Help/" class="md-nav__link">
         Help
       </a>
     </li>
@@ -515,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/wsadmin_types/" class="md-nav__link">
+      <a href="../wsadmin_types/" class="md-nav__link">
         wsadmin_types
       </a>
     </li>
@@ -544,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="resources/" class="md-nav__link">
+      <a href="../../../resources/" class="md-nav__link">
         Useful resources
       </a>
     </li>
@@ -570,65 +565,50 @@
 
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Anchor link to this section for reference">&para;</a></h1>
-<p>This project aims to provide a <strong>better developer experience</strong> while developing <code>wsadmin</code> scripts for IBM® Websphere Application Server.</p>
-<p>It does so by providing:</p>
-<ul>
-<li><strong>Autocompletion</strong> through the intellisense.</li>
-<li><strong>Type hints</strong> (function parameters and function return types)</li>
-</ul>
-<p>This leads to lots of advantages to the developer, such as:</p>
-<ul>
-<li><strong>Faster development</strong>, since you don't need to leave the editor to know what was the name of some method.</li>
-<li><strong>Less errors</strong>, since you don't need to manually re-type the method names and an error will show up if you mistype the methods.</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code>wsadmin</code> scripting tool only supports <strong>Jython up to 2.7</strong> (some still have Jython 2.1!), so the following requirements must still be satisfied:</p>
-<ul>
-<li>you MUST use <strong>Python 2 syntax</strong> (check the <em>Jython</em> version to know which one you'll need to target)</li>
-<li>some packages available on development environments might not be available or might have some differences.</li>
-</ul>
-<p>Make sure to check that your script matches your workplace/environment requirements before submitting it.
-This package DOES NOT in any way prevent you from writing bugged code, or could even contain <strong>old modules</strong> not used anymore in the official documentation (since it was originally written for my workplace production environment using <em>Websphere Application Server 8.5.5/9.0</em> and <em>Jython 2.1</em>).</p>
-<p><strong>Always check that your environment requirements/versions are the same as this library</strong>. </p>
+  <h1>AdminTask</h1>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="wsadmin_type_hints.AdminTask"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Use the <code>AdminTask</code> object to run administrative commands with the <code>wsadmin</code> tool.</p>
+<p>Administrative commands are loaded dynamically when you start the <code>wsadmin</code> tool. 
+The administrative commands that are available for you to use, and what you can do 
+with them, depends on the edition of the product that you use.</p>
+<p>For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
 </div>
-<h2 id="gallery">Gallery<a class="headerlink" href="#gallery" title="Anchor link to this section for reference">&para;</a></h2>
-<p>Here's some screenshots showing the features of this package. The IDE I'm using here is <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
-<figure>
-<p><img alt="Image title" src="images/60817fad50b7491f2d03e29e93568bfb74dd0ce265319675f2fb83cad67a46fa.png" width="600" />
-  </p>
-<figcaption>Autocompletion for the <code>AdminControl</code> command.</figcaption>
-</figure>
-<figure>
-<p><img alt="Image title" src="images/e84d4763b6a93d5950af4b85e9b43d04f8fda9b35a9c4d16ed0f52084dd27195.png" width="600" />
-  </p>
-<figcaption>Type hint for function parameters as well as return types.</figcaption>
-</figure>
-<figure>
-<p><img alt="Image title" src="images/effc6528764e161a1dcd38fd64001001d6b528531ea5638f7e4232075f990949.png" width="600" />
-  </p>
-<figcaption>An error will show up if you mistype the method.</figcaption>
-</figure>
-<figure>
-<p><img alt="Image title" src="images/81b0b5b198a29fd8c37c63ef095f8ce3972b9d4526dc5e836e94a5b19cb9757e.png" width="600" />
-  </p>
-<figcaption>Autocompletion based on the <code>AdminConfig.attributes(...)</code> return type (<code>str</code>).</figcaption>
-</figure>
-<h2 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Anchor link to this section for reference">&para;</a></h2>
-<p>This is an unofficial package created for speeding up the development process and is not in any way affiliated with IBM®. All trademarks and registered trademarks are the property of their respective company owners.</p>
-<p>The code does not include any implementation detail, and includes only the informations (such as parameter numbers, types and descriptions) publicly available on the official Websphere Application Server® documentation.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-11T00:29:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-14T10:03:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-14</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-09T23:05:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-09</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-14T10:03:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-14</span>
       
     
   </small>
@@ -697,14 +677,14 @@ This package DOES NOT in any way prevent you from writing bugged code, or could 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.tabs", "toc.follow", "toc.integrate", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.tabs", "toc.follow", "toc.integrate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
       
-        <script src="js/timeago.min.js"></script>
+        <script src="../../../js/timeago.min.js"></script>
       
-        <script src="js/timeago_mkdocs_material.js"></script>
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>
