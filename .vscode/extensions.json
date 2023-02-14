@@ -1,7 +1,8 @@
 {
 	"recommendations": [
-		"njpwerner.autodocstring",
-		"aaron-bond.better-comments",
-		"njqdev.vscode-python-typehint"
-	]
+        "njpwerner.autodocstring",
+        "aaron-bond.better-comments",
+        "njqdev.vscode-python-typehint",
+        "samuelcolvin.jinjahtml"
+    ]
 }

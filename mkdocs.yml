@@ -49,7 +49,19 @@ theme:
 
 plugins:
   # Automatic code reference
-  - mkdocstrings
+  - mkdocstrings:
+      custom_templates: docs/templates/
+      handlers:
+        python:
+          paths: [src] # Recommended [by the docs](https://mkdocstrings.github.io/python/usage/#finding-modules:~:text=Except%20for%20case,on%20their%20filesystem.)
+          
+          # For more options: https://mkdocstrings.github.io/python/usage/#globallocal-options
+          options:
+            show_root_toc_entry: false
+            filters: null
+            merge_init_into_class: true
+            show_if_no_docstring: true
+
   - gen-files:
       scripts:
       - docs/scripts/generate_api_reference.py
