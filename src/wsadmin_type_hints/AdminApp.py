@@ -1,12 +1,13 @@
 """
-Use the `AdminApp` object to install, modify, and administer applications.
+Use the `AdminApp` object to **install**, **modify**, and **administer applications**.
 
 The `AdminApp` object interacts with the WebSphere® Application Server management 
-and configuration services to make application inquiries and changes. 
+and configuration services to make application inquiries and changes.
+
 This interaction includes installing and uninstalling applications, listing modules, 
 exporting, and so on.
 
-For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminapp-object-using-wsadmin
+For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminapp-object-using-wsadmin).
 """
 def deleteUserAndGroupEntries(): # undocumented
     pass

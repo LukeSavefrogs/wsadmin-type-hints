@@ -1,5 +1,6 @@
 """
-Include `wsadmin.sh` Jython language objects:
+`import` this module to gain intellisense on the 5 main `wsadmin.sh` Jython language objects:
+
 - `AdminControl`
 - `AdminConfig`
 - `AdminApp`
@@ -12,10 +13,12 @@ Use it like this:
 try:
     (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-    from wsadmin_language import *
+    from wsadmin_type_hints import *
 else:
     print("AdminControl is already defined, no shim needed")
 ```
+
+This way it will be imported only in your development environment.
 """
 
 

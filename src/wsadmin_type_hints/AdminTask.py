@@ -5,7 +5,7 @@ Administrative commands are loaded dynamically when you start the `wsadmin` tool
 The administrative commands that are available for you to use, and what you can do 
 with them, depends on the edition of the product that you use.
 
-For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin
+For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin).
 """
 def createTCPEndPoint(): # undocumented
     pass

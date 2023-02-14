@@ -3,7 +3,7 @@ Use the `AdminConfig` object to invoke configuration commands and to create or
 change elements of the WebSphere® Application Server configuration, for example, 
 creating a data source.
 
-For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin
+For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin).
 """
 from typing import Any
 from .wsadmin_types import _OpaqueDigestObject

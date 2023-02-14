@@ -5,7 +5,7 @@ parameters that are specified by Java Management Extensions (JMX), or by using s
 In addition to operational commands, the AdminControl object supports some utility commands for tracing, 
 reconnecting with a server, and converting data types.
 
-For more info go to https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admincontrol-object-using-wsadmin
+For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admincontrol-object-using-wsadmin).
 """
 
 def completeObjectName(object_name, template=""):
@@ -159,7 +159,7 @@ def makeObjectName(): # undocumented
 def queryMBeans(): # undocumented
     """ """
 
-def queryNames(): # undocumented
+def queryNames() -> str: # undocumented
     """ """
 
 def queryNames_jmx(): # undocumented
