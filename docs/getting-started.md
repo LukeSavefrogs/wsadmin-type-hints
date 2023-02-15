@@ -37,11 +37,12 @@ try:
 	(AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
 	# wsadmin objects are not defined, so this is the development environment.
-	from wsadmin_type_hints import *
+	from wsadmin_type_hints import *   # type: ignore
 else:
 	print("Production environment, i'm not needed here 😃")
 ```
 	This block could even be left as-is in the code deployed on the production server (maybe leaving out the emoji before uploading 😇), since it won't ever reach the import (and even then the script would simply fail because of the `wsadmin-type-hints` package not being there).
+	The `# type: ignore` is used to ignore the **Pylance** warning `Wildcard import from a library not allowed`
 
 2. Use the `wsadmin` objects like always: 
 ```python

@@ -75,7 +75,7 @@ plugins:
 
             # Additional options:
             show_source: false
-            show_bases: false
+            show_bases: true
 
   - gen-files:
       scripts:

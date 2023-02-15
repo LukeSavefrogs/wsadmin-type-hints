@@ -1,6 +1,5 @@
 """
-You can use the Jython or Jacl scripting languages to find general help and dynamic online
-information about the currently running MBeans with the `wsadmin` tool. 
+You can use the `Help` command to find general help and dynamic online information. 
 
 Use the `Help` object as an aid in writing and running scripts with the `AdminControl` object.
 
@@ -15,7 +14,6 @@ def AdminApp() -> str:
     
     Returns:
         str: The list of available methods for the `AdminApp` object.
-
 
     Example:
         ```pycon
@@ -51,7 +49,7 @@ def AdminConfig() -> str:
     pass
 
 def AdminControl() -> str:
-    """Use the `AdminControl` command to view a summary of the help commands and ways to invoke an administrative command.
+    """Use the `AdminControl` command to view a summary of each available method for the `AdminControl` object.
 
     Returns:
         str: The list of available methods for the `AdminControl` command.
@@ -66,7 +64,7 @@ def AdminControl() -> str:
     pass
 
 def AdminTask() -> str:
-    """Use the `AdminTask` command to view a summary of help commands and ways to invoke an administrative command with the AdminTask object.
+    """Use the `AdminTask` command to view a summary of each available method for the `AdminTask` object.
 
     Returns:
         str: The list of available methods for the `AdminTask` command.
@@ -85,8 +83,9 @@ def AdminTask() -> str:
     """
     pass
 
-def all(mbean_name: str) -> str: # undocumented
-    """Use the `all` command to view a summary of the information that the MBean defines by name.
+def all(mbean_name: str) -> str:
+    """Use the `all` command to view a summary of all the information associated with the MBean 
+        identified by `mbean_name`.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
@@ -116,14 +115,14 @@ def all(mbean_name: str) -> str: # undocumented
     pass
 
 
-def attributes(mbean_name: str, attribute_name: str = None) -> str: # undocumented
-    """Use the `attributes` command to view a summary of all the attributes that the MBean defines by name. 
+def attributes(mbean_name: str, attribute_name: str = None) -> str:
+    """Use the `attributes` command to view a summary of all the attributes of the MBean identified by `mbean_name`. 
     
-    - If you provide the `mbean_name` parameter, the command displays information about the attributes, operations, 
+    - If the `attribute_name` parameter is _omitted_, the command displays information about all the attributes, operations, 
         constructors, description, notifications, and classname of the specified MBean. 
     
-    - If you specify the `mbean_name` and `attribute_name`, the command displays information about the 
-        specified attribute for the specified MBean.
+    - If the `attribute_name` parameter is _set_, the command will display only the information about
+        the specified attribute.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
@@ -154,8 +153,9 @@ def attributes(mbean_name: str, attribute_name: str = None) -> str: # undocument
     """
     pass
 
-def classname(mbean_name: str) -> str: # undocumented
-    """Use the `classname` command to view a class name that the MBean defines by name.
+def classname(mbean_name: str) -> str:
+    """Use the `classname` command to get the class name associated with the MBean 
+        identified by `mbean_name`.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
@@ -172,8 +172,9 @@ def classname(mbean_name: str) -> str: # undocumented
     """
     pass
 
-def constructors(mbean_name: str) -> str: # undocumented
-    """Use the `constructors` command to view a summary of all of the constructors that the MBean defines by name.
+def constructors(mbean_name: str) -> str:
+    """Use the `constructors` command to get all the constructors associated with the MBean 
+        identified by `mbean_name`.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
@@ -190,8 +191,8 @@ def constructors(mbean_name: str) -> str: # undocumented
     """
     pass
 
-def description(mbean_name: str) -> str: # undocumented
-    """Use the `description` command to view a description that the MBean defines by name.
+def description(mbean_name: str) -> str:
+    """Use the `description` command to view a description of the MBean identified by `mbean_name`.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
@@ -208,7 +209,7 @@ def description(mbean_name: str) -> str: # undocumented
     """
     pass
 
-def help() -> str: # undocumented
+def help() -> str:
     """Use the `help` command to view a summary of all the available methods for the `Help` object.
 
     Returns:
@@ -223,7 +224,7 @@ def help() -> str: # undocumented
     """
     pass
 
-def message(message_id: str) -> str: # undocumented
+def message(message_id: str) -> str:
     """Use the `message` command to view information for a message ID.
 
     Args:
@@ -238,17 +239,21 @@ def message(message_id: str) -> str: # undocumented
             Explanation: The container was unable to passivate an enterprise bean due to exception {2} 
             User action: Take action based upon message in exception {2}
         ```
+    
+    Question: More testing needed
+        I **couldn't** properly **test this command** in my test environment since it kept raising an Exception.
     """
     pass
 
-def notifications(mbean_name: str) -> str: # undocumented
-    """Use the `notifications` command to view a summary of all the notifications that the MBean defines by name.
+def notifications(mbean_name: str) -> str:
+    """Use the `notifications` command to view a summary of all the notifications associated with the MBean 
+        identified by `mbean_name`.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
 
     Returns:
-        str: All the notifications that the MBean defines by name.
+        str: A **multiline** string containing all the MBean notifications.
     
     Example:
         ```pycon
@@ -266,15 +271,52 @@ def notifications(mbean_name: str) -> str: # undocumented
     """
     pass
 
-def operations(mbean_name: str, operation_name: str = None): # undocumented
-    """Use the operations command with the MBean name parameter to view a summary of all the operations that the 
-        MBean defines by name. 
+def operations(mbean_name: str, operation_name: str = None):
+    """Use the `operations` command to view a summary of all the operations associated with the MBean 
+        identified by `mbean_name`.
         
-    - Specify a value for the `mbean_name` and `operation_name` to display the signature of the operation
-        for the MBean that is defined by name.
+    - If the `operation_name` parameter is set, it will be displayed only the signature of the 
+        requested operation.
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
         operation_name (str, optional): The operation of interest. Defaults to None.
+    
+    Example:
+        ```pycon
+        >>> mbean = AdminControl.queryNames('type=Server,*').splitlines()[0]
+        >>> print(Help.operations(mbean))
+            Operation
+            int getRingBufferSize()
+            void setRingBufferSize(int)
+            java.lang.String getTraceSpecification()
+            void setTraceState(java.lang.String)
+            void appendTraceString(java.lang.String)
+            void dumpRingBuffer(java.lang.String)
+            void clearRingBuffer()
+            [Ljava.lang.String; listAllRegisteredComponents()
+            [Ljava.lang.String; listAllRegisteredGroups()
+            [Ljava.lang.String; listComponentsInGroup(java.lang.String)
+            [Lcom.ibm.websphere.ras.TraceElementState; getTracedComponents()
+            [Lcom.ibm.websphere.ras.TraceElementState; getTracedGroups()
+            java.lang.String getTraceSpecification(java.lang.String)
+            void processDumpString(java.lang.String)
+            void checkTraceString(java.lang.String)
+            void setTraceOutputToFile(java.lang.String, int, int, java.lang.String)
+            void setTraceOutputToRingBuffer(int, java.lang.String)
+            java.lang.String rolloverLogFileImmediate(java.lang.String, java.lang.String)
+
+        >>> print(Help.operations(mbean, 'processDumpString'))
+            void processDumpString(string)
+
+            Description: Write the contents of the Ras 
+            services ring buffer to the specified file.
+
+            Parameters:
+
+            Type         string
+            Name         dumpString
+            Description  A String in the specified format to process or null.
+        ```
     """
     pass

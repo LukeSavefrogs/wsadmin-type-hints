@@ -13,7 +13,7 @@ Use it like this:
 try:
     (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-    from wsadmin_type_hints import *
+    from wsadmin_type_hints import *   # type: ignore
 else:
     print("AdminControl is already defined, no shim needed")
 ```
