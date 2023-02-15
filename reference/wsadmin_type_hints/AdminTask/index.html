@@ -675,8 +675,8 @@
   <div class="doc doc-contents first">
   
       <p>Use the <code>AdminTask</code> object to run administrative commands with the <code>wsadmin</code> tool.</p>
-<p>Administrative commands are loaded dynamically when you start the <code>wsadmin</code> tool. 
-The administrative commands that are available for you to use, and what you can do 
+<p>Administrative commands are loaded dynamically when you start the <code>wsadmin</code> tool. </p>
+<p>The administrative commands that are available for you to use, and what you can do 
 with them, depends on the edition of the product that you use.</p>
 <p>For more info see the <a href="https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin">official documentation</a>.</p>
 
@@ -691,30 +691,98 @@ with them, depends on the edition of the product that you use.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
 
 <h2 id="wsadmin_type_hints.AdminTask.createTCPEndPoint" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">createTCPEndPoint</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">createTCPEndPoint</span><span class="p">(</span><span class="n">target_object</span><span class="p">,</span> <span class="n">endpoint_configuration</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminTask.createTCPEndPoint" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Create a new endpoint that you can associate with a TCP inbound channel.</p>
+<ul>
+<li>If <code>target_object</code> is set to a string with value <code>"-interactive"</code>, the endpoint will 
+    be created in <em>interactive mode</em>.</li>
+</ul>
 
-      <details class="quote">
-        <summary>Source code in <code>wsadmin_type_hints/AdminTask.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="k">def</span> <span class="nf">createTCPEndPoint</span><span class="p">():</span> <span class="c1"># undocumented</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-      </details>
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>target_object</code></td>
+          <td class="doc-param-details">
+            <p>Parent instance of the TransportChannelService that contains the TCPInboundChannel. If <code>target_object</code> is set to a string with value <code>"-interactive"</code>, the endpoint will be created in <em>interactive mode</em>.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" href="../wsadmin_types/#wsadmin_type_hints.wsadmin_types.ConfigurationObjectName">ConfigurationObjectName</a> | str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>endpoint_configuration</code></td>
+          <td class="doc-param-details">
+            <p>String containing the <code>-name</code>, <code>-host</code> and <code>-port</code> parameters (all <strong>required</strong>) with their values set.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str | list</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>ConfigurationObjectName</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The object name of the endpoint that was created.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" href="../wsadmin_types/#wsadmin_type_hints.wsadmin_types.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TransportChannelService_1&#39;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go"># As a string...</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminTask</span><span class="o">.</span><span class="n">createTCPEndPoint</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s1">&#39;[-name Sample_End_Pt_Name -host mybuild.location.ibm.com -port 8978]&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go"># ... or as a list...</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminTask</span><span class="o">.</span><span class="n">createTCPEndPoint</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;-name&#39;</span><span class="p">,</span> <span class="s1">&#39;Sample_End_Pt_Name&#39;</span><span class="p">,</span> <span class="s1">&#39;-host&#39;</span><span class="p">,</span> <span class="s1">&#39;mybuild.location.ibm.com&#39;</span><span class="p">,</span> <span class="s1">&#39;-port&#39;</span><span class="p">,</span> <span class="s1">&#39;8978&#39;</span><span class="p">])</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
-
 <div class="doc doc-object doc-function">
 
 
@@ -727,17 +795,9 @@ with them, depends on the edition of the product that you use.</p>
 
   <div class="doc doc-contents ">
 
-      <details class="quote">
-        <summary>Source code in <code>wsadmin_type_hints/AdminTask.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">def</span> <span class="nf">getTCPEndPoint</span><span class="p">():</span> <span class="c1"># undocumented</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
-
 <div class="doc doc-object doc-function">
 
 
@@ -750,17 +810,9 @@ with them, depends on the edition of the product that you use.</p>
 
   <div class="doc doc-contents ">
 
-      <details class="quote">
-        <summary>Source code in <code>wsadmin_type_hints/AdminTask.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="k">def</span> <span class="nf">help</span><span class="p">():</span> <span class="c1"># undocumented</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
-
 <div class="doc doc-object doc-function">
 
 
@@ -773,17 +825,9 @@ with them, depends on the edition of the product that you use.</p>
 
   <div class="doc doc-contents ">
 
-      <details class="quote">
-        <summary>Source code in <code>wsadmin_type_hints/AdminTask.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">def</span> <span class="nf">listTCPEndPoints</span><span class="p">():</span> <span class="c1"># undocumented</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
-
 <div class="doc doc-object doc-function">
 
 
@@ -796,17 +840,9 @@ with them, depends on the edition of the product that you use.</p>
 
   <div class="doc doc-contents ">
 
-      <details class="quote">
-        <summary>Source code in <code>wsadmin_type_hints/AdminTask.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">def</span> <span class="nf">listTCPThreadPools</span><span class="p">():</span> <span class="c1"># undocumented</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
-
 <div class="doc doc-object doc-function">
 
 
@@ -819,13 +855,6 @@ with them, depends on the edition of the product that you use.</p>
 
   <div class="doc doc-contents ">
 
-      <details class="quote">
-        <summary>Source code in <code>wsadmin_type_hints/AdminTask.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="k">def</span> <span class="nf">updateAppOnCluster</span><span class="p">():</span> <span class="c1"># undocumented</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-      </details>
   </div>
 
 </div>
@@ -843,11 +872,11 @@ with them, depends on the edition of the product that you use.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-14T19:35:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-15T14:03:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-15</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-14T19:35:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-14</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-15T14:03:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-15</span>
       
     
   </small>

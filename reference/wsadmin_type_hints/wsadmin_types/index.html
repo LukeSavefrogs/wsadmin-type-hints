@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -475,9 +480,59 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          wsadmin_types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         wsadmin_types
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" class="md-nav__link">
+    ConfigurationObjectName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types.ContainmentPath" class="md-nav__link">
+    ContainmentPath
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types.RunningObjectName" class="md-nav__link">
+    RunningObjectName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types._OpaqueDigestObject" class="md-nav__link">
+    _OpaqueDigestObject
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -530,6 +585,42 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" class="md-nav__link">
+    ConfigurationObjectName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types.ContainmentPath" class="md-nav__link">
+    ContainmentPath
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types.RunningObjectName" class="md-nav__link">
+    RunningObjectName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.wsadmin_types._OpaqueDigestObject" class="md-nav__link">
+    _OpaqueDigestObject
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -547,6 +638,8 @@
 
 
 
+  <h1>wsadmin_types</h1>
+
 <div class="doc doc-object doc-module">
 
 
@@ -555,6 +648,15 @@
   
       <p>Module used internally by <code>wsadmin-type-hints</code> to define appropriate return types for some <code>wsadmin</code> methods.</p>
 
+<details class="warning">
+  <summary>Warning</summary>
+  <p>These are NOT real classes, so they can't be used as-is.</p>
+<p>The <strong>actual return type</strong> is the one they inherit from (<em>for example <code>RunningObjectName</code> inherits from <code>str</code>, 
+    so the actual return type will be <code>str</code></em>).</p>
+<p>This structure is needed to make the code more <strong>pythonic</strong> and <strong>readable</strong>.
+It also makes it clear just by glancing to the method signature <strong>which</strong> value must be passed,
+    instead of remembering which <code>wsadmin</code> object method returns the correct Object name.</p>
+</details>
   
 
   <div class="doc doc-children">
@@ -565,6 +667,139 @@
 
 
 
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" class="doc doc-heading">
+        <code>ConfigurationObjectName</code>
+
+
+<a href="#wsadmin_type_hints.wsadmin_types.ConfigurationObjectName" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>str</code></p>
+
+  
+      <p>Object name representing an entry in the configuration.</p>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)&quot;
+</code></pre></div>
+</details>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wsadmin_type_hints.wsadmin_types.ContainmentPath" class="doc doc-heading">
+        <code>ContainmentPath</code>
+
+
+<a href="#wsadmin_type_hints.wsadmin_types.ContainmentPath" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>str</code></p>
+
+  
+      <p>Represents the path of a resource in the configuration.</p>
+<p>The containment path must be a path that contains the correct hierarchical order. 
+For example, if you specify /Server:server1/Node:node/ as the containment path, 
+    you do not receive a valid configuration ID because Node is a parent of Server and comes before Server in the hierarchy.</p>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;/Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/&quot;
+</code></pre></div>
+</details>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wsadmin_type_hints.wsadmin_types.RunningObjectName" class="doc doc-heading">
+        <code>RunningObjectName</code>
+
+
+<a href="#wsadmin_type_hints.wsadmin_types.RunningObjectName" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>str</code></p>
+
+  
+      <p>This <code>ObjectName</code> uniquely identifies running objects and is in the 
+    form <code>[domainName]:property=value[,property=value]*</code>.</p>
+<p>The <code>RunningObjectName</code> class consists of the following elements:</p>
+<ul>
+<li>The domain name <code>"WebSphere"</code>.</li>
+<li>Several key properties, for example:<ul>
+<li><code>type</code> indicates the type of object that is accessible through the MBean, for example, ApplicationServer, and EJBContainer.</li>
+<li><code>name</code> represents the display name of the particular object, for example, MyServer.</li>
+<li><code>node</code> represents the name of the node on which the object runs.</li>
+<li><code>process</code> represents the name of the server process in which the object runs.</li>
+<li><code>mbeanIdentifier</code> correlates the MBean instance with corresponding configuration data.</li>
+</ul>
+</li>
+</ul>
+<p>You can use the asterisk (*) at the end as a wildcard character, so that you do not have to specify the entire set of key properties.</p>
+<p>For more info see the <a href="https://www.ibm.com/docs/en/was-nd/8.5.5?topic=administration-objectname-attribute-attributelist-classes-using-wsadmin-scripting">official documentation</a>.</p>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;WebSphere:name=&quot;My Server&quot;,type=ApplicationServer,node=n1,*&quot;
+</code></pre></div>
+</details>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wsadmin_type_hints.wsadmin_types._OpaqueDigestObject" class="doc doc-heading">
+        <code>_OpaqueDigestObject</code>
+
+
+<a href="#wsadmin_type_hints.wsadmin_types._OpaqueDigestObject" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>object</code></p>
+
+  
+      <p>Opaque "digest" object returned by a call to the <code>AdminConfig.extract()</code> method.</p>
+
+<details class="question">
+  <summary>More testing needed</summary>
+  <p>I <strong>didn't test this command</strong> in my test environment but i will need to, in order to better understand it.</p>
+</details>
+
+
+  </div>
+
+</div>
 
 
 
@@ -580,11 +815,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-14T19:35:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-15T14:03:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-15</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-14T19:35:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-14</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-15T14:03:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-15</span>
       
     
   </small>

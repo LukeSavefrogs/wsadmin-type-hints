@@ -651,11 +651,12 @@ Because of this, the functions <em>do not contain actual code</em> and their bod
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="p">(</span><span class="n">AdminControl</span><span class="p">,</span> <span class="n">AdminConfig</span><span class="p">,</span> <span class="n">AdminApp</span><span class="p">,</span> <span class="n">AdminTask</span><span class="p">,</span> <span class="n">Help</span><span class="p">)</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="c1"># wsadmin objects are not defined, so this is the development environment.</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="kn">from</span> <span class="nn">wsadmin_type_hints</span> <span class="kn">import</span> <span class="o">*</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="kn">from</span> <span class="nn">wsadmin_type_hints</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c1"># type: ignore</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Production environment, i&#39;m not needed here 😃&quot;</span><span class="p">)</span>
 </code></pre></div>
-    This block could even be left as-is in the code deployed on the production server (maybe leaving out the emoji before uploading 😇), since it won't ever reach the import (and even then the script would simply fail because of the <code>wsadmin-type-hints</code> package not being there).</p>
+    This block could even be left as-is in the code deployed on the production server (maybe leaving out the emoji before uploading 😇), since it won't ever reach the import (and even then the script would simply fail because of the <code>wsadmin-type-hints</code> package not being there).
+    The <code># type: ignore</code> is used to ignore the <strong>Pylance</strong> warning <code>Wildcard import from a library not allowed</code></p>
 </li>
 <li>
 <p>Use the <code>wsadmin</code> objects like always: 
@@ -670,7 +671,7 @@ Because of this, the functions <em>do not contain actual code</em> and their bod
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-11T00:29:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-15T14:02:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-15</span>
       
         <br>
         Created:
