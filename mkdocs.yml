@@ -57,9 +57,10 @@ plugins:
           
           # For more options: https://mkdocstrings.github.io/python/usage/#globallocal-options
           options:
+            show_root_heading: false
             show_root_toc_entry: false
-            # filters: null
-            merge_init_into_class: true
+            filters: ["!^__all__$"]
+            # merge_init_into_class: true
             show_if_no_docstring: true
 
   - gen-files:

@@ -44,8 +44,13 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poe.tasks.docs]
+env = { SERVER_ADDRESS = "127.0.0.1:8000" }
 help = "Start the local server to test the documentation."
-cmd  = "mkdocs serve"
+sequence = [
+    { shell = "echo $SERVER_ADDRESS" },
+    { script = "webbrowser:open('http://' + environ['SERVER_ADDRESS'] + '/')" },
+    { cmd = "mkdocs serve --watch-theme --dev-addr $SERVER_ADDRESS" },
+]
 
 
 [tool.mypy]
