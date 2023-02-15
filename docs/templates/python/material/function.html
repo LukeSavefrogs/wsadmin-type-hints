@@ -1,6 +1,5 @@
 {# {{ log.critical("A CRITICAL message.") }} #}
 {% set module_name = function.parent.filepath.stem %}
-{{ log.info("Module: " + module_name) }}
 
 <div class="doc doc-object doc-function">
 {% with html_id = function.path %}
