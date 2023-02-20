@@ -20,6 +20,7 @@ keywords = ["wsadmin", "ibm", "stubs", "types", "jython"]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<=3.11"
+mkdocs-simple-hooks = "^0.1.5"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -44,7 +45,7 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poe.tasks.docs]
-env = { SERVER_ADDRESS = "127.0.0.1:8000" }
+env = { DEVELOPMENT = "true", SERVER_ADDRESS = "127.0.0.1:8000" }
 help = "Start the local server to test the documentation."
 sequence = [
     { shell = "echo $SERVER_ADDRESS" },
