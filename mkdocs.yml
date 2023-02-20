@@ -31,6 +31,10 @@ theme:
     - toc.follow
     - content.code.copy
     - content.tabs.link
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.share
 
   palette: 
     # Palette toggle for light mode
@@ -48,6 +52,10 @@ theme:
         name: Switch to light mode
 
 plugins:
+  # - mkdocs-simple-hooks:
+  #     hooks:
+  #       on_env: "docs.scripts.hooks:on_env"
+
   # Automatic code reference
   - mkdocstrings:
       custom_templates: docs/templates/
@@ -62,7 +70,7 @@ plugins:
             show_root_toc_entry: false
 
             # Members options:
-            filters: ["!^__all__$"]
+            # filters: ["!^__all__$"]
 
             # Docstrings options:
             docstring_style: "google"
@@ -71,11 +79,14 @@ plugins:
             # merge_init_into_class: true
 
             # Signatures/annotations options:
-            show_signature: true
+            show_signature: false
+            # separate_signature: true
 
             # Additional options:
             show_source: false
             show_bases: true
+
+            show_submodules: true
 
   - gen-files:
       scripts:
@@ -87,10 +98,9 @@ plugins:
   # Other plugins
   - search:
       lang: en
-      features:
-        - search.highlight
 
   - git-revision-date-localized:
+      enabled: !ENV [DEVELOPMENT, True]
       enable_creation_date: true
       fallback_to_build_date: true
       type: timeago
