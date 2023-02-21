@@ -83,7 +83,7 @@ def AdminTask() -> str:
     """
     pass
 
-def all(mbean_name: str) -> str:
+def all(mbean_name: str, /) -> str:
     """Use the `all` command to view a summary of all the information associated with the MBean 
         identified by `mbean_name`.
 
@@ -115,7 +115,7 @@ def all(mbean_name: str) -> str:
     pass
 
 
-def attributes(mbean_name: str, attribute_name: str = None) -> str:
+def attributes(mbean_name: str, attribute_name: Optional[str] = None, /) -> str:
     """Use the `attributes` command to view a summary of all the attributes of the MBean identified by `mbean_name`. 
     
     - If the `attribute_name` parameter is _omitted_, the command displays information about all the attributes, operations, 
@@ -126,7 +126,7 @@ def attributes(mbean_name: str, attribute_name: str = None) -> str:
 
     Args:
         mbean_name (str): The object name which identifies the desired MBean.
-        attribute_name (str): The attribute of interest. Defaults to None.
+        attribute_name (str, optional): The attribute of interest. Defaults to None.
 
     Returns:
         str: Summary of all the attributes of the specified MBean
@@ -153,7 +153,7 @@ def attributes(mbean_name: str, attribute_name: str = None) -> str:
     """
     pass
 
-def classname(mbean_name: str) -> str:
+def classname(mbean_name: str, /) -> str:
     """Use the `classname` command to get the class name associated with the MBean 
         identified by `mbean_name`.
 
@@ -172,7 +172,7 @@ def classname(mbean_name: str) -> str:
     """
     pass
 
-def constructors(mbean_name: str) -> str:
+def constructors(mbean_name: str, /) -> str:
     """Use the `constructors` command to get all the constructors associated with the MBean 
         identified by `mbean_name`.
 
@@ -191,7 +191,7 @@ def constructors(mbean_name: str) -> str:
     """
     pass
 
-def description(mbean_name: str) -> str:
+def description(mbean_name: str, /) -> str:
     """Use the `description` command to view a description of the MBean identified by `mbean_name`.
 
     Args:
@@ -224,7 +224,7 @@ def help() -> str:
     """
     pass
 
-def message(message_id: str) -> str:
+def message(message_id: str, /) -> str:
     """Use the `message` command to view information for a message ID.
 
     Args:
@@ -245,7 +245,7 @@ def message(message_id: str) -> str:
     """
     pass
 
-def notifications(mbean_name: str) -> str:
+def notifications(mbean_name: str, /) -> str:
     """Use the `notifications` command to view a summary of all the notifications associated with the MBean 
         identified by `mbean_name`.
 
@@ -271,7 +271,7 @@ def notifications(mbean_name: str) -> str:
     """
     pass
 
-def operations(mbean_name: str, operation_name: str = None):
+def operations(mbean_name: str, operation_name: Optional[str] = None, /):
     """Use the `operations` command to view a summary of all the operations associated with the MBean 
         identified by `mbean_name`.
         
