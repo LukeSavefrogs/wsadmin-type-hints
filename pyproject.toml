@@ -39,6 +39,10 @@ mkdocs-literate-nav = "^0.6.0"
 mkdocs-gen-files = "^0.4.0"
 
 
+
+[tool.poetry.group.linting.dependencies]
+mypy = "^1.0.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -53,13 +57,20 @@ sequence = [
     { cmd = "mkdocs serve --watch-theme --dev-addr $SERVER_ADDRESS" },
 ]
 
+[tool.poe.tasks.lint]
+help = "Initiate the linting process"
+sequence = [
+    { cmd = "mypy --version" },
+    { shell = "mypy --ignore-missing-imports --no-warn-no-return --disable-error-code 'no-untyped-def' --disable-error-code 'empty-body' src" },
+]
+
 
 [tool.mypy]
 # strict = true
 warn_no_return = false
 warn_return_any = false
-disallow_untyped_defs = false
+allow_untyped_defs = true
 warn_incomplete_stub = false
-ignore_missing_imports = true
+# ignore_missing_imports = true
 
 # disable_error_code = 'no-untyped-def,empty-body'
