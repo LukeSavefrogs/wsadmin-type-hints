@@ -1,4 +1,4 @@
-from typing import Generic, TypeVar
+from typing import Generic, Protocol, TypeVar
 
 class OpaqueDigestObject(object):
     """
@@ -7,11 +7,11 @@ class OpaqueDigestObject(object):
     Question: More testing needed
         I **didn't test this command** in my test environment but i will need to, in order to better understand it.
     """
-    pass
+    ...
 
 T = TypeVar('T', bound=str)
 
-class MultilineList(Generic[T]):
+class MultilineList(str, Generic[T]):
     """ A `wsadmin` response which is composed of a multiline string representing a list of values. 
 
         To get the original value use the `{str}.splitlines()` method.
@@ -51,3 +51,4 @@ class MultilineList(Generic[T]):
             >>> result: MultilineList[RunningObjectName] = ""
             ```
     """
+    ...

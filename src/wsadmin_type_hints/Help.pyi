@@ -30,7 +30,7 @@ def AdminApp() -> str:
             [...]
         ```
     """
-    pass
+    ...
 
 
 def AdminConfig() -> str:
@@ -46,7 +46,7 @@ def AdminConfig() -> str:
             [...]
         ```
     """
-    pass
+    ...
 
 def AdminControl() -> str:
     """Use the `AdminControl` command to view a summary of each available method for the `AdminControl` object.
@@ -61,7 +61,7 @@ def AdminControl() -> str:
             [...]
         ```
     """
-    pass
+    ...
 
 def AdminTask() -> str:
     """Use the `AdminTask` command to view a summary of each available method for the `AdminTask` object.
@@ -81,7 +81,7 @@ def AdminTask() -> str:
             [...]
         ```
     """
-    pass
+    ...
 
 def all(mbean_name: str, /) -> str:
     """Use the `all` command to view a summary of all the information associated with the MBean 
@@ -112,7 +112,7 @@ def all(mbean_name: str, /) -> str:
             [...]
         ```
     """
-    pass
+    ...
 
 
 def attributes(mbean_name: str, attribute_name: Optional[str] = None, /) -> str:
@@ -151,7 +151,7 @@ def attributes(mbean_name: str, attribute_name: Optional[str] = None, /) -> str:
             Description: Process id for the server process.
         ```
     """
-    pass
+    ...
 
 def classname(mbean_name: str, /) -> str:
     """Use the `classname` command to get the class name associated with the MBean 
@@ -170,7 +170,7 @@ def classname(mbean_name: str, /) -> str:
             javax.management.modelmbean.RequiredModelMBean
         ```
     """
-    pass
+    ...
 
 def constructors(mbean_name: str, /) -> str:
     """Use the `constructors` command to get all the constructors associated with the MBean 
@@ -189,7 +189,7 @@ def constructors(mbean_name: str, /) -> str:
             Constructors
         ```
     """
-    pass
+    ...
 
 def description(mbean_name: str, /) -> str:
     """Use the `description` command to view a description of the MBean identified by `mbean_name`.
@@ -207,7 +207,7 @@ def description(mbean_name: str, /) -> str:
             Managed object for overall server process.
         ```
     """
-    pass
+    ...
 
 def help() -> str:
     """Use the `help` command to view a summary of all the available methods for the `Help` object.
@@ -222,7 +222,7 @@ def help() -> str:
             [...]
         ```
     """
-    pass
+    ...
 
 def message(message_id: str, /) -> str:
     """Use the `message` command to view information for a message ID.
@@ -243,7 +243,7 @@ def message(message_id: str, /) -> str:
     Question: More testing needed
         I **couldn't** properly **test this command** in my test environment since it kept raising an Exception.
     """
-    pass
+    ...
 
 def notifications(mbean_name: str, /) -> str:
     """Use the `notifications` command to view a summary of all the notifications associated with the MBean 
@@ -269,7 +269,7 @@ def notifications(mbean_name: str, /) -> str:
             jmx.attribute.changed
         ```
     """
-    pass
+    ...
 
 def operations(mbean_name: str, operation_name: Optional[str] = None, /):
     """Use the `operations` command to view a summary of all the operations associated with the MBean 
@@ -319,4 +319,4 @@ def operations(mbean_name: str, operation_name: Optional[str] = None, /):
             Description  A String in the specified format to process or null.
         ```
     """
-    pass
+    ...

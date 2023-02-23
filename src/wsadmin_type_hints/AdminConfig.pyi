@@ -6,9 +6,12 @@ creating a data source.
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin).
 """
 from typing import Any
-from .wsadmin_types import _OpaqueDigestObject
 
-def attributes(object_type: str) -> str:
+from wsadmin_type_hints.typing_objects.object_name import ConfigurationObjectName
+from .typing_objects.wsadmin_types import MultilineList, OpaqueDigestObject
+from .typing_objects.literals import ResourceType
+
+def attributes(object_type: ResourceType, /) -> str:
     """Get a multiline string containing the top level attributes for the given type.
 
     Args:
@@ -17,45 +20,48 @@ def attributes(object_type: str) -> str:
     Returns:
         str: Multiline string with the top level attributes for the given type.
     """
-    pass
+    ...
 
 # TODO: Check return type
-def checkin(document_uri: str, file_name: str, opaque_object: _OpaqueDigestObject) -> Any:
+def checkin(document_uri: str, file_name: str, opaque_object: OpaqueDigestObject, /) -> Any:
     """Checks a file that the document URI describes into the configuration repository.
     This method only applies to deployment manager configurations.
 
     Args:
         document_uri (str): The document URI, relative to the root of the configuration repository.
         file_name (str): The name of the source file to check.
-        opaque_object (_OpaqueDigestObject): The object returned by a prior call to the `AdminConfig.extract()` command.
+        opaque_object (OpaqueDigestObject): The object returned by a prior call to the `AdminConfig.extract()` command.
+    
+    Question: More testing needed
+        The **return type** needs to be checked.
     """
-    pass
+    ...
 
 def convertToCluster(): # undocumented
-    pass
+    ...
 
 def create(): # undocumented
-    pass
+    ...
 
 def createClusterMember(): # undocumented
-    pass
+    ...
 
 def createDocument(): # undocumented
-    pass
+    ...
 
 def createUsingTemplate(): # undocumented
-    pass
+    ...
 
 def defaults(): # undocumented
-    pass
+    ...
 
 def deleteDocument(): # undocumented
-    pass
+    ...
 
 def existsDocument(): # undocumented
-    pass
+    ...
 
-def extract(document_uri: str, filename: str) -> _OpaqueDigestObject:
+def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
     """Extracts a configuration repository file that is described by the document URI and places it in the file named by filename. 
     This method only applies to deployment manager configurations.
 
@@ -64,96 +70,127 @@ def extract(document_uri: str, filename: str) -> _OpaqueDigestObject:
         filename (str): The name of the source file to check. If it exists already, it will be overwritten.
 
     Returns:
-        _OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
+        OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
     """
-    pass
+    ...
 
 def getCrossDocumentValidationEnabled(): # undocumented
-    pass
+    ...
 
 def getid(): # undocumented
-    pass
+    ...
 
 def getObjectName(): # undocumented
-    pass
+    ...
 
 def getObjectType(): # undocumented
-    pass
+    ...
 
 def getSaveMode(): # undocumented
-    pass
+    ...
 
 def getValidationLevel(): # undocumented
-    pass
+    ...
 
 def getValidationSeverityResult(): # undocumented
-    pass
+    ...
 
 def hasChanges(): # undocumented
-    pass
+    ...
 
 def help(): # undocumented
-    pass
+    ...
 
 def installResourceAdapter(): # undocumented
-    pass
+    ...
 
-def list(): # undocumented
-    pass
+def list(object_type: ResourceType, pattern="", /) -> MultilineList[ConfigurationObjectName]:
+    """Use the list command to return a list of objects of a given type, possibly scoped by a parent.
+    
+    Args:
+        object_type (ResourceType): The name of the object type.
+        pattern (str, optional): Additional search query information using wildcard characters or Java regular expressions. Defaults to "".
+
+    Returns:
+        MultilineList[ConfigurationObjectName]: Multiline list of objects of a given type, possibly scoped by a parent.
+    
+    Example:
+        If the `pattern` parameter is omitted, then will be returned a list of all servers defined:
+        ```pycon
+        >>> print(AdminConfig.list("Server"))
+        ```
+
+        You can narrow the scope by using:
+
+        - Wildcard patterns:
+            ```pycon
+            >>> print(AdminConfig.list("Server", "server1*"))
+            ```
+        - Regular expression patters:
+            ```pycon
+            >>> print(AdminConfig.list("Server", "server1.*"))
+            ```
+        - Complete [ConfigurationObjectName][wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName]:
+            ```pycon
+            >>> node = AdminConfig.list("Node").splitlines()[0]
+            >>> print(AdminConfig.list("Server", node))
+            ```
+    """
+    ...
 
 def listTemplates(): # undocumented
-    pass
+    ...
 
 def modify(): # undocumented
-    pass
+    ...
 
 def parents(): # undocumented
-    pass
+    ...
 
 def queryChanges(): # undocumented
-    pass
+    ...
 
 def remove(): # undocumented
-    pass
+    ...
 
 def required(): # undocumented
-    pass
+    ...
 
 def reset(): # undocumented
-    pass
+    ...
 
 def resetAttributes(): # undocumented
-    pass
+    ...
 
 def save(): # undocumented
-    pass
+    ...
 
 def setCrossDocumentValidationEnabled(): # undocumented
-    pass
+    ...
 
 def setSaveMode(): # undocumented
-    pass
+    ...
 
 def setValidationLevel(): # undocumented
-    pass
+    ...
 
 def show(): # undocumented
-    pass
+    ...
 
 def showall(): # undocumented
-    pass
+    ...
 
 def showAttribute(): # undocumented
-    pass
+    ...
 
 def types(): # undocumented
-    pass
+    ...
 
 def uninstallResourceAdapter(): # undocumented
-    pass
+    ...
 
 def unsetAttributes(): # undocumented
-    pass
+    ...
 
 def validate(): # undocumented
-    pass
+    ...

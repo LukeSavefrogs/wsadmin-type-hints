@@ -6,7 +6,7 @@ class ConfigurationObjectName(str):
         "Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)"
         ```
     """
-    pass
+    ...
 
 class ContainmentPath(str):
     """Represents the path of a resource in the configuration.
@@ -20,7 +20,7 @@ class ContainmentPath(str):
         "/Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/"
         ```
     """
-    pass
+    ...
 
 class RunningObjectName(str):
     """This `ObjectName` uniquely identifies running objects and is in the 
@@ -44,7 +44,7 @@ class RunningObjectName(str):
         'WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1'
         ```
     """
-    pass
+    ...
 
 class RunningObjectTemplate(str):
     """This `ObjectName` is a string containing a segment of the object name to be matched. 
@@ -65,4 +65,4 @@ class RunningObjectTemplate(str):
         'WebSphere:name="My Server",type=ApplicationServer,node=n1,*'
         ```
     """
-    pass
+    ...
