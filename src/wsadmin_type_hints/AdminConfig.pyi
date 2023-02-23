@@ -5,7 +5,7 @@ creating a data source.
 
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin).
 """
-from typing import Any
+from typing import Any, Optional, Union, overload
 
 from wsadmin_type_hints.typing_objects.object_name import ConfigurationObjectName
 from .typing_objects.wsadmin_types import MultilineList, OpaqueDigestObject
@@ -104,39 +104,83 @@ def help(): # undocumented
 def installResourceAdapter(): # undocumented
     ...
 
-def list(object_type: ResourceType, pattern="", /) -> MultilineList[ConfigurationObjectName]:
-    """Use the list command to return a list of objects of a given type, possibly scoped by a parent.
+# --------------------------------------------------------------------------
+@overload
+def list(object_type: ResourceType, /) -> MultilineList[ConfigurationObjectName]:
+    """Lists all the configuration objects of the type named by `object_type`.
+
+    Args:
+        object_type (ResourceType): The name of the object type.
+
+    Returns:
+        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type.
+    """
+    ...
+
+@overload
+def list(object_type: ResourceType, scope: ConfigurationObjectName, /) -> MultilineList[ConfigurationObjectName]:
+    """Lists all the configuration objects of the type named by `object_type` in the scope of `scope`.
+
+    Args:
+        object_type (ResourceType): The name of the object type.
+        scope (ConfigurationObjectName): The scope of the search.
+
+    Returns:
+        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type found under the scope of `scope`.
+    """
+    ...
+
+@overload
+def list(object_type: ResourceType, pattern: str, /) -> MultilineList[ConfigurationObjectName]:
+    """Lists all the configuration objects of the type named by `object_type` and matching 
+    wildcard characters or Java regular expressions.
+
+    Args:
+        object_type (ResourceType): The name of the object type.
+        pattern (str): The pattern (wildcard characters or Java regular expressions) that needs to be matched.
+
+    Returns:
+        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type matching the pattern `pattern`
+    """
+    ...
+
+def list(object_type: ResourceType, scope_or_pattern: Optional[Union[ConfigurationObjectName, str]] = "", /) -> MultilineList[ConfigurationObjectName]: # type: ignore[misc]
+    """Lists all the configuration objects of the type named by `object_type`.
     
     Args:
         object_type (ResourceType): The name of the object type.
-        pattern (str, optional): Additional search query information using wildcard characters or Java regular expressions. Defaults to "".
+        scope_or_pattern (Union[ConfigurationObjectName, str], optional): This parameter causes a different behaviour depending on its type:
+            
+            - `ConfigurationObjectName`: Limit the search within the scope of the configuration object named by `scope`.
+            - `str`: Search all the configuration objects matching wildcard characters or Java regular expressions.
 
     Returns:
-        MultilineList[ConfigurationObjectName]: Multiline list of objects of a given type, possibly scoped by a parent.
+        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of a given type, possibly scoped by a parent.
     
     Example:
-        If the `pattern` parameter is omitted, then will be returned a list of all servers defined:
+        If the `scope_or_pattern` parameter is omitted, then will be returned a list of all servers defined:
         ```pycon
         >>> print(AdminConfig.list("Server"))
         ```
 
-        You can narrow the scope by using:
+        You can narrow the search using the `scope_or_pattern` parameter:
 
-        - Wildcard patterns:
-            ```pycon
-            >>> print(AdminConfig.list("Server", "server1*"))
-            ```
-        - Regular expression patters:
-            ```pycon
-            >>> print(AdminConfig.list("Server", "server1.*"))
-            ```
-        - Complete [ConfigurationObjectName][wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName]:
+        - Limit the search to only the servers under the **scope** of the node `node`:
             ```pycon
             >>> node = AdminConfig.list("Node").splitlines()[0]
             >>> print(AdminConfig.list("Server", node))
             ```
+        - Search the servers matching a specific **wildcard** pattern:
+            ```pycon
+            >>> print(AdminConfig.list("Server", "server1*"))
+            ```
+        - Search the servers matching a specific **regular expression** pattern:
+            ```pycon
+            >>> print(AdminConfig.list("Server", "server1.*"))
+            ```
     """
     ...
+# --------------------------------------------------------------------------
 
 def listTemplates(): # undocumented
     ...
@@ -183,8 +227,64 @@ def showall(): # undocumented
 def showAttribute(): # undocumented
     ...
 
-def types(): # undocumented
+# --------------------------------------------------------------------------
+@overload
+def types() -> MultilineList[ResourceType]:
+    """Displays all the possible top-level configuration object types.
+
+    Returns:
+        types(MultilineList[ResourceType]): All the top-level configuration object types.
+    """
     ...
+
+@overload
+def types(pattern: str) -> MultilineList[ResourceType]:
+    """Displays all the possible top-level configuration object types matching
+    with the `pattern`, which can be a wildcard or a regular expression.
+
+    Args:
+        pattern (str): A wildcard or a regular expression matching the type to search.
+
+    Returns:
+        types(MultilineList[ResourceType]): A multiline list of all the possible top-level configuration object types
+            matching the provided `pattern`.
+    """
+    ...
+
+def types(pattern: Optional[str] = "") -> MultilineList[ResourceType]: # type: ignore[misc]
+    """Displays all the possible top-level configuration object types, restricting the 
+    search to the types matching the `pattern` parameter, if specified.
+
+    Args:
+        pattern (Optional[str], optional): A wildcard or a regular expression matching the type to search.
+    
+    Returns:
+        types(MultilineList[ResourceType]): A multiline list of all the possible top-level configuration object types
+            matching the provided `pattern` (if specified).
+
+    Example:
+        - Print **all** the available types:
+            ```pycon
+            >>> print(AdminConfig.types())
+                AccessPointGroup
+                Action
+                ActivationSpec
+                ActivationSpecTemplateProps
+                ActiveAffinityType
+                [...]
+            ```
+        - Print **only** the types matching the regex `No.*`:
+            ```pycon
+            >>> print(AdminConfig.types("No.*"))
+                NoOpPolicy
+                Node
+                NodeAgent
+                NodeGroup
+                NodeGroupMember
+            ```
+    """
+    ...
+# --------------------------------------------------------------------------
 
 def uninstallResourceAdapter(): # undocumented
     ...
