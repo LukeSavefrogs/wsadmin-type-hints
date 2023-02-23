@@ -1,4 +1,4 @@
-from typing import Generic, Protocol, TypeVar
+from typing import Generic, List, Protocol, TypeVar
 
 class OpaqueDigestObject(object):
     """
@@ -51,4 +51,4 @@ class MultilineList(str, Generic[T]):
             >>> result: MultilineList[RunningObjectName] = ""
             ```
     """
-    ...
+    def splitlines(self, keepends: bool = ..., /) -> List[T]: ... # type: ignore
