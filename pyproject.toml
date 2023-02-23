@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wsadmin-type-hints"
-version = "0.1.3"
+version = "0.1.4"
 description = "Provide type hints for `wsadmin` object methods"
 authors = ["Luca Salvarani <lucasalvarani99@gmail.com>"]
 license = "MIT"
@@ -55,7 +55,7 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poe.tasks.docs]
-env = { IS_PRODUCTION = "false", SERVER_ADDRESS = "127.0.0.1:8000" }
+env = { IS_PRODUCTION = "false", SERVER_ADDRESS = "127.0.0.1:8000", PYTHONPATH="." }
 help = "Start the local server to test the documentation."
 sequence = [
     # { script = "webbrowser:open('http://' + environ['SERVER_ADDRESS'] + '/')" },
@@ -78,4 +78,5 @@ allow_untyped_defs = true
 warn_incomplete_stub = false
 # ignore_missing_imports = true
 
-# disable_error_code = 'no-untyped-def,empty-body'
+# disable_error_code = "no-untyped-def, empty-body"
+# disable_error_code = 'misc'
