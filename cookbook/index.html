@@ -13,17 +13,17 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../resources/">
       
       
-        <link rel="next" href="../reference/wsadmin_type_hints/">
+        <link rel="next" href="servers/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
-        <title>Getting started - Python wsadmin</title>
+        <title>Cookbook - Python wsadmin</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#cookbook" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting started
+              Cookbook
             
           </span>
         </div>
@@ -222,12 +222,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../getting-started/" class="md-tabs__link">
       Getting started
     </a>
   </li>
@@ -264,10 +262,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../cookbook/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Cookbook
     </a>
   </li>
@@ -338,61 +338,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Getting started
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
         Getting started
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page...">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page...
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -653,23 +603,23 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../cookbook/">Cookbook</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Cookbook</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -677,7 +627,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Cookbook
@@ -690,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cookbook/servers/" class="md-nav__link">
+      <a href="servers/" class="md-nav__link">
         Servers
       </a>
     </li>
@@ -704,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cookbook/custom_properties/" class="md-nav__link">
+      <a href="custom_properties/" class="md-nav__link">
         Custom Properties
       </a>
     </li>
@@ -740,28 +690,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page...
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -779,70 +707,23 @@
 
 
 
-<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Anchor link to this section for reference">&para;</a></h1>
-<p>This section will guide you through the installation and setup of the development environment.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Anchor link to this section for reference">&para;</a></h2>
-<p>The first step is to install the <code>wsadmin-type-hints</code> package.</p>
-<ul>
-<li>
-<p>Using <code>pip</code> (global install):
-<div class="language-text highlight"><pre><span></span><code>pip install wsadmin-type-hints
-</code></pre></div></p>
-</li>
-<li>
-<p>Using <code>poetry</code>:
-<div class="language-text highlight"><pre><span></span><code>poetry add wsadmin-type-hints --group dev 
-</code></pre></div></p>
-</li>
-<li>
-<p>Using <code>pipenv</code>:
-<div class="language-text highlight"><pre><span></span><code>pipenv install --dev wsadmin-type-hints
-</code></pre></div></p>
-</li>
-<li>
-<p><em>For other dependency managers (such as <a href="https://github.com/pdm-project/pdm">pdm</a> or <a href="https://github.com/pypa/hatch">hatch</a>) see the respective documentation...</em></p>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If installed inside a virtual environment, you may need to activate it first, to be able to use it.</p>
+<h1 id="cookbook">Cookbook<a class="headerlink" href="#cookbook" title="Anchor link to this section for reference">&para;</a></h1>
+<p>This section will include a list of <strong>recipes</strong> useful while developing scripts.</p>
+<div class="admonition info">
+<p class="admonition-title">Reminder</p>
+<p>When using the <code>AdminConfig.list(...)</code> wsadmin command, in order to get a <strong>list</strong> you will have to use the <code>[str].splitlines()</code> method, since the return value of the call is a <strong>multiline string</strong>.</p>
 </div>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Anchor link to this section for reference">&para;</a></h2>
-<p>The <code>wsadmin-type-hints</code> package is intended to be used to provide <strong>type hints</strong> to the Python interpreter used by IDE language servers (such as Pylance). 
-Because of this, the functions <em>do not contain actual code</em> and their body is <em>always empty</em>.</p>
-<p>The following steps will allow you to make use of modern IDE intellisense for <code>wsadmin</code> objects:</p>
-<ol>
-<li>
-<p>To differentiate between the development and production environment we can use a <code>try..except</code> block:
-<div class="language-python highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">AdminControl</span><span class="p">,</span> <span class="n">AdminConfig</span><span class="p">,</span> <span class="n">AdminApp</span><span class="p">,</span> <span class="n">AdminTask</span><span class="p">,</span> <span class="n">Help</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-    <span class="c1"># wsadmin objects are not defined, so this is the development environment.</span>
-    <span class="kn">from</span> <span class="nn">wsadmin_type_hints</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c1"># type: ignore</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Production environment, i&#39;m not needed here 😃&quot;</span><span class="p">)</span>
-</code></pre></div>
-    This block could even be left as-is in the code deployed on the production server (maybe leaving out the emoji before uploading 😇), since it won't ever reach the import (and even then the script would simply fail because of the <code>wsadmin-type-hints</code> package not being there).
-    The <code># type: ignore</code> is used to ignore the <strong>Pylance</strong> warning <code>Wildcard import from a library not allowed</code></p>
-</li>
-<li>
-<p>Use the <code>wsadmin</code> objects like always: 
-<div class="language-python highlight"><pre><span></span><code><span class="n">current_cell</span> <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">getCell</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current cell: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">current_cell</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-15T14:02:53+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-23T05:04:29+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-23</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-11T00:29:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-11</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-23T05:04:29+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-23</span>
       
     
   </small>
