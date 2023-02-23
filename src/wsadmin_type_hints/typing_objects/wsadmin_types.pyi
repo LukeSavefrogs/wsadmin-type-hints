@@ -14,7 +14,7 @@ T = TypeVar('T', bound=str)
 class MultilineList(str, Generic[T]):
     """ A `wsadmin` response which is composed of a multiline string representing a list of values. 
 
-        To get the original value use the `{str}.splitlines()` method.
+        To get the original value use the `splitlines()` method.
 
         This class is meant to be used as a type, and takes another type in input
             which represents the **type of each line** of the text (i.e. `MultilineList[RunningObjectName]`).
