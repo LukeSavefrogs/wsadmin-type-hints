@@ -34,6 +34,9 @@ jobs:
       - name: "🔍 Install dependencies"
         run: poetry install --with dev
 
+      - name: 🖼 Replace image URLs
+        run: sed -i 's_\(^!\[.*\](\)_\1https://raw.githubusercontent.com/LukeSavefrogs/wsadmin-type-hints/main/_' README.md
+
       - name: "📚 Deploy"
         run: poetry build --no-interaction --no-cache
 
