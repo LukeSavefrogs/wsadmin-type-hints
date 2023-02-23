@@ -84,7 +84,7 @@ plugins:
             # merge_init_into_class: true
 
             # Signatures/annotations options:
-            show_signature: false
+            show_signature: true
             # separate_signature: true
 
             # Additional options:
@@ -94,7 +94,7 @@ plugins:
             show_submodules: false
 
             # extensions:
-            #   - ./griffe_prune
+            #   - docs.scripts.griffe_prune
 
 
   - gen-files:
