@@ -309,7 +309,32 @@ def modify(): # undocumented
 def parents(): # undocumented
     ...
 
-def queryChanges(): # undocumented
+def queryChanges() -> MultilineList[str]:
+    """Returns a list of unsaved configuration files.
+
+    Returns:
+        changed_files (str): Multiline list of unsaved configuration files.
+
+    Example:
+        - If some unsaved changes are **found**:
+        ```pycon
+        >>> print(AdminConfig.queryChanges())
+        WASX7146I: The following configuration files contain unsaved changes:
+        cells/mycell/nodes/mynode/servers/server1|resources.xml
+        ```
+        
+        - In case unsaved changes are **not found**:
+        ```pycon
+        >>> print(AdminConfig.queryChanges())
+        WASX7241I: There are no unsaved changes in this workspace.
+        ```
+
+    Warning:
+        **Do NOT** use this method as a way to **check** if there are changes that need to be saved!
+        If that is your goal, see if you can use the [**`AdminConfig.hasChanges()`**][wsadmin_type_hints.AdminConfig.hasChanges] method instead.
+
+        Use the `AdminConfig.queryChanges()` method ONLY to **show** which files have been changed but not saved.
+    """
     ...
 
 def remove(): # undocumented
