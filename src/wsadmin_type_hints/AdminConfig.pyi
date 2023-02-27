@@ -156,7 +156,18 @@ def getValidationLevel(): # undocumented
 def getValidationSeverityResult(): # undocumented
     ...
 
-def hasChanges(): # undocumented
+def hasChanges() -> bool:
+    """ Check if there are unsaved configuration changes.
+
+    Returns:
+        has_changes (bool): Truthy (actual value is `1`) if unsaved configuration changes exist, falsy (`0`) otherwise.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.hasChanges())
+        0
+        ```
+    """
     ...
 
 # --------------------------------------------------------------------------
