@@ -159,8 +159,65 @@ def getValidationSeverityResult(): # undocumented
 def hasChanges(): # undocumented
     ...
 
-def help(): # undocumented
+# --------------------------------------------------------------------------
+@overload
+def help() -> str:
+    """ Displays general help for the `AdminConfig` module.
+
+    Returns:
+        help (str): A general help.
+    """
     ...
+
+@overload
+def help(method_name: str) -> str:
+    """ Displays help for the `AdminConfig` method specified by `method_name`.
+
+    Args:
+        method_name (str): The name of the method whose description needs to be retrieved.
+
+    Returns:
+        help (str): A more specific help regarding the method `method_name`.
+    """
+    ...
+
+
+def help(method_name: str = "") -> str: # type: ignore[misc]
+    """ Displays help for the `AdminConfig` module and its methods.
+
+    Args:
+        method_name (str, optional): The name of the method whose description needs to be retrieved.
+
+    Returns:
+        message (str): The help message regarding the method `method_name` (if provided), otherwise the description of the `AdminConfig` module and its methods.
+    
+    Example:
+        - To get an **overview** of the module and its methods:
+        ```pycon
+        >>> print(AdminConfig.help())
+        WASX7053I: The AdminConfig object communicates with the
+        Config Service in a WebSphere server to manipulate configuration data
+        for a WebSphere installation.  AdminConfig has commands to list, create,
+        remove, display, and modify configuration data, as well as commands to
+        display information about configuration data types.
+        [...]
+        ```
+
+        - For a more detailed description of a **single method**:
+        ```pycon
+        >>> print(AdminConfig.help("attributes"))
+        WASX7061I: Method: attributes
+
+        Arguments: type
+
+        Description: Displays all the possible attributes contained by an
+        object of type "type."  The attribute types are also displayed; when
+        the attribute represents a reference to another object, the type of
+        [...]
+        ```
+    """
+    ...
+# --------------------------------------------------------------------------
 
 def installResourceAdapter(): # undocumented
     ...
