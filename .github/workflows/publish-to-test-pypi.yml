@@ -34,8 +34,23 @@ jobs:
       - name: "🔍 Install dependencies"
         run: poetry install --with dev
 
+
       - name: 📷 Replace image URLs
         run: sed -i '/\.png/s_](_](https://raw.githubusercontent.com/LukeSavefrogs/wsadmin-type-hints/main/_' README.md
+      # Source: https://stackoverflow.com/a/67569812/8965861
+      # TODO: Replace ONLY local URLs
+      # - name: 📷 Replace image URLs
+      #   run: | 
+      #     sed -r -i '
+      #     /\]\(.*?\.png/ {
+      #       s_\]\(_\]\(https://raw.githubusercontent.com/LukeSavefrogs/wsadmin-type-hints/main/_;
+      #     }' README.md
+
+      #     gawk '
+      #       /\]\(.*?\.png.*?\)/ {
+            
+      #       }
+      #     ' README.md
 
       - name: "📚 Deploy"
         run: poetry build --no-interaction --no-cache
