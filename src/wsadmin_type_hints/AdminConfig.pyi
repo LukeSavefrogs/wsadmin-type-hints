@@ -360,7 +360,15 @@ def reset(): # undocumented
 def resetAttributes(): # undocumented
     ...
 
-def save(): # undocumented
+def save() -> Literal['']:
+    """ Commits unsaved changes to the configuration repository.
+    
+    Returns:
+        empty (Literal['']): An empty string is always returned
+
+    !!! abstract "See also"
+        - For the opposite operation, see [`AdminConfig.reset()`][wsadmin_type_hints.AdminConfig.reset]
+    """
     ...
 
 def setCrossDocumentValidationEnabled(): # undocumented
