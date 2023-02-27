@@ -354,7 +354,15 @@ def remove(): # undocumented
 def required(): # undocumented
     ...
 
-def reset(): # undocumented
+def reset() -> Literal['']:
+    """ Discard unsaved configuration changes.
+        
+    Returns:
+        empty (Literal['']): An empty string is always returned
+    
+    !!! abstract "See also"
+        - For the opposite operation, see [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save]
+    """
     ...
 
 def resetAttributes(): # undocumented
