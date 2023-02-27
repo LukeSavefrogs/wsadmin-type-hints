@@ -378,7 +378,34 @@ def show(): # undocumented
 def showall(): # undocumented
     ...
 
-def showAttribute(): # undocumented
+def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> str:
+    """Shows the value of the single attribute specified for the configuration object named by `configuration_id`.
+    
+    The output of this command is different from the output of [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show] when a single
+    attribute is specified: the `AdminConfig.showAttribute` command does not display a
+    list containing the attribute name and value; rather, the **attribute value alone** is displayed.
+
+    Args:
+        configuration_id (ConfigurationObjectName): The configuration ID for the parent object of the `attribute`.
+        attribute (str): The name of the attribute value to retrieve.
+
+    Returns:
+        attribute_value (str): The value of the single attribute specified.
+
+    !!! Tip
+        For a complete list of attributes available for the configuration object use the [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes] 
+        method passing the object type as a parameter.
+
+        For example, if you don't remember the name of an attribute for the `Server` object type, you can `print(AdminConfig.attributes("Server"))`.
+        
+    Example:
+        ```pycon
+        >>> server = AdminConfig.getid("/Node:myNode/Server:myServer/")
+        >>> server_name, server_cluster = AdminConfig.showAttribute(server, "name"), AdminConfig.showAttribute(server, "clusterName")
+        >>> print("Server '%s' is part of cluster '%s'" % (server_name, server_cluster))
+        Server 'myServer' is part of cluster 'myCluster'
+        ```
+    """
     ...
 
 # --------------------------------------------------------------------------
