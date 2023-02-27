@@ -1,11 +1,11 @@
 import re
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup # type: ignore
 
 from typing import List, Union
 from collections.abc import Callable
 
-from .types import DocumentationVersion, WasVersion
+from .types import DocumentationModule, DocumentationVersion, WasVersion
 
 
 DOCUMENTATION_API_BASE_URL = "https://www.ibm.com/docs/api/v1"
@@ -35,9 +35,9 @@ def get_updated_modules() -> List[DocumentationVersion]:
 			print(f"ERROR - {len(wsadmin_commands_topic)} did not match expected command topic number (1)")
 			continue
 
-		current_version_json = {
+		current_version_json: DocumentationVersion = {
 			"name": was_version["label"],
-			"version": was_version["version"],
+			"version": was_version["version"] if was_version["version"] else "No version found",
 			"modules": []
 		}
 
@@ -45,12 +45,12 @@ def get_updated_modules() -> List[DocumentationVersion]:
 			label = topic.get("label")
 			topic_href = topic.get("href")
 
-			command = re.search(r"Commands for the (.*?) object using wsadmin scripting", label)
+			command_regex = re.search(r"Commands for the (.*?) object using wsadmin scripting", label)
 
-			if not command:
+			if not command_regex:
 				continue
 
-			command = command.group(1)
+			command = command_regex.group(1)
 
 
 			api_reference_url = f"{DOCUMENTATION_API_BASE_URL}/content/{topic_href}?parsebody=true&lang=en"
@@ -62,7 +62,7 @@ def get_updated_modules() -> List[DocumentationVersion]:
 			last_update = soup.select_one("#lastModifiedDate").text.strip().removeprefix("Last Updated: ")
 			module_description = '\n\n'.join(list(map(lambda el: el.text.strip(), soup.select("article > div.body > p"))))
 			
-			current_module_info = {
+			current_module_info: DocumentationModule = {
 				"name": command,
 				"description": module_description,
 				"documentation": {
