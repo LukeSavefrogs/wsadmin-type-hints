@@ -5,13 +5,13 @@ creating a data source.
 
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin).
 """
-from typing import Any, Optional, Union, overload
+from typing import Any, Literal, Optional, Union, overload
 
-from wsadmin_type_hints.typing_objects.object_name import ConfigurationObjectName
+from .typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
 from .typing_objects.wsadmin_types import MultilineList, OpaqueDigestObject
-from .typing_objects.literals import ResourceType
+from .typing_objects.object_types import ObjectType
 
-def attributes(object_type: ResourceType, /) -> str:
+def attributes(object_type: ObjectType, /) -> str:
     """Get a multiline string containing the top level attributes for the given type.
 
     Args:
@@ -52,7 +52,30 @@ def createDocument(): # undocumented
 def createUsingTemplate(): # undocumented
     ...
 
-def defaults(): # undocumented
+def defaults(type: ObjectType) -> str:
+    """ Displays all the possible attributes contained by an object of type `type`, along with 
+        the type and default value of each attribute, if the attribute has a default value.
+
+    Args:
+        type (ObjectType): The type of the object
+
+    Returns:
+        defaults (str): All the attributes, along with the type and default value
+
+    Example:
+        ```pycon
+        >>> print AdminConfig.defaults("Server")
+        Attribute                       Type                            Default
+        name                            String
+        clusterName                     String
+        modelId                         String
+        shortName                       String
+        uniqueId                        String
+        developmentMode                 boolean                         false
+        parallelStartEnabled            boolean                         true
+        [...]
+        ```
+    """
     ...
 
 def deleteDocument(): # undocumented
@@ -77,10 +100,48 @@ def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
 def getCrossDocumentValidationEnabled(): # undocumented
     ...
 
-def getid(): # undocumented
+def getid(containment_path: ConfigurationContainmentPath) -> ConfigurationObjectName:
+    """Returns the unique configuration ID for an object described by the
+        given containment path.
+
+    Args:
+        containment_path (ConfigurationContainmentPath): The containment path of the requested object
+
+    Returns:
+        configuration_id (ConfigurationObjectName): The configuration ID for the object
+
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getid("/Node:myNode/Server:myServer/"))
+        myServer(cells/myCell/nodes/myNode/servers/myServer|server.xml#Server_1)
+        ```
+    """
     ...
 
-def getObjectName(): # undocumented
+def getObjectName(configuration_id: ConfigurationObjectName) -> Union[RunningObjectName, Literal[""]]:
+    """ Returns a string version of the ObjectName for the MBean that corresponds to this configuration ID. 
+    
+    If there is no such running MBean this returns an empty string.
+
+    Args:
+        configuration_id (ConfigurationObjectName): The configuration ID of the object
+
+    Returns:
+        mbean_object_name (RunningObjectName | Literal[""]): ObjectName of the MBean corresponding to the specified configuration ID.
+
+    Example:
+        ```pycon
+        # Search the configuration ID of the object
+        >>> server = AdminConfig.getid("/Node:myNode/Server:myServer/")
+        >>> print(server)
+        myServer(cells/myCell/nodes/myNode/servers/myServer|server.xml#Server_1)
+
+        # Retrieve the running object from the configuration ID (not running if empty string)
+        >>> server_instance = AdminConfig.getObjectName(server)
+        >>> print(server_instance)
+        WebSphere:name=myServer,process=myServer,platform=proxy,node=myNode,j2eeType=J2EEServer,version=9.0.5.14,type=Server,mbeanIdentifier=cells/myCell/nodes/myNode/servers/myServer/server.xml#Server_1,cell=myCell,spec=1.0,processType=ManagedProcess
+        ```
+    """    
     ...
 
 def getObjectType(): # undocumented
@@ -106,11 +167,11 @@ def installResourceAdapter(): # undocumented
 
 # --------------------------------------------------------------------------
 @overload
-def list(object_type: ResourceType, /) -> MultilineList[ConfigurationObjectName]:
+def list(object_type: ObjectType, /) -> MultilineList[ConfigurationObjectName]:
     """Lists all the configuration objects of the type named by `object_type`.
 
     Args:
-        object_type (ResourceType): The name of the object type.
+        object_type (ObjectType): The name of the object type.
 
     Returns:
         objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type.
@@ -118,11 +179,11 @@ def list(object_type: ResourceType, /) -> MultilineList[ConfigurationObjectName]
     ...
 
 @overload
-def list(object_type: ResourceType, scope: ConfigurationObjectName, /) -> MultilineList[ConfigurationObjectName]:
+def list(object_type: ObjectType, scope: ConfigurationObjectName, /) -> MultilineList[ConfigurationObjectName]:
     """Lists all the configuration objects of the type named by `object_type` in the scope of `scope`.
 
     Args:
-        object_type (ResourceType): The name of the object type.
+        object_type (ObjectType): The name of the object type.
         scope (ConfigurationObjectName): The scope of the search.
 
     Returns:
@@ -131,12 +192,12 @@ def list(object_type: ResourceType, scope: ConfigurationObjectName, /) -> Multil
     ...
 
 @overload
-def list(object_type: ResourceType, pattern: str, /) -> MultilineList[ConfigurationObjectName]:
+def list(object_type: ObjectType, pattern: str, /) -> MultilineList[ConfigurationObjectName]:
     """Lists all the configuration objects of the type named by `object_type` and matching 
     wildcard characters or Java regular expressions.
 
     Args:
-        object_type (ResourceType): The name of the object type.
+        object_type (ObjectType): The name of the object type.
         pattern (str): The pattern (wildcard characters or Java regular expressions) that needs to be matched.
 
     Returns:
@@ -144,11 +205,11 @@ def list(object_type: ResourceType, pattern: str, /) -> MultilineList[Configurat
     """
     ...
 
-def list(object_type: ResourceType, scope_or_pattern: Optional[Union[ConfigurationObjectName, str]] = "", /) -> MultilineList[ConfigurationObjectName]: # type: ignore[misc]
+def list(object_type: ObjectType, scope_or_pattern: Optional[Union[ConfigurationObjectName, str]] = "", /) -> MultilineList[ConfigurationObjectName]: # type: ignore[misc]
     """Lists all the configuration objects of the type named by `object_type`.
     
     Args:
-        object_type (ResourceType): The name of the object type.
+        object_type (ObjectType): The name of the object type.
         scope_or_pattern (Union[ConfigurationObjectName, str], optional): This parameter causes a different behaviour depending on its type:
             
             - `ConfigurationObjectName`: Limit the search within the scope of the configuration object named by `scope`.
@@ -229,16 +290,16 @@ def showAttribute(): # undocumented
 
 # --------------------------------------------------------------------------
 @overload
-def types() -> MultilineList[ResourceType]:
+def types() -> MultilineList[ObjectType]:
     """Displays all the possible top-level configuration object types.
 
     Returns:
-        types(MultilineList[ResourceType]): All the top-level configuration object types.
+        types(MultilineList[ObjectType]): All the top-level configuration object types.
     """
     ...
 
 @overload
-def types(pattern: str) -> MultilineList[ResourceType]:
+def types(pattern: str) -> MultilineList[ObjectType]:
     """Displays all the possible top-level configuration object types matching
     with the `pattern`, which can be a wildcard or a regular expression.
 
@@ -246,12 +307,12 @@ def types(pattern: str) -> MultilineList[ResourceType]:
         pattern (str): A wildcard or a regular expression matching the type to search.
 
     Returns:
-        types(MultilineList[ResourceType]): A multiline list of all the possible top-level configuration object types
+        types(MultilineList[ObjectType]): A multiline list of all the possible top-level configuration object types
             matching the provided `pattern`.
     """
     ...
 
-def types(pattern: Optional[str] = "") -> MultilineList[ResourceType]: # type: ignore[misc]
+def types(pattern: Optional[str] = "") -> MultilineList[ObjectType]: # type: ignore[misc]
     """Displays all the possible top-level configuration object types, restricting the 
     search to the types matching the `pattern` parameter, if specified.
 
@@ -259,28 +320,28 @@ def types(pattern: Optional[str] = "") -> MultilineList[ResourceType]: # type: i
         pattern (Optional[str], optional): A wildcard or a regular expression matching the type to search.
     
     Returns:
-        types(MultilineList[ResourceType]): A multiline list of all the possible top-level configuration object types
+        types(MultilineList[ObjectType]): A multiline list of all the possible top-level configuration object types
             matching the provided `pattern` (if specified).
 
     Example:
         - Print **all** the available types:
             ```pycon
             >>> print(AdminConfig.types())
-                AccessPointGroup
-                Action
-                ActivationSpec
-                ActivationSpecTemplateProps
-                ActiveAffinityType
-                [...]
+            AccessPointGroup
+            Action
+            ActivationSpec
+            ActivationSpecTemplateProps
+            ActiveAffinityType
+            [...]
             ```
         - Print **only** the types matching the regex `No.*`:
             ```pycon
             >>> print(AdminConfig.types("No.*"))
-                NoOpPolicy
-                Node
-                NodeAgent
-                NodeGroup
-                NodeGroupMember
+            NoOpPolicy
+            Node
+            NodeAgent
+            NodeGroup
+            NodeGroupMember
             ```
     """
     ...

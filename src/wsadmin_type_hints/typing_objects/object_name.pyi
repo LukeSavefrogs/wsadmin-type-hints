@@ -8,12 +8,15 @@ class ConfigurationObjectName(str):
     """
     ...
 
-class ContainmentPath(str):
+class ConfigurationContainmentPath(str):
     """Represents the path of a resource in the configuration.
 
-    The containment path must be a path that contains the **correct hierarchical order**.
-    For example, if you specify `/Server:server1/Node:node/` as the containment path, 
-        you do not receive a valid configuration ID because Node is a parent of Server and comes before Server in the hierarchy.
+    Warning:
+        The containment path MUST contain the **correct hierarchical order**.
+
+        For example, if you specify `/Server:server1/Node:node/` as the containment path, 
+        you will not receive a valid configuration ID because `Node` is a parent 
+        of `Server` and comes before Server in the hierarchy.
 
     Example:
         ``` 

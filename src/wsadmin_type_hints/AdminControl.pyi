@@ -65,11 +65,11 @@ def getAttribute(object_name: RunningObjectName, attribute: str, /) -> str:
         ```pycon
         >>> server = AdminControl.completeObjectName('type=Server,*')
         >>> print(AdminConfig.attributes("Server"))
-            adjustPort Boolean
-            changeGroupAfterStartup String
-            changeUserAfterStartup String
-            clusterName String
-            [...]
+        adjustPort Boolean
+        changeGroupAfterStartup String
+        changeUserAfterStartup String
+        clusterName String
+        [...]
         >>> print(AdminControl.getAttribute(server, "clusterName"))
         ```
         
@@ -199,8 +199,8 @@ def queryNames() -> MultilineList[RunningObjectName]: # undocumented
 	Example:
 		```pycon
 		>>> print(AdminControl.queryNames('*'))
-			WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
-			[...]
+        WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
+        [...]
 		```
 	"""
     ...

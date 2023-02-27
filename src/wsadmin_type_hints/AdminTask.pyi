@@ -3157,9 +3157,9 @@ def help(search_query: str = "", /) -> str:
     Example:
         ```pycon
         >>> print (AdminTask.help("createTCPEndPoint"))
-            WASX8006I: Detailed help for command: createTCPEndPoint
-            Description: Create a new NamedEndPoint that can be associated with a TCPInboundChannel
-            [...]
+        WASX8006I: Detailed help for command: createTCPEndPoint
+        Description: Create a new NamedEndPoint that can be associated with a TCPInboundChannel
+        [...]
         ```
     """
     ...
