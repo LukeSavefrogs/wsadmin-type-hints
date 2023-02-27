@@ -19,7 +19,7 @@ class MultilineList(str, Generic[T]):
         This class is meant to be used as a type, and takes another type in input
             which represents the **type of each line** of the text (i.e. `MultilineList[RunningObjectName]`).
 
-        !!! Info "History background"
+        !!! Info "Historical reasons"
             This type of output (instead of an actual `list`) is a legacy from the **JACL**  coding style.
 
             The administrative API was written with Jacl in mind. 
