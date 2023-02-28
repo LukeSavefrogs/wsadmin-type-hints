@@ -9,9 +9,9 @@ class OpaqueDigestObject(object):
     """
     ...
 
-T = TypeVar('T', bound=str)
+_Line = TypeVar('_Line', bound=str)
 
-class MultilineList(str, Generic[T]):
+class MultilineList(str, Generic[_Line]):
     """ A `wsadmin` response which is composed of a multiline string representing a list of values. 
 
         To get the original value use the `splitlines()` method.
@@ -51,4 +51,37 @@ class MultilineList(str, Generic[T]):
             >>> result: MultilineList[RunningObjectName] = ""
             ```
     """
-    def splitlines(self, keepends: bool = ..., /) -> List[T]: ... # type: ignore
+    def splitlines(self, keepends: bool = ..., /) -> List[_Line]: ... # type: ignore
+
+class MultilineTableWithHeader(str, Generic[_Line]):
+    """ A `wsadmin` response which is composed of a multiline table **with header**.
+
+        This class is meant to be used as a type, and takes another type in input
+            which represents the **type of each line** of the text (i.e. `MultilineList[RunningObjectName]`).
+
+        Example:
+            - This is an example of a multiline table **with header**:
+            ```pycon
+            >>> print(AdminConfig.required("Server"))
+            Attribute                       Type
+            name                            String
+            ```
+    """
+
+class MultilineTableWithoutHeader(str, Generic[_Line]):
+    """ A `wsadmin` response which is composed of a multiline table **without header**.
+
+        This class is meant to be used as a type, and takes another type in input
+            which represents the **type of each line** of the text (i.e. `MultilineList[RunningObjectName]`).
+
+        Example:
+            - This is an example of a multiline table **without header**:
+            ```pycon
+            >>> print(AdminConfig.attributes("Server"))
+            adjustPort Boolean
+            changeGroupAfterStartup String
+            changeUserAfterStartup String
+            clusterName String
+            [...]
+            ```
+    """
