@@ -8,7 +8,7 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
 from typing import Any, Literal, Optional, Union, overload
 
 from .typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
-from .typing_objects.wsadmin_types import MultilineList, OpaqueDigestObject
+from .typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, OpaqueDigestObject
 from .typing_objects.object_types import ObjectType
 
 def attributes(object_type: ObjectType, /) -> str:
@@ -52,12 +52,12 @@ def createDocument(): # undocumented
 def createUsingTemplate(): # undocumented
     ...
 
-def defaults(type: ObjectType) -> str:
-    """ Displays all the possible attributes contained by an object of type `type`, along with 
+def defaults(object_type: ObjectType) -> str:
+    """ Displays all the possible attributes contained by an object of type `object_type`, along with 
         the type and default value of each attribute, if the attribute has a default value.
 
     Args:
-        type (ObjectType): The type of the object
+        object_type (ObjectType): The type of the object
 
     Returns:
         defaults (str): All the attributes, along with the type and default value
@@ -340,7 +340,7 @@ def queryChanges() -> MultilineList[str]:
         WASX7241I: There are no unsaved changes in this workspace.
         ```
 
-    Warning:
+    !!! Warning
         **Do NOT** use this method as a way to **check** if there are changes that need to be saved!
         If that is your goal, see if you can use the [**`AdminConfig.hasChanges()`**][wsadmin_type_hints.AdminConfig.hasChanges] method instead.
 
@@ -351,7 +351,37 @@ def queryChanges() -> MultilineList[str]:
 def remove(): # undocumented
     ...
 
-def required(): # undocumented
+def required(object_type: ObjectType) -> MultilineTableWithHeader[str]:
+    """Displays a table with the required attributes contained by an object of type `object_type`.
+
+    Args:
+        object_type (ObjectType): The object type as returned by the [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] method.
+
+    Returns:
+        required_schema (MultilineTableWithHeader[str]): A table with the required attributes contained by the object. 
+            The first row contains the header.
+    
+    Example:
+        This is an example of how to use the `required()` method:
+        ```pycon
+        >>> print(AdminConfig.required("Server"))
+        Attribute                       Type
+        name                            String
+        ```
+    
+    Warning:
+        When the type has **no required attributes**, the returned table will NOT be an empty string.
+        Instead, it will contain only the message _`WASX7361I`_:
+        ```pycon
+        >>> print(AdminConfig.required("JavaVirtualMachine"))
+        WASX7361I: No required attribute found for type "JavaVirtualMachine".
+        ```
+        
+    !!! abstract "See also"
+        - For a list of all the available object types, see [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types]
+        - For a list of all the attributes available for the requested object type, see [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes]
+        - For a list of all the default values for the attributes of the requested object type, see [`AdminConfig.defaults()`][wsadmin_type_hints.AdminConfig.defaults]
+    """
     ...
 
 def reset() -> Literal['']:
