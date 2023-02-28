@@ -3,6 +3,7 @@
         "njpwerner.autodocstring",
         "aaron-bond.better-comments",
         "njqdev.vscode-python-typehint",
-        "samuelcolvin.jinjahtml"
+        "samuelcolvin.jinjahtml",
+        "matangover.mypy"
     ]
 }
