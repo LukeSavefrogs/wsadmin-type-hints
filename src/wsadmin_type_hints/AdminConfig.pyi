@@ -45,6 +45,9 @@ def checkin(document_uri: str, file_name: str, opaque_object: OpaqueDigestObject
     
     Question: More testing needed
         The **return type** needs to be checked.
+
+    !!! abstract "See also"
+        - [`AdminConfig.extract()`][wsadmin_type_hints.AdminConfig.extract]
     """
     ...
 
@@ -111,6 +114,9 @@ def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
 
     Returns:
         OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
+
+    !!! abstract "See also"
+        - [`AdminConfig.checkin()`][wsadmin_type_hints.AdminConfig.checkin]
     """
     ...
 
