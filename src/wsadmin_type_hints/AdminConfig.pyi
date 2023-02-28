@@ -8,17 +8,28 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
 from typing import Any, Literal, Optional, Union, overload
 
 from .typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
-from .typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, OpaqueDigestObject
+from .typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, MultilineTableWithoutHeader, OpaqueDigestObject
 from .typing_objects.object_types import ObjectType
 
-def attributes(object_type: ObjectType, /) -> str:
+def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
     """Get a multiline string containing the top level attributes for the given type.
 
     Args:
-        object_type (str): name of the object type. Use `AdminConfig.types()` to get a list of available types.
+        object_type (ObjectType): name of the object type. Use [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] to get a list of available types.
 
     Returns:
-        str: Multiline string with the top level attributes for the given type.
+        attributes_table (MultilineTableWithoutHeader[str]): Multiline table with the attributes of the given type.
+            The first "word" in each line is the **attribute name**, and the rest is the **attribute** value **type**.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.attributes("Server"))
+        adjustPort Boolean
+        changeGroupAfterStartup String
+        changeUserAfterStartup String
+        clusterName String
+        [...]
+        ```
     """
     ...
 
@@ -52,7 +63,7 @@ def createDocument(): # undocumented
 def createUsingTemplate(): # undocumented
     ...
 
-def defaults(object_type: ObjectType) -> str:
+def defaults(object_type: ObjectType) -> MultilineTableWithHeader[str]:
     """ Displays all the possible attributes contained by an object of type `object_type`, along with 
         the type and default value of each attribute, if the attribute has a default value.
 
@@ -60,7 +71,13 @@ def defaults(object_type: ObjectType) -> str:
         object_type (ObjectType): The type of the object
 
     Returns:
-        defaults (str): All the attributes, along with the type and default value
+        defaults (MultilineTableWithHeader[str]): Tab-separated table with all the attribute defaults. 
+            The table consists of the following columns:
+            
+            1. `Attribute`: Attribute name
+            2. `Type`: Attribute type
+            3. `Default`: Default value
+
 
     Example:
         ```pycon
