@@ -2,7 +2,7 @@
 This section will guide you through the installation and setup of the development environment.
 
 ## Installation
-The first step is to **install** the `wsadmin-type-hints` package.
+The first step is to **install** the [`wsadmin-type-hints`](https://pypi.org/project/wsadmin-type-hints/) package.
 
 - Using `pip` (global install):
 ```
@@ -23,10 +23,10 @@ pipenv install --dev wsadmin-type-hints
 
 !!! note
 
-	If installed inside a virtual environment, you may need to activate it first, to be able to use it.
+	If installed inside a **virtual environment**, you may need to **activate** it first, to be able to use it.
 
 ## Usage
-The `wsadmin-type-hints` package is intended to be used to provide **type hints** to the Python interpreter used by IDE language servers (such as Pylance). 
+The [`wsadmin-type-hints`](https://pypi.org/project/wsadmin-type-hints/) package is intended to be used to provide **type hints** to the Python interpreter used by IDE language servers (such as Pylance). 
 Because of this, the functions _do not contain actual code_ and their body is _always empty_.
 
 The following steps will allow you to make use of modern IDE intellisense for `wsadmin` objects:
