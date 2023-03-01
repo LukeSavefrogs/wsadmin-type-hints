@@ -1,8 +1,10 @@
 """
 This module is used internally by `wsadmin-type-hints` to define appropriate return types for some `wsadmin` methods.
 
-Warning: READ ME
-    These are NOT real classes, so they can't be used as-is.
+!!! Warning "Please read before continuing"
+    _**The classes and types present in this sub-module are NOT meant to be referenced in user scripts**_.
+
+    These are only meant to be used internally by `wsadmin-type-hints`.
 
     The **actual return type** is the one they inherit from (_for example `RunningObjectName` inherits from `str`, 
         so the actual return type will be `str`_).
