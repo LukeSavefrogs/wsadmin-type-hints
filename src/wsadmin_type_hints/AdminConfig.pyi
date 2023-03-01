@@ -542,5 +542,88 @@ def uninstallResourceAdapter(): # undocumented
 def unsetAttributes(): # undocumented
     ...
 
-def validate(): # undocumented
+# --------------------------------------------------------------------------
+@overload
+def validate() -> str:
+    r""" Requests **configuration validation** results based on the
+    files in your workspace, the value of the cross-document validation
+    enabled flag, and the validation level setting.
+
+    Returns:
+        validation_result (str): The result of the validation request.
+
+    Example:
+        ```pycon
+        >>> print(AdminConfig.validate())
+        WASX7193I: Validation results are logged in c:\WebSphere5\AppServer\logs\wsadmin.valout: Total number of messages: 16
+        WASX7194I: Number of messages of severity 1: 16
+        ```
+    """
     ...
+
+@overload
+def validate(configuration_id: ConfigurationObjectName) -> str:
+    r""" Requests **configuration validation** results based on the
+    files in your workspace, the value of the cross-document validation
+    enabled flag, and the validation level setting. 
+    
+    The **scope** of this request is the object named by `configuration_id`.
+
+    Args:
+        configuration_id (ConfigurationObjectName, optional): The scope of the request.
+
+    Returns:
+        validation_result (str): The result of the validation request.
+
+    Example:
+        ```pycon
+        >>> server = AdminConfig.getid("/Node:myNode/Server:myServer/")
+        >>> print(AdminConfig.validate(server))
+        WASX7193I: Validation results are logged in c:\WebSphere5\AppServer\logs\wsadmin.valout_2: Total number of messages: 0
+        ```
+    """
+    ...
+
+def validate(configuration_id: ConfigurationObjectName = "") -> str: # type: ignore[misc]
+    r""" Requests **configuration validation** results based on the
+    files in your workspace, the value of the cross-document validation
+    enabled flag, and the validation level setting.
+    
+    If provided, the **scope** of this request will be the object named by `configuration_id`.
+
+    Args:
+        configuration_id (ConfigurationObjectName, optional): The scope of the request.
+
+    Returns:
+        validation_result (str): The result of the validation request. 
+            The number of messages is always stored in the first line and can be matched using the following regex:
+            ```
+            Total number of messages: ([0-9]+)
+            ```
+        
+    !!! Warning
+        When the configuration has **no errors**, the returned string will NOT be empty.
+        Instead, it will contain only the first line (_`WASX7193I`_):
+        ```pycon
+        >>> server = AdminConfig.getid("/Node:myNode/Server:myServer/")
+        >>> print(AdminConfig.validate(server))
+        WASX7193I: Validation results are logged in c:\WebSphere5\AppServer\logs\wsadmin.valout_2: Total number of messages: 0
+        ```
+        
+    Example:
+        - Validate configuration globally:
+        ```pycon
+        >>> print(AdminConfig.validate())
+        WASX7193I: Validation results are logged in c:\WebSphere5\AppServer\logs\wsadmin.valout: Total number of messages: 16
+        WASX7194I: Number of messages of severity 1: 16
+        ```
+
+        - Validate configuration only for a specific configuration object:
+        ```pycon
+        >>> server = AdminConfig.getid("/Node:myNode/Server:myServer/")
+        >>> print(AdminConfig.validate(server))
+        WASX7193I: Validation results are logged in c:\WebSphere5\AppServer\logs\wsadmin.valout_2: Total number of messages: 0
+        ```
+    """    
+    ...
+# --------------------------------------------------------------------------
