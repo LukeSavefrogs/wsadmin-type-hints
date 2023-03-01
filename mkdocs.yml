@@ -6,13 +6,15 @@ repo_url: https://github.com/LukeSavefrogs/wsadmin-type-hints
 
 nav:
   - Home: index.md
-  - Getting started: getting-started.md
-  - API Reference: reference/
-  - Useful resources: resources.md
+  - Getting started: 
+    - getting_started/getting-started.md
+    - getting_started/faq.md
+    - getting_started/resources.md
   - Cookbook: 
     - cookbook/index.md
     - Servers: cookbook/servers.md
     - Custom Properties: cookbook/custom_properties.md
+  - API Reference: reference/
 
 watch:
   - docs/
