@@ -167,7 +167,22 @@ def getObjectName(configuration_id: ConfigurationObjectName) -> Union[RunningObj
     """    
     ...
 
-def getObjectType(): # undocumented
+def getObjectType(configuration_id: ConfigurationObjectName) -> ObjectType:
+    """Displays the configuration object type indentified by `configuration_id`.
+
+    Args:
+        configuration_id (ConfigurationObjectName): The configuration object which type is being requested.
+
+    Returns:
+        object_type (ObjectType): The object type indentified by `configuration_id`.
+
+    Example:
+        ```pycon
+        >>> configuration_id = AdminConfig.getid("/Cell:myCell/")
+        >>> print(AdminConfig.getObjectType(configuration_id))
+        Cell
+        ```
+    """
     ...
 
 def getSaveMode(): # undocumented
