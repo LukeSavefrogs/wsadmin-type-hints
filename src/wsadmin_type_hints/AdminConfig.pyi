@@ -185,7 +185,30 @@ def getObjectType(configuration_id: ConfigurationObjectName) -> ObjectType:
     """
     ...
 
-def getSaveMode(): # undocumented
+def getSaveMode() -> Literal["overwriteOnConflict", "rollbackOnConflict"]:
+    """Returns the mode that will be used when the [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save] method will be invoked.
+
+    Returns:
+        save_mode (Literal["overwriteOnConflict", "rollbackOnConflict"]): The mode used when `save` is invoked.
+            Possible values are:
+        
+            - `"overwriteOnConflict"` to save changes even if they conflict 
+                with other configuration changes;
+            - `"rollbackOnConflict"` to cause a save operation to fail if
+            changes conflict with other configuration changes;
+            this value is the default.
+
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getSaveMode())
+        rollbackOnConflict
+        ```
+        
+    !!! abstract "See also"
+        - [`AdminConfig.setSaveMode()`][wsadmin_type_hints.AdminConfig.setSaveMode]
+        - [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save]
+        - [`AdminConfig.reset()`][wsadmin_type_hints.AdminConfig.reset]
+    """
     ...
 
 def getValidationLevel(): # undocumented
@@ -450,7 +473,26 @@ def save() -> Literal['']:
 def setCrossDocumentValidationEnabled(): # undocumented
     ...
 
-def setSaveMode(): # undocumented
+def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"]) -> Literal['']:
+    """ Changes the mode that will be used when the [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save] method will be invoked.
+    
+    Args:
+        save_mode (Literal["overwriteOnConflict", "rollbackOnConflict"]): The save mode for the configuration repository
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getSaveMode())
+        rollbackOnConflict
+        >>> AdminConfig.setSaveMode("overwriteOnConflict")
+        >>> print(AdminConfig.getSaveMode())
+        overwriteOnConflict
+        ```
+        
+    !!! abstract "See also"
+        - [`AdminConfig.getSaveMode()`][wsadmin_type_hints.AdminConfig.getSaveMode]
+        - [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save]
+        - [`AdminConfig.reset()`][wsadmin_type_hints.AdminConfig.reset]
+    """
     ...
 
 def setValidationLevel(): # undocumented
