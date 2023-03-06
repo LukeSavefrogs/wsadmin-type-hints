@@ -1,11 +1,11 @@
 """
 `import` this module to gain intellisense on the 5 main `wsadmin.sh` Jython language objects:
 
-- `AdminControl`
-- `AdminConfig`
-- `AdminApp`
-- `AdminTask`
-- `Help`
+- [`AdminControl`](/reference/wsadmin_type_hints/AdminControl/)
+- [`AdminConfig`](/reference/wsadmin_type_hints/AdminConfig/)
+- [`AdminApp`](/reference/wsadmin_type_hints/AdminApp/)
+- [`AdminTask`](/reference/wsadmin_type_hints/AdminTask/)
+- [`Help`](/reference/wsadmin_type_hints/Help/)
 
 
 Use it like this:
@@ -39,17 +39,17 @@ __all__ = [
 # Additional try/except to ensure that even if installed in a real environment,
 # the original modules do not get overwritten.
 try:
-    (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
+    (AdminControl, AdminConfig, AdminApp, AdminTask, Help) # type: ignore
 except NameError:
     # ----- Interact with a configuration object    -----
-    from . import AdminApp
-    from . import AdminConfig
-    from . import AdminTask
+    from . import AdminApp # pyright: ignore[reportMissingModuleSource]
+    from . import AdminConfig # pyright: ignore[reportMissingModuleSource]
+    from . import AdminTask # pyright: ignore[reportMissingModuleSource]
 
 
     # -----     Interact with a runtime object      -----
-    from . import AdminControl
+    from . import AdminControl # pyright: ignore[reportMissingModuleSource]
 
 
     # -----              Helper module              -----
-    from . import Help
+    from . import Help # pyright: ignore[reportMissingModuleSource]
