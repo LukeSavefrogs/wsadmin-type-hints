@@ -140,7 +140,23 @@ def defaults(object_type: ObjectType) -> MultilineTableWithHeader[str]:
     """
     ...
 
-def deleteDocument(): # undocumented
+def deleteDocument(document_uri: str) -> Any:
+    """Deletes a document from the configuration repository.
+
+    Args:
+        document_uri (str): The document to be deleted from the repository.
+    
+    Example:
+        ```pycon
+        >>> AdminConfig.deleteDocument('cells/mycell/myfile.xml')
+        ```
+    
+    Question: More testing needed
+        The **return type** needs to be checked.
+
+    !!! abstract "See also"
+        - [`AdminConfig.existsDocument()`][wsadmin_type_hints.AdminConfig.existsDocument]
+    """
     ...
 
 def existsDocument(): # undocumented
