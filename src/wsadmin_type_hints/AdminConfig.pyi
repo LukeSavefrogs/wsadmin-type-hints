@@ -12,17 +12,18 @@ from .typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeade
 from .typing_objects.object_types import ObjectType
 
 def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
-    """ Displays all the possible attributes contained by an object of type `object_type`.
+    """ Displays all the possible **attributes** contained by an object of type `object_type`.
 
-        The attribute types are also displayed:
-        - When the attribute represents a **reference to another object**, 
-            the type of the attribute has a suffix of `@`. 
-        - When the attribute represents a **collection of objects**, 
-            the type has a suffix of `*`.
-        - If the type represents a **base type**, 
-            possible subtypes are listed after the base type in parenthesis.
-        - If the type is an **enumeration**, 
-            it is listed as `ENUM`, followed by the possible values in parentheses.
+    The _attribute types_ are also displayed:
+
+    - When the attribute represents a **reference to another object**, 
+        the type of the attribute has a suffix of `@`. 
+    - When the attribute represents a **collection of objects**, 
+        the type has a suffix of `*`.
+    - If the type represents a **base type**, 
+        possible subtypes are listed after the base type in parenthesis.
+    - If the type is an **enumeration**, 
+        it is listed as `ENUM`, followed by the possible values in parentheses.
 
     Args:
         object_type (ObjectType): name of the object type. Use [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] to get a list of available types.
@@ -48,19 +49,14 @@ def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
     ...
 
 # TODO: Check return type
-def checkin(document_uri: str, file_name: str, digest: OpaqueDigestObject, /) -> Any:
+def checkin(document_uri: str, filename: str, digest: OpaqueDigestObject, /) -> Any:
     """ Checks a document into the configuration repository.
 
-        The `documentURI` must describe a document that exists in the
-        repository, and `filename` must be a valid local filename where
-        the contents of the document are located.
-        The `digest` parameter should be the opaque object which was 
-        returned as a result of a previous `AdminConfig.extract()` call.
-
     Args:
-        document_uri (str): The document URI, relative to the root of the configuration repository.
-        file_name (str): The name of the source file to check.
-        digest (OpaqueDigestObject): The object returned by a prior call to the `AdminConfig.extract()` command.
+        document_uri (str): The document URI, relative to the root of the configuration repository. 
+            This document MUST exist in the repository.
+        filename (str): The valid local filename where the contents of the document are located.
+        digest (OpaqueDigestObject): The opaque object returned by a prior call to the `AdminConfig.extract()` command.
     
     Question: More testing needed
         The **return type** needs to be checked.
