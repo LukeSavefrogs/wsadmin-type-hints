@@ -102,7 +102,25 @@ def create(): # undocumented
 def createClusterMember(): # undocumented
     ...
 
-def createDocument(): # undocumented
+def createDocument(document_uri: str, filename: str) -> Any:
+    """ Creates a document in the configuration repository.
+
+    Args:
+        document_uri (str): The document to be created in the repository.
+        filename (str): A valid local filename where the contents of the document are located.
+
+    Example:
+        ```pycon
+        >>> AdminConfig.createDocument('cells/myCell/myfile.xml', '/mydir/myfile')
+        ```
+    
+    Question: More testing needed
+        The **return type** needs to be checked.
+
+    !!! abstract "See also"
+        - [`AdminConfig.deleteDocument()`][wsadmin_type_hints.AdminConfig.deleteDocument]
+        - [`AdminConfig.existsDocument()`][wsadmin_type_hints.AdminConfig.existsDocument]
+    """    
     ...
 
 def createUsingTemplate(): # undocumented
