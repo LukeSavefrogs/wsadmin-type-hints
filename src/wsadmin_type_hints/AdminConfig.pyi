@@ -159,7 +159,32 @@ def deleteDocument(document_uri: str) -> Any:
     """
     ...
 
-def existsDocument(): # undocumented
+def existsDocument(document_uri: str) -> bool:
+    """ Tests to see if a document exists in the configuration repository.
+
+    Args:
+        document_uri (str): The document to be tested in the repository.
+
+    Returns:
+        exists(bool): Returns `1` if the document exists; `0` otherwise.
+
+    Example:
+        ```pycon
+        >>> exists = AdminConfig.existsDocument('cells/mycell/myfile.xml')
+        >>> print(exists)
+        1
+        >>> if exists:
+        ...     print("Document exists")
+        ... else:
+        ...     print("Document does not exist")
+        ...
+        Document exists
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.deleteDocument()`][wsadmin_type_hints.AdminConfig.deleteDocument]
+        - [`AdminConfig.createDocument()`][wsadmin_type_hints.AdminConfig.createDocument]
+    """    
     ...
 
 def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
