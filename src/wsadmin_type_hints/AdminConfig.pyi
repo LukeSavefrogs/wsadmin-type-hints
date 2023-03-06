@@ -155,6 +155,7 @@ def deleteDocument(document_uri: str) -> Any:
         The **return type** needs to be checked.
 
     !!! abstract "See also"
+        - [`AdminConfig.createDocument()`][wsadmin_type_hints.AdminConfig.createDocument]
         - [`AdminConfig.existsDocument()`][wsadmin_type_hints.AdminConfig.existsDocument]
     """
     ...
@@ -182,8 +183,8 @@ def existsDocument(document_uri: str) -> bool:
         ```
 
     !!! abstract "See also"
-        - [`AdminConfig.deleteDocument()`][wsadmin_type_hints.AdminConfig.deleteDocument]
         - [`AdminConfig.createDocument()`][wsadmin_type_hints.AdminConfig.createDocument]
+        - [`AdminConfig.deleteDocument()`][wsadmin_type_hints.AdminConfig.deleteDocument]
     """    
     ...
 
