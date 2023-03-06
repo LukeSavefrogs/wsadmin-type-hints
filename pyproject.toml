@@ -80,3 +80,17 @@ warn_incomplete_stub = false
 
 # disable_error_code = "no-untyped-def, empty-body"
 # disable_error_code = 'misc'
+
+[tool.pyright]
+typeCheckingMode = "strict"
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md#type-check-diagnostics-settings
+reportUnnecessaryTypeIgnoreComment = false
+reportOverlappingOverload = true
+
+reportUnknownArgumentType = true
+reportUnknownParameterType = true
+reportUnknownVariableType = true
+reportUnknownMemberType = true
+reportMissingParameterType = true
+reportMissingTypeArgument = true
+strictParameterNoneValue = true
