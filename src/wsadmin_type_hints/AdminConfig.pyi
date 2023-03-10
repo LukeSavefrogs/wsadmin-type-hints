@@ -665,7 +665,30 @@ def save() -> Literal['']:
     """
     ...
 
-def setCrossDocumentValidationEnabled(): # undocumented
+def setCrossDocumentValidationEnabled(flag: Literal["true", "false"], /) -> str:
+    """ Enables or disables the cross-document validation.
+    
+    Args:
+        flag (Literal["true", "false"]): Pass `true` to enable the cross-document validation, or `false` to disable it.
+    
+    Returns:
+        message (str): The same message returned by [`AdminConfig.getCrossDocumentValidationEnabled()`][wsadmin_type_hints.AdminConfig.getCrossDocumentValidationEnabled].
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getCrossDocumentValidationEnabled())
+        WASX7188I: Cross-document validation enablement set to true
+        
+        >>> print(AdminConfig.setCrossDocumentValidationEnabled("false"))
+        WASX7188I: Cross-document validation enablement set to false
+
+        >>> print(AdminConfig.getCrossDocumentValidationEnabled())
+        WASX7188I: Cross-document validation enablement set to false
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.getCrossDocumentValidationEnabled()`][wsadmin_type_hints.AdminConfig.getCrossDocumentValidationEnabled]
+    """
     ...
 
 def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"]) -> Literal['']:
