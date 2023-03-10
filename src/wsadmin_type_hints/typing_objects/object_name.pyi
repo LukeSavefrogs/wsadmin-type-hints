@@ -1,9 +1,9 @@
 class ConfigurationObjectName(str):
     """Object name representing an entry in the configuration.
 
-    Example:
+    !!! Example
         ``` 
-        "Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)"
+        Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)
         ```
     """
     ...
@@ -18,9 +18,9 @@ class ConfigurationContainmentPath(str):
         you will not receive a valid configuration ID because `Node` is a parent 
         of `Server` and comes before Server in the hierarchy.
 
-    Example:
+    !!! Example
         ``` 
-        "/Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/"
+        /Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/
         ```
     """
     ...
@@ -42,9 +42,9 @@ class RunningObjectName(str):
     
     For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=administration-objectname-attribute-attributelist-classes-using-wsadmin-scripting).
 
-    Example:
+    !!! Example
         ```
-        'WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1'
+        WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
         ```
     """
     ...
@@ -63,9 +63,9 @@ class RunningObjectTemplate(str):
         The only difference between a `template` and an `object name` is that the template can be partial and use wildcards.
         It can then be used to retrieve a complete Object Name.
 
-    Example:
+    !!! Example
         ```
-        'WebSphere:name="My Server",type=ApplicationServer,node=n1,*'
+        WebSphere:name="My Server",type=ApplicationServer,node=n1,*
         ```
     """
     ...
