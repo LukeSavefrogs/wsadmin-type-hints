@@ -301,7 +301,21 @@ def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
     """
     ...
 
-def getCrossDocumentValidationEnabled(): # undocumented
+def getCrossDocumentValidationEnabled() -> str:
+    """ Returns a message giving the current cross-document enablement setting.
+
+    Returns:
+        message(str): The current cross-document enablement setting.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getCrossDocumentValidationEnabled())
+        WASX7188I: Cross-document validation enablement set to true
+        ```
+    
+    !!! abstract "See also"
+        - [`AdminConfig.setCrossDocumentValidationEnabled()`][wsadmin_type_hints.AdminConfig.setCrossDocumentValidationEnabled]
+    """
     ...
 
 def getid(containment_path: ConfigurationContainmentPath) -> ConfigurationObjectName:
