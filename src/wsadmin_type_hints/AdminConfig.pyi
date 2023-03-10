@@ -5,7 +5,7 @@ creating a data source.
 
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin).
 """
-from typing import Any, Literal, Optional, Union, overload
+from typing import Any, List, Literal, Optional, Union, overload
 
 from .typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
 from .typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, MultilineTableWithoutHeader, OpaqueDigestObject
@@ -92,8 +92,91 @@ def convertToCluster(server_id: ConfigurationObjectName, cluster_name: str, /) -
     """    
     ...
 
-def create(): # undocumented
+# --------------------------------------------------------------------------
+@overload
+def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[str, List[List[str]]], /) -> ConfigurationObjectName:
+    """ Create a new configuration object.
+
+    Create a configuration object of the type named by
+        `type`, the parent named by `parent`, using the attributes supplied by
+        `attributes`.
+
+    Args:
+        type (ObjectType): The type of the configuration object that will be created.
+        parent (ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (Union[str, List[List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
+
+    Returns:
+        new_object(ConfigurationObjectName): The newly created configuration object.
+    """    
     ...
+
+@overload
+def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[str, List[List[str]]], parent_attribute_name: str = "", /) -> ConfigurationObjectName:
+    """ Create a new configuration object.
+
+    Create a configuration object of the type named by
+        `type`, the parent named by `parent`, using the attributes supplied
+        by `attributes` and the attribute name in the parent given by
+        `parent_attribute_name`.
+
+    Args:
+        type (ObjectType): The type of the configuration object that will be created.
+        parent (ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (Union[str, List[List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
+        parent_attribute_name (str, optional): _description_. Defaults to "".
+
+    Returns:
+        new_object(ConfigurationObjectName): The newly created configuration object.
+    """
+    ...
+
+def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[str, List[List[str]]], parent_attribute_name: str = "", /) -> ConfigurationObjectName:  # type: ignore[misc]
+    """ Create a new configuration object.
+    
+    Create a configuration object of the type named by
+        `type`, the parent named by `parent`, using the attributes supplied
+        by `attributes` and, optionally, the attribute name in the parent given by
+        `parent_attribute_name`.
+
+    Args:
+        type (ObjectType): The type of the configuration object that will be created.
+        parent (ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (Union[str, List[List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
+        parent_attribute_name (str, optional): _description_. Defaults to "".
+
+    Returns:
+        new_object(ConfigurationObjectName): The newly created configuration object.
+    
+    Example:
+
+        - Using Jython string attributes:
+        ```pycon
+        >>> jdbc1 = AdminConfig.getid('/JDBCProvider:jdbc1/')
+        >>> print AdminConfig.create('DataSource', jdbc1, '[[name ds1]]')
+        ```
+
+        - Using Jython with list attributes:
+        ```pycon
+        >>> jdbc1 = AdminConfig.getid('/JDBCProvider:jdbc1/')
+        >>> print AdminConfig.create('DataSource', jdbc1, [['name', 'ds1']])
+        ```
+    
+    Question: More testing needed
+        The documentation is not clear on how to use the `create` method.
+
+        For example, on the offline server documentation, the **additional `parent_attribute_name`** is cited, while 
+        in the online server documentation this is **not present**.
+
+        The examples should be tested.
+    
+
+    !!! abstract "See also"
+        - [`AdminConfig.modify()`][wsadmin_type_hints.AdminConfig.modify]
+        - [`AdminConfig.remove()`][wsadmin_type_hints.AdminConfig.remove]
+    """
+    ...
+# --------------------------------------------------------------------------
 
 def createClusterMember(): # undocumented
     ...
