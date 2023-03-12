@@ -714,6 +714,29 @@ def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"])
     ...
 
 def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"]) -> str:
+    """Sets the validation used when files are extracted from the repository.
+
+    Args:
+        level(Literal["none", "low", "medium", "high", "highest"]): The validation level to use.
+
+    Returns:
+        message(str): A message indicating the current validation level.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getValidationLevel())
+        WASX7188I: Validation level set to "none"
+        
+        >>> print(AdminConfig.setValidationLevel("high"))
+        WASX7188I: Validation level set to "high"
+        
+        >>> print(AdminConfig.getValidationLevel())
+        WASX7188I: Validation level set to "high"
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.getValidationLevel()`][wsadmin_type_hints.AdminConfig.getValidationLevel]
+    """
     ...
 
 def show(): # undocumented
