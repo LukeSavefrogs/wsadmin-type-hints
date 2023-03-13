@@ -406,7 +406,21 @@ def getSaveMode() -> Literal["overwriteOnConflict", "rollbackOnConflict"]:
     """
     ...
 
-def getValidationLevel(): # undocumented
+def getValidationLevel() -> str: # undocumented
+    """Returns a message giving the current validation level.
+
+    Returns:
+        message(str): The current validation level.
+
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getValidationLevel())
+        WASX7189I: Validation level set to HIGHEST
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.setValidationLevel()`][wsadmin_type_hints.AdminConfig.setValidationLevel]
+    """
     ...
 
 def getValidationSeverityResult(): # undocumented
