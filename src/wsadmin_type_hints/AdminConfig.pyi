@@ -683,7 +683,23 @@ def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[Confi
 def modify(): # undocumented
     ...
 
-def parents(): # undocumented
+def parents(type: ObjectType) -> MultilineList[ObjectType]:
+    """ Displays the object types that can contain `type`.
+
+    Args:
+        type (ObjectType): The object type you want to find parents of.
+
+    Returns:
+        parents (MultilineList[ObjectType]): The parent object types.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.parents("Server"))
+        DynamicCluster
+        Node
+        ServerCluster
+        ```
+    """
     ...
 
 def queryChanges() -> MultilineList[str]:
