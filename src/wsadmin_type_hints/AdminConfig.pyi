@@ -406,7 +406,7 @@ def getSaveMode() -> Literal["overwriteOnConflict", "rollbackOnConflict"]:
     """
     ...
 
-def getValidationLevel() -> str: # undocumented
+def getValidationLevel() -> str:
     """Returns a message giving the current validation level.
 
     Returns:
@@ -423,7 +423,23 @@ def getValidationLevel() -> str: # undocumented
     """
     ...
 
-def getValidationSeverityResult(): # undocumented
+def getValidationSeverityResult(severity: Literal[0,1,2,3,4,5,6,7,8,9]) -> int:
+    """Returns the number of validation messages with the given
+        severity from the most recent validation.
+
+    Args:
+        severity (int): The severity level for which to return the number of validation messages. 
+            Specify an integer value **between 0 and 9**.
+
+    Returns:
+        messages_count(int): A string that indicates the number of validation messages of the given severity.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.getValidationSeverityResult(1))
+        16
+        ```
+    """
     ...
 
 def hasChanges() -> bool:
@@ -731,7 +747,7 @@ def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"
     """Sets the validation used when files are extracted from the repository.
 
     Args:
-        level(Literal["none", "low", "medium", "high", "highest"]): The validation level to use.
+        level (Literal["none", "low", "medium", "high", "highest"]): The validation level to use.
 
     Returns:
         message(str): A message indicating the current validation level.
