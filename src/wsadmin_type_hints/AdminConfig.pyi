@@ -597,8 +597,88 @@ def list(object_type: ObjectType, scope_or_pattern: Optional[Union[Configuration
     ...
 # --------------------------------------------------------------------------
 
-def listTemplates(): # undocumented
+@overload
+def listTemplates(type: ObjectType, /) -> MultilineList[ConfigurationObjectName]:
+    """ Returns a list of all the templates available for the given type.
+    
+    These templates may be used in invocations of [`AdminConfig.createUsingTemplate`][wsadmin_type_hints.AdminConfig.createUsingTemplate].
+
+    Args:
+        type (ObjectType): The name of the target object type.
+
+    Returns:
+        MultilineList[ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
+        
+    Example:
+        ```pycon
+        >>> print(AdminConfig.listTemplates("Server"))
+        apache13(templates/servertypes/APACHE_SERVER/servers/apache13|server.xml#Server_1)
+        apache20(templates/servertypes/APACHE_SERVER/servers/apache20|server.xml#Server_1)
+        apache22(templates/servertypes/APACHE_SERVER/servers/apache22|server.xml#Server_1)
+        customHTTP(templates/servertypes/CUSTOMHTTP_SERVER/servers/customHTTP|server.xml#Server_1177012689063)
+        default(templates/servertypes/APPLICATION_SERVER/servers/default|server.xml#Server_1)
+        default(templates/servertypes/GENERIC_SERVER/servers/default|server.xml#Genericserver_1)
+        defaultXD(templates/servertypes/APPLICATION_SERVER/servers/defaultXD|server.xml#Server_1)
+        [...]
+        ```
+    """    
     ...
+
+@overload
+def listTemplates(type: ObjectType, pattern: str, /) -> MultilineList[ConfigurationObjectName]:
+    """ Returns a list of the templates available for the given type that match the provided `pattern`.
+    
+    These templates may be used in invocations of [`AdminConfig.createUsingTemplate`][wsadmin_type_hints.AdminConfig.createUsingTemplate].
+
+    Args:
+        type (ObjectType): The name of the target object type.
+        pattern (str): A query (wildcard characters or Java regular expressions) to filter the results.
+
+    Returns:
+        MultilineList[ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
+
+    Example:
+        ```pycon
+        >>> print(AdminConfig.listTemplates("Server", "php"))
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP4|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP5|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE20_PHP4|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE20_PHP5|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE22_PHP4|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE22_PHP5|server.xml#Server_1)
+        ```
+    """    
+    ...
+
+def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[ConfigurationObjectName]: # type: ignore[misc]
+    """ Returns a list of the templates available for the given type that match the provided `pattern`.
+    
+    These templates may be used in invocations of [`AdminConfig.createUsingTemplate`][wsadmin_type_hints.AdminConfig.createUsingTemplate].
+
+    Args:
+        type (ObjectType): The name of the target object type.
+        pattern (str): A query (wildcard characters or Java regular expressions) to filter the results.
+
+    Returns:
+        MultilineList[ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
+    
+    Example:
+        ```pycon
+        >>> print(AdminConfig.listTemplates("Server", "php"))
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP4|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP5|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE20_PHP4|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE20_PHP5|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE22_PHP4|server.xml#Server_1)
+        phpserver(templates/servertypes/PHP_SERVER/servers/APACHE22_PHP5|server.xml#Server_1)
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.createUsingTemplate()`][wsadmin_type_hints.AdminConfig.createUsingTemplate]
+    """
+    ...
+
+# --------------------------------------------------------------------------
 
 def modify(): # undocumented
     ...
