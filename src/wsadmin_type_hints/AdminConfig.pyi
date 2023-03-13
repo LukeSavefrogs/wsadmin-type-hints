@@ -181,7 +181,7 @@ def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[
 def createClusterMember(): # undocumented
     ...
 
-def createDocument(document_uri: str, filename: str) -> Any:
+def createDocument(document_uri: str, filename: str, /) -> Any:
     """ Creates a document in the configuration repository.
 
     Args:
@@ -205,7 +205,7 @@ def createDocument(document_uri: str, filename: str) -> Any:
 def createUsingTemplate(): # undocumented
     ...
 
-def defaults(object_type: ObjectType) -> MultilineTableWithHeader[str]:
+def defaults(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
     """ Displays all the possible attributes contained by an object of type `object_type`, along with 
         the type and default value of each attribute, if the attribute has a default value.
 
@@ -237,7 +237,7 @@ def defaults(object_type: ObjectType) -> MultilineTableWithHeader[str]:
     """
     ...
 
-def deleteDocument(document_uri: str) -> Any:
+def deleteDocument(document_uri: str, /) -> Any:
     """Deletes a document from the configuration repository.
 
     Args:
@@ -257,7 +257,7 @@ def deleteDocument(document_uri: str) -> Any:
     """
     ...
 
-def existsDocument(document_uri: str) -> bool:
+def existsDocument(document_uri: str, /) -> bool:
     """ Tests to see if a document exists in the configuration repository.
 
     Args:
@@ -318,7 +318,7 @@ def getCrossDocumentValidationEnabled() -> str:
     """
     ...
 
-def getid(containment_path: ConfigurationContainmentPath) -> ConfigurationObjectName:
+def getid(containment_path: ConfigurationContainmentPath, /) -> ConfigurationObjectName:
     """Returns the unique configuration ID for an object described by the
         given containment path.
 
@@ -336,7 +336,7 @@ def getid(containment_path: ConfigurationContainmentPath) -> ConfigurationObject
     """
     ...
 
-def getObjectName(configuration_id: ConfigurationObjectName) -> Union[RunningObjectName, Literal[""]]:
+def getObjectName(configuration_id: ConfigurationObjectName, /) -> Union[RunningObjectName, Literal[""]]:
     """ Returns a string version of the ObjectName for the MBean that corresponds to this configuration ID. 
     
     If there is no such running MBean this returns an empty string.
@@ -362,7 +362,7 @@ def getObjectName(configuration_id: ConfigurationObjectName) -> Union[RunningObj
     """    
     ...
 
-def getObjectType(configuration_id: ConfigurationObjectName) -> ObjectType:
+def getObjectType(configuration_id: ConfigurationObjectName, /) -> ObjectType:
     """Displays the configuration object type indentified by `configuration_id`.
 
     Args:
@@ -423,7 +423,7 @@ def getValidationLevel() -> str:
     """
     ...
 
-def getValidationSeverityResult(severity: Literal[0,1,2,3,4,5,6,7,8,9]) -> int:
+def getValidationSeverityResult(severity: Literal[0,1,2,3,4,5,6,7,8,9], /) -> int:
     """Returns the number of validation messages with the given
         severity from the most recent validation.
 
@@ -467,7 +467,7 @@ def help() -> str:
     ...
 
 @overload
-def help(method_name: str) -> str:
+def help(method_name: str, /) -> str:
     """ Displays help for the `AdminConfig` method specified by `method_name`.
 
     Args:
@@ -479,7 +479,7 @@ def help(method_name: str) -> str:
     ...
 
 
-def help(method_name: str = "") -> str: # type: ignore[misc]
+def help(method_name: str = "", /) -> str: # type: ignore[misc]
     """ Displays help for the `AdminConfig` module and its methods.
 
     Args:
@@ -683,7 +683,7 @@ def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[Confi
 def modify(): # undocumented
     ...
 
-def parents(type: ObjectType) -> MultilineList[ObjectType]:
+def parents(type: ObjectType, /) -> MultilineList[ObjectType]:
     """ Displays the object types that can contain `type`.
 
     Args:
@@ -733,7 +733,7 @@ def queryChanges() -> MultilineList[str]:
 def remove(): # undocumented
     ...
 
-def required(object_type: ObjectType) -> MultilineTableWithHeader[str]:
+def required(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
     """Displays a table with the required attributes contained by an object of type `object_type`.
 
     Args:
@@ -817,7 +817,7 @@ def setCrossDocumentValidationEnabled(flag: Literal["true", "false"], /) -> str:
     """
     ...
 
-def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"]) -> Literal['']:
+def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"], /) -> Literal['']:
     """ Changes the mode that will be used when the [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save] method will be invoked.
     
     Args:
@@ -839,7 +839,7 @@ def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"])
     """
     ...
 
-def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"]) -> str:
+def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"], /) -> str:
     """Sets the validation used when files are extracted from the repository.
 
     Args:
@@ -912,7 +912,7 @@ def types() -> MultilineList[ObjectType]:
     ...
 
 @overload
-def types(pattern: str) -> MultilineList[ObjectType]:
+def types(pattern: str, /) -> MultilineList[ObjectType]:
     """Displays all the possible top-level configuration object types matching
     with the `pattern`, which can be a wildcard or a regular expression.
 
@@ -925,7 +925,7 @@ def types(pattern: str) -> MultilineList[ObjectType]:
     """
     ...
 
-def types(pattern: Optional[str] = "") -> MultilineList[ObjectType]: # type: ignore[misc]
+def types(pattern: Optional[str] = "", /) -> MultilineList[ObjectType]: # type: ignore[misc]
     """Displays all the possible top-level configuration object types, restricting the 
     search to the types matching the `pattern` parameter, if specified.
 
@@ -986,7 +986,7 @@ def validate() -> str:
     ...
 
 @overload
-def validate(configuration_id: ConfigurationObjectName) -> str:
+def validate(configuration_id: ConfigurationObjectName, /) -> str:
     r""" Requests **configuration validation** results based on the
     files in your workspace, the value of the cross-document validation
     enabled flag, and the validation level setting. 
@@ -1008,7 +1008,7 @@ def validate(configuration_id: ConfigurationObjectName) -> str:
     """
     ...
 
-def validate(configuration_id: ConfigurationObjectName = "") -> str: # type: ignore[misc]
+def validate(configuration_id: ConfigurationObjectName = "", /) -> str: # type: ignore[misc]
     r""" Requests **configuration validation** results based on the
     files in your workspace, the value of the cross-document validation
     enabled flag, and the validation level setting.
