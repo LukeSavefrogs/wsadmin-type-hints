@@ -52,6 +52,8 @@
     
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../../../stylesheets/material.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -872,12 +874,12 @@
 <p>For example, if you specify <code>/Server:server1/Node:node/</code> as the containment path, 
 you will not receive a valid configuration ID because <code>Node</code> is a parent 
 of <code>Server</code> and comes before Server in the hierarchy.</p>
-</details>
-<details class="example">
-  <summary>Example</summary>
-  <div class="language-text highlight"><pre><span></span><code>&quot;/Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/&quot;
+</details>      <div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-text highlight"><pre><span></span><code>/Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/
 </code></pre></div>
-</details>
+</div>
+
 
 
   </div>
@@ -901,12 +903,12 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 
   
       <p>Object name representing an entry in the configuration.</p>
-
-<details class="example">
-  <summary>Example</summary>
-  <div class="language-text highlight"><pre><span></span><code>&quot;Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)&quot;
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-text highlight"><pre><span></span><code>Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)
 </code></pre></div>
-</details>
+</div>
+
 
 
   </div>
@@ -945,12 +947,12 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 </li>
 </ul>
 <p>For more info see the <a href="https://www.ibm.com/docs/en/was-nd/8.5.5?topic=administration-objectname-attribute-attributelist-classes-using-wsadmin-scripting">official documentation</a>.</p>
-
-<details class="example">
-  <summary>Example</summary>
-  <div class="language-text highlight"><pre><span></span><code>&#39;WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1&#39;
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-text highlight"><pre><span></span><code>WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
 </code></pre></div>
-</details>
+</div>
+
 
 
   </div>
@@ -983,12 +985,12 @@ The template has the same format as an object name with the following pattern: <
   <summary>Note</summary>
   <p>The only difference between a <code>template</code> and an <code>object name</code> is that the template can be partial and use wildcards.
 It can then be used to retrieve a complete Object Name.</p>
-</details>
-<details class="example">
-  <summary>Example</summary>
-  <div class="language-text highlight"><pre><span></span><code>&#39;WebSphere:name=&quot;My Server&quot;,type=ApplicationServer,node=n1,*&#39;
+</details>      <div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-text highlight"><pre><span></span><code>WebSphere:name=&quot;My Server&quot;,type=ApplicationServer,node=n1,*
 </code></pre></div>
-</details>
+</div>
+
 
 
   </div>
@@ -1009,11 +1011,11 @@ It can then be used to retrieve a complete Object Name.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-01T16:12:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-13T18:12:15+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-13</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-01T16:12:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-01</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-13T18:12:15+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-13</span>
       
     
   </small>

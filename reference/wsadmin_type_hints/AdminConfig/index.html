@@ -52,6 +52,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../../stylesheets/material.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1383,7 +1385,18 @@ creating a data source.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Get a multiline string containing the top level attributes for the given type.</p>
+      <p>Displays all the possible <strong>attributes</strong> contained by an object of type <code>object_type</code>.</p>
+<p>The <em>attribute types</em> are also displayed:</p>
+<ul>
+<li>When the attribute represents a <strong>reference to another object</strong>, 
+    the type of the attribute has a suffix of <code>@</code>. </li>
+<li>When the attribute represents a <strong>collection of objects</strong>, 
+    the type has a suffix of <code>*</code>.</li>
+<li>If the type represents a <strong>base type</strong>, 
+    possible subtypes are listed after the base type in parenthesis.</li>
+<li>If the type is an <strong>enumeration</strong>, 
+    it is listed as <code>ENUM</code>, followed by the possible values in parentheses.</li>
+</ul>
 
   <table>
     <thead>
@@ -1442,6 +1455,10 @@ The first "word" in each line is the <strong>attribute name</strong>, and the re
 <span class="go">changeUserAfterStartup String</span>
 <span class="go">clusterName String</span>
 <span class="go">[...]</span>
+<span class="go">customServices CustomService*</span>
+<span class="go">[...]</span>
+<span class="go">processDefinition ProcessDef(JavaProcessDef, NamedJavaProcessDef, NamedProcessDef)</span>
+<span class="go">processDefinitions ProcessDef(JavaProcessDef, NamedJavaProcessDef, NamedProcessDef)*</span>
 </code></pre></div>
 </details>
   </div>
@@ -1452,15 +1469,14 @@ The first "word" in each line is the <strong>attribute name</strong>, and the re
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.checkin" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">checkin</span><span class="p">(</span><span class="n">document_uri</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">opaque_object</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">checkin</span><span class="p">(</span><span class="n">document_uri</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">digest</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.checkin" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Checks a file that the document URI describes into the configuration repository.
-This method only applies to deployment manager configurations.</p>
+      <p>Checks a document into the configuration repository.</p>
 
   <table>
     <thead>
@@ -1473,7 +1489,8 @@ This method only applies to deployment manager configurations.</p>
         <tr>
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
-            <p>The document URI, relative to the root of the configuration repository.</p>
+            <p>The document URI, relative to the root of the configuration repository. 
+This document MUST exist in the repository.</p>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1483,9 +1500,9 @@ This method only applies to deployment manager configurations.</p>
           </td>
         </tr>
         <tr>
-          <td><code>file_name</code></td>
+          <td><code>filename</code></td>
           <td class="doc-param-details">
-            <p>The name of the source file to check.</p>
+            <p>The valid local filename where the contents of the document are located.</p>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1495,9 +1512,9 @@ This method only applies to deployment manager configurations.</p>
           </td>
         </tr>
         <tr>
-          <td><code>opaque_object</code></td>
+          <td><code>digest</code></td>
           <td class="doc-param-details">
-            <p>The object returned by a prior call to the <code>AdminConfig.extract()</code> command.</p>
+            <p>The opaque object returned by a prior call to the <code>AdminConfig.extract()</code> command.</p>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1527,13 +1544,87 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.convertToCluster" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">convertToCluster</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">convertToCluster</span><span class="p">(</span><span class="n">server_id</span><span class="p">,</span> <span class="n">cluster_name</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.convertToCluster" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Converts the server <code>server_id</code> so that it is the first member of the
+    new server cluster <code>cluster_name</code>.</p>
+<p>Creates a new <code>ServerCluster</code> object with the name specified by <code>cluster_name</code>, 
+    and makes the server specified by <code>server_id</code> the first member of this cluster.</p>
+<p>Applications loaded on this server are now configured on the new cluster.</p>
 
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>server_id</code></td>
+          <td class="doc-param-details">
+            <p>The ID of the server to use as the first member of the cluster.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cluster_name</code></td>
+          <td class="doc-param-details">
+            <p>The name of the new cluster.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>cluster_id</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The configuration ID of the newly created Cluster.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">server</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s1">&#39;/Server:myServer/&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_cluster</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">convertToCluster</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="s1">&#39;myCluster&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_cluster</span><span class="p">)</span>
+<span class="go">myCluster(cells/myCell/clusters/myCluster|cluster.xml#ClusterMember_2)</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
@@ -1542,12 +1633,137 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.create" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">create</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">parent_attribute_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.create" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Create a new configuration object.</p>
+<p>Create a configuration object of the type named by
+    <code>type</code>, the parent named by <code>parent</code>, using the attributes supplied
+    by <code>attributes</code> and, optionally, the attribute name in the parent given by
+    <code>parent_attribute_name</code>.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>type</code></td>
+          <td class="doc-param-details">
+            <p>The type of the configuration object that will be created.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_types.ObjectType" href="../typing_objects/object_types/#wsadmin_type_hints.typing_objects.object_types.ObjectType">ObjectType</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>parent</code></td>
+          <td class="doc-param-details">
+            <p>The configuration ID of the parent object.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>attributes</code></td>
+          <td class="doc-param-details">
+            <p>A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see <code>attributes</code> for more information).</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Union">Union</span>[str, <span title="typing.List">List</span>[<span title="typing.List">List</span>[str]]]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>parent_attribute_name</code></td>
+          <td class="doc-param-details">
+            <p><em>description</em>. Defaults to "".</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>&#39;&#39;</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>new_object</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The newly created configuration object.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <ul>
+<li>
+<p>Using Jython string attributes:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">jdbc1</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s1">&#39;/JDBCProvider:jdbc1/&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;DataSource&#39;</span><span class="p">,</span> <span class="n">jdbc1</span><span class="p">,</span> <span class="s1">&#39;[[name ds1]]&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Using Jython with list attributes:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">jdbc1</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s1">&#39;/JDBCProvider:jdbc1/&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;DataSource&#39;</span><span class="p">,</span> <span class="n">jdbc1</span><span class="p">,</span> <span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;ds1&#39;</span><span class="p">]])</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<details class="question">
+  <summary>More testing needed</summary>
+  <p>The documentation is not clear on how to use the <code>create</code> method.</p>
+<p>For example, on the offline server documentation, the <strong>additional <code>parent_attribute_name</code></strong> is cited, while 
+in the online server documentation this is <strong>not present</strong>.</p>
+<p>The examples should be tested.</p>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.modify"><code>AdminConfig.modify()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.remove"><code>AdminConfig.remove()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1572,12 +1788,65 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.createDocument" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createDocument</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createDocument</span><span class="p">(</span><span class="n">document_uri</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.createDocument" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Creates a document in the configuration repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>document_uri</code></td>
+          <td class="doc-param-details">
+            <p>The document to be created in the repository.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filename</code></td>
+          <td class="doc-param-details">
+            <p>A valid local filename where the contents of the document are located.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createDocument</span><span class="p">(</span><span class="s1">&#39;cells/myCell/myfile.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;/mydir/myfile&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="question">
+  <summary>More testing needed</summary>
+  <p>The <strong>return type</strong> needs to be checked.</p>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.deleteDocument"><code>AdminConfig.deleteDocument()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.existsDocument"><code>AdminConfig.existsDocument()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1688,12 +1957,53 @@ The table consists of the following columns:</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.deleteDocument" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">deleteDocument</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">deleteDocument</span><span class="p">(</span><span class="n">document_uri</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.deleteDocument" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Deletes a document from the configuration repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>document_uri</code></td>
+          <td class="doc-param-details">
+            <p>The document to be deleted from the repository.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">deleteDocument</span><span class="p">(</span><span class="s1">&#39;cells/mycell/myfile.xml&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="question">
+  <summary>More testing needed</summary>
+  <p>The <strong>return type</strong> needs to be checked.</p>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.createDocument"><code>AdminConfig.createDocument()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.existsDocument"><code>AdminConfig.existsDocument()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1703,12 +2013,82 @@ The table consists of the following columns:</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.existsDocument" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">existsDocument</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">existsDocument</span><span class="p">(</span><span class="n">document_uri</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.existsDocument" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Tests to see if a document exists in the configuration repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>document_uri</code></td>
+          <td class="doc-param-details">
+            <p>The document to be tested in the repository.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>exists</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>Returns <code>1</code> if the document exists; <code>0</code> otherwise.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>bool</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">exists</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">existsDocument</span><span class="p">(</span><span class="s1">&#39;cells/mycell/myfile.xml&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">exists</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">exists</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document exists&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document does not exist&quot;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">Document exists</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.createDocument"><code>AdminConfig.createDocument()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.deleteDocument"><code>AdminConfig.deleteDocument()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1808,6 +2188,45 @@ This method only applies to deployment manager configurations.</p>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Returns a message giving the current cross-document enablement setting.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>message</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The current cross-document enablement setting.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getCrossDocumentValidationEnabled</span><span class="p">())</span>
+<span class="go">WASX7188I: Cross-document validation enablement set to true</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.setCrossDocumentValidationEnabled"><code>AdminConfig.setCrossDocumentValidationEnabled()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1896,13 +2315,70 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.getObjectType" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getObjectType</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getObjectType</span><span class="p">(</span><span class="n">configuration_id</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.getObjectType" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Displays the configuration object type indentified by <code>configuration_id</code>.</p>
 
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>configuration_id</code></td>
+          <td class="doc-param-details">
+            <p>The configuration object which type is being requested.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>object_type</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The object type indentified by <code>configuration_id</code>.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_types.ObjectType" href="../typing_objects/object_types/#wsadmin_type_hints.typing_objects.object_types.ObjectType">ObjectType</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">configuration_id</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Cell:myCell/&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getObjectType</span><span class="p">(</span><span class="n">configuration_id</span><span class="p">))</span>
+<span class="go">Cell</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
@@ -1917,6 +2393,55 @@ This method only applies to deployment manager configurations.</p>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Returns the mode that will be used when the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.save"><code>AdminConfig.save()</code></a> method will be invoked.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>save_mode</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The mode used when <code>save</code> is invoked.
+Possible values are:</p>
+<ul>
+<li><code>"overwriteOnConflict"</code> to save changes even if they conflict 
+    with other configuration changes;</li>
+<li><code>"rollbackOnConflict"</code> to cause a save operation to fail if
+changes conflict with other configuration changes;
+this value is the default.</li>
+</ul>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Literal">Literal</span>[&#39;overwriteOnConflict&#39;, &#39;rollbackOnConflict&#39;]</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getSaveMode</span><span class="p">())</span>
+<span class="go">rollbackOnConflict</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.setSaveMode"><code>AdminConfig.setSaveMode()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.save"><code>AdminConfig.save()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.reset"><code>AdminConfig.reset()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1932,6 +2457,45 @@ This method only applies to deployment manager configurations.</p>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Returns a message giving the current validation level.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>message</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The current validation level.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationLevel</span><span class="p">())</span>
+<span class="go">WASX7189I: Validation level set to HIGHEST</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.setValidationLevel"><code>AdminConfig.setValidationLevel()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -1941,13 +2505,71 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.getValidationSeverityResult" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationSeverityResult</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationSeverityResult</span><span class="p">(</span><span class="n">severity</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.getValidationSeverityResult" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Returns the number of validation messages with the given
+    severity from the most recent validation.</p>
 
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>severity</code></td>
+          <td class="doc-param-details">
+            <p>The severity level for which to return the number of validation messages. 
+Specify an integer value <strong>between 0 and 9</strong>.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>int</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>messages_count</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>A string that indicates the number of validation messages of the given severity.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>int</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationSeverityResult</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="go">16</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
@@ -2293,12 +2915,96 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.listTemplates" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">listTemplates</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">listTemplates</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.listTemplates" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Returns a list of the templates available for the given type that match the provided <code>pattern</code>.</p>
+<p>These templates may be used in invocations of <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.createUsingTemplate"><code>AdminConfig.createUsingTemplate</code></a>.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>type</code></td>
+          <td class="doc-param-details">
+            <p>The name of the target object type.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_types.ObjectType" href="../typing_objects/object_types/#wsadmin_type_hints.typing_objects.object_types.ObjectType">ObjectType</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>pattern</code></td>
+          <td class="doc-param-details">
+            <p>A query (wildcard characters or Java regular expressions) to filter the results.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>&#39;&#39;</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>configuration_ids</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>Multiline string with the requested templates configuration IDs.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a>]</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">listTemplates</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">,</span> <span class="s2">&quot;php&quot;</span><span class="p">))</span>
+<span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP4|server.xml#Server_1)</span>
+<span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP5|server.xml#Server_1)</span>
+<span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE20_PHP4|server.xml#Server_1)</span>
+<span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE20_PHP5|server.xml#Server_1)</span>
+<span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE22_PHP4|server.xml#Server_1)</span>
+<span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE22_PHP5|server.xml#Server_1)</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.createUsingTemplate"><code>AdminConfig.createUsingTemplate()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2323,13 +3029,71 @@ This method only applies to deployment manager configurations.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.parents" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">parents</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">parents</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.parents" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Displays the object types that can contain <code>type</code>.</p>
 
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>type</code></td>
+          <td class="doc-param-details">
+            <p>The object type you want to find parents of.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_types.ObjectType" href="../typing_objects/object_types/#wsadmin_type_hints.typing_objects.object_types.ObjectType">ObjectType</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>parents</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The parent object types.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_types.ObjectType" href="../typing_objects/object_types/#wsadmin_type_hints.typing_objects.object_types.ObjectType">ObjectType</a>]</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">parents</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">))</span>
+<span class="go">DynamicCluster</span>
+<span class="go">Node</span>
+<span class="go">ServerCluster</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
@@ -2620,12 +3384,80 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.setCrossDocumentValidationEnabled" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setCrossDocumentValidationEnabled</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setCrossDocumentValidationEnabled</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.setCrossDocumentValidationEnabled" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Enables or disables the cross-document validation.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>flag</code></td>
+          <td class="doc-param-details">
+            <p>Pass <code>true</code> to enable the cross-document validation, or <code>false</code> to disable it.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Literal">Literal</span>[&#39;true&#39;, &#39;false&#39;]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>message</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The same message returned by <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.getCrossDocumentValidationEnabled"><code>AdminConfig.getCrossDocumentValidationEnabled()</code></a>.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getCrossDocumentValidationEnabled</span><span class="p">())</span>
+<span class="go">WASX7188I: Cross-document validation enablement set to true</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setCrossDocumentValidationEnabled</span><span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">))</span>
+<span class="go">WASX7188I: Cross-document validation enablement set to false</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getCrossDocumentValidationEnabled</span><span class="p">())</span>
+<span class="go">WASX7188I: Cross-document validation enablement set to false</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.getCrossDocumentValidationEnabled"><code>AdminConfig.getCrossDocumentValidationEnabled()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2635,12 +3467,54 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.setSaveMode" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setSaveMode</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setSaveMode</span><span class="p">(</span><span class="n">save_mode</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.setSaveMode" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Changes the mode that will be used when the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.save"><code>AdminConfig.save()</code></a> method will be invoked.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>save_mode</code></td>
+          <td class="doc-param-details">
+            <p>The save mode for the configuration repository</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Literal">Literal</span>[&#39;overwriteOnConflict&#39;, &#39;rollbackOnConflict&#39;]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getSaveMode</span><span class="p">())</span>
+<span class="go">rollbackOnConflict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setSaveMode</span><span class="p">(</span><span class="s2">&quot;overwriteOnConflict&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getSaveMode</span><span class="p">())</span>
+<span class="go">overwriteOnConflict</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.getSaveMode"><code>AdminConfig.getSaveMode()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.save"><code>AdminConfig.save()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.reset"><code>AdminConfig.reset()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2650,12 +3524,80 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.setValidationLevel" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setValidationLevel</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setValidationLevel</span><span class="p">(</span><span class="n">level</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.setValidationLevel" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Sets the validation used when files are extracted from the repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>level</code></td>
+          <td class="doc-param-details">
+            <p>The validation level to use.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Literal">Literal</span>[&#39;none&#39;, &#39;low&#39;, &#39;medium&#39;, &#39;high&#39;, &#39;highest&#39;]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>message</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>A message indicating the current validation level.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationLevel</span><span class="p">())</span>
+<span class="go">WASX7188I: Validation level set to &quot;none&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">setValidationLevel</span><span class="p">(</span><span class="s2">&quot;high&quot;</span><span class="p">))</span>
+<span class="go">WASX7188I: Validation level set to &quot;high&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationLevel</span><span class="p">())</span>
+<span class="go">WASX7188I: Validation level set to &quot;high&quot;</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.getValidationLevel"><code>AdminConfig.getValidationLevel()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -3024,11 +3966,11 @@ Instead, it will contain only the first line (<em><code>WASX7193I</code></em>):
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-01T16:12:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-13T18:12:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-13</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-01T16:12:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-01</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-13T18:12:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-13</span>
       
     
   </small>
