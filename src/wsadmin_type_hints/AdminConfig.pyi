@@ -660,7 +660,7 @@ def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[Confi
         pattern (str): A query (wildcard characters or Java regular expressions) to filter the results.
 
     Returns:
-        MultilineList[ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
+        configuration_ids (MultilineList[ConfigurationObjectName]): Multiline string with the requested templates configuration IDs.
     
     Example:
         ```pycon
