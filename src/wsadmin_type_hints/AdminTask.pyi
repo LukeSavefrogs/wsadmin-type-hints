@@ -1,10 +1,8 @@
 """
 Use the `AdminTask` object to run administrative commands with the `wsadmin` tool.
 
-Administrative commands are loaded dynamically when you start the `wsadmin` tool. 
-
-The administrative commands that are available for you to use, and what you can do 
-with them, depends on the edition of the product that you use.
+The set of available administrative commands is discovered dynamically when the scripting 
+client is started and **depends on the edition** of WebSphere Application Server you install.
 
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin).
 
