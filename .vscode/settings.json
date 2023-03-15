@@ -19,7 +19,13 @@
         "--no-pretty",
         "--no-warn-no-return",
         "--disable-error-code 'no-untyped-def'",
+        "--disable-error-code 'misc'",
         "--disable-error-code 'empty-body'"
     ],
-    "python.analysis.completeFunctionParens": true
+    "python.analysis.completeFunctionParens": true,
+    "python.languageServer": "Pylance",
+    "yaml.customTags": [
+        "!ENV sequence"
+    ],
+
 }
