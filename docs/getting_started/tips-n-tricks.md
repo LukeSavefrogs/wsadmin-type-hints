@@ -1,4 +1,12 @@
 # Tips and Tricks
+
+The following section lists a series of tips and tricks I found useful in my experience.
+
+This includes:
+
+- Solutions to language problems
+- Tips for using the `wsadmin`
+
 ## `NameError` with Boolean values
 Being Python 2.7 the earliest Python version i was used to work on, i was shocked to find that simple scripts running on **Python 2.1** failed with `NameError: True` and `NameError: False`.
 
@@ -75,7 +83,7 @@ This built-in module was **added in Python 2.1** and allows the developer to **f
 
     A full list of features available, with all their descriptions and version prerequisites can be found [here](https://docs.python.org/3/library/__future__.html).
 
-1. You can find the features **available** in _your Jython environment_ by running the following commands:
+1. To **discover** the features **available** in _your Jython environment_ use the following commands:
 ```pycon
 >>> import __future__
 >>> print([feature for feature in dir(__future__) if not feature.startswith("_")])
