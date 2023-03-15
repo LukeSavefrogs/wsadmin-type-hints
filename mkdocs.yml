@@ -10,6 +10,7 @@ nav:
     - getting_started/getting-started.md
     - getting_started/faq.md
     - getting_started/resources.md
+    - getting_started/tips-n-tricks.md
   - Cookbook: 
     - cookbook/index.md
     - Servers: cookbook/servers.md
