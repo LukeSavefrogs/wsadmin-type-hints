@@ -11,17 +11,59 @@ Upon investigation I found that:
 !!! Info 
     **More informations** on this subject and other interesting considerations can be found in [**this article**](https://giedrius.blog/2018/01/04/what-is-actually-true-and-false-in-python/).
 
-### Workaround for Jython `2.2` and lower
-To fix this, add the following lines at the top of your code (inspired by [this SO answer](https://stackoverflow.com/q/31042827/8965861){: target=_blank}):
+### Solutions
+Since boolean values were introduced in **Python 2.3** (with [PEP 285](https://peps.python.org/pep-0285/){: target=_blank}), if the `wsadmin` is running an older Jython version, you won't be able to use `True` or `False` (nor the `bool(...)` function) in your scripts. 
+
+To overcome this problem you have **2 options**:
+
+1. [Provide a polyfill for `True` and `False`](#1-define-truefalse)
+1. [Use `0` (falsy) and `1` (truthy)](#2-use-01)
+
+
+Let's explore these options in detail...
+#### 1. Define `True`/`False`
+To use `True` and `False` in the scripts **add the following line** at the top of your code, then you'll be able to write your scripts as usual:
 ```python
-# Define True and False, for very old versions of Python (<2.3)
 exec("try: (True, False)\nexcept NameError: True = 1==1; False = 1==0")
 ```
 
-The code is wrapped in an `exec(...)` function for two primary reasons:
+!!! Info
+    The code is wrapped in an `exec(...)` function for two primary reasons:
 
-- To provide a **oneliner** fix, easier to copy-paste, thus reducing errors;
-- To **elude linters and static type checkers** like `pylint` or `mypy` which consider this an error _(while it is only a false positive, since we're dealing with old legacy Python versions)_.
+    1. To provide a **oneliner** fix, easier to _copy-paste_, thus _reducing errors_;
+    1. To **elude linters and static type checkers** like `pylint` or `mypy` which consider this an error _(while it is only a false positive, since we're dealing with old legacy Python versions)_.
+
+!!! quote "Source"
+    This **workaround** is inspired by [this SO answer](https://stackoverflow.com/q/31042827/8965861){: target=_blank}.
+
+!!! Example
+    The following example shows how the `False` value gets correctly evaluated in a condition:
+    ```pycon
+    >>> exec("try: (True, False)\nexcept NameError: True = 1==1; False = 1==0")
+    >>> exists = True
+    
+    >>> if exists:
+    ...     print("File exists.")
+    ... else:
+    ...     print("File does not exists.")
+    File exists.
+    ```
+
+#### 2. Use `0`/`1`
+Python interprets **`0`** and **`1`** respectively as **falsy** and **truthy values**.
+This means that we can use `0` instead of `False` and `1` instead of `True`.
+
+!!! Example
+    We can rewrite the previous example like this:
+    ```pycon
+    >>> exists = 1
+    
+    >>> if exists:
+    ...     print("File exists.")
+    ... else:
+    ...     print("File does not exists.")
+    File exists.
+    ```
 
 ## The `__future__` module
 Just like Python, Jython also provides the `__future__` module.
