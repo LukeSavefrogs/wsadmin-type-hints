@@ -4,6 +4,8 @@
         "aaron-bond.better-comments",
         "njqdev.vscode-python-typehint",
         "samuelcolvin.jinjahtml",
-        "matangover.mypy"
+        "matangover.mypy",
+        "stkb.rewrap",
+        "johnnywong.vscode-ts-whitespace-converter"
     ]
 }
