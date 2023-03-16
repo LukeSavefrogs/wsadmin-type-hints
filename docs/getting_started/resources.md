@@ -23,5 +23,6 @@
 - [Stackoverflow](https://stackoverflow.com/questions/tagged/wsadmin){: target=\_blank} - _Doesn't need any explanation_ 😶
 - [IBM WebSphere Application Server Network Deployment V8.0 Core Administration Guide](http://java.boot.by/ibm-317/){: target=_blank} - Guide for the administration of Websphere Application Server to be used along other sources.
 - [FreeKB "IBM Websphere" articles](http://www.freekb.net/Articles?tag=IBM%20WebSphere){: target=_blank} - Collection of articles about the **administration** of an "**IBM WebSphere Application Server**" infrastructure (not only with `wsadmin`)
+- [SysMan - WebSphere Jython programming](https://www.sysman.nl/WebSphereJython/){: target=_blank} - **Small** guide with additional info on **Object types**.
 - [WsAdmin Objects](https://wpcertification.blogspot.com/2009/08/wsadmin-objects.html){: target=_blank} - Simple explanation of the **difference between the 4 main objects** used by the `wsadmin`
 - [SetGetWeb WAS](https://setgetweb.com/p/WAS8/welc6topscripting.html){: target=_blank} - Something is ripped from the IBM documentation, something else is useful; worth of a glance anyway.
