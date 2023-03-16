@@ -123,6 +123,10 @@ plugins:
 
 extra:
   social:
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/wsadmin-type-hints/
+      name: Visit the package homepage
+
     - icon: fontawesome/brands/github
       link: https://github.com/LukeSavefrogs
       name: Find me on Github
