@@ -680,7 +680,57 @@ def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[Confi
 
 # --------------------------------------------------------------------------
 
-def modify(): # undocumented
+def modify(configuration_id: ConfigurationObjectName, attributes: Union[str, List[List[str]]], /) -> Literal['']:
+    """ Change only the attributes specified by `attributes` 
+        for the configuration object named by `configuration_id`.
+
+    Args:
+        configuration_id (ConfigurationObjectName): The configuration ID of the object whose `attribute`s need to be changed.
+        attributes (str | List[List[str]]): The attributes to modify, along with their new value.
+        
+    Returns:
+        empty (Literal['']): An empty string.
+    
+    Example:
+        In this example we'll take for granted that every code block is preceded by the following commands: 
+        ```pycon
+        >>> datasource = AdminConfig.list("DataSource", "*LUCAXA*").splitlines()[0]
+        >>> print(datasource)
+        DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)
+        >>> print(AdminConfig.showAttribute(datasource, "description"))
+        Datasource Test
+        ```
+
+        This is how you can modify an existing configuration object:
+
+        - Using **lists**:
+        ```pycon
+        >>> AdminConfig.modify(datasource, [["description", "This is the new description!"]])
+        ''
+        >>> print(AdminConfig.showAttribute(datasource, "description"))
+        This is the new description!
+        ```
+
+        - Using a **string**:
+            ```pycon
+            >>> AdminConfig.modify(datasource, '[[description "This is the new(er) description!"]]')
+            ''
+            >>> print(AdminConfig.showAttribute(datasource, "description"))
+            This is the new(er) description!
+            ```
+            Notice how it _**may seem** like a list_ enclosed in quotes BUT with some differences:
+            
+            1. The **comma** (`,`) between the key and the value **must be omitted**;
+            1. Both keys and values do not need to be surrounded in **quotes**, except when they **contain spaces or special characters**.
+    
+    !!! abstract "See also"
+        - [`AdminConfig.create()`][wsadmin_type_hints.AdminConfig.create]
+        - [`AdminConfig.remove()`][wsadmin_type_hints.AdminConfig.remove]
+        - [`AdminConfig.resetAttributes()`][wsadmin_type_hints.AdminConfig.resetAttributes]
+        - [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show]
+        - [`AdminConfig.showall()`][wsadmin_type_hints.AdminConfig.showall]
+        - [`AdminConfig.showAttribute()`][wsadmin_type_hints.AdminConfig.showAttribute]
+    """        
     ...
 
 def parents(type: ObjectType, /) -> MultilineList[ObjectType]:
