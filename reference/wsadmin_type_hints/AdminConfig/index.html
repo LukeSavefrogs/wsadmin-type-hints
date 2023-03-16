@@ -3028,12 +3028,120 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
 
 
 <h2 id="wsadmin_type_hints.AdminConfig.modify" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">modify</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">configuration_id</span><span class="p">,</span> <span class="n">attributes</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.AdminConfig.modify" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Change only the attributes specified by <code>attributes</code> 
+    for the configuration object named by <code>configuration_id</code>.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>configuration_id</code></td>
+          <td class="doc-param-details">
+            <p>The configuration ID of the object whose <code>attribute</code>s need to be changed.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>attributes</code></td>
+          <td class="doc-param-details">
+            <p>The attributes to modify, along with their new value.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str | <span title="typing.List">List</span>[<span title="typing.List">List</span>[str]]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>empty</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>An empty string.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Literal">Literal</span>[&#39;&#39;]</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <p>In this example we'll take for granted that every code block is preceded by the following commands: 
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">datasource</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s2">&quot;DataSource&quot;</span><span class="p">,</span> <span class="s2">&quot;*LUCAXA*&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">datasource</span><span class="p">)</span>
+<span class="go">DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">showAttribute</span><span class="p">(</span><span class="n">datasource</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">))</span>
+<span class="go">Datasource Test</span>
+</code></pre></div></p>
+<p>This is how you can modify an existing configuration object:</p>
+<ul>
+<li>
+<p>Using <strong>lists</strong>:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">datasource</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;This is the new description!&quot;</span><span class="p">]])</span>
+<span class="go">&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">showAttribute</span><span class="p">(</span><span class="n">datasource</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">))</span>
+<span class="go">This is the new description!</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Using a <strong>string</strong>:
+    <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">datasource</span><span class="p">,</span> <span class="s1">&#39;[[description &quot;This is the new(er) description!&quot;]]&#39;</span><span class="p">)</span>
+<span class="go">&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">showAttribute</span><span class="p">(</span><span class="n">datasource</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">))</span>
+<span class="go">This is the new(er) description!</span>
+</code></pre></div>
+    Notice how it <em><strong>may seem</strong> like a list</em> enclosed in quotes BUT with some differences:</p>
+<ol>
+<li>The <strong>comma</strong> (<code>,</code>) between the key and the value <strong>must be omitted</strong>;</li>
+<li>Both keys and values do not need to be surrounded in <strong>quotes</strong>, except when they <strong>contain spaces or special characters</strong>.</li>
+</ol>
+</li>
+</ul>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.create"><code>AdminConfig.create()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.remove"><code>AdminConfig.remove()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.resetAttributes"><code>AdminConfig.resetAttributes()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.show"><code>AdminConfig.show()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.showall"><code>AdminConfig.showall()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.AdminConfig.showAttribute"><code>AdminConfig.showAttribute()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -3980,11 +4088,11 @@ Instead, it will contain only the first line (<em><code>WASX7193I</code></em>):
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-15T12:18:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-16T16:40:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-16</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-15T12:18:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-16T16:40:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-16</span>
       
     
   </small>

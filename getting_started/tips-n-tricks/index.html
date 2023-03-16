@@ -437,9 +437,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#workaround-for-jython-22-and-lower" class="md-nav__link">
-    Workaround for Jython 2.2 and lower
+  <a href="#solutions" class="md-nav__link">
+    Solutions
   </a>
+  
+    <nav class="md-nav" aria-label="Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-define-truefalse" class="md-nav__link">
+    1. Define True/False
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-01" class="md-nav__link">
+    2. Use 0/1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -813,9 +833,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#workaround-for-jython-22-and-lower" class="md-nav__link">
-    Workaround for Jython 2.2 and lower
+  <a href="#solutions" class="md-nav__link">
+    Solutions
   </a>
+  
+    <nav class="md-nav" aria-label="Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-define-truefalse" class="md-nav__link">
+    1. Define True/False
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-use-01" class="md-nav__link">
+    2. Use 0/1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -850,6 +890,12 @@
 
 
 <h1 id="tips-and-tricks">Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Anchor link to this section for reference">&para;</a></h1>
+<p>The following section lists a series of tips and tricks I found useful in my experience.</p>
+<p>This includes:</p>
+<ul>
+<li>Solutions to language problems</li>
+<li>Tips for using the <code>wsadmin</code></li>
+</ul>
 <h2 id="nameerror-with-boolean-values"><code>NameError</code> with Boolean values<a class="headerlink" href="#nameerror-with-boolean-values" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Being Python 2.7 the earliest Python version i was used to work on, i was shocked to find that simple scripts running on <strong>Python 2.1</strong> failed with <code>NameError: True</code> and <code>NameError: False</code>.</p>
 <p>Upon investigation I found that:</p>
@@ -862,16 +908,58 @@
 <p class="admonition-title">Info</p>
 <p><strong>More informations</strong> on this subject and other interesting considerations can be found in <a href="https://giedrius.blog/2018/01/04/what-is-actually-true-and-false-in-python/"><strong>this article</strong></a>.</p>
 </div>
-<h3 id="workaround-for-jython-22-and-lower">Workaround for Jython <code>2.2</code> and lower<a class="headerlink" href="#workaround-for-jython-22-and-lower" title="Anchor link to this section for reference">&para;</a></h3>
-<p>To fix this, add the following lines at the top of your code (inspired by <a href="https://stackoverflow.com/q/31042827/8965861" target="_blank">this SO answer</a>):
-<div class="language-python highlight"><pre><span></span><code><span class="c1"># Define True and False, for very old versions of Python (&lt;2.3)</span>
-<span class="n">exec</span><span class="p">(</span><span class="s2">&quot;try: (True, False)</span><span class="se">\n</span><span class="s2">except NameError: True = 1==1; False = 1==0&quot;</span><span class="p">)</span>
+<h3 id="solutions">Solutions<a class="headerlink" href="#solutions" title="Anchor link to this section for reference">&para;</a></h3>
+<p>Since boolean values were introduced in <strong>Python 2.3</strong> (with <a href="https://peps.python.org/pep-0285/" target="_blank">PEP 285</a>), if the <code>wsadmin</code> is running an older Jython version, you won't be able to use <code>True</code> or <code>False</code> (nor the <code>bool(...)</code> function) in your scripts. </p>
+<p>To overcome this problem you have <strong>2 options</strong>:</p>
+<ol>
+<li><a href="#1-define-truefalse">Provide a polyfill for <code>True</code> and <code>False</code></a></li>
+<li><a href="#2-use-01">Use <code>0</code> (falsy) and <code>1</code> (truthy)</a></li>
+</ol>
+<p>Let's explore these options in detail...</p>
+<h4 id="1-define-truefalse">1. Define <code>True</code>/<code>False</code><a class="headerlink" href="#1-define-truefalse" title="Anchor link to this section for reference">&para;</a></h4>
+<p>To use <code>True</code> and <code>False</code> in the scripts <strong>add the following line</strong> at the top of your code, then you'll be able to write your scripts as usual:
+<div class="language-python highlight"><pre><span></span><code><span class="n">exec</span><span class="p">(</span><span class="s2">&quot;try: (True, False)</span><span class="se">\n</span><span class="s2">except NameError: True = 1==1; False = 1==0&quot;</span><span class="p">)</span>
 </code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>The code is wrapped in an <code>exec(...)</code> function for two primary reasons:</p>
-<ul>
-<li>To provide a <strong>oneliner</strong> fix, easier to copy-paste, thus reducing errors;</li>
+<ol>
+<li>To provide a <strong>oneliner</strong> fix, easier to <em>copy-paste</em>, thus <em>reducing errors</em>;</li>
 <li>To <strong>elude linters and static type checkers</strong> like <code>pylint</code> or <code>mypy</code> which consider this an error <em>(while it is only a false positive, since we're dealing with old legacy Python versions)</em>.</li>
-</ul>
+</ol>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Source</p>
+<p>This <strong>workaround</strong> is inspired by <a href="https://stackoverflow.com/q/31042827/8965861" target="_blank">this SO answer</a>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The following example shows how the <code>False</code> value gets correctly evaluated in a condition:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">exec</span><span class="p">(</span><span class="s2">&quot;try: (True, False)</span><span class="se">\n</span><span class="s2">except NameError: True = 1==1; False = 1==0&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exists</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">exists</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File exists.&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File does not exists.&quot;</span><span class="p">)</span>
+<span class="go">File exists.</span>
+</code></pre></div></p>
+</div>
+<h4 id="2-use-01">2. Use <code>0</code>/<code>1</code><a class="headerlink" href="#2-use-01" title="Anchor link to this section for reference">&para;</a></h4>
+<p>Python interprets <strong><code>0</code></strong> and <strong><code>1</code></strong> respectively as <strong>falsy</strong> and <strong>truthy values</strong>.
+This means that we can use <code>0</code> instead of <code>False</code> and <code>1</code> instead of <code>True</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>We can rewrite the previous example like this:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">exists</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">exists</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File exists.&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File does not exists.&quot;</span><span class="p">)</span>
+<span class="go">File exists.</span>
+</code></pre></div></p>
+</div>
 <h2 id="the-__future__-module">The <code>__future__</code> module<a class="headerlink" href="#the-__future__-module" title="Anchor link to this section for reference">&para;</a></h2>
 <p>Just like Python, Jython also provides the <code>__future__</code> module.</p>
 <p>This built-in module was <strong>added in Python 2.1</strong> and allows the developer to <strong>force</strong> the Python (and so, Jython) interpreters into using <strong>newer features</strong> of the language.</p>
@@ -882,7 +970,7 @@
 </div>
 <ol>
 <li>
-<p>You can find the features <strong>available</strong> in <em>your Jython environment</em> by running the following commands:
+<p>To <strong>discover</strong> the features <strong>available</strong> in <em>your Jython environment</em> use the following commands:
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">__future__</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">([</span><span class="n">feature</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__future__</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">feature</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)])</span>
 <span class="go">[&#39;nested_scopes&#39;]</span>
@@ -904,7 +992,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-15T12:16:50+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-15T16:52:49+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-15</span>
       
         <br>
         Created:
