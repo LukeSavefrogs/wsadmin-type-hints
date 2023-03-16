@@ -35,6 +35,7 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.tabs
+    # - navigation.tabs
     - toc.follow
     - content.code.copy
     - content.tabs.link
@@ -79,6 +80,7 @@ plugins:
             # Members options:
             filters: 
               - "!^__all__$"
+              - "!^_" # Do not show hidden properties
 
             # Docstrings options:
             docstring_style: "google"
