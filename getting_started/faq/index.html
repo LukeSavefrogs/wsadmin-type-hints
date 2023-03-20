@@ -427,6 +427,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jython" class="md-nav__link">
+    Jython
+  </a>
+  
+    <nav class="md-nav" aria-label="Jython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-keyword-arguments-in-wsadmin-methods" class="md-nav__link">
+    Can I use keyword arguments in wsadmin methods?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -831,6 +851,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jython" class="md-nav__link">
+    Jython
+  </a>
+  
+    <nav class="md-nav" aria-label="Jython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-keyword-arguments-in-wsadmin-methods" class="md-nav__link">
+    Can I use keyword arguments in wsadmin methods?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -855,13 +895,38 @@
 <p><strong>No</strong>, this package only provides autocompletion and intellisense functionality, as well as an online manual complete with examples.</p>
 <h3 id="do-i-need-the-same-python-version-of-the-wsadmin">Do I need the same Python version of the <code>wsadmin</code>?<a class="headerlink" href="#do-i-need-the-same-python-version-of-the-wsadmin" title="Anchor link to this section for reference">&para;</a></h3>
 <p><strong>No</strong>, to work this package needs <strong>Python &gt;3.7</strong>. However, the syntax of your scripts should match the Pyhon version run by the <code>wsadmin</code> Jython interpreter.</p>
+<h2 id="jython">Jython<a class="headerlink" href="#jython" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="can-i-use-keyword-arguments-in-wsadmin-methods">Can I use keyword arguments in <code>wsadmin</code> methods?<a class="headerlink" href="#can-i-use-keyword-arguments-in-wsadmin-methods" title="Anchor link to this section for reference">&para;</a></h3>
+<p><strong>No</strong>, you can't.</p>
+<p>Passing a keyword argument to a <code>wsadmin</code> method (for example <a class="autorefs autorefs-internal" href="../../reference/wsadmin_type_hints/AdminConfig/#wsadmin_type_hints.AdminConfig.help"><code>AdminConfig.help()</code></a>) will throw a <code>TypeError</code>:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="n">method_name</span><span class="o">=</span><span class="s2">&quot;help&quot;</span><span class="p">)</span>
+<span class="go">WASX7015E: Exception running command: &quot;AdminConfig.help(method_name=&quot;help&quot;)&quot;; exception information:</span>
+<span class="go">com.ibm.bsf.BSFException: exception from Jython:</span>
+<span class="go">Traceback (innermost last):</span>
+<span class="go">  File &quot;&lt;input&gt;&quot;, line 1, in ?</span>
+<span class="go">TypeError: help(): takes no keyword arguments</span>
+</code></pre></div></p>
+<p>You can however write <strong>custom functions</strong> or methods that accept both <strong>positional and keyword arguments</strong>:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; argument&quot;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">()</span>
+<span class="go">Default argument</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;positional&quot;</span><span class="p">)</span>
+<span class="go">Positional argument</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">&quot;keyword&quot;</span><span class="p">)</span>
+<span class="go">Keyword argument</span>
+<span class="go">&gt;&gt;&gt;</span>
+</code></pre></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-01T16:04:32+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-20T18:15:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-20</span>
       
         <br>
         Created:
