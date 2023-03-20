@@ -10,7 +10,7 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
     All methods and descriptions were generated using the `AdminTask.help("-commands")` command.
 """
 
-from typing import Any, Literal, Optional, Union, overload
+from typing import Any, Literal, Optional, Union, overload, List
 
 from wsadmin_type_hints.typing_objects.object_name import ConfigurationObjectName
 
@@ -1193,10 +1193,10 @@ def createTCPEndPoint(target_object: ConfigurationObjectName, /) -> Configuratio
     ...
 
 @overload
-def createTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, list], /) -> ConfigurationObjectName:
+def createTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, List[str]], /) -> ConfigurationObjectName:
     ...
 
-def createTCPEndPoint(target_object: Union[Literal['-interactive'], ConfigurationObjectName], options: Union[str, list], /) -> ConfigurationObjectName: # type: ignore[misc]
+def createTCPEndPoint(target_object: Union[Literal['-interactive'], ConfigurationObjectName], options: Union[str, List[str]], /) -> ConfigurationObjectName: # type: ignore[misc]
     """Create a new endpoint that you can associate with a TCP inbound channel.
 
     - If `options` is set to a string with value `"-interactive"`, the endpoint will 
@@ -3039,10 +3039,10 @@ def getTCPEndPoint(target_object: ConfigurationObjectName, /) -> ConfigurationOb
     ...
 
 @overload
-def getTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, list], /) -> ConfigurationObjectName:
+def getTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, List[str]], /) -> ConfigurationObjectName:
     ...
 
-def getTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, list], /) -> ConfigurationObjectName: # type: ignore[misc]
+def getTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, List[str]], /) -> ConfigurationObjectName: # type: ignore[misc]
     """Get the NamedEndPoint associated with either a TCPInboundChannel, or a chain that contains a TCPInboundChannel.
 
     - If `target_object` is set to a string with value `"-interactive"`, the endpoint will 
