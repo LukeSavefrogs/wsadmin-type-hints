@@ -10,468 +10,468 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
     All methods and descriptions were generated using the `AdminTask.help("-commands")` command.
 """
 
-from typing import Any, Literal, Optional, Union, overload, List
+from typing import Any, Literal, Union, overload, List
 
 from wsadmin_type_hints.typing_objects.object_name import ConfigurationObjectName
 
 
-def WIMCheckPassword(*args, **kwargs):
+def WIMCheckPassword(*args: Any) -> Any:
 	""" Validates the user/pasword in the Federated repositories user registry """
 	...
 
-def activateEdition(*args, **kwargs):
+def activateEdition(*args: Any) -> Any:
 	""" Marks the state of an edition as ACTIVE. """
 	...
 
-def addActionToRule(*args, **kwargs):
+def addActionToRule(*args: Any) -> Any:
 	""" Use this command to add an action to a rule. """
 	...
 
-def addAdminIdToUserRegObj(*args, **kwargs):
+def addAdminIdToUserRegObj(*args: Any) -> Any:
 	""" Adds the adminId to the user registry object in the security.xml file """
 	...
 
-def addCompUnit(*args, **kwargs):
+def addCompUnit(*args: Any) -> Any:
 	""" Add a composition unit, based on an asset or another business-level application, to a business-level application. """
 	...
 
-def addConditionalTraceRuleForIntelligentManagement(*args, **kwargs):
+def addConditionalTraceRuleForIntelligentManagement(*args: Any) -> Any:
 	""" Add conditional trace for Intelligent Management """
 	...
 
-def addDefaultAction(*args, **kwargs):
+def addDefaultAction(*args: Any) -> Any:
 	""" Use this command to add a default action to a ruleset. """
 	...
 
-def addDisabledSessionCookie(*args, **kwargs):
+def addDisabledSessionCookie(*args: Any) -> Any:
 	""" Adds a cookie configuration that applications will not be able to programmatically modify """
 	...
 
-def addExternalBundleRepository(*args, **kwargs):
+def addExternalBundleRepository(*args: Any) -> Any:
 	""" Adds an external bundle repository to the configuration.  Requires a repository name and a URL. """
 	...
 
-def addFeaturesToServer(*args, **kwargs):
+def addFeaturesToServer(*args: Any) -> Any:
 	""" Add feature pack or stack product features to existing server """
 	...
 
-def addFileRegistryAccount(*args, **kwargs):
+def addFileRegistryAccount(*args: Any) -> Any:
 	""" Adds an account to the file registry. """
 	...
 
-def addForeignServersToDynamicCluster(*args, **kwargs):
+def addForeignServersToDynamicCluster(*args: Any) -> Any:
 	""" Add foreign servers to dynamic cluster """
 	...
 
-def addGroupToBusConnectorRole(*args, **kwargs):
+def addGroupToBusConnectorRole(*args: Any) -> Any:
 	""" Give a group permission to connect to the bus specified. """
 	...
 
-def addGroupToDefaultRole(*args, **kwargs):
+def addGroupToDefaultRole(*args: Any) -> Any:
 	""" Grants a group default access to all local destinations on the bus for the specified role. """
 	...
 
-def addGroupToDestinationRole(*args, **kwargs):
+def addGroupToDestinationRole(*args: Any) -> Any:
 	""" Grants a group access to a destination for the specified destination role. """
 	...
 
-def addGroupToForeignBusRole(*args, **kwargs):
+def addGroupToForeignBusRole(*args: Any) -> Any:
 	""" Grants a group access to a foreign bus from the local bus specified for the specified destination role. """
 	...
 
-def addGroupToTopicRole(*args, **kwargs):
+def addGroupToTopicRole(*args: Any) -> Any:
 	""" Gives a group permission to access the topic for the specified role. """
 	...
 
-def addGroupToTopicSpaceRootRole(*args, **kwargs):
+def addGroupToTopicSpaceRootRole(*args: Any) -> Any:
 	""" Gives a group permission to access the topic space for the specified role. """
 	...
 
-def addIdMgrLDAPAttr(*args, **kwargs):
+def addIdMgrLDAPAttr(*args: Any) -> Any:
 	""" Adds an LDAP attribute configuration to the LDAP repository configuration. """
 	...
 
-def addIdMgrLDAPAttrNotSupported(*args, **kwargs):
+def addIdMgrLDAPAttrNotSupported(*args: Any) -> Any:
 	""" Adds a configuration for a virtual member manager property not supported by a specific LDAP repository. """
 	...
 
-def addIdMgrLDAPBackupServer(*args, **kwargs):
+def addIdMgrLDAPBackupServer(*args: Any) -> Any:
 	""" Sets up a backup LDAP server. """
 	...
 
-def addIdMgrLDAPEntityType(*args, **kwargs):
+def addIdMgrLDAPEntityType(*args: Any) -> Any:
 	""" Adds an LDAP entity type definition to the LDAP repository configuration. """
 	...
 
-def addIdMgrLDAPEntityTypeRDNAttr(*args, **kwargs):
+def addIdMgrLDAPEntityTypeRDNAttr(*args: Any) -> Any:
 	""" Adds RDN attribute configuration to an LDAP entity type configuration. """
 	...
 
-def addIdMgrLDAPExternalIdAttr(*args, **kwargs):
+def addIdMgrLDAPExternalIdAttr(*args: Any) -> Any:
 	""" Adds a configuration for an LDAP attribute used as an external ID. """
 	...
 
-def addIdMgrLDAPGroupDynamicMemberAttr(*args, **kwargs):
+def addIdMgrLDAPGroupDynamicMemberAttr(*args: Any) -> Any:
 	""" Adds a dynamic member attribute configuration to an LDAP group configuration. """
 	...
 
-def addIdMgrLDAPGroupMemberAttr(*args, **kwargs):
+def addIdMgrLDAPGroupMemberAttr(*args: Any) -> Any:
 	""" Adds a member attribute configuration to the LDAP group configuration. """
 	...
 
-def addIdMgrLDAPServer(*args, **kwargs):
+def addIdMgrLDAPServer(*args: Any) -> Any:
 	""" Adds an LDAP server to the LDAP repository configuration. """
 	...
 
-def addIdMgrPropertyToEntityTypes(*args, **kwargs):
+def addIdMgrPropertyToEntityTypes(*args: Any) -> Any:
 	""" Adds a property to one or more entity types either into repositories or into the property extension repository. """
 	...
 
-def addIdMgrRealmBaseEntry(*args, **kwargs):
+def addIdMgrRealmBaseEntry(*args: Any) -> Any:
 	""" Adds a base entry to a specified realm configuration. """
 	...
 
-def addIdMgrRepositoryBaseEntry(*args, **kwargs):
+def addIdMgrRepositoryBaseEntry(*args: Any) -> Any:
 	""" Adds a base entry to the specified repository. """
 	...
 
-def addLocalRepositoryBundle(*args, **kwargs):
+def addLocalRepositoryBundle(*args: Any) -> Any:
 	""" Adds a bundle to the internal bundle repository. """
 	...
 
-def addMemberToGroup(*args, **kwargs):
+def addMemberToGroup(*args: Any) -> Any:
 	""" Adds a member (user or group) to a group. """
 	...
 
-def addMemberToManagedNodeGroup(*args, **kwargs):
+def addMemberToManagedNodeGroup(*args: Any) -> Any:
 	""" This command is used to add members to a group of managed nodes. (deprecated) """
 	...
 
-def addMemberToTargetGroup(*args, **kwargs):
+def addMemberToTargetGroup(*args: Any) -> Any:
 	""" This command is used to add members to a target group. """
 	...
 
-def addMiddlewareAppWebModule(*args, **kwargs):
+def addMiddlewareAppWebModule(*args: Any) -> Any:
 	""" Use this command to add a web module to a middleware application. """
 	...
 
-def addMiddlewareTarget(*args, **kwargs):
+def addMiddlewareTarget(*args: Any) -> Any:
 	""" Use this command to add a deployment target to a middleware application. """
 	...
 
-def addNodeGroupMember(*args, **kwargs):
+def addNodeGroupMember(*args: Any) -> Any:
 	""" add node to the node group """
 	...
 
-def addOSGiExtension(*args, **kwargs):
+def addOSGiExtension(*args: Any) -> Any:
 	""" Adds an extension to the composition unit. """
 	...
 
-def addOSGiExtensions(*args, **kwargs):
+def addOSGiExtensions(*args: Any) -> Any:
 	""" Adds multiple extensions to the composition unit. """
 	...
 
-def addPluginPropertyForIntelligentManagement(*args, **kwargs):
+def addPluginPropertyForIntelligentManagement(*args: Any) -> Any:
 	""" Add plug-in property for Intelligent Management """
 	...
 
-def addPolicyType(*args, **kwargs):
+def addPolicyType(*args: Any) -> Any:
 	""" The addPolicyType command creates a policy type with default values for the specified policy set. You may indicate whether to enable or disable the added policy type. """
 	...
 
-def addProductInfo(*args, **kwargs):
+def addProductInfo(*args: Any) -> Any:
 	""" Add feature pack or stack product information to product info. """
 	...
 
-def addRemoteCellToIntelligentManagement(*args, **kwargs):
+def addRemoteCellToIntelligentManagement(*args: Any) -> Any:
 	""" Command to add remote cell connectors to Intelligent Management """
 	...
 
-def addResourceToAuthorizationGroup(*args, **kwargs):
+def addResourceToAuthorizationGroup(*args: Any) -> Any:
 	""" Add resources to an existing authorization group. """
 	...
 
-def addRoutingPolicyRoutingRule(*args, **kwargs):
+def addRoutingPolicyRoutingRule(*args: Any) -> Any:
 	""" Use this command to add a routing rule to an existing workclass """
 	...
 
-def addRoutingRule(*args, **kwargs):
+def addRoutingRule(*args: Any) -> Any:
 	""" Use this command to add a routing policy rule. """
 	...
 
-def addRuleToRuleset(*args, **kwargs):
+def addRuleToRuleset(*args: Any) -> Any:
 	""" Use this command to add a rule to a ruleset. """
 	...
 
-def addSAMLTAISSO(*args, **kwargs):
+def addSAMLTAISSO(*args: Any) -> Any:
 	""" This command adds the SAML Single Sign-On (SSO) service provider (SP) to the security configuration SAML TAI. """
 	...
 
-def addSIBBootstrapMember(*args, **kwargs):
+def addSIBBootstrapMember(*args: Any) -> Any:
 	""" Nominates a server or cluster for use as a bootstrap server. """
 	...
 
-def addSIBPermittedChain(*args, **kwargs):
+def addSIBPermittedChain(*args: Any) -> Any:
 	""" Adds the specified chain to the list of permitted chains for the specified bus. """
 	...
 
-def addSIBWSInboundPort(*args, **kwargs):
+def addSIBWSInboundPort(*args: Any) -> Any:
 	""" Add an inbound port to an inbound service. """
 	...
 
-def addSIBWSOutboundPort(*args, **kwargs):
+def addSIBWSOutboundPort(*args: Any) -> Any:
 	""" Add an outbound port to an outbound service. """
 	...
 
-def addSIBusMember(*args, **kwargs):
+def addSIBusMember(*args: Any) -> Any:
 	""" Add a member to a bus. """
 	...
 
-def addSTSProperty(*args, **kwargs):
+def addSTSProperty(*args: Any) -> Any:
 	""" Add a configuration property under a configuration group. """
 	...
 
-def addServicePolicyRoutingRule(*args, **kwargs):
+def addServicePolicyRoutingRule(*args: Any) -> Any:
 	""" Use this command to add a routing rule to an existing workclass """
 	...
 
-def addServiceRule(*args, **kwargs):
+def addServiceRule(*args: Any) -> Any:
 	""" Use this command to add a service policy rule. """
 	...
 
-def addSignerCertificate(*args, **kwargs):
+def addSignerCertificate(*args: Any) -> Any:
 	""" Add a signer certificates from a certificate file to a keystore. """
 	...
 
-def addSpnegoFilter(*args, **kwargs):
+def addSpnegoFilter(*args: Any) -> Any:
 	""" This command adds SPNEGO Web authentication filter in the security configuration. """
 	...
 
-def addSpnegoTAIProperties(*args, **kwargs):
+def addSpnegoTAIProperties(*args: Any) -> Any:
 	""" This command adds SPNEGO TAI properties in the security configuration. """
 	...
 
-def addToAdminAuthz(*args, **kwargs):
+def addToAdminAuthz(*args: Any) -> Any:
 	""" Adds the input administrative user to admin-authz.xml. """
 	...
 
-def addToPolicySetAttachment(*args, **kwargs):
+def addToPolicySetAttachment(*args: Any) -> Any:
 	""" The addToPolicySetAttachment command adds additional resources that apply to a policy set attachment. """
 	...
 
-def addTrustedRealms(*args, **kwargs):
+def addTrustedRealms(*args: Any) -> Any:
 	""" Adds a realm or list of realms to the list of trusted realms in a security domain or in global security. """
 	...
 
-def addUserToBusConnectorRole(*args, **kwargs):
+def addUserToBusConnectorRole(*args: Any) -> Any:
 	""" Give a user permission to connect to the bus specified. """
 	...
 
-def addUserToDefaultRole(*args, **kwargs):
+def addUserToDefaultRole(*args: Any) -> Any:
 	""" Grants a user default access to all local destinations on the bus for the specified role. """
 	...
 
-def addUserToDestinationRole(*args, **kwargs):
+def addUserToDestinationRole(*args: Any) -> Any:
 	""" Grants a user access to a destination for the specified destination role. """
 	...
 
-def addUserToForeignBusRole(*args, **kwargs):
+def addUserToForeignBusRole(*args: Any) -> Any:
 	""" Grants a user access to a foreign bus from the local bus specified for the specified destination role. """
 	...
 
-def addUserToTopicRole(*args, **kwargs):
+def addUserToTopicRole(*args: Any) -> Any:
 	""" Gives a user permission to access the topic for the specified role. """
 	...
 
-def addUserToTopicSpaceRootRole(*args, **kwargs):
+def addUserToTopicSpaceRootRole(*args: Any) -> Any:
 	""" Gives a user permission to access the topic space for the specified role. """
 	...
 
-def addWSGWTargetService(*args, **kwargs):
+def addWSGWTargetService(*args: Any) -> Any:
 	""" addWSGWTargetService.description """
 	...
 
-def addWebServerRoutingRule(*args, **kwargs):
+def addWebServerRoutingRule(*args: Any) -> Any:
 	""" Use this command to create a new routing rule. """
 	...
 
-def applyConfigProperties(*args, **kwargs):
+def applyConfigProperties(*args: Any) -> Any:
 	""" Apply configuration as specified in properties file """
 	...
 
-def applyProfileSecuritySettings(*args, **kwargs):
+def applyProfileSecuritySettings(*args: Any) -> Any:
 	""" Applies the security settings selected during install or profile creation time. """
 	...
 
-def applyWizardSettings(*args, **kwargs):
+def applyWizardSettings(*args: Any) -> Any:
 	""" Applies current Security Wizard settings from the workspace. """
 	...
 
-def assignSTSEndpointTokenType(*args, **kwargs):
+def assignSTSEndpointTokenType(*args: Any) -> Any:
 	""" Assign a token type to be issued for the client to access a given endpoint. Endpoints must be unique. If the local name parameter is omitted, the default token type is assumed. """
 	...
 
-def attachServiceMap(*args, **kwargs):
+def attachServiceMap(*args: Any) -> Any:
 	""" Use the "attachServiceMap" command to attach a service map to a local mapping service. """
 	...
 
-def autogenLTPA(*args, **kwargs):
+def autogenLTPA(*args: Any) -> Any:
 	""" Auto-generates an LTPA password and updates the LTPA object in the security.xml. """
 	...
 
-def autogenServerId(*args, **kwargs):
+def autogenServerId(*args: Any) -> Any:
 	""" Auto-generates a server Id and updates the internalServerId field in the security.xml. """
 	...
 
-def backupJobManager(*args, **kwargs):
+def backupJobManager(*args: Any) -> Any:
 	""" Backs up the job manager database to a specified location. """
 	...
 
-def binaryAuditLogReader(*args, **kwargs):
+def binaryAuditLogReader(*args: Any) -> Any:
 	""" Binary Audit Log Reader Command """
 	...
 
-def canNodeJoinNodeGroup(*args, **kwargs):
+def canNodeJoinNodeGroup(*args: Any) -> Any:
 	""" Check if a specified node can be added to a specified node group. """
 	...
 
-def cancelValidation(*args, **kwargs):
+def cancelValidation(*args: Any) -> Any:
 	""" Cancels the validation mode of an edition. """
 	...
 
-def changeClusterShortName(*args, **kwargs):
+def changeClusterShortName(*args: Any) -> Any:
 	""" A command that can be used to change the cluster's short name. """
 	...
 
-def changeFileRegistryAccountPassword(*args, **kwargs):
+def changeFileRegistryAccountPassword(*args: Any) -> Any:
 	""" Change the password of an account in the file registry. """
 	...
 
-def changeHostName(*args, **kwargs):
+def changeHostName(*args: Any) -> Any:
 	""" Change the host name of a node """
 	...
 
-def changeKeyStorePassword(*args, **kwargs):
+def changeKeyStorePassword(*args: Any) -> Any:
 	""" Change the password of a keystore. This will automatically save the new password to the configuration. """
 	...
 
-def changeMultipleKeyStorePasswords(*args, **kwargs):
+def changeMultipleKeyStorePasswords(*args: Any) -> Any:
 	""" Change all the passwords for the keystores that use the password provided, which automatically saves the new passwords to the configuration. """
 	...
 
-def changeMyPassword(*args, **kwargs):
+def changeMyPassword(*args: Any) -> Any:
 	""" Changes the password of this logged-in user. """
 	...
 
-def changeRoutingDefaultRulesAction(*args, **kwargs):
+def changeRoutingDefaultRulesAction(*args: Any) -> Any:
 	""" Use this command to change a rules routing policy default action. """
 	...
 
-def changeRoutingRuleAction(*args, **kwargs):
+def changeRoutingRuleAction(*args: Any) -> Any:
 	""" Use this command to change a routing policy action for a rule. """
 	...
 
-def changeRoutingRuleExpression(*args, **kwargs):
+def changeRoutingRuleExpression(*args: Any) -> Any:
 	""" Use this command to change a routing policy rule expression. """
 	...
 
-def changeRoutingRulePriority(*args, **kwargs):
+def changeRoutingRulePriority(*args: Any) -> Any:
 	""" Use this command to change a routing policy rule priority. """
 	...
 
-def changeRuleExpression(*args, **kwargs):
+def changeRuleExpression(*args: Any) -> Any:
 	""" Use this command to change a rule expression. """
 	...
 
-def changeRulePriority(*args, **kwargs):
+def changeRulePriority(*args: Any) -> Any:
 	""" Use this command to change a rule prioritiy. """
 	...
 
-def changeServerGenericShortName(*args, **kwargs):
+def changeServerGenericShortName(*args: Any) -> Any:
 	""" A command that can be used to change the server generic short name. """
 	...
 
-def changeServerSpecificShortName(*args, **kwargs):
+def changeServerSpecificShortName(*args: Any) -> Any:
 	""" A command that can be used to change the server specific short name. """
 	...
 
-def changeServiceDefaultRulesAction(*args, **kwargs):
+def changeServiceDefaultRulesAction(*args: Any) -> Any:
 	""" Use this command to change a rules service policy default action. """
 	...
 
-def changeServiceRuleAction(*args, **kwargs):
+def changeServiceRuleAction(*args: Any) -> Any:
 	""" Use this command to change a service policy action for a rule. """
 	...
 
-def changeServiceRuleExpression(*args, **kwargs):
+def changeServiceRuleExpression(*args: Any) -> Any:
 	""" Use this command to change a service policy rule expression. """
 	...
 
-def changeServiceRulePriority(*args, **kwargs):
+def changeServiceRulePriority(*args: Any) -> Any:
 	""" Use this command to change a service policy rule priority. """
 	...
 
-def changeWebServerRoutingRuleAction(*args, **kwargs):
+def changeWebServerRoutingRuleAction(*args: Any) -> Any:
 	""" Use this command to change the action associated with an existing routing rule. """
 	...
 
-def changeWebServerRoutingRuleExpression(*args, **kwargs):
+def changeWebServerRoutingRuleExpression(*args: Any) -> Any:
 	""" Use this command to change the expression associated with an existing routing rule. """
 	...
 
-def changeWebServerRoutingRuleOrder(*args, **kwargs):
+def changeWebServerRoutingRuleOrder(*args: Any) -> Any:
 	""" Use this command to change the order associated with an existing routing rule. """
 	...
 
-def checkDynamicClustersForNodeGroupRemoval(*args, **kwargs):
+def checkDynamicClustersForNodeGroupRemoval(*args: Any) -> Any:
 	""" Check Node Group for XD Dynamic Clusters """
 	...
 
-def checkMode(*args, **kwargs):
+def checkMode(*args: Any) -> Any:
 	""" checks the maintenance mode indicator on specified server """
 	...
 
-def checkRegistryRunAsUser(*args, **kwargs):
+def checkRegistryRunAsUser(*args: Any) -> Any:
 	""" Checks if the provided runas user is valid.  True is return if the runas user is valid and false if it is not. """
 	...
 
-def checkRegistryUserPassword(*args, **kwargs):
+def checkRegistryUserPassword(*args: Any) -> Any:
 	""" Check if the provided user and password authenticate in the registry. """
 	...
 
-def cleanupManagedNode(*args, **kwargs):
+def cleanupManagedNode(*args: Any) -> Any:
 	""" Cleanup a managed node that no longer exists """
 	...
 
-def cleanupTarget(*args, **kwargs):
+def cleanupTarget(*args: Any) -> Any:
 	""" Cleanup a Target that no longer exists """
 	...
 
-def clearAuthCache(*args, **kwargs):
+def clearAuthCache(*args: Any) -> Any:
 	""" Clears the auth cache for a security domain; if no security domain is specified, the auth cache for the admin security domain will be cleared """
 	...
 
-def clearIdMgrRepositoryCache(*args, **kwargs):
+def clearIdMgrRepositoryCache(*args: Any) -> Any:
 	""" Clears the cache of the specified repository or of all repositories. """
 	...
 
-def clearIdMgrUserFromCache(*args, **kwargs):
+def clearIdMgrUserFromCache(*args: Any) -> Any:
 	""" Removes a specified user from the cache. """
 	...
 
-def cloneDynamicCluster(*args, **kwargs):
+def cloneDynamicCluster(*args: Any) -> Any:
 	""" Use this command to clone a dynamic cluster. """
 	...
 
-def clonePreference(*args, **kwargs):
+def clonePreference(*args: Any) -> Any:
 	""" Command to clone a user preference """
 	...
 
-def compareMultipleResourceAdapters(*args, **kwargs):
+def compareMultipleResourceAdapters(*args: Any) -> Any:
 	""" Compare a list of multiple resource adapters to see if they are all able to be updated with the same RAR file. """
 	...
 
-def compareNodeVersion(*args, **kwargs):
+def compareNodeVersion(*args: Any) -> Any:
 	""" Compares the version of a given node with the specified version.  Only the number of levels in the specified version number are compared.  For example, if "6.0" compared to a node version of "6.0.1.0", they will compare as equal.  The possible return values are -1, 0, and 1. They are defined as follows: 
             - `-1`: node version is less than the specified version
             - `0`: node version is equal to the specified version
@@ -479,707 +479,707 @@ def compareNodeVersion(*args, **kwargs):
     """
 	...
 
-def compareResourceAdapterToRAR(*args, **kwargs):
+def compareResourceAdapterToRAR(*args: Any) -> Any:
 	""" Compare an existing Resource Adapter to a RAR file and determine whether the RAR is compatible for updating the Resource Adapter. """
 	...
 
-def configureAdminCustomUserRegistry(*args, **kwargs):
+def configureAdminCustomUserRegistry(*args: Any) -> Any:
 	""" Configure a custom user registry in the administrative security configuration """
 	...
 
-def configureAdminLDAPUserRegistry(*args, **kwargs):
+def configureAdminLDAPUserRegistry(*args: Any) -> Any:
 	""" Configure an LDAP user registry in the administrative security configuration """
 	...
 
-def configureAdminLocalOSUserRegistry(*args, **kwargs):
+def configureAdminLocalOSUserRegistry(*args: Any) -> Any:
 	""" Configures a local OS user registry in the administrative security configuration. """
 	...
 
-def configureAdminWIMUserRegistry(*args, **kwargs):
+def configureAdminWIMUserRegistry(*args: Any) -> Any:
 	""" Configures a Federated repositories user registry in the administrative security configuration. """
 	...
 
-def configureAppCustomUserRegistry(*args, **kwargs):
+def configureAppCustomUserRegistry(*args: Any) -> Any:
 	""" Configure a custom user registry in an application security domain """
 	...
 
-def configureAppLDAPUserRegistry(*args, **kwargs):
+def configureAppLDAPUserRegistry(*args: Any) -> Any:
 	""" Configures an LDAP user registry in an application security domain """
 	...
 
-def configureAppLocalOSUserRegistry(*args, **kwargs):
+def configureAppLocalOSUserRegistry(*args: Any) -> Any:
 	""" Configures a local OS user registry in an application security domain. """
 	...
 
-def configureAppWIMUserRegistry(*args, **kwargs):
+def configureAppWIMUserRegistry(*args: Any) -> Any:
 	""" Configures a Federated repositories user registry in an application security domain. """
 	...
 
-def configureAuthzConfig(*args, **kwargs):
+def configureAuthzConfig(*args: Any) -> Any:
 	""" Configures an external authorization provider in global security or in an application security domain. """
 	...
 
-def configureCSIInbound(*args, **kwargs):
+def configureCSIInbound(*args: Any) -> Any:
 	""" Configures the CSI inbound information in the administrative security configuration or in an application security domain. """
 	...
 
-def configureCSIOutbound(*args, **kwargs):
+def configureCSIOutbound(*args: Any) -> Any:
 	""" Configures the CSI outbound information in the administrative security configuration or in an application security domain. """
 	...
 
-def configureDVIPA(*args, **kwargs):
+def configureDVIPA(*args: Any) -> Any:
 	""" configureDVIPA.desc """
 	...
 
-def configureInterceptor(*args, **kwargs):
+def configureInterceptor(*args: Any) -> Any:
 	""" Configures an interceptor. """
 	...
 
-def configureJAASLoginEntry(*args, **kwargs):
+def configureJAASLoginEntry(*args: Any) -> Any:
 	""" Configures a JAAS login module entry in the administrative security configuration or in an application security domain. """
 	...
 
-def configureJaspi(*args, **kwargs):
+def configureJaspi(*args: Any) -> Any:
 	""" Configure the Jaspi configuration. """
 	...
 
-def configureLoginModule(*args, **kwargs):
+def configureLoginModule(*args: Any) -> Any:
 	""" Configures a login module in the administrative security configuration or in an application security domain. """
 	...
 
-def configureRSATokenAuthorization(*args, **kwargs):
+def configureRSATokenAuthorization(*args: Any) -> Any:
 	""" Command that modifies the role propagation authorization mechanism """
 	...
 
-def configureSingleHome(*args, **kwargs):
+def configureSingleHome(*args: Any) -> Any:
 	""" configureDVIPA.desc """
 	...
 
-def configureSingleSignon(*args, **kwargs):
+def configureSingleSignon(*args: Any) -> Any:
 	""" Configure single signon. """
 	...
 
-def configureSpnego(*args, **kwargs):
+def configureSpnego(*args: Any) -> Any:
 	""" This command configures SPNEGO Web Authentication in the security configuration. """
 	...
 
-def configureTAM(*args, **kwargs):
+def configureTAM(*args: Any) -> Any:
 	""" This command configures embedded Tivoli Access Manager on the WebSphere Application Server node or nodes specified. """
 	...
 
-def configureTAMTAI(*args, **kwargs):
+def configureTAMTAI(*args: Any) -> Any:
 	""" This command configures the embedded Tivoli Access Manager Trust Association Interceptor with classname TAMTrustAsociationInterceptorPlus. """
 	...
 
-def configureTAMTAIPdjrte(*args, **kwargs):
+def configureTAMTAIPdjrte(*args: Any) -> Any:
 	""" This command performs the tasks necessary to fully configure the Tivoli Access Manager Runtime for Java. The specific tasks run are PDJrteCfg and SvrSslCfg. """
 	...
 
-def configureTAMTAIProperties(*args, **kwargs):
+def configureTAMTAIProperties(*args: Any) -> Any:
 	""" This command adds the custom properties to the security configuration for the embedded Tivoli Access Manager Trust Association Interceptor with classname TAMTrustAsociationInterceptorPlus. """
 	...
 
-def configureTrustAssociation(*args, **kwargs):
+def configureTrustAssociation(*args: Any) -> Any:
 	""" Configures a trust association. """
 	...
 
-def configureTrustedRealms(*args, **kwargs):
+def configureTrustedRealms(*args: Any) -> Any:
 	""" Configures an inbound or outbound trusted realms. """
 	...
 
-def connectSIBWSEndpointListener(*args, **kwargs):
+def connectSIBWSEndpointListener(*args: Any) -> Any:
 	""" Connect an endpoint listener to a service integration bus. """
 	...
 
-def convertCertForSecurityStandard(*args, **kwargs):
+def convertCertForSecurityStandard(*args: Any) -> Any:
 	""" Converts certificates used by SSL configuration and plugins so that they comply with specified FIPS level.  Also lists certificates that cannot be converted by WebSphere. """
 	...
 
-def convertFilterRefToString(*args, **kwargs):
+def convertFilterRefToString(*args: Any) -> Any:
 	""" Converts an audit specification reference to a string representation. """
 	...
 
-def convertFilterStringToRef(*args, **kwargs):
+def convertFilterStringToRef(*args: Any) -> Any:
 	""" Converts an audit specification event and outcome to a reference representation. """
 	...
 
-def convertSSLCertificates(*args, **kwargs):
+def convertSSLCertificates(*args: Any) -> Any:
 	""" Converts SSL personal certificates to a certificate that is created with the desired signature algorithm or lists SSL personal certificates that are not created with the desired signature algorithm. """
 	...
 
-def convertSSLConfig(*args, **kwargs):
+def convertSSLConfig(*args: Any) -> Any:
 	""" Converts old style SSL configuration to new style SSL configurations.  The CONVERT_SSLCONFIGS option will look for old style SSL configuration objects and change them to look like new style SSL configuration objects.  The CONVERT_TO_DEFAULT will go through make convert the whole SSL configuration to the new centralized SSL configuration style, removing the SSL configuraiton direct referencing from the servers. """
 	...
 
-def convertSelfSignedCertificatesToChained(*args, **kwargs):
+def convertSelfSignedCertificatesToChained(*args: Any) -> Any:
 	""" Converts self-signed certificates to chained certificate in a keystore, all keystore, or the default keystores.  The new chained certificate will be signed with root certificate specified or the default root if one is not specified.  All keystores in the configuration will be searched for the self-signed certificate's signer certificate and it will be replaced with the signer of the default root certificate. """
 	...
 
-def convertServerSecurityToSecurityDomain(*args, **kwargs):
+def convertServerSecurityToSecurityDomain(*args: Any) -> Any:
 	""" Task to convert server level security configuration to a security domain configuration. """
 	...
 
-def convertToSysplexNodeGroup(*args, **kwargs):
+def convertToSysplexNodeGroup(*args: Any) -> Any:
 	""" Converts to a sysplex node group """
 	...
 
-def copyBinding(*args, **kwargs):
+def copyBinding(*args: Any) -> Any:
 	""" The copyBinding command creates a copy of an existing binding. """
 	...
 
-def copyIdMgrFilesForDomain(*args, **kwargs):
+def copyIdMgrFilesForDomain(*args: Any) -> Any:
 	""" Copies the files related to virtual member manager from the specified source domain to the specified destination domain. """
 	...
 
-def copyPolicySet(*args, **kwargs):
+def copyPolicySet(*args: Any) -> Any:
 	""" The copyPolicySet command creates a copy of an existing policy set. The default indicator is set to false for the new policy set. You may indicate whether to transfer attachments from the existing policy set to the new policy set. """
 	...
 
-def copyResourceAdapter(*args, **kwargs):
+def copyResourceAdapter(*args: Any) -> Any:
 	""" copy the specified J2C resource adapter to the specified scope. """
 	...
 
-def copySecurityDomain(*args, **kwargs):
+def copySecurityDomain(*args: Any) -> Any:
 	""" Creates a security domain by coping from another security domain. """
 	...
 
-def copySecurityDomainFromGlobalSecurity(*args, **kwargs):
+def copySecurityDomainFromGlobalSecurity(*args: Any) -> Any:
 	""" Creates a security domain by copy the global administrative security configuration. """
 	...
 
-def correctSIBEnginePolicy(*args, **kwargs):
+def correctSIBEnginePolicy(*args: Any) -> Any:
 	""" Ensures that a messaging engines core group policy conforms to its associated bus members messaging engine assistance policy. """
 	...
 
-def createAllActivePolicy(*args, **kwargs):
+def createAllActivePolicy(*args: Any) -> Any:
 	""" Create a policy that automatically activates all group members. """
 	...
 
-def createApacheServer(*args, **kwargs):
+def createApacheServer(*args: Any) -> Any:
 	""" Use this command to create an Apache Server. """
 	...
 
-def createApacheServerTemplate(*args, **kwargs):
+def createApacheServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createApplicationServer(*args, **kwargs):
+def createApplicationServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createApplicationServerTemplate(*args, **kwargs):
+def createApplicationServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createAuditEncryptionConfig(*args, **kwargs):
+def createAuditEncryptionConfig(*args: Any) -> Any:
 	""" Configures audit record encryption. """
 	...
 
-def createAuditEventFactory(*args, **kwargs):
+def createAuditEventFactory(*args: Any) -> Any:
 	""" Creates an entry in the audit.xml to reference the configuration of an audit event factory implementation of the Audit Event Factory interface. """
 	...
 
-def createAuditFilter(*args, **kwargs):
+def createAuditFilter(*args: Any) -> Any:
 	""" Creates an entry in the audit.xml to reference an Audit Specification. Enables the specification by default. """
 	...
 
-def createAuditKeyStore(*args, **kwargs):
+def createAuditKeyStore(*args: Any) -> Any:
 	""" Creates a new Key Store. """
 	...
 
-def createAuditNotification(*args, **kwargs):
+def createAuditNotification(*args: Any) -> Any:
 	""" Configures an audit notification. """
 	...
 
-def createAuditNotificationMonitor(*args, **kwargs):
+def createAuditNotificationMonitor(*args: Any) -> Any:
 	""" Configures an audit notification monitor. """
 	...
 
-def createAuditSelfSignedCertificate(*args, **kwargs):
+def createAuditSelfSignedCertificate(*args: Any) -> Any:
 	""" Create a new self-signed certificate and store it in a key store. """
 	...
 
-def createAuditSigningConfig(*args, **kwargs):
+def createAuditSigningConfig(*args: Any) -> Any:
 	""" Configures audit record signing. """
 	...
 
-def createAuthDataEntry(*args, **kwargs):
+def createAuthDataEntry(*args: Any) -> Any:
 	""" Create an authentication data entry in the administrative security configuration or a in a security domain. """
 	...
 
-def createAuthorizationGroup(*args, **kwargs):
+def createAuthorizationGroup(*args: Any) -> Any:
 	""" Create a new authorization group. """
 	...
 
-def createBinaryEmitter(*args, **kwargs):
+def createBinaryEmitter(*args: Any) -> Any:
 	""" Creates an entry in the audit.xml to reference the configuration of the Binary File Emitter implementation of the Service Provider interface. """
 	...
 
-def createCAClient(*args, **kwargs):
+def createCAClient(*args: Any) -> Any:
 	""" Creates a certificate authority (CA) client configurator object. """
 	...
 
-def createCMSKeyStore(*args, **kwargs):
+def createCMSKeyStore(*args: Any) -> Any:
 	""" Create a CMS KeyStore with password stash file. """
 	...
 
-def createCertificateRequest(*args, **kwargs):
+def createCertificateRequest(*args: Any) -> Any:
 	""" Create Certificate Request """
 	...
 
-def createChain(*args, **kwargs):
+def createChain(*args: Any) -> Any:
 	""" Create a new chain of transport channels based on a chain template. """
 	...
 
-def createChainedCertificate(*args, **kwargs):
+def createChainedCertificate(*args: Any) -> Any:
 	""" Create a new chained certificate and store it in a key store. """
 	...
 
-def createCluster(*args, **kwargs):
+def createCluster(*args: Any) -> Any:
 	""" Creates a new application server cluster. """
 	...
 
-def createClusterMember(*args, **kwargs):
+def createClusterMember(*args: Any) -> Any:
 	""" Creates a new member of an application server cluster. """
 	...
 
-def createCoreGroup(*args, **kwargs):
+def createCoreGroup(*args: Any) -> Any:
 	""" Create a new core group """
 	...
 
-def createCoreGroupAccessPoint(*args, **kwargs):
+def createCoreGroupAccessPoint(*args: Any) -> Any:
 	""" This command creates a default core group access point for the specified core group and adds it to the default access point group. """
 	...
 
-def createDatasource(*args, **kwargs):
+def createDatasource(*args: Any) -> Any:
 	""" Create a new Datasource to access the backend data store.  Application components use the Datasource to access connection instances to your database. A connection pool is associated with each Datasource. """
 	...
 
-def createDefaultARPWorkClass(*args, **kwargs):
+def createDefaultARPWorkClass(*args: Any) -> Any:
 	""" Creates default application routing policy work classes """
 	...
 
-def createDefaultASPWorkClass(*args, **kwargs):
+def createDefaultASPWorkClass(*args: Any) -> Any:
 	""" Creates default application service policy work classes """
 	...
 
-def createDefaultGRPWorkClass(*args, **kwargs):
+def createDefaultGRPWorkClass(*args: Any) -> Any:
 	""" Creates a default generic server routing policy default work class """
 	...
 
-def createDefaultGSPWorkClass(*args, **kwargs):
+def createDefaultGSPWorkClass(*args: Any) -> Any:
 	""" Creates a default generic server service policy default work class """
 	...
 
-def createDefaultSystemRPWorkClass(*args, **kwargs):
+def createDefaultSystemRPWorkClass(*args: Any) -> Any:
 	""" Creates default system application routing policy work classes """
 	...
 
-def createDefaultSystemSPWorkClass(*args, **kwargs):
+def createDefaultSystemSPWorkClass(*args: Any) -> Any:
 	""" Creates default system application service policy work classes """
 	...
 
-def createDescriptiveProp(*args, **kwargs):
+def createDescriptiveProp(*args: Any) -> Any:
 	""" Create a descriptive property under an object. """
 	...
 
-def createDynamicCluster(*args, **kwargs):
+def createDynamicCluster(*args: Any) -> Any:
 	""" Create a new WAS dynamic cluster """
 	...
 
-def createDynamicClusterFromForeignServers(*args, **kwargs):
+def createDynamicClusterFromForeignServers(*args: Any) -> Any:
 	""" Create a new dynamic cluster from existing foreign servers """
 	...
 
-def createDynamicClusterFromStaticCluster(*args, **kwargs):
+def createDynamicClusterFromStaticCluster(*args: Any) -> Any:
 	""" Create a new dynamic cluster from existing static cluster """
 	...
 
-def createDynamicSSLConfigSelection(*args, **kwargs):
+def createDynamicSSLConfigSelection(*args: Any) -> Any:
 	""" Create a Dynamic SSL configuration Selection. """
 	...
 
-def createElasticityAction(*args, **kwargs):
+def createElasticityAction(*args: Any) -> Any:
 	""" Command to create a elasticity action """
 	...
 
-def createEmptyBLA(*args, **kwargs):
+def createEmptyBLA(*args: Any) -> Any:
 	""" Create a new business-level application with no composition units. """
 	...
 
-def createExtWasAppServer(*args, **kwargs):
+def createExtWasAppServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createExtWasAppServerTemplate(*args, **kwargs):
+def createExtWasAppServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createForeignServer(*args, **kwargs):
+def createForeignServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createForeignServerTemplate(*args, **kwargs):
+def createForeignServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createFullCheckpoint(*args, **kwargs):
+def createFullCheckpoint(*args: Any) -> Any:
 	""" Create a full named checkpoint specified by the "checkpointName" """
 	...
 
-def createGenericServer(*args, **kwargs):
+def createGenericServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createGenericServerTemplate(*args, **kwargs):
+def createGenericServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createGroup(*args, **kwargs):
+def createGroup(*args: Any) -> Any:
 	""" Creates a group in the default realm. """
 	...
 
-def createHealthAction(*args, **kwargs):
+def createHealthAction(*args: Any) -> Any:
 	""" Command to create a health action """
 	...
 
-def createHealthPolicy(*args, **kwargs):
+def createHealthPolicy(*args: Any) -> Any:
 	""" Command to create a health policy """
 	...
 
-def createIdMgrCustomRepository(*args, **kwargs):
+def createIdMgrCustomRepository(*args: Any) -> Any:
 	""" Creates a custom repository configuration. """
 	...
 
-def createIdMgrDBRepository(*args, **kwargs):
+def createIdMgrDBRepository(*args: Any) -> Any:
 	""" Creates a database repository configuration. """
 	...
 
-def createIdMgrFileRepository(*args, **kwargs):
+def createIdMgrFileRepository(*args: Any) -> Any:
 	""" Creates a file repository configuration. """
 	...
 
-def createIdMgrLDAPRepository(*args, **kwargs):
+def createIdMgrLDAPRepository(*args: Any) -> Any:
 	""" Creates an LDAP repository configuration object. """
 	...
 
-def createIdMgrRealm(*args, **kwargs):
+def createIdMgrRealm(*args: Any) -> Any:
 	""" Creates a realm configuration. """
 	...
 
-def createIdMgrSupportedEntityType(*args, **kwargs):
+def createIdMgrSupportedEntityType(*args: Any) -> Any:
 	""" Creates a supported entity type configuration. """
 	...
 
-def createJ2CActivationSpec(*args, **kwargs):
+def createJ2CActivationSpec(*args: Any) -> Any:
 	""" Create a J2C activation specification. """
 	...
 
-def createJ2CAdminObject(*args, **kwargs):
+def createJ2CAdminObject(*args: Any) -> Any:
 	""" Create a J2C administrative object. """
 	...
 
-def createJ2CConnectionFactory(*args, **kwargs):
+def createJ2CConnectionFactory(*args: Any) -> Any:
 	""" Create a J2C connection factory """
 	...
 
-def createJAXWSHandler(*args, **kwargs):
+def createJAXWSHandler(*args: Any) -> Any:
 	""" Create a JAX-WS Handler """
 	...
 
-def createJAXWSHandlerList(*args, **kwargs):
+def createJAXWSHandlerList(*args: Any) -> Any:
 	""" Create a JAX-WS Handler List """
 	...
 
-def createJBossServer(*args, **kwargs):
+def createJBossServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createJBossServerTemplate(*args, **kwargs):
+def createJBossServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createJDBCProvider(*args, **kwargs):
+def createJDBCProvider(*args: Any) -> Any:
 	""" Create a new JDBC provider that is used to connect with a relational database for data access. """
 	...
 
-def createJobSchedulerProperty(*args, **kwargs):
+def createJobSchedulerProperty(*args: Any) -> Any:
 	""" add a custom property for job scheduler """
 	...
 
-def createKeyManager(*args, **kwargs):
+def createKeyManager(*args: Any) -> Any:
 	""" Create a key manager. """
 	...
 
-def createKeyReference(*args, **kwargs):
+def createKeyReference(*args: Any) -> Any:
 	""" Create a Key Reference for a keySet. """
 	...
 
-def createKeySet(*args, **kwargs):
+def createKeySet(*args: Any) -> Any:
 	""" Create a Key Set. """
 	...
 
-def createKeySetGroup(*args, **kwargs):
+def createKeySetGroup(*args: Any) -> Any:
 	""" Create a key set group. """
 	...
 
-def createKeyStore(*args, **kwargs):
+def createKeyStore(*args: Any) -> Any:
 	""" Creates a new keystore. """
 	...
 
-def createKrbAuthMechanism(*args, **kwargs):
+def createKrbAuthMechanism(*args: Any) -> Any:
 	""" The KRB5 authentication mechanism security object field in the security configuration file is created based on the user input. """
 	...
 
-def createKrbConfigFile(*args, **kwargs):
+def createKrbConfigFile(*args: Any) -> Any:
 	""" This command creates a Kerberos configuration file (krb5.ini or krb5.conf). """
 	...
 
-def createLMService(*args, **kwargs):
+def createLMService(*args: Any) -> Any:
 	""" Use the "createLMService" command to create a local mapping service, to which a service map can be attached. """
 	...
 
-def createLMServiceEventPoint(*args, **kwargs):
+def createLMServiceEventPoint(*args: Any) -> Any:
 	""" Use the "createLMServiceEventPoint" command to create a local mapping service event point, in order to generate service mapping events. """
 	...
 
-def createLibertyServer(*args, **kwargs):
+def createLibertyServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createLibertyServerTemplate(*args, **kwargs):
+def createLibertyServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createLongRunningSchedulerProperty(*args, **kwargs):
+def createLongRunningSchedulerProperty(*args: Any) -> Any:
 	""" (Deprecated) add a custom property for long-running scheduler. Use createJobSchedulerProperty. """
 	...
 
-def createMOfNPolicy(*args, **kwargs):
+def createMOfNPolicy(*args: Any) -> Any:
 	""" Create a policy that activates the specified number of group members. """
 	...
 
-def createManagedNodeGroup(*args, **kwargs):
+def createManagedNodeGroup(*args: Any) -> Any:
 	""" This command is used to create a group of managed nodes. (deprecated) """
 	...
 
-def createManagementScope(*args, **kwargs):
+def createManagementScope(*args: Any) -> Any:
 	""" Create a management scope. """
 	...
 
-def createMigrationReport(*args, **kwargs):
+def createMigrationReport(*args: Any) -> Any:
 	""" Scans an application to create a Liberty migration report """
 	...
 
-def createMissingSIBEnginePolicy(*args, **kwargs):
+def createMissingSIBEnginePolicy(*args: Any) -> Any:
 	""" Create a core group policy for a messaging engine configured for server cluster bus member with messaging engine policy assistance enabled for the "Custom" policy. """
 	...
 
-def createNoOpPolicy(*args, **kwargs):
+def createNoOpPolicy(*args: Any) -> Any:
 	""" Create a policy in which no group members are automatically activated. """
 	...
 
-def createNodeGroup(*args, **kwargs):
+def createNodeGroup(*args: Any) -> Any:
 	""" create a node group """
 	...
 
-def createNodeGroupProperty(*args, **kwargs):
+def createNodeGroupProperty(*args: Any) -> Any:
 	""" add a custom property for a node group """
 	...
 
-def createNonWASDynamicCluster(*args, **kwargs):
+def createNonWASDynamicCluster(*args: Any) -> Any:
 	""" Create a new non-WAS dynamic cluster """
 	...
 
-def createOAuthProvider(*args, **kwargs):
+def createOAuthProvider(*args: Any) -> Any:
 	""" Create OAuth Provider """
 	...
 
-def createODRDynamicCluster(*args, **kwargs):
+def createODRDynamicCluster(*args: Any) -> Any:
 	""" Create On Demand Router dynamic cluster """
 	...
 
-def createObjectCacheInstance(*args, **kwargs):
+def createObjectCacheInstance(*args: Any) -> Any:
 	""" Create an Object Cache Instance.  An object cache instance is a location where an applications can store, distribute, and share data. """
 	...
 
-def createOnDemandRouter(*args, **kwargs):
+def createOnDemandRouter(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createOnDemandRouterTemplate(*args, **kwargs):
+def createOnDemandRouterTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createOneOfNPolicy(*args, **kwargs):
+def createOneOfNPolicy(*args: Any) -> Any:
 	""" Create a policy that keeps one member active at a time. """
 	...
 
-def createPHPDynamicCluster(*args, **kwargs):
+def createPHPDynamicCluster(*args: Any) -> Any:
 	""" Create a new PHP dynamic cluster """
 	...
 
-def createPHPServer(*args, **kwargs):
+def createPHPServer(*args: Any) -> Any:
 	""" Use this command to create a PHP Server. """
 	...
 
-def createPHPServerTemplate(*args, **kwargs):
+def createPHPServerTemplate(*args: Any) -> Any:
 	""" Use this command to create a PHP Server template. """
 	...
 
-def createPolicySet(*args, **kwargs):
+def createPolicySet(*args: Any) -> Any:
 	""" The createPolicySet command creates a new policy set. Policy types are not created with the policy set. The default indicator is set to false. """
 	...
 
-def createPolicySetAttachment(*args, **kwargs):
+def createPolicySetAttachment(*args: Any) -> Any:
 	""" The createPolicySetAttachment command creates a new policy set attachment. """
 	...
 
-def createPropertiesFileTemplates(*args, **kwargs):
+def createPropertiesFileTemplates(*args: Any) -> Any:
 	""" Create properties file template for create/delete objects """
 	...
 
-def createProxyServer(*args, **kwargs):
+def createProxyServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createProxyServerTemplate(*args, **kwargs):
+def createProxyServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createRoutingPolicyWorkClass(*args, **kwargs):
+def createRoutingPolicyWorkClass(*args: Any) -> Any:
 	""" Use this command to create a Routing Policy Workclass """
 	...
 
-def createRoutingRules(*args, **kwargs):
+def createRoutingRules(*args: Any) -> Any:
 	""" Use this command to create a routing policy rule list. """
 	...
 
-def createRuleset(*args, **kwargs):
+def createRuleset(*args: Any) -> Any:
 	""" Use this command to create a ruleset. """
 	...
 
-def createSIBDestination(*args, **kwargs):
+def createSIBDestination(*args: Any) -> Any:
 	""" Create bus destination. """
 	...
 
-def createSIBDestinations(*args, **kwargs):
+def createSIBDestinations(*args: Any) -> Any:
 	""" Create bus destinations. """
 	...
 
-def createSIBEngine(*args, **kwargs):
+def createSIBEngine(*args: Any) -> Any:
 	""" Create a messaging engine. """
 	...
 
-def createSIBForeignBus(*args, **kwargs):
+def createSIBForeignBus(*args: Any) -> Any:
 	""" Create a SIB foreign bus. """
 	...
 
-def createSIBJMSActivationSpec(*args, **kwargs):
+def createSIBJMSActivationSpec(*args: Any) -> Any:
 	""" Create an activation specification in the SIB JMS resource adapter. """
 	...
 
-def createSIBJMSConnectionFactory(*args, **kwargs):
+def createSIBJMSConnectionFactory(*args: Any) -> Any:
 	""" Create a SIB JMS connection factory at the scope identified by the target object. """
 	...
 
-def createSIBJMSQueue(*args, **kwargs):
+def createSIBJMSQueue(*args: Any) -> Any:
 	""" Create a SIB JMS queue at the scope identified by the target object. """
 	...
 
-def createSIBJMSTopic(*args, **kwargs):
+def createSIBJMSTopic(*args: Any) -> Any:
 	""" Create a SIB JMS topic at the scope identified by the target object. """
 	...
 
-def createSIBLink(*args, **kwargs):
+def createSIBLink(*args: Any) -> Any:
 	""" Create a new SIB link. """
 	...
 
-def createSIBMQLink(*args, **kwargs):
+def createSIBMQLink(*args: Any) -> Any:
 	""" Create a new WebSphere MQ link. """
 	...
 
-def createSIBMediation(*args, **kwargs):
+def createSIBMediation(*args: Any) -> Any:
 	""" Create a mediation. """
 	...
 
-def createSIBWMQServer(*args, **kwargs):
+def createSIBWMQServer(*args: Any) -> Any:
 	""" Create a new WebSphere MQ server. """
 	...
 
-def createSIBWSEndpointListener(*args, **kwargs):
+def createSIBWSEndpointListener(*args: Any) -> Any:
 	""" Creates an endpoint listener configuration.This command is supported only in the connected mode. """
 	...
 
-def createSIBWSInboundService(*args, **kwargs):
+def createSIBWSInboundService(*args: Any) -> Any:
 	""" Create an inbound service. """
 	...
 
-def createSIBWSOutboundService(*args, **kwargs):
+def createSIBWSOutboundService(*args: Any) -> Any:
 	""" Create an outbound service. """
 	...
 
-def createSIBus(*args, **kwargs):
+def createSIBus(*args: Any) -> Any:
 	""" Create a bus. """
 	...
 
-def createSMFEmitter(*args, **kwargs):
+def createSMFEmitter(*args: Any) -> Any:
 	""" Creates an entry in the audit.xml to reference the configuration of an SMF Emitter implementation of the Service Provider interface. """
 	...
 
-def createSSLConfig(*args, **kwargs):
+def createSSLConfig(*args: Any) -> Any:
 	""" Create a SSL Configuration. """
 	...
 
-def createSSLConfigGroup(*args, **kwargs):
+def createSSLConfigGroup(*args: Any) -> Any:
 	""" Create a SSL Configuration Group. """
 	...
 
-def createSSLConfigProperty(*args, **kwargs):
+def createSSLConfigProperty(*args: Any) -> Any:
 	""" Create a SSLConfig Property. """
 	...
 
-def createSecurityDomain(*args, **kwargs):
+def createSecurityDomain(*args: Any) -> Any:
 	""" Creates an empty security domain object. """
 	...
 
-def createSelfSignedCertificate(*args, **kwargs):
+def createSelfSignedCertificate(*args: Any) -> Any:
 	""" Create a new self-signed certificate and store it in a keystore. """
 	...
 
-def createServerType(*args, **kwargs):
+def createServerType(*args: Any) -> Any:
 	""" Create a new Server Type e.g. (APPLICATION_SERVER) """
 	...
 
-def createServicePolicyWorkClass(*args, **kwargs):
+def createServicePolicyWorkClass(*args: Any) -> Any:
 	""" Use these commands to configure Service Policy Workclasses """
 	...
 
-def createServiceRules(*args, **kwargs):
+def createServiceRules(*args: Any) -> Any:
 	""" Use this command to create a service policy rule list. """
 	...
 
-def createServletCacheInstance(*args, **kwargs):
+def createServletCacheInstance(*args: Any) -> Any:
 	""" Create a Servlet Cache Instance.  A servlet cache instance is a location where the dynamic cache can store, distribute, and share data. """
 	...
 
-def createStaticPolicy(*args, **kwargs):
+def createStaticPolicy(*args: Any) -> Any:
 	""" Create a policy that activates group members on all of the servers in the list. """
 	...
 
-def createSysplexNodeGroup(*args, **kwargs):
+def createSysplexNodeGroup(*args: Any) -> Any:
 	""" create sysplex node group """
 	...
 
-def createSystemRoutingPolicyWorkClass(*args, **kwargs):
+def createSystemRoutingPolicyWorkClass(*args: Any) -> Any:
 	""" Use this command to create a Routing Policy Workclass """
 	...
 
-def createSystemServicePolicyWorkClass(*args, **kwargs):
+def createSystemServicePolicyWorkClass(*args: Any) -> Any:
 	""" Use this command to create a Routing Policy Workclass """
 	...
 
-def createTADataCollection(*args, **kwargs):
+def createTADataCollection(*args: Any) -> Any:
 	""" This command scans the profile to create a Transformation Advisor data collection. """
 	...
 
@@ -1225,1807 +1225,1807 @@ def createTCPEndPoint(target_object: Union[Literal['-interactive'], Configuratio
 # --------------------------------------------------------------------------
 
 
-def createTargetGroup(*args, **kwargs):
+def createTargetGroup(*args: Any) -> Any:
 	""" This command is used to create a group of targets. """
 	...
 
-def createTemplateFromTemplate(*args, **kwargs):
+def createTemplateFromTemplate(*args: Any) -> Any:
 	""" Create a server template from an existing server template """
 	...
 
-def createThirdPartyEmitter(*args, **kwargs):
+def createThirdPartyEmitter(*args: Any) -> Any:
 	""" Creates an entry in the audit.xml to reference the configuration of a Third Party Emitter implementation of the Service Provider interface. """
 	...
 
-def createTomCatServer(*args, **kwargs):
+def createTomCatServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createTomCatServerTemplate(*args, **kwargs):
+def createTomCatServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createTrustManager(*args, **kwargs):
+def createTrustManager(*args: Any) -> Any:
 	""" Create a trust Manager. """
 	...
 
-def createUDPEndPoint(*args, **kwargs):
+def createUDPEndPoint(*args: Any) -> Any:
 	""" Create a new NamedEndPoint endpoint to associate with a UDPInboundChannel """
 	...
 
-def createUnmanagedNode(*args, **kwargs):
+def createUnmanagedNode(*args: Any) -> Any:
 	""" Use this command to create an unmanaged node in a cell. """
 	...
 
-def createUser(*args, **kwargs):
+def createUser(*args: Any) -> Any:
 	""" Creates a PersonAccount in the default realm. """
 	...
 
-def createWMQActivationSpec(*args, **kwargs):
+def createWMQActivationSpec(*args: Any) -> Any:
 	""" Creates a IBM MQ Activation Specification at the scope provided to the command. """
 	...
 
-def createWMQConnectionFactory(*args, **kwargs):
+def createWMQConnectionFactory(*args: Any) -> Any:
 	""" Creates a IBM MQ Connection Factory at the scope provided to the command. """
 	...
 
-def createWMQQueue(*args, **kwargs):
+def createWMQQueue(*args: Any) -> Any:
 	""" Creates a IBM MQ Queue at the scope provided to the command. """
 	...
 
-def createWMQTopic(*args, **kwargs):
+def createWMQTopic(*args: Any) -> Any:
 	""" Creates a IBM MQ Topic at the scope provided to the command. """
 	...
 
-def createWSCertExpMonitor(*args, **kwargs):
+def createWSCertExpMonitor(*args: Any) -> Any:
 	""" Create a certificate expiration monitor. """
 	...
 
-def createWSGWGatewayService(*args, **kwargs):
+def createWSGWGatewayService(*args: Any) -> Any:
 	""" createWSGWGatewayService.description """
 	...
 
-def createWSGWProxyService(*args, **kwargs):
+def createWSGWProxyService(*args: Any) -> Any:
 	""" createWSGWProxyService.description """
 	...
 
-def createWSNAdministeredSubscriber(*args, **kwargs):
+def createWSNAdministeredSubscriber(*args: Any) -> Any:
 	""" Add an administered subscriber to a WS-Notification service point """
 	...
 
-def createWSNService(*args, **kwargs):
+def createWSNService(*args: Any) -> Any:
 	""" Create a WS-Notification service """
 	...
 
-def createWSNServicePoint(*args, **kwargs):
+def createWSNServicePoint(*args: Any) -> Any:
 	""" Create a WS-Notification service point """
 	...
 
-def createWSNTopicDocument(*args, **kwargs):
+def createWSNTopicDocument(*args: Any) -> Any:
 	""" Add an instance document to a WS-Notification topic namespace """
 	...
 
-def createWSNTopicNamespace(*args, **kwargs):
+def createWSNTopicNamespace(*args: Any) -> Any:
 	""" Create a WS-Notification topic namespace """
 	...
 
-def createWSNotifier(*args, **kwargs):
+def createWSNotifier(*args: Any) -> Any:
 	""" Create a notifier. """
 	...
 
-def createWSSchedule(*args, **kwargs):
+def createWSSchedule(*args: Any) -> Any:
 	""" Create a schedule. """
 	...
 
-def createWasCEServer(*args, **kwargs):
+def createWasCEServer(*args: Any) -> Any:
 	""" Use this command to create an WebSphere Community Edition Server. """
 	...
 
-def createWasCEServerTemplate(*args, **kwargs):
+def createWasCEServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createWebLogicServer(*args, **kwargs):
+def createWebLogicServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createWebLogicServerTemplate(*args, **kwargs):
+def createWebLogicServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def createWebModuleProxyConfig(*args, **kwargs):
+def createWebModuleProxyConfig(*args: Any) -> Any:
 	""" Create a proxy configuration for a Web module """
 	...
 
-def createWebServer(*args, **kwargs):
+def createWebServer(*args: Any) -> Any:
 	""" Command that creates a server """
 	...
 
-def createWebServerByHostName(*args, **kwargs):
+def createWebServerByHostName(*args: Any) -> Any:
 	""" Create Web server definition using hostname. """
 	...
 
-def createWebServerTemplate(*args, **kwargs):
+def createWebServerTemplate(*args: Any) -> Any:
 	""" creates a server Template based on a server configuration """
 	...
 
-def deactivateEdition(*args, **kwargs):
+def deactivateEdition(*args: Any) -> Any:
 	""" Marks the state of an edition as INACTIVE. """
 	...
 
-def defineJaspiProvider(*args, **kwargs):
+def defineJaspiProvider(*args: Any) -> Any:
 	""" Define a new authentication provider. """
 	...
 
-def deleteAsset(*args, **kwargs):
+def deleteAsset(*args: Any) -> Any:
 	""" Delete an asset which was imported into the product configuration repository. """
 	...
 
-def deleteAttachmentsForPolicySet(*args, **kwargs):
+def deleteAttachmentsForPolicySet(*args: Any) -> Any:
 	""" The deleteAttachmentsForPolicySet command removes all attachments for a specific policy set. """
 	...
 
-def deleteAuditCertificate(*args, **kwargs):
+def deleteAuditCertificate(*args: Any) -> Any:
 	""" Delete the personal certificate used for audit encryption from the keystore identified as the audit encryption keystore """
 	...
 
-def deleteAuditEmitterByName(*args, **kwargs):
+def deleteAuditEmitterByName(*args: Any) -> Any:
 	""" Deletes an audit emitter implementation object by unique name. """
 	...
 
-def deleteAuditEmitterByRef(*args, **kwargs):
+def deleteAuditEmitterByRef(*args: Any) -> Any:
 	""" Deletes an audit emitter implementation object by reference id. """
 	...
 
-def deleteAuditEncryptionConfig(*args, **kwargs):
+def deleteAuditEncryptionConfig(*args: Any) -> Any:
 	""" Deletes the audit record encryption configuration. """
 	...
 
-def deleteAuditEventFactoryByName(*args, **kwargs):
+def deleteAuditEventFactoryByName(*args: Any) -> Any:
 	""" Deletes the audit event factory specified by the unique name. """
 	...
 
-def deleteAuditEventFactoryByRef(*args, **kwargs):
+def deleteAuditEventFactoryByRef(*args: Any) -> Any:
 	""" Deletes the audit event factory specified by the reference id. """
 	...
 
-def deleteAuditFilter(*args, **kwargs):
+def deleteAuditFilter(*args: Any) -> Any:
 	""" Deletes an audit specification entry in the audit.xml that matches the event and outcome. """
 	...
 
-def deleteAuditFilterByRef(*args, **kwargs):
+def deleteAuditFilterByRef(*args: Any) -> Any:
 	""" Deletes an audit specification entry in the audit.xml that matches the reference Id. """
 	...
 
-def deleteAuditKeyStore(*args, **kwargs):
+def deleteAuditKeyStore(*args: Any) -> Any:
 	""" Deletes an existing Key Store. """
 	...
 
-def deleteAuditNotification(*args, **kwargs):
+def deleteAuditNotification(*args: Any) -> Any:
 	""" Deletes an audit notification. """
 	...
 
-def deleteAuditNotificationMonitorByName(*args, **kwargs):
+def deleteAuditNotificationMonitorByName(*args: Any) -> Any:
 	""" Deletes an audit notification monitor specified by the unique name. """
 	...
 
-def deleteAuditNotificationMonitorByRef(*args, **kwargs):
+def deleteAuditNotificationMonitorByRef(*args: Any) -> Any:
 	""" Deletes an audit notification monitor specified by the reference id. """
 	...
 
-def deleteAuditSigningConfig(*args, **kwargs):
+def deleteAuditSigningConfig(*args: Any) -> Any:
 	""" Unconfigures audit record signing. """
 	...
 
-def deleteAuthDataEntry(*args, **kwargs):
+def deleteAuthDataEntry(*args: Any) -> Any:
 	""" Delete an authentication data entry from the administrative security configuration or a in a security domain. """
 	...
 
-def deleteAuthorizationGroup(*args, **kwargs):
+def deleteAuthorizationGroup(*args: Any) -> Any:
 	""" Delete an existing authorization group """
 	...
 
-def deleteBLA(*args, **kwargs):
+def deleteBLA(*args: Any) -> Any:
 	""" Delete a specified business-level application. """
 	...
 
-def deleteCAClient(*args, **kwargs):
+def deleteCAClient(*args: Any) -> Any:
 	""" Deletes a certificate authority (CA) client configurator object. """
 	...
 
-def deleteCertificate(*args, **kwargs):
+def deleteCertificate(*args: Any) -> Any:
 	""" Delete a personal certificate from a keystore. """
 	...
 
-def deleteCertificateRequest(*args, **kwargs):
+def deleteCertificateRequest(*args: Any) -> Any:
 	""" Delete an existing certificate request from a keystore. """
 	...
 
-def deleteChain(*args, **kwargs):
+def deleteChain(*args: Any) -> Any:
 	""" Delete an existing chain and, optionally, the transport channels in the chain. """
 	...
 
-def deleteCheckpoint(*args, **kwargs):
+def deleteCheckpoint(*args: Any) -> Any:
 	""" Delete the named checkpoint specified by the "checkpointName" """
 	...
 
-def deleteCluster(*args, **kwargs):
+def deleteCluster(*args: Any) -> Any:
 	""" Delete the configuration of an application server cluster. """
 	...
 
-def deleteClusterMember(*args, **kwargs):
+def deleteClusterMember(*args: Any) -> Any:
 	""" Deletes a member from an application server cluster. """
 	...
 
-def deleteCompUnit(*args, **kwargs):
+def deleteCompUnit(*args: Any) -> Any:
 	""" Delete a composition unit from a business-level application. """
 	...
 
-def deleteConfigProperties(*args, **kwargs):
+def deleteConfigProperties(*args: Any) -> Any:
 	""" Delete configuration specified in properties file """
 	...
 
-def deleteCoreGroup(*args, **kwargs):
+def deleteCoreGroup(*args: Any) -> Any:
 	""" Delete an existing core group. The core group must contain no servers. """
 	...
 
-def deleteCoreGroupAccessPoints(*args, **kwargs):
+def deleteCoreGroupAccessPoints(*args: Any) -> Any:
 	""" Delete all the core group access points associated with a specified core group. """
 	...
 
-def deleteDatasource(*args, **kwargs):
+def deleteDatasource(*args: Any) -> Any:
 	""" Delete a Datasource used to access a relational database. """
 	...
 
-def deleteDescriptiveProp(*args, **kwargs):
+def deleteDescriptiveProp(*args: Any) -> Any:
 	""" Delete a descriptive property under an object. """
 	...
 
-def deleteDynamicCluster(*args, **kwargs):
+def deleteDynamicCluster(*args: Any) -> Any:
 	""" Delete a dynamic cluster from the configuration repository. """
 	...
 
-def deleteDynamicSSLConfigSelection(*args, **kwargs):
+def deleteDynamicSSLConfigSelection(*args: Any) -> Any:
 	""" Delete an existing Dynamic SSL configuration Selection. """
 	...
 
-def deleteElasticityAction(*args, **kwargs):
+def deleteElasticityAction(*args: Any) -> Any:
 	""" Command to delete a elasticity action """
 	...
 
-def deleteGroup(*args, **kwargs):
+def deleteGroup(*args: Any) -> Any:
 	""" Deletes a group from the default realm. """
 	...
 
-def deleteHealthAction(*args, **kwargs):
+def deleteHealthAction(*args: Any) -> Any:
 	""" Command to delete a health action """
 	...
 
-def deleteHealthPolicy(*args, **kwargs):
+def deleteHealthPolicy(*args: Any) -> Any:
 	""" Command to delete a health policy """
 	...
 
-def deleteIdMgrDBTables(*args, **kwargs):
+def deleteIdMgrDBTables(*args: Any) -> Any:
 	""" Deletes the tables of the database in virtual member manager. """
 	...
 
-def deleteIdMgrEntryMappingRepositoryTables(*args, **kwargs):
+def deleteIdMgrEntryMappingRepositoryTables(*args: Any) -> Any:
 	""" Deletes the tables of the entry mapping database in virtual member manager. """
 	...
 
-def deleteIdMgrLDAPAttr(*args, **kwargs):
+def deleteIdMgrLDAPAttr(*args: Any) -> Any:
 	""" Deletes a LDAP attribute configuration data for a specified entity type for a specific LDAP repository. Use the name of either the LDAP attribute or virtual member manager property. """
 	...
 
-def deleteIdMgrLDAPAttrNotSupported(*args, **kwargs):
+def deleteIdMgrLDAPAttrNotSupported(*args: Any) -> Any:
 	""" Deletes the configuration for a virtual member manager property not supported by a specific LDAP repository. """
 	...
 
-def deleteIdMgrLDAPEntityType(*args, **kwargs):
+def deleteIdMgrLDAPEntityType(*args: Any) -> Any:
 	""" Deletes a LDAP entity type configuration data for a specified entity type for a specific LDAP repository. """
 	...
 
-def deleteIdMgrLDAPEntityTypeRDNAttr(*args, **kwargs):
+def deleteIdMgrLDAPEntityTypeRDNAttr(*args: Any) -> Any:
 	""" Deletes RDN attribute configuration from an LDAP entity type configuration. """
 	...
 
-def deleteIdMgrLDAPExternalIdAttr(*args, **kwargs):
+def deleteIdMgrLDAPExternalIdAttr(*args: Any) -> Any:
 	""" Deletes the configuration for an LDAP attribute used as an external ID. """
 	...
 
-def deleteIdMgrLDAPGroupConfig(*args, **kwargs):
+def deleteIdMgrLDAPGroupConfig(*args: Any) -> Any:
 	""" Deletes the entire LDAP group configuration. """
 	...
 
-def deleteIdMgrLDAPGroupDynamicMemberAttr(*args, **kwargs):
+def deleteIdMgrLDAPGroupDynamicMemberAttr(*args: Any) -> Any:
 	""" Deletes the dynamic member attribute configuration from the LDAP group configuration. """
 	...
 
-def deleteIdMgrLDAPGroupMemberAttr(*args, **kwargs):
+def deleteIdMgrLDAPGroupMemberAttr(*args: Any) -> Any:
 	""" Deletes the member attribute configuration from the LDAP group configuration. """
 	...
 
-def deleteIdMgrLDAPServer(*args, **kwargs):
+def deleteIdMgrLDAPServer(*args: Any) -> Any:
 	""" Deletes the primary LDAP server and configured backup servers. """
 	...
 
-def deleteIdMgrPropertyExtensionEntityData(*args, **kwargs):
+def deleteIdMgrPropertyExtensionEntityData(*args: Any) -> Any:
 	""" Deletes the property data from the property extension repository. It also deletes any entity IDs with which there is no property data associated, from the property extension repository in virtual member manager. """
 	...
 
-def deleteIdMgrPropertyExtensionRepositoryTables(*args, **kwargs):
+def deleteIdMgrPropertyExtensionRepositoryTables(*args: Any) -> Any:
 	""" Deletes the tables of the property extension database in virtual member manager. """
 	...
 
-def deleteIdMgrRealm(*args, **kwargs):
+def deleteIdMgrRealm(*args: Any) -> Any:
 	""" Deletes the specified realm configuration. """
 	...
 
-def deleteIdMgrRealmBaseEntry(*args, **kwargs):
+def deleteIdMgrRealmBaseEntry(*args: Any) -> Any:
 	""" Deletes a base entry from a specified realm configuration. """
 	...
 
-def deleteIdMgrRealmDefaultParent(*args, **kwargs):
+def deleteIdMgrRealmDefaultParent(*args: Any) -> Any:
 	""" Deletes the default parent of an entity type for a realm. If * is specified as entityTypeName, default parent mapping for all entity types is deleted. If the realm name is not specified, default realm is used. """
 	...
 
-def deleteIdMgrRepository(*args, **kwargs):
+def deleteIdMgrRepository(*args: Any) -> Any:
 	""" Deletes the configuration of the specified repository. """
 	...
 
-def deleteIdMgrRepositoryBaseEntry(*args, **kwargs):
+def deleteIdMgrRepositoryBaseEntry(*args: Any) -> Any:
 	""" Deletes a base entry from the specified repository. """
 	...
 
-def deleteIdMgrSupportedEntityType(*args, **kwargs):
+def deleteIdMgrSupportedEntityType(*args: Any) -> Any:
 	""" Deletes a supported entity type configuration. """
 	...
 
-def deleteJAXWSHandler(*args, **kwargs):
+def deleteJAXWSHandler(*args: Any) -> Any:
 	""" Delete a JAX-WS Handler """
 	...
 
-def deleteJAXWSHandlerList(*args, **kwargs):
+def deleteJAXWSHandlerList(*args: Any) -> Any:
 	""" Delete a JAX-WS Handler List """
 	...
 
-def deleteJDBCProvider(*args, **kwargs):
+def deleteJDBCProvider(*args: Any) -> Any:
 	""" Delete a JDBC provider that is used to connect to a relational database for data access. """
 	...
 
-def deleteJob(*args, **kwargs):
+def deleteJob(*args: Any) -> Any:
 	""" Deletes a previously submitted job. """
 	...
 
-def deleteKeyManager(*args, **kwargs):
+def deleteKeyManager(*args: Any) -> Any:
 	""" Delete a key manager. """
 	...
 
-def deleteKeyReference(*args, **kwargs):
+def deleteKeyReference(*args: Any) -> Any:
 	""" Delete an existing Key Reference from a keySet. """
 	...
 
-def deleteKeySet(*args, **kwargs):
+def deleteKeySet(*args: Any) -> Any:
 	""" Delete a key set. """
 	...
 
-def deleteKeySetGroup(*args, **kwargs):
+def deleteKeySetGroup(*args: Any) -> Any:
 	""" Delete a key set group. """
 	...
 
-def deleteKeyStore(*args, **kwargs):
+def deleteKeyStore(*args: Any) -> Any:
 	""" Deletes an existing keystore. """
 	...
 
-def deleteKrbAuthMechanism(*args, **kwargs):
+def deleteKrbAuthMechanism(*args: Any) -> Any:
 	""" The KRB5 authentication mechanism security object field in the security configuration file is deleted. """
 	...
 
-def deleteLMService(*args, **kwargs):
+def deleteLMService(*args: Any) -> Any:
 	""" Use the "deleteLMService" command to delete an existing local mapping service. """
 	...
 
-def deleteLMServiceEventPoint(*args, **kwargs):
+def deleteLMServiceEventPoint(*args: Any) -> Any:
 	""" Use the "deleteLMServiceEventPoint" command to delete a local mapping service event point. """
 	...
 
-def deleteManagedNodeGroup(*args, **kwargs):
+def deleteManagedNodeGroup(*args: Any) -> Any:
 	""" This command is used to delete a group of managed nodes. (deprecated) """
 	...
 
-def deleteManagementScope(*args, **kwargs):
+def deleteManagementScope(*args: Any) -> Any:
 	""" Delete an existing management scope. """
 	...
 
-def deleteMemberFromManagedNodeGroup(*args, **kwargs):
+def deleteMemberFromManagedNodeGroup(*args: Any) -> Any:
 	""" This command is used to delete members from a group of managed nodes. (deprecated) """
 	...
 
-def deleteMemberFromTargetGroup(*args, **kwargs):
+def deleteMemberFromTargetGroup(*args: Any) -> Any:
 	""" This command is used to delete members from a target group. """
 	...
 
-def deleteMigrationReport(*args, **kwargs):
+def deleteMigrationReport(*args: Any) -> Any:
 	""" Deletes a Liberty migration report for an application """
 	...
 
-def deleteOAuthProvider(*args, **kwargs):
+def deleteOAuthProvider(*args: Any) -> Any:
 	""" Delete OAuth Provider """
 	...
 
-def deletePasswordEncryptionKey(*args, **kwargs):
+def deletePasswordEncryptionKey(*args: Any) -> Any:
 	""" Deletes an AES encryption key from the keystore file. This command is disabled when the custom KeyManager class is used. """
 	...
 
-def deletePolicy(*args, **kwargs):
+def deletePolicy(*args: Any) -> Any:
 	""" Delete a policy that matches the provided policy name. """
 	...
 
-def deletePolicySet(*args, **kwargs):
+def deletePolicySet(*args: Any) -> Any:
 	""" The deletePolicySet command deletes the specified policy set. If attachments exist for the policy set, the command returns a failure message. """
 	...
 
-def deletePolicySetAttachment(*args, **kwargs):
+def deletePolicySetAttachment(*args: Any) -> Any:
 	""" The deletePolicySetAttachment command removes a policy set attachment. """
 	...
 
-def deletePolicyType(*args, **kwargs):
+def deletePolicyType(*args: Any) -> Any:
 	""" The deletePolicyType command deletes a policy type from a policy set. """
 	...
 
-def deleteRemoteCellFromIntelligentManagement(*args, **kwargs):
+def deleteRemoteCellFromIntelligentManagement(*args: Any) -> Any:
 	""" deleteRemoteCellFromIntellMgmtDesc """
 	...
 
-def deleteRoutingPolicyWorkClass(*args, **kwargs):
+def deleteRoutingPolicyWorkClass(*args: Any) -> Any:
 	""" Use this command to delete a Routing Policy Workclass """
 	...
 
-def deleteSAMLIdpPartner(*args, **kwargs):
+def deleteSAMLIdpPartner(*args: Any) -> Any:
 	""" This command removes the SAML TAI IdP partner from the security configuration. """
 	...
 
-def deleteSAMLTAISSO(*args, **kwargs):
+def deleteSAMLTAISSO(*args: Any) -> Any:
 	""" This command removes the SAML TAI SSO from the security configuration. """
 	...
 
-def deleteSCClientCacheConfigurationCustomProperties(*args, **kwargs):
+def deleteSCClientCacheConfigurationCustomProperties(*args: Any) -> Any:
 	""" Delete the Custom property """
 	...
 
-def deleteSIBDestination(*args, **kwargs):
+def deleteSIBDestination(*args: Any) -> Any:
 	""" Delete bus destination. """
 	...
 
-def deleteSIBDestinations(*args, **kwargs):
+def deleteSIBDestinations(*args: Any) -> Any:
 	""" Delete bus destinations. """
 	...
 
-def deleteSIBEngine(*args, **kwargs):
+def deleteSIBEngine(*args: Any) -> Any:
 	""" Delete the default engine or named engine from the target bus. """
 	...
 
-def deleteSIBForeignBus(*args, **kwargs):
+def deleteSIBForeignBus(*args: Any) -> Any:
 	""" Delete a SIB foreign bus. """
 	...
 
-def deleteSIBJMSActivationSpec(*args, **kwargs):
+def deleteSIBJMSActivationSpec(*args: Any) -> Any:
 	""" Delete given SIB JMS activation specification. """
 	...
 
-def deleteSIBJMSConnectionFactory(*args, **kwargs):
+def deleteSIBJMSConnectionFactory(*args: Any) -> Any:
 	""" Delete the supplied SIB JMS connection factory. """
 	...
 
-def deleteSIBJMSQueue(*args, **kwargs):
+def deleteSIBJMSQueue(*args: Any) -> Any:
 	""" Delete the supplied SIB JMS queue. """
 	...
 
-def deleteSIBJMSTopic(*args, **kwargs):
+def deleteSIBJMSTopic(*args: Any) -> Any:
 	""" Delete the supplied SIB JMS topic. """
 	...
 
-def deleteSIBLink(*args, **kwargs):
+def deleteSIBLink(*args: Any) -> Any:
 	""" Delete a SIB link. """
 	...
 
-def deleteSIBMQLink(*args, **kwargs):
+def deleteSIBMQLink(*args: Any) -> Any:
 	""" Delete an WebSphere MQ link. """
 	...
 
-def deleteSIBMQLinkReceiverChannel(*args, **kwargs):
+def deleteSIBMQLinkReceiverChannel(*args: Any) -> Any:
 	""" This command deletes the Receiver Channel associated with the SIB MQ Link passed in as a target object. """
 	...
 
-def deleteSIBMQLinkSenderChannel(*args, **kwargs):
+def deleteSIBMQLinkSenderChannel(*args: Any) -> Any:
 	""" This command deletes the Sender Channel associated with the SIB MQ Link passed in as a target object. """
 	...
 
-def deleteSIBMediation(*args, **kwargs):
+def deleteSIBMediation(*args: Any) -> Any:
 	""" Delete a mediation. """
 	...
 
-def deleteSIBWMQServer(*args, **kwargs):
+def deleteSIBWMQServer(*args: Any) -> Any:
 	""" Delete a named WebSphere MQ server. Also, delete its membership of any buses, and cleanup all associated configuration. """
 	...
 
-def deleteSIBWSEndpointListener(*args, **kwargs):
+def deleteSIBWSEndpointListener(*args: Any) -> Any:
 	""" Delete an endpoint listener. """
 	...
 
-def deleteSIBWSInboundService(*args, **kwargs):
+def deleteSIBWSInboundService(*args: Any) -> Any:
 	""" Delete an inbound service. """
 	...
 
-def deleteSIBWSOutboundService(*args, **kwargs):
+def deleteSIBWSOutboundService(*args: Any) -> Any:
 	""" Delete an outbound service. """
 	...
 
-def deleteSIBus(*args, **kwargs):
+def deleteSIBus(*args: Any) -> Any:
 	""" Delete a named bus, including everything on it. """
 	...
 
-def deleteSSLConfig(*args, **kwargs):
+def deleteSSLConfig(*args: Any) -> Any:
 	""" Delete an existing SSL configuration. """
 	...
 
-def deleteSSLConfigGroup(*args, **kwargs):
+def deleteSSLConfigGroup(*args: Any) -> Any:
 	""" Delete a SSLConfig group. """
 	...
 
-def deleteSSLConfigProperty(*args, **kwargs):
+def deleteSSLConfigProperty(*args: Any) -> Any:
 	""" Delete a SSLConfig Property. """
 	...
 
-def deleteSTSProperty(*args, **kwargs):
+def deleteSTSProperty(*args: Any) -> Any:
 	""" Remove a configuration property under a configuration group. """
 	...
 
-def deleteSTSTokenTypeConfigurationCustomProperties(*args, **kwargs):
+def deleteSTSTokenTypeConfigurationCustomProperties(*args: Any) -> Any:
 	""" Delete custom properties from the configuration of a token type. """
 	...
 
-def deleteSecurityDomain(*args, **kwargs):
+def deleteSecurityDomain(*args: Any) -> Any:
 	""" Deletes a domain object. """
 	...
 
-def deleteServer(*args, **kwargs):
+def deleteServer(*args: Any) -> Any:
 	""" Delete a server configuration """
 	...
 
-def deleteServerTemplate(*args, **kwargs):
+def deleteServerTemplate(*args: Any) -> Any:
 	""" A command that Deletes a Server Template """
 	...
 
-def deleteServicePolicyWorkClass(*args, **kwargs):
+def deleteServicePolicyWorkClass(*args: Any) -> Any:
 	""" Use this command to delete a Service Policy Workclass """
 	...
 
-def deleteSignerCertificate(*args, **kwargs):
+def deleteSignerCertificate(*args: Any) -> Any:
 	""" Delete a signer certificate from a keystore. """
 	...
 
-def deleteSpnegoFilter(*args, **kwargs):
+def deleteSpnegoFilter(*args: Any) -> Any:
 	""" This command removes SPNEGO Web authentication Filter from the security configuration. If a host name is not specified, all the SPNEGO Web authentication Filters are removed. """
 	...
 
-def deleteSpnegoTAIProperties(*args, **kwargs):
+def deleteSpnegoTAIProperties(*args: Any) -> Any:
 	""" This command removes SPNEGO TAI properties from the security configuration. If an spnId is not specified, all the SPNEGO TAI properties are removed. """
 	...
 
-def deleteTADataCollection(*args, **kwargs):
+def deleteTADataCollection(*args: Any) -> Any:
 	""" This command deletes the previously generated Transformation Advisor data collection. """
 	...
 
-def deleteTargetGroup(*args, **kwargs):
+def deleteTargetGroup(*args: Any) -> Any:
 	""" This command is used to delete a group of targets. """
 	...
 
-def deleteTrustManager(*args, **kwargs):
+def deleteTrustManager(*args: Any) -> Any:
 	""" Delete a trust manager. """
 	...
 
-def deleteUser(*args, **kwargs):
+def deleteUser(*args: Any) -> Any:
 	""" Deletes a PersonAccount from the default realm. """
 	...
 
-def deleteWMQActivationSpec(*args, **kwargs):
+def deleteWMQActivationSpec(*args: Any) -> Any:
 	""" Deletes the IBM MQ Activation Specification object provided to the command. """
 	...
 
-def deleteWMQConnectionFactory(*args, **kwargs):
+def deleteWMQConnectionFactory(*args: Any) -> Any:
 	""" Deletes the IBM MQ Connection Factory object provided to the command. """
 	...
 
-def deleteWMQQueue(*args, **kwargs):
+def deleteWMQQueue(*args: Any) -> Any:
 	""" Deletes the IBM MQ Queue object provided to the command. """
 	...
 
-def deleteWMQTopic(*args, **kwargs):
+def deleteWMQTopic(*args: Any) -> Any:
 	""" Deletes the IBM MQ Topic object provided to the command. """
 	...
 
-def deleteWSCertExpMonitor(*args, **kwargs):
+def deleteWSCertExpMonitor(*args: Any) -> Any:
 	""" Specifies the certificate expiration monitor name. """
 	...
 
-def deleteWSGWGatewayService(*args, **kwargs):
+def deleteWSGWGatewayService(*args: Any) -> Any:
 	""" deleteWSGWGatewayService.description """
 	...
 
-def deleteWSGWInstance(*args, **kwargs):
+def deleteWSGWInstance(*args: Any) -> Any:
 	""" deleteWSGWInstance.description """
 	...
 
-def deleteWSGWProxyService(*args, **kwargs):
+def deleteWSGWProxyService(*args: Any) -> Any:
 	""" deleteWSGWProxyService.description """
 	...
 
-def deleteWSNAdministeredSubscriber(*args, **kwargs):
+def deleteWSNAdministeredSubscriber(*args: Any) -> Any:
 	""" Remove an administered subscriber from a WS-Notification service point """
 	...
 
-def deleteWSNService(*args, **kwargs):
+def deleteWSNService(*args: Any) -> Any:
 	""" Delete a WS-Notification service """
 	...
 
-def deleteWSNServicePoint(*args, **kwargs):
+def deleteWSNServicePoint(*args: Any) -> Any:
 	""" Delete a WS-Notification service point """
 	...
 
-def deleteWSNTopicDocument(*args, **kwargs):
+def deleteWSNTopicDocument(*args: Any) -> Any:
 	""" Remove an instance document from a WS-Notification topic namespace """
 	...
 
-def deleteWSNTopicNamespace(*args, **kwargs):
+def deleteWSNTopicNamespace(*args: Any) -> Any:
 	""" Delete a WS-Notification topic namespace """
 	...
 
-def deleteWSNotifier(*args, **kwargs):
+def deleteWSNotifier(*args: Any) -> Any:
 	""" Delete an existing notifier. """
 	...
 
-def deleteWSSDistributedCacheConfigCustomProperties(*args, **kwargs):
+def deleteWSSDistributedCacheConfigCustomProperties(*args: Any) -> Any:
 	""" Remove Web Services Security distributed cache custom properties """
 	...
 
-def deleteWSSchedule(*args, **kwargs):
+def deleteWSSchedule(*args: Any) -> Any:
 	""" Delete an existing schedule. """
 	...
 
-def deleteWebModuleProxyConfig(*args, **kwargs):
+def deleteWebModuleProxyConfig(*args: Any) -> Any:
 	""" Delete the proxy server configuration for a Web module """
 	...
 
-def deleteWebServer(*args, **kwargs):
+def deleteWebServer(*args: Any) -> Any:
 	""" Delete a server configuration """
 	...
 
-def deployWasCEApp(*args, **kwargs):
+def deployWasCEApp(*args: Any) -> Any:
 	""" Use this command to deploy a WAS CE application onto a server. """
 	...
 
-def detachServiceMap(*args, **kwargs):
+def detachServiceMap(*args: Any) -> Any:
 	""" Use the "detachServiceMap" command to detach a service map from a local mapping service. """
 	...
 
-def disableAudit(*args, **kwargs):
+def disableAudit(*args: Any) -> Any:
 	""" Disables Security Auditing and resets the auditEnabled field in audit.xml. """
 	...
 
-def disableAuditEncryption(*args, **kwargs):
+def disableAuditEncryption(*args: Any) -> Any:
 	""" Disables audit encryption. """
 	...
 
-def disableAuditFilter(*args, **kwargs):
+def disableAuditFilter(*args: Any) -> Any:
 	""" Disables the Audit Specification. """
 	...
 
-def disableAuditSigning(*args, **kwargs):
+def disableAuditSigning(*args: Any) -> Any:
 	""" Disables audit signing. """
 	...
 
-def disableIntelligentManagement(*args, **kwargs):
+def disableIntelligentManagement(*args: Any) -> Any:
 	""" Command to disable Intelligent Management """
 	...
 
-def disableLMServiceEventPoint(*args, **kwargs):
+def disableLMServiceEventPoint(*args: Any) -> Any:
 	""" Use the "disableLMServiceEventPoint" command to disable a local mapping service event point, in order to stop generation of service mapping events. """
 	...
 
-def disablePasswordEncryption(*args, **kwargs):
+def disablePasswordEncryption(*args: Any) -> Any:
 	""" Disables the configuration of the password encryption. As a result, the values of xor or custom are used for the encryption algorithm. """
 	...
 
-def disableProvisioning(*args, **kwargs):
+def disableProvisioning(*args: Any) -> Any:
 	""" Disable provisioning on a server. All components will be started. """
 	...
 
-def disableServerPort(*args, **kwargs):
+def disableServerPort(*args: Any) -> Any:
 	""" Disable all the transport chains associated with an endpoint on a server. Returns a list of all the disabled transport chains on successful execution of the command. """
 	...
 
-def disableVerboseAudit(*args, **kwargs):
+def disableVerboseAudit(*args: Any) -> Any:
 	""" Disables the verbose gathering of audit data. """
 	...
 
-def disconnectSIBWSEndpointListener(*args, **kwargs):
+def disconnectSIBWSEndpointListener(*args: Any) -> Any:
 	""" Disconnect an endpoint listener from a service integration bus. """
 	...
 
-def displayJaspiProvider(*args, **kwargs):
+def displayJaspiProvider(*args: Any) -> Any:
 	""" Display configuration data for the given authentication provider(s). """
 	...
 
-def displayJaspiProviderNames(*args, **kwargs):
+def displayJaspiProviderNames(*args: Any) -> Any:
 	""" Display the names of all authentication providers in the security configuration. """
 	...
 
-def doesCoreGroupExist(*args, **kwargs):
+def doesCoreGroupExist(*args: Any) -> Any:
 	""" Check to see if a core group exists. """
 	...
 
-def dpAddAppliance(*args, **kwargs):
+def dpAddAppliance(*args: Any) -> Any:
 	""" Use the dpAddAppliance command to add an appliance to the DataPower appliance manager. """
 	...
 
-def dpAddFirmwareVersion(*args, **kwargs):
+def dpAddFirmwareVersion(*args: Any) -> Any:
 	""" Use the dpAddFirmwareVersion command to add a firmware version to the DataPower appliance manager. """
 	...
 
-def dpAddManagedSet(*args, **kwargs):
+def dpAddManagedSet(*args: Any) -> Any:
 	""" Use the dpAddManagedSet command to add a managed set to the DataPower appliance manager. """
 	...
 
-def dpCopyMSDomainVersion(*args, **kwargs):
+def dpCopyMSDomainVersion(*args: Any) -> Any:
 	""" Use the dpCopyMSDomainVersion command to copy a DataPower appliance manager managed domain version to a new managed set. """
 	...
 
-def dpCopyMSSettingsVersion(*args, **kwargs):
+def dpCopyMSSettingsVersion(*args: Any) -> Any:
 	""" Use the dpCopyMSSettingsVersion command to copy a DataPower appliance manager managed settings version to a new managed set. """
 	...
 
-def dpExport(*args, **kwargs):
+def dpExport(*args: Any) -> Any:
 	""" Use the dpExport command to export the DataPower appliance manager configuration and versions. """
 	...
 
-def dpGetAllApplianceIds(*args, **kwargs):
+def dpGetAllApplianceIds(*args: Any) -> Any:
 	""" Use the dpGetAllApplianceIds command to get the IDs of each appliance in the DataPower appliance manager. """
 	...
 
-def dpGetAllDomainNames(*args, **kwargs):
+def dpGetAllDomainNames(*args: Any) -> Any:
 	""" Use the dpGetAllDomainNames command to get the names of each of the domains on a DataPower appliance. """
 	...
 
-def dpGetAllFirmwareIds(*args, **kwargs):
+def dpGetAllFirmwareIds(*args: Any) -> Any:
 	""" Use the dpGetAllFirmwareIds command to get the IDs of each DataPower appliance manager firmware in the configuration. """
 	...
 
-def dpGetAllFirmwareVersionIds(*args, **kwargs):
+def dpGetAllFirmwareVersionIds(*args: Any) -> Any:
 	""" Use the dpGetAllFirmwareVersionIds command to get the IDs of each DataPower appliance manager firmware version. """
 	...
 
-def dpGetAllMSApplianceIds(*args, **kwargs):
+def dpGetAllMSApplianceIds(*args: Any) -> Any:
 	""" Use the dpGetAllMSApplianceIds command to get the IDs of each appliance in a DataPower appliance manager managed set. """
 	...
 
-def dpGetAllMSDomainIds(*args, **kwargs):
+def dpGetAllMSDomainIds(*args: Any) -> Any:
 	""" Use the dpGetAllMSDomainIds command to get the IDs of each domain in a DataPower appliance manager managed set. """
 	...
 
-def dpGetAllMSDomainVersionIds(*args, **kwargs):
+def dpGetAllMSDomainVersionIds(*args: Any) -> Any:
 	""" Use the dpGetAllMSDomainVersionIds command to get the IDs of each domain version in a DataPower appliance manager managed set. """
 	...
 
-def dpGetAllMSIdsUsingFirmwareVersion(*args, **kwargs):
+def dpGetAllMSIdsUsingFirmwareVersion(*args: Any) -> Any:
 	""" Use the dpGetAllMSIdsUsingFirmwareVersion command to get the IDs of the managed sets that use a firmware version. """
 	...
 
-def dpGetAllMSSettingsVersionIds(*args, **kwargs):
+def dpGetAllMSSettingsVersionIds(*args: Any) -> Any:
 	""" Use the dpGetAllMSSettingsVersionIds command to get the IDs of each settings version in a DataPower appliance manager managed set. """
 	...
 
-def dpGetAllManagedSetIds(*args, **kwargs):
+def dpGetAllManagedSetIds(*args: Any) -> Any:
 	""" Use the dpGetAllManagedSetIds command to get the IDs of each DataPower appliance manager managed set. """
 	...
 
-def dpGetAllTaskIds(*args, **kwargs):
+def dpGetAllTaskIds(*args: Any) -> Any:
 	""" Use the dpGetAllTaskIDs command to get the IDs of each of the DataPower appliance manager tasks. """
 	...
 
-def dpGetAppliance(*args, **kwargs):
+def dpGetAppliance(*args: Any) -> Any:
 	""" Use the dpGetAppliance command to get a specific appliance in the DataPower appliance manager. """
 	...
 
-def dpGetBestFirmware(*args, **kwargs):
+def dpGetBestFirmware(*args: Any) -> Any:
 	""" Use the dpGetBestFirmware command to get the firmware that best matches the parameters. """
 	...
 
-def dpGetFirmware(*args, **kwargs):
+def dpGetFirmware(*args: Any) -> Any:
 	""" Use the dpGetFirmware command to get a specific DataPower appliance manager firmware. """
 	...
 
-def dpGetFirmwareVersion(*args, **kwargs):
+def dpGetFirmwareVersion(*args: Any) -> Any:
 	""" Use the dpGetFirmwareVersion command to get a specific DataPower appliance manager firmware version. """
 	...
 
-def dpGetMSDomain(*args, **kwargs):
+def dpGetMSDomain(*args: Any) -> Any:
 	""" Use the dpGetMSDomain command to get a DataPower appliance manager managed domain. """
 	...
 
-def dpGetMSDomainVersion(*args, **kwargs):
+def dpGetMSDomainVersion(*args: Any) -> Any:
 	""" Use the dpGetMSDomainVersion command to get a DataPower appliance manager managed domain version. """
 	...
 
-def dpGetMSSettings(*args, **kwargs):
+def dpGetMSSettings(*args: Any) -> Any:
 	""" Use the dpGetMSSettings command to get the DataPower appliance manager managed settings. """
 	...
 
-def dpGetMSSettingsVersion(*args, **kwargs):
+def dpGetMSSettingsVersion(*args: Any) -> Any:
 	""" Use the dpGetMSSettingsVersion command to get a DataPower appliance manager managed settings version. """
 	...
 
-def dpGetManagedSet(*args, **kwargs):
+def dpGetManagedSet(*args: Any) -> Any:
 	""" Use the dpGetManagedSet comand to get a DataPower appliance manager managed set. """
 	...
 
-def dpGetManager(*args, **kwargs):
+def dpGetManager(*args: Any) -> Any:
 	""" Use the dpGetManager command to get the properties of the DataPower appliance manager. """
 	...
 
-def dpGetManagerStatus(*args, **kwargs):
+def dpGetManagerStatus(*args: Any) -> Any:
 	""" Use the dpGetManagerStatus command to get the status of the DataPower appliance manager. """
 	...
 
-def dpGetTask(*args, **kwargs):
+def dpGetTask(*args: Any) -> Any:
 	""" Use the dpGetTask command to get a specific DataPower appliance manager task. """
 	...
 
-def dpImport(*args, **kwargs):
+def dpImport(*args: Any) -> Any:
 	""" Use the dpImport command to import the DataPower appliance manager configuration and versions. """
 	...
 
-def dpManageAppliance(*args, **kwargs):
+def dpManageAppliance(*args: Any) -> Any:
 	""" Use the dpManageAppliance command to add the appliance to a managed set and to start managing the appliance. """
 	...
 
-def dpManageDomain(*args, **kwargs):
+def dpManageDomain(*args: Any) -> Any:
 	""" Use the dpManageDomain command to add the domain to a managed set, and to start managing the domain. """
 	...
 
-def dpPurgeTask(*args, **kwargs):
+def dpPurgeTask(*args: Any) -> Any:
 	""" Use the dpPurgeTask command to purge a DataPower appliance manager task. """
 	...
 
-def dpRemoveAppliance(*args, **kwargs):
+def dpRemoveAppliance(*args: Any) -> Any:
 	""" Use the dpRemoveAppliance command to remove an appliance from the DataPower appliance manager. """
 	...
 
-def dpRemoveFirmwareVersion(*args, **kwargs):
+def dpRemoveFirmwareVersion(*args: Any) -> Any:
 	""" Use the dpRemoveFirmwareVersion command to remove a firmware version from the DataPower appliance manager. """
 	...
 
-def dpRemoveMSDomainVersion(*args, **kwargs):
+def dpRemoveMSDomainVersion(*args: Any) -> Any:
 	""" Use the dpRemoveMSDomainVersion command to remove a managed domain version from the DataPower appliance manager. """
 	...
 
-def dpRemoveMSSettingsVersion(*args, **kwargs):
+def dpRemoveMSSettingsVersion(*args: Any) -> Any:
 	""" Use the dpRemoveMSSettingsVersion command to remove a managed settings version from the DataPower appliance manager. """
 	...
 
-def dpRemoveManagedSet(*args, **kwargs):
+def dpRemoveManagedSet(*args: Any) -> Any:
 	""" Use the dpRemoveManagedSet command to remove a managed set from the DataPower appliance manager. """
 	...
 
-def dpSetAppliance(*args, **kwargs):
+def dpSetAppliance(*args: Any) -> Any:
 	""" Use the dpSetAppliance command to modify an appliance in the DataPower appliance manager. """
 	...
 
-def dpSetFirmwareVersion(*args, **kwargs):
+def dpSetFirmwareVersion(*args: Any) -> Any:
 	""" Use the dpSetFirmwareVersion command to modify a DataPower appliance manager firmware version. """
 	...
 
-def dpSetMSDomain(*args, **kwargs):
+def dpSetMSDomain(*args: Any) -> Any:
 	""" Use the dpSetMSDomain command to modify a DataPower appliance manager managed domain. """
 	...
 
-def dpSetMSDomainVersion(*args, **kwargs):
+def dpSetMSDomainVersion(*args: Any) -> Any:
 	""" Use the dpSetMSDomainVersion command to modify a DataPower appliance manager managed domain version. """
 	...
 
-def dpSetMSSettings(*args, **kwargs):
+def dpSetMSSettings(*args: Any) -> Any:
 	""" Use the dpSetMSSettings command to modify the DataPower appliance manager managed settings. """
 	...
 
-def dpSetMSSettingsVersion(*args, **kwargs):
+def dpSetMSSettingsVersion(*args: Any) -> Any:
 	""" Use the dpSetMSSettingsVersion command to modify a DataPower appliance manager managed settings version. """
 	...
 
-def dpSetManagedSet(*args, **kwargs):
+def dpSetManagedSet(*args: Any) -> Any:
 	""" Use the dpSetManagedSet command to modify a DataPower appliance manager managed set. """
 	...
 
-def dpSetManager(*args, **kwargs):
+def dpSetManager(*args: Any) -> Any:
 	""" Use the dpSetManager command to modify the DataPower appliance manager. """
 	...
 
-def dpStopManager(*args, **kwargs):
+def dpStopManager(*args: Any) -> Any:
 	""" Use the dpStopManager command to stop the DataPower appliance manager. """
 	...
 
-def dpSynchManagedSet(*args, **kwargs):
+def dpSynchManagedSet(*args: Any) -> Any:
 	""" Use the dpSynchManagedSet command to manually synchronize a DataPower appliance manager managed set. """
 	...
 
-def dpUnmanageAppliance(*args, **kwargs):
+def dpUnmanageAppliance(*args: Any) -> Any:
 	""" Use the dpUnmanageAppliance command to remove the appliance of interest from its managed set, and to stop managing the appliance. """
 	...
 
-def dpUnmanageDomain(*args, **kwargs):
+def dpUnmanageDomain(*args: Any) -> Any:
 	""" Use the dpUnmanageDomain command to remove the domain from the managed set, and to stop managing the domain. """
 	...
 
-def duplicateMembershipOfGroup(*args, **kwargs):
+def duplicateMembershipOfGroup(*args: Any) -> Any:
 	""" Makes a group a member of the same groups as another group. """
 	...
 
-def duplicateMembershipOfUser(*args, **kwargs):
+def duplicateMembershipOfUser(*args: Any) -> Any:
 	""" Makes a user a member of the same groups as another user. """
 	...
 
-def editAsset(*args, **kwargs):
+def editAsset(*args: Any) -> Any:
 	""" Edit options specified when a specified asset was imported. """
 	...
 
-def editBLA(*args, **kwargs):
+def editBLA(*args: Any) -> Any:
 	""" Edit options for a specified business-level application. """
 	...
 
-def editCompUnit(*args, **kwargs):
+def editCompUnit(*args: Any) -> Any:
 	""" Edit options for a specified composition unit. """
 	...
 
-def editSTSProperty(*args, **kwargs):
+def editSTSProperty(*args: Any) -> Any:
 	""" Edit a configuration property under a configuration group. """
 	...
 
-def enableAudit(*args, **kwargs):
+def enableAudit(*args: Any) -> Any:
 	""" Enables Security Auditing and sets the auditEnabled field in audit.xml. """
 	...
 
-def enableAuditEncryption(*args, **kwargs):
+def enableAuditEncryption(*args: Any) -> Any:
 	""" Enables audit encryption. """
 	...
 
-def enableAuditFilter(*args, **kwargs):
+def enableAuditFilter(*args: Any) -> Any:
 	""" Enables the Audit Specification. """
 	...
 
-def enableAuditSigning(*args, **kwargs):
+def enableAuditSigning(*args: Any) -> Any:
 	""" Enables audit signing. """
 	...
 
-def enableFips(*args, **kwargs):
+def enableFips(*args: Any) -> Any:
 	""" Enables and disables a specified FIPS security level. """
 	...
 
-def enableIntelligentManagement(*args, **kwargs):
+def enableIntelligentManagement(*args: Any) -> Any:
 	""" Command to enable Intelligent Management """
 	...
 
-def enableLMServiceEventPoint(*args, **kwargs):
+def enableLMServiceEventPoint(*args: Any) -> Any:
 	""" Use the "enableLMServiceEventPoint" command to enable a local mapping service event point, in order to generate service mapping events. """
 	...
 
-def enableOAuthTAI(*args, **kwargs):
+def enableOAuthTAI(*args: Any) -> Any:
 	""" Enable OAuth TAI """
 	...
 
-def enablePasswordEncryption(*args, **kwargs):
+def enablePasswordEncryption(*args: Any) -> Any:
 	""" Generates and configures the key file and passwordUtil.properties file, both of which are required for AES password encryption. """
 	...
 
-def enableProvisioning(*args, **kwargs):
+def enableProvisioning(*args: Any) -> Any:
 	""" Enable provisioning on a server. Some components will be started as they are needed. """
 	...
 
-def enableVerboseAudit(*args, **kwargs):
+def enableVerboseAudit(*args: Any) -> Any:
 	""" Enables the verbose gathering of audit data. """
 	...
 
-def enableWritableKeyrings(*args, **kwargs):
+def enableWritableKeyrings(*args: Any) -> Any:
 	""" Modify keystore for writable SAF support.  This task is used during the migration process and will create additional writable keystore objects for the control region and servant region keyrings for SSL keystores. """
 	...
 
-def exchangeSigners(*args, **kwargs):
+def exchangeSigners(*args: Any) -> Any:
 	""" Exchange Signer Certificates """
 	...
 
-def executeElasticityAction(*args, **kwargs):
+def executeElasticityAction(*args: Any) -> Any:
 	""" Command to execute a elasticity action """
 	...
 
-def executeHealthAction(*args, **kwargs):
+def executeHealthAction(*args: Any) -> Any:
 	""" Command to execute a health action """
 	...
 
-def executeMiddlewareServerOperation(*args, **kwargs):
+def executeMiddlewareServerOperation(*args: Any) -> Any:
 	""" Use this command to execute an operation on a middleware server """
 	...
 
-def exportAsset(*args, **kwargs):
+def exportAsset(*args: Any) -> Any:
 	""" Export an asset which has been imported into the product configuration repository.  Only the asset file itself is exported.  No import options for the asset are exported. """
 	...
 
-def exportAuditCertToManagedKS(*args, **kwargs):
+def exportAuditCertToManagedKS(*args: Any) -> Any:
 	""" Exports a personal certificate from a managed key to another managed key store. """
 	...
 
-def exportAuditCertificate(*args, **kwargs):
+def exportAuditCertificate(*args: Any) -> Any:
 	""" Export a certificate to another KeyStore. """
 	...
 
-def exportBinding(*args, **kwargs):
+def exportBinding(*args: Any) -> Any:
 	""" The exportBinding command exports a binding as an archive that can be copied onto a client environment or imported onto a server environment. """
 	...
 
-def exportCertToManagedKS(*args, **kwargs):
+def exportCertToManagedKS(*args: Any) -> Any:
 	""" Export a personal certificate to a managed keystore in the configuration. """
 	...
 
-def exportCertificate(*args, **kwargs):
+def exportCertificate(*args: Any) -> Any:
 	""" Export a certificate to another KeyStore. """
 	...
 
-def exportCompositeToDomain(*args, **kwargs):
+def exportCompositeToDomain(*args: Any) -> Any:
 	""" Exports composites under specified domain """
 	...
 
-def exportDeploymentManifest(*args, **kwargs):
+def exportDeploymentManifest(*args: Any) -> Any:
 	""" Export the deployment manifest from an EBA asset. """
 	...
 
-def exportLTPAKeys(*args, **kwargs):
+def exportLTPAKeys(*args: Any) -> Any:
 	""" Exports Lightweight Third Party Authentication keys to a file. """
 	...
 
-def exportMiddlewareApp(*args, **kwargs):
+def exportMiddlewareApp(*args: Any) -> Any:
 	""" Use this command to export a middleware application to a directory. """
 	...
 
-def exportMiddlewareAppScript(*args, **kwargs):
+def exportMiddlewareAppScript(*args: Any) -> Any:
 	""" Use this command to export middleware application scripts to a directory. """
 	...
 
-def exportOAuthProps(*args, **kwargs):
+def exportOAuthProps(*args: Any) -> Any:
 	""" Get OAuth Configuration to edit """
 	...
 
-def exportPolicySet(*args, **kwargs):
+def exportPolicySet(*args: Any) -> Any:
 	""" The exportPolicySet command exports a policy set as an archive that can be copied onto a client environment or imported onto a server environment. """
 	...
 
-def exportProxyProfile(*args, **kwargs):
+def exportProxyProfile(*args: Any) -> Any:
 	""" export the configuration of a wsprofile to a config archive. """
 	...
 
-def exportProxyServer(*args, **kwargs):
+def exportProxyServer(*args: Any) -> Any:
 	""" export the configuration of a server to a config archive. """
 	...
 
-def exportSAMLSpMetadata(*args, **kwargs):
+def exportSAMLSpMetadata(*args: Any) -> Any:
 	""" This command exports the security configuration SAML TAI SP metadata to a file. """
 	...
 
-def exportSCDL(*args, **kwargs):
+def exportSCDL(*args: Any) -> Any:
 	""" Export the SCA SCDL """
 	...
 
-def exportServer(*args, **kwargs):
+def exportServer(*args: Any) -> Any:
 	""" export the configuration of a server to a config archive. """
 	...
 
-def exportTunnelTemplate(*args, **kwargs):
+def exportTunnelTemplate(*args: Any) -> Any:
 	""" Export a tunnel template and its children into a simple properties file. """
 	...
 
-def exportWSDLArtifacts(*args, **kwargs):
+def exportWSDLArtifacts(*args: Any) -> Any:
 	""" Export WSDL and XSD documents for a specific Composition Unit """
 	...
 
-def exportWasprofile(*args, **kwargs):
+def exportWasprofile(*args: Any) -> Any:
 	""" export the configuration of a wsprofile to a config archive. """
 	...
 
-def extractCertificate(*args, **kwargs):
+def extractCertificate(*args: Any) -> Any:
 	""" extract a signer certificate to a file. """
 	...
 
-def extractCertificateRequest(*args, **kwargs):
+def extractCertificateRequest(*args: Any) -> Any:
 	""" Extract a certificate request to a file. """
 	...
 
-def extractConfigProperties(*args, **kwargs):
+def extractConfigProperties(*args: Any) -> Any:
 	""" Extracts configuration of the object specified by ConfigId or ConfigData parameter to a specified properies file. Either ConfigId or ConfigData parameter should be specified, but not both. ConfigId parameter should be in the form that is returned by "AdminConfig list configType". Example of ConfigId is cellName(cells/cellName|cell.xml#Cell_1). ConfigData parameter should be in the form of configType=value[:configType=value]*. Examples of configData are Deployment=appName or Node=nodeName:Server=serverName. """
 	...
 
-def extractRepositoryCheckpoint(*args, **kwargs):
+def extractRepositoryCheckpoint(*args: Any) -> Any:
 	""" Extract the repository checkpoint specified by the "checkpointName" to the file specified by the "extractToFile". """
 	...
 
-def extractSignerCertificate(*args, **kwargs):
+def extractSignerCertificate(*args: Any) -> Any:
 	""" Extract a signer certificate from a keystore. """
 	...
 
-def findOtherRAsToUpdate(*args, **kwargs):
+def findOtherRAsToUpdate(*args: Any) -> Any:
 	""" Find other Resource Adapters that are copies of the entered Resource Adapter.  Since an update will replace binary files, these copies of the Resource Adapter should be updated after the current Resource Adapter is updated. """
 	...
 
-def genAndReplaceCertificates(*args, **kwargs):
+def genAndReplaceCertificates(*args: Any) -> Any:
 	""" Generates a new certificate with new specification options that replaces existing certificates as specified by the parameter configuration. """
 	...
 
-def generateKeyForKeySet(*args, **kwargs):
+def generateKeyForKeySet(*args: Any) -> Any:
 	""" Generate all the keys in a KeySet. """
 	...
 
-def generateKeyForKeySetGroup(*args, **kwargs):
+def generateKeyForKeySetGroup(*args: Any) -> Any:
 	""" Generate new keys for all the keys within a keySet Group. """
 	...
 
-def generateSecConfigReport(*args, **kwargs):
+def generateSecConfigReport(*args: Any) -> Any:
 	""" Generates the Security Configuration report. """
 	...
 
-def generateTemplates(*args, **kwargs):
+def generateTemplates(*args: Any) -> Any:
 	""" Generates new set of templates by combining WebSphere Application Server base product templates with feature pack and/or stack product templates """
 	...
 
-def getAccessIdFromServerId(*args, **kwargs):
+def getAccessIdFromServerId(*args: Any) -> Any:
 	""" Returns the access ID for the registry server ID. """
 	...
 
-def getActiveSecuritySettings(*args, **kwargs):
+def getActiveSecuritySettings(*args: Any) -> Any:
 	""" Gets the active security setting for global security or in a security domain. """
 	...
 
-def getAllCoreGroupNames(*args, **kwargs):
+def getAllCoreGroupNames(*args: Any) -> Any:
 	""" Get the names of all core groups """
 	...
 
-def getAuditCertificate(*args, **kwargs):
+def getAuditCertificate(*args: Any) -> Any:
 	""" Get information about a personal certificate. """
 	...
 
-def getAuditEmitter(*args, **kwargs):
+def getAuditEmitter(*args: Any) -> Any:
 	""" Returns an audit emitter implementation object. """
 	...
 
-def getAuditEmitterFilters(*args, **kwargs):
+def getAuditEmitterFilters(*args: Any) -> Any:
 	""" Returns a list of defined filters for the supplied emitter in shortened format. """
 	...
 
-def getAuditEncryptionConfig(*args, **kwargs):
+def getAuditEncryptionConfig(*args: Any) -> Any:
 	""" Returns the audit record encryption configuration. """
 	...
 
-def getAuditEventFactory(*args, **kwargs):
+def getAuditEventFactory(*args: Any) -> Any:
 	""" Returns the object of the supplied event factory. """
 	...
 
-def getAuditEventFactoryClass(*args, **kwargs):
+def getAuditEventFactoryClass(*args: Any) -> Any:
 	""" Returns the class name for the supplied event factory. """
 	...
 
-def getAuditEventFactoryFilters(*args, **kwargs):
+def getAuditEventFactoryFilters(*args: Any) -> Any:
 	""" Returns a list of defined filters for the supplied event factory in shortened format. """
 	...
 
-def getAuditEventFactoryName(*args, **kwargs):
+def getAuditEventFactoryName(*args: Any) -> Any:
 	""" Returns the unique name for the supplied event factory. """
 	...
 
-def getAuditEventFactoryProvider(*args, **kwargs):
+def getAuditEventFactoryProvider(*args: Any) -> Any:
 	""" Returns the configured audit service provider for the supplied event factory. """
 	...
 
-def getAuditFilter(*args, **kwargs):
+def getAuditFilter(*args: Any) -> Any:
 	""" Returns an audit specification entry in the audit.xml that matches the reference Id. """
 	...
 
-def getAuditKeyStoreInfo(*args, **kwargs):
+def getAuditKeyStoreInfo(*args: Any) -> Any:
 	""" Shows information about a particular key store. """
 	...
 
-def getAuditNotification(*args, **kwargs):
+def getAuditNotification(*args: Any) -> Any:
 	""" Returns an audit notification. """
 	...
 
-def getAuditNotificationMonitor(*args, **kwargs):
+def getAuditNotificationMonitor(*args: Any) -> Any:
 	""" Returns the audit notification monitor specified by the reference id. """
 	...
 
-def getAuditNotificationName(*args, **kwargs):
+def getAuditNotificationName(*args: Any) -> Any:
 	""" Returns the name of the configured audit notification. """
 	...
 
-def getAuditNotificationRef(*args, **kwargs):
+def getAuditNotificationRef(*args: Any) -> Any:
 	""" Returns the reference id of the configured audit notification. """
 	...
 
-def getAuditOutcomes(*args, **kwargs):
+def getAuditOutcomes(*args: Any) -> Any:
 	""" Returns the audit outcomes defined for an event. """
 	...
 
-def getAuditPolicy(*args, **kwargs):
+def getAuditPolicy(*args: Any) -> Any:
 	""" Returns the audit policy attributes. """
 	...
 
-def getAuditSigningConfig(*args, **kwargs):
+def getAuditSigningConfig(*args: Any) -> Any:
 	""" Returns the audit record signing configuration. """
 	...
 
-def getAuditSystemFailureAction(*args, **kwargs):
+def getAuditSystemFailureAction(*args: Any) -> Any:
 	""" Returns the audit system failure policy. """
 	...
 
-def getAuditorId(*args, **kwargs):
+def getAuditorId(*args: Any) -> Any:
 	""" Gets the auditor identity defined in the audit.xml file. """
 	...
 
-def getAuthDataEntry(*args, **kwargs):
+def getAuthDataEntry(*args: Any) -> Any:
 	""" Return information about an authentication data entry """
 	...
 
-def getAuthzConfigInfo(*args, **kwargs):
+def getAuthzConfigInfo(*args: Any) -> Any:
 	""" Return information about an external JAAC authorization provider. """
 	...
 
-def getAutoCheckpointDepth(*args, **kwargs):
+def getAutoCheckpointDepth(*args: Any) -> Any:
 	""" Get the depth of the automatic checkpoints """
 	...
 
-def getAutoCheckpointEnabled(*args, **kwargs):
+def getAutoCheckpointEnabled(*args: Any) -> Any:
 	""" Get the automatic checkpoints enabled attribute value """
 	...
 
-def getAvailableSDKsOnNode(*args, **kwargs):
+def getAvailableSDKsOnNode(*args: Any) -> Any:
 	""" Returns a list of names for the SDKs on a given node. """
 	...
 
-def getBLAStatus(*args, **kwargs):
+def getBLAStatus(*args: Any) -> Any:
 	""" Determine whether a business-level application or composition unit is running or stopped. """
 	...
 
-def getBinaryFileLocation(*args, **kwargs):
+def getBinaryFileLocation(*args: Any) -> Any:
 	""" Returns the file location of the Binary audit log. """
 	...
 
-def getBinaryFileSize(*args, **kwargs):
+def getBinaryFileSize(*args: Any) -> Any:
 	""" Returns the file size of the Binary audit log. """
 	...
 
-def getBinding(*args, **kwargs):
+def getBinding(*args: Any) -> Any:
 	""" The getBinding command returns the binding configuration for a specified policy type and scope. """
 	...
 
-def getCAClient(*args, **kwargs):
+def getCAClient(*args: Any) -> Any:
 	""" Gets information about a certificate authority (CA) client configurator object. """
 	...
 
-def getCSIInboundInfo(*args, **kwargs):
+def getCSIInboundInfo(*args: Any) -> Any:
 	""" Returns the CSI inbound information for global security or in a security domain. """
 	...
 
-def getCSIOutboundInfo(*args, **kwargs):
+def getCSIOutboundInfo(*args: Any) -> Any:
 	""" Returns the CSI outbound information for global security or in a security domain. """
 	...
 
-def getCertificate(*args, **kwargs):
+def getCertificate(*args: Any) -> Any:
 	""" Get information about a personal certificate. """
 	...
 
-def getCertificateChain(*args, **kwargs):
+def getCertificateChain(*args: Any) -> Any:
 	""" Gets information about each certificate in a certificate chain. """
 	...
 
-def getCertificateRequest(*args, **kwargs):
+def getCertificateRequest(*args: Any) -> Any:
 	""" Get information about a certificate request """
 	...
 
-def getCheckpointLocation(*args, **kwargs):
+def getCheckpointLocation(*args: Any) -> Any:
 	""" Get the directory path where the checkpoints are stored """
 	...
 
-def getClientDynamicPolicyControl(*args, **kwargs):
+def getClientDynamicPolicyControl(*args: Any) -> Any:
 	""" The getClientDynamicPolicyControl command returns the WSPolicy client acquisition information for a specified application or resource. """
 	...
 
-def getConfigRepositoryLocation(*args, **kwargs):
+def getConfigRepositoryLocation(*args: Any) -> Any:
 	""" Get the directory path where the configuration repository is stored """
 	...
 
-def getContexts(*args, **kwargs):
+def getContexts(*args: Any) -> Any:
 	""" getContextDesc """
 	...
 
-def getCoreGroupNameForServer(*args, **kwargs):
+def getCoreGroupNameForServer(*args: Any) -> Any:
 	""" Get the name of the core group the server is a member of. """
 	...
 
-def getCurrentWizardSettings(*args, **kwargs):
+def getCurrentWizardSettings(*args: Any) -> Any:
 	""" Gets current security wizard settings from the workspace. """
 	...
 
-def getDefaultBindings(*args, **kwargs):
+def getDefaultBindings(*args: Any) -> Any:
 	""" The getDefaultBindings command returns the default binding names for a specified domain or server. """
 	...
 
-def getDefaultContextService(*args, **kwargs):
+def getDefaultContextService(*args: Any) -> Any:
 	""" Get the JNDI name that is bound to java:comp/DefaultContextService. """
 	...
 
-def getDefaultCoreGroupName(*args, **kwargs):
+def getDefaultCoreGroupName(*args: Any) -> Any:
 	""" Get the name of the default core group """
 	...
 
-def getDefaultDataSource(*args, **kwargs):
+def getDefaultDataSource(*args: Any) -> Any:
 	""" Get the JNDI name that is bound to java:comp/DefaultDataSource. """
 	...
 
-def getDefaultJMSConnectionFactory(*args, **kwargs):
+def getDefaultJMSConnectionFactory(*args: Any) -> Any:
 	""" Get the JNDI name that is bound to java:comp/DefaultJMSConnectionFactory. """
 	...
 
-def getDefaultManagedExecutor(*args, **kwargs):
+def getDefaultManagedExecutor(*args: Any) -> Any:
 	""" Get the JNDI name that is bound to java:comp/DefaultManagedExecutorService. """
 	...
 
-def getDefaultManagedScheduledExecutor(*args, **kwargs):
+def getDefaultManagedScheduledExecutor(*args: Any) -> Any:
 	""" Get the JNDI name that is bound to java:comp/DefaultManagedScheduledExecutorService. """
 	...
 
-def getDefaultManagedThreadFactory(*args, **kwargs):
+def getDefaultManagedThreadFactory(*args: Any) -> Any:
 	""" Get the JNDI name that is bound to java:comp/DefaultManagedThreadFactory. """
 	...
 
-def getDescriptiveProp(*args, **kwargs):
+def getDescriptiveProp(*args: Any) -> Any:
 	""" Get information about a descriptive property under an object. """
 	...
 
-def getDistributedCacheProperty(*args, **kwargs):
+def getDistributedCacheProperty(*args: Any) -> Any:
 	""" queryDistrbitedConfigCmdDesc """
 	...
 
-def getDmgrProperties(*args, **kwargs):
+def getDmgrProperties(*args: Any) -> Any:
 	""" Returns the properties of the deployment manager """
 	...
 
-def getDynamicClusterIsolationProperties(*args, **kwargs):
+def getDynamicClusterIsolationProperties(*args: Any) -> Any:
 	""" Display Dynamic Cluster isolation properties """
 	...
 
-def getDynamicClusterMaxInstances(*args, **kwargs):
+def getDynamicClusterMaxInstances(*args: Any) -> Any:
 	""" Get dynamic cluster maximum number of cluster instances """
 	...
 
-def getDynamicClusterMaxNodes(*args, **kwargs):
+def getDynamicClusterMaxNodes(*args: Any) -> Any:
 	""" Get dynamic cluster maximum number of cluster nodes """
 	...
 
-def getDynamicClusterMembers(*args, **kwargs):
+def getDynamicClusterMembers(*args: Any) -> Any:
 	""" Get members of specified dynamic cluster and node name.  If node name is not specified, all members of the dynamic cluster are returned. """
 	...
 
-def getDynamicClusterMembershipPolicy(*args, **kwargs):
+def getDynamicClusterMembershipPolicy(*args: Any) -> Any:
 	""" Get dynamic cluster membership policy """
 	...
 
-def getDynamicClusterMinInstances(*args, **kwargs):
+def getDynamicClusterMinInstances(*args: Any) -> Any:
 	""" Get dynamic cluster minimum number of cluster instances """
 	...
 
-def getDynamicClusterMinNodes(*args, **kwargs):
+def getDynamicClusterMinNodes(*args: Any) -> Any:
 	""" Get dynamic cluster minimum number of cluster nodes """
 	...
 
-def getDynamicClusterOperationalMode(*args, **kwargs):
+def getDynamicClusterOperationalMode(*args: Any) -> Any:
 	""" Get dynamic cluster operational mode """
 	...
 
-def getDynamicClusterServerIndexTemplateId(*args, **kwargs):
+def getDynamicClusterServerIndexTemplateId(*args: Any) -> Any:
 	""" Get the configuration ID of the specified dynamic cluster's ServerIndex template object. """
 	...
 
-def getDynamicClusterServerType(*args, **kwargs):
+def getDynamicClusterServerType(*args: Any) -> Any:
 	""" Get dynamic cluster server type """
 	...
 
-def getDynamicClusterVerticalInstances(*args, **kwargs):
+def getDynamicClusterVerticalInstances(*args: Any) -> Any:
 	""" Get dynamic cluster vertical stacking of instances on node """
 	...
 
-def getDynamicSSLConfigSelection(*args, **kwargs):
+def getDynamicSSLConfigSelection(*args: Any) -> Any:
 	""" Get information about a Dynamic SSL configuration selection. """
 	...
 
-def getEditionState(*args, **kwargs):
+def getEditionState(*args: Any) -> Any:
 	""" Provides the state of an application edition. """
 	...
 
-def getEmailList(*args, **kwargs):
+def getEmailList(*args: Any) -> Any:
 	""" Returns the notification email list for the configured audit notification. """
 	...
 
-def getEmitterClass(*args, **kwargs):
+def getEmitterClass(*args: Any) -> Any:
 	""" Returns the class name associated with the supplied emitter reference. """
 	...
 
-def getEmitterUniqueId(*args, **kwargs):
+def getEmitterUniqueId(*args: Any) -> Any:
 	""" Returns the unique ID associated with the supplied emitter reference. """
 	...
 
-def getEncryptionKeyStore(*args, **kwargs):
+def getEncryptionKeyStore(*args: Any) -> Any:
 	""" Returns the keystore containing the certificate used to encrypt the audit records. """
 	...
 
-def getEventFormatterClass(*args, **kwargs):
+def getEventFormatterClass(*args: Any) -> Any:
 	""" Returns the class name of the event formatter associated with the audit service provider reference. """
 	...
 
-def getFipsInfo(*args, **kwargs):
+def getFipsInfo(*args: Any) -> Any:
 	""" Returns information about the FIPS settings in the current WebSphere configuration.  It will print out whether the FIPS is enabled or not and if it is, then what level FIPS setting is enabled. If suite B is enabled, the level of suite B is also returned. """
 	...
 
-def getGroup(*args, **kwargs):
+def getGroup(*args: Any) -> Any:
 	""" Retrieves the attributes of a group. """
 	...
 
-def getIdMgrDefaultRealm(*args, **kwargs):
+def getIdMgrDefaultRealm(*args: Any) -> Any:
 	""" Returns the name of the default realm. """
 	...
 
-def getIdMgrEntityTypeSchema(*args, **kwargs):
+def getIdMgrEntityTypeSchema(*args: Any) -> Any:
 	""" Retrieves the schema of an entity type. If repository ID is not specified then it returns the default entity type schema supported by virtual member manager. If entity type names are not specified then it retrieves the entity type schema for all the entity types. """
 	...
 
-def getIdMgrLDAPAttrCache(*args, **kwargs):
+def getIdMgrLDAPAttrCache(*args: Any) -> Any:
 	""" Returns the LDAP attribute cache configuration. """
 	...
 
-def getIdMgrLDAPContextPool(*args, **kwargs):
+def getIdMgrLDAPContextPool(*args: Any) -> Any:
 	""" Returns LDAP context pool configuration. """
 	...
 
-def getIdMgrLDAPEntityType(*args, **kwargs):
+def getIdMgrLDAPEntityType(*args: Any) -> Any:
 	""" Returns the LDAP entity type configuration data for the specified entity type in the LDAP repository. """
 	...
 
-def getIdMgrLDAPEntityTypeRDNAttr(*args, **kwargs):
+def getIdMgrLDAPEntityTypeRDNAttr(*args: Any) -> Any:
 	""" Returns the RDN attributes configuration of an LDAP entity type configuration. """
 	...
 
-def getIdMgrLDAPGroupConfig(*args, **kwargs):
+def getIdMgrLDAPGroupConfig(*args: Any) -> Any:
 	""" Returns the LDAP group configuration parameters. """
 	...
 
-def getIdMgrLDAPGroupDynamicMemberAttrs(*args, **kwargs):
+def getIdMgrLDAPGroupDynamicMemberAttrs(*args: Any) -> Any:
 	""" Returns the dynamic member attribute configuration from the LDAP group configuration. """
 	...
 
-def getIdMgrLDAPGroupMemberAttrs(*args, **kwargs):
+def getIdMgrLDAPGroupMemberAttrs(*args: Any) -> Any:
 	""" Returns the member attribute configuration from the LDAP group configuration. """
 	...
 
-def getIdMgrLDAPSearchResultCache(*args, **kwargs):
+def getIdMgrLDAPSearchResultCache(*args: Any) -> Any:
 	""" Returns the LDAP search result cache configuration. """
 	...
 
-def getIdMgrLDAPServer(*args, **kwargs):
+def getIdMgrLDAPServer(*args: Any) -> Any:
 	""" Returns all the configured LDAP servers and their configurations. """
 	...
 
-def getIdMgrPropertySchema(*args, **kwargs):
+def getIdMgrPropertySchema(*args: Any) -> Any:
 	""" Retrieves the property schema of an entity type. If repository ID is not specified then it returns the default property schema supported by virtual member manager. If propertyNames is not specified it returns schema of all the properties. If entity type is not specified then it retrieves the property schema for all entity types. If propertyNames is specified then entityTypeName must be specified. """
 	...
 
-def getIdMgrRealm(*args, **kwargs):
+def getIdMgrRealm(*args: Any) -> Any:
 	""" Returns the specified realm configuration. """
 	...
 
-def getIdMgrRepositoriesForRealm(*args, **kwargs):
+def getIdMgrRepositoriesForRealm(*args: Any) -> Any:
 	""" Returns repository specific details for the repositories configuration for the specified realm. """
 	...
 
-def getIdMgrRepository(*args, **kwargs):
+def getIdMgrRepository(*args: Any) -> Any:
 	""" Returns the configuration of the specified repository. """
 	...
 
-def getIdMgrSupportedDataTypes(*args, **kwargs):
+def getIdMgrSupportedDataTypes(*args: Any) -> Any:
 	""" Retrieves the supported data types. If repository ID is not specified then it returns the default data types supported by virtual member manager. """
 	...
 
-def getIdMgrSupportedEntityType(*args, **kwargs):
+def getIdMgrSupportedEntityType(*args: Any) -> Any:
 	""" Returns the configuration of the specified supported entity type. """
 	...
 
-def getInheritedSSLConfig(*args, **kwargs):
+def getInheritedSSLConfig(*args: Any) -> Any:
 	""" Returns a string containing the alias of the SSL Configuration and the certificate alias for the specified scope. """
 	...
 
-def getJAASLoginEntryInfo(*args, **kwargs):
+def getJAASLoginEntryInfo(*args: Any) -> Any:
 	""" Get information about a JAAS login entry. """
 	...
 
-def getJVMMode(*args, **kwargs):
+def getJVMMode(*args: Any) -> Any:
 	""" Get the current JVM mode. The command will return either 31-bit or 64-bit. """
 	...
 
-def getJaspiInfo(*args, **kwargs):
+def getJaspiInfo(*args: Any) -> Any:
 	""" Display information about the Jaspi configuration. """
 	...
 
-def getJavaHome(*args, **kwargs):
+def getJavaHome(*args: Any) -> Any:
 	""" Get the Java Home path. """
 	...
 
-def getJobTargetHistory(*args, **kwargs):
+def getJobTargetHistory(*args: Any) -> Any:
 	""" This command is used to get the job target history for a job. """
 	...
 
-def getJobTargetStatus(*args, **kwargs):
+def getJobTargetStatus(*args: Any) -> Any:
 	""" This command is used to get the latest job target status for a job. """
 	...
 
-def getJobTargets(*args, **kwargs):
+def getJobTargets(*args: Any) -> Any:
 	""" This command is used to get targets for a job.  The targets for the job may have been unregistered, or deleted. """
 	...
 
-def getJobTypeMetadata(*args, **kwargs):
+def getJobTypeMetadata(*args: Any) -> Any:
 	""" This command is used to get the metadata associated with a jobType. """
 	...
 
-def getJobTypes(*args, **kwargs):
+def getJobTypes(*args: Any) -> Any:
 	""" This command is used to get the supported job types for a managed node. """
 	...
 
-def getKeyManager(*args, **kwargs):
+def getKeyManager(*args: Any) -> Any:
 	""" Get information about a key manager. """
 	...
 
-def getKeyReference(*args, **kwargs):
+def getKeyReference(*args: Any) -> Any:
 	""" Get information about a Key Reference in a particular keySet. """
 	...
 
-def getKeySet(*args, **kwargs):
+def getKeySet(*args: Any) -> Any:
 	""" Get information about a key set. """
 	...
 
-def getKeySetGroup(*args, **kwargs):
+def getKeySetGroup(*args: Any) -> Any:
 	""" Get information about a key set group. """
 	...
 
-def getKeyStoreInfo(*args, **kwargs):
+def getKeyStoreInfo(*args: Any) -> Any:
 	""" Returns information about a particular keystore. """
 	...
 
-def getLTPATimeout(*args, **kwargs):
+def getLTPATimeout(*args: Any) -> Any:
 	""" Return the LTPA authentication mechanism timeout from global security or a security domain. """
 	...
 
-def getManagedNodeConnectorProperties(*args, **kwargs):
+def getManagedNodeConnectorProperties(*args: Any) -> Any:
 	""" Get connector properties for the managed node """
 	...
 
-def getManagedNodeGroupInfo(*args, **kwargs):
+def getManagedNodeGroupInfo(*args: Any) -> Any:
 	""" Information regarding a group of managed nodes. (deprecated) """
 	...
 
-def getManagedNodeGroupMembers(*args, **kwargs):
+def getManagedNodeGroupMembers(*args: Any) -> Any:
 	""" This command is used to list members of a group of managed nodes. (deprecated) """
 	...
 
-def getManagedNodeKeys(*args, **kwargs):
+def getManagedNodeKeys(*args: Any) -> Any:
 	""" Get properties keys associated with a specific managed node. (deprecated) """
 	...
 
-def getManagedNodeProperties(*args, **kwargs):
+def getManagedNodeProperties(*args: Any) -> Any:
 	""" Get properties associated with a specific managed node. (deprecated) """
 	...
 
-def getManagedResourceProperties(*args, **kwargs):
+def getManagedResourceProperties(*args: Any) -> Any:
 	""" Get properties associated with a specific managed resource. """
 	...
 
-def getManagedResourcePropertyKeys(*args, **kwargs):
+def getManagedResourcePropertyKeys(*args: Any) -> Any:
 	""" Get property keys associated with an specific managed resource. """
 	...
 
-def getManagedResourceTypes(*args, **kwargs):
+def getManagedResourceTypes(*args: Any) -> Any:
 	""" Retrieves managed resource types. """
 	...
 
-def getManagementScope(*args, **kwargs):
+def getManagementScope(*args: Any) -> Any:
 	""" Get information about a management scope. """
 	...
 
-def getMaxNumBinaryLogs(*args, **kwargs):
+def getMaxNumBinaryLogs(*args: Any) -> Any:
 	""" Returns the configured maximum number of Binary audit logs. """
 	...
 
-def getMembersOfGroup(*args, **kwargs):
+def getMembersOfGroup(*args: Any) -> Any:
 	""" Retrieves the members of a group. """
 	...
 
-def getMembershipOfGroup(*args, **kwargs):
+def getMembershipOfGroup(*args: Any) -> Any:
 	""" Retrieves the groups in which a group is a member. """
 	...
 
-def getMembershipOfUser(*args, **kwargs):
+def getMembershipOfUser(*args: Any) -> Any:
 	""" Get the groups in which a PersonAccount is a member. """
 	...
 
-def getMetadataProperties(*args, **kwargs):
+def getMetadataProperties(*args: Any) -> Any:
 	""" Returns all managed object metadata properties for a given node. """
 	...
 
-def getMetadataProperty(*args, **kwargs):
+def getMetadataProperty(*args: Any) -> Any:
 	""" Returns the specified managed object metadata property for agiven node. """
 	...
 
-def getMiddlewareServerType(*args, **kwargs):
+def getMiddlewareServerType(*args: Any) -> Any:
 	""" Use this command to show the server type of a middleware server """
 	...
 
-def getMigrationOptions(*args, **kwargs):
+def getMigrationOptions(*args: Any) -> Any:
 	""" Returns the default migration scan options used by the createMigrationReport command """
 	...
 
-def getMigrationReport(*args, **kwargs):
+def getMigrationReport(*args: Any) -> Any:
 	""" Returns the absolute path for an application's Liberty migration report """
 	...
 
-def getMigrationSummary(*args, **kwargs):
+def getMigrationSummary(*args: Any) -> Any:
 	""" Returns a summary of a Liberty migration report for an application """
 	...
 
-def getNamedTCPEndPoint(*args, **kwargs):
+def getNamedTCPEndPoint(*args: Any) -> Any:
 	""" Returns the port associated with the specified bridge interface.  This is the port specified on the TCP inbound channel of transport channel chain for the specified bridge interface. """
 	...
 
-def getNewRAObjectProperties(*args, **kwargs):
+def getNewRAObjectProperties(*args: Any) -> Any:
 	""" Returns a string containing all of the property values and step inputs for the updateRAR command. """
 	...
 
-def getNodeBaseProductVersion(*args, **kwargs):
+def getNodeBaseProductVersion(*args: Any) -> Any:
 	""" Returns the base version for a node, for example, "6.0.0.0". """
 	...
 
-def getNodeDefaultSDK(*args, **kwargs):
+def getNodeDefaultSDK(*args: Any) -> Any:
 	""" Query the node's default SDK name and location """
 	...
 
-def getNodeMajorVersion(*args, **kwargs):
+def getNodeMajorVersion(*args: Any) -> Any:
 	""" Returns the major version for a node, for example, "6" for v6.0.0.0. """
 	...
 
-def getNodeMinorVersion(*args, **kwargs):
+def getNodeMinorVersion(*args: Any) -> Any:
 	""" Returns the minor version for a node, for example, "0.0.0" for v6.0.0.0. """
 	...
 
-def getNodePlatformOS(*args, **kwargs):
+def getNodePlatformOS(*args: Any) -> Any:
 	""" Returns the operating system platform for a given node. """
 	...
 
-def getNodeSysplexName(*args, **kwargs):
+def getNodeSysplexName(*args: Any) -> Any:
 	""" Returns the operating system platform for a given node.  This valueapplies only to nodes running on the z/OS operating system. """
 	...
 
-def getOSGiApplicationDeployedObject(*args, **kwargs):
+def getOSGiApplicationDeployedObject(*args: Any) -> Any:
 	""" Returns the deployedObject that represents the configuration of the OSGi application given the name of its composition unit. """
 	...
 
-def getOverallJobStatus(*args, **kwargs):
+def getOverallJobStatus(*args: Any) -> Any:
 	""" This command is used to get overall status of a job. """
 	...
 
-def getPolicySet(*args, **kwargs):
+def getPolicySet(*args: Any) -> Any:
 	""" The getPolicySet command returns general attributes, such as description and default indicator, for the specified policy set. """
 	...
 
-def getPolicySetAttachments(*args, **kwargs):
+def getPolicySetAttachments(*args: Any) -> Any:
 	""" The getPolicySetAttachments command lists the properties for all attachments configured for a specified application or for the trust service. """
 	...
 
-def getPolicyType(*args, **kwargs):
+def getPolicyType(*args: Any) -> Any:
 	""" The getPolicyType command returns the attributes for a specified policy. """
 	...
 
-def getPolicyTypeAttribute(*args, **kwargs):
+def getPolicyTypeAttribute(*args: Any) -> Any:
 	""" The getPolicyTypeAttribute command returns the value for the specified policy attribute. """
 	...
 
-def getPreferences(*args, **kwargs):
+def getPreferences(*args: Any) -> Any:
 	""" Command to get user preferences """
 	...
 
-def getProfileKey(*args, **kwargs):
+def getProfileKey(*args: Any) -> Any:
 	""" Get the profile key """
 	...
 
-def getProviderPolicySharingInfo(*args, **kwargs):
+def getProviderPolicySharingInfo(*args: Any) -> Any:
 	""" The getProviderPolicySharingInfo command returns the WSPolicy provider sharing information for a specified application or resource. """
 	...
 
-def getRSATokenAuthorization(*args, **kwargs):
+def getRSATokenAuthorization(*args: Any) -> Any:
 	""" Returns information in the admin RSA token authorization mechanism object. """
 	...
 
-def getRequiredBindingVersion(*args, **kwargs):
+def getRequiredBindingVersion(*args: Any) -> Any:
 	""" The getRequiredBindingVersion command returns the binding version that is required for a specified asset. """
 	...
 
-def getRuntimeRegistrationProperties(*args, **kwargs):
+def getRuntimeRegistrationProperties(*args: Any) -> Any:
 	""" Get certain runtime properties pertaining to a device and its registered job manager """
 	...
 
-def getSDKPropertiesOnNode(*args, **kwargs):
+def getSDKPropertiesOnNode(*args: Any) -> Any:
 	""" Returns properties for the SDKs. If the SDK name is not given, all properties for all avaiable SDKs are returned.  If the SDK attributes are specified, only properties for given SDK attributes are returned. """
 	...
 
-def getSDKVersion(*args, **kwargs):
+def getSDKVersion(*args: Any) -> Any:
 	""" Query the SDK version number in use """
 	...
 
-def getSSLConfig(*args, **kwargs):
+def getSSLConfig(*args: Any) -> Any:
 	""" Get information about a particular SSL configuration. """
 	...
 
-def getSSLConfigGroup(*args, **kwargs):
+def getSSLConfigGroup(*args: Any) -> Any:
 	""" Get information about a SSL configuration group. """
 	...
 
-def getSSLConfigProperties(*args, **kwargs):
+def getSSLConfigProperties(*args: Any) -> Any:
 	""" Get SSL Configuration Properties """
 	...
 
-def getSecurityDomainForResource(*args, **kwargs):
+def getSecurityDomainForResource(*args: Any) -> Any:
 	""" Returns the security domain that a particular scope belongs to. """
 	...
 
-def getSendEmail(*args, **kwargs):
+def getSendEmail(*args: Any) -> Any:
 	""" Returns the state of the sendEmail audit notification. """
 	...
 
-def getServerSDK(*args, **kwargs):
+def getServerSDK(*args: Any) -> Any:
 	""" Query the server's SDK name and location """
 	...
 
-def getServerSecurityLevel(*args, **kwargs):
+def getServerSecurityLevel(*args: Any) -> Any:
 	""" Get the current security level of the secure proxy server. """
 	...
 
-def getServerType(*args, **kwargs):
+def getServerType(*args: Any) -> Any:
 	""" returns the server type of the specified server. """
 	...
 
-def getSignerCertificate(*args, **kwargs):
+def getSignerCertificate(*args: Any) -> Any:
 	""" Get information about a signer Certificate. """
 	...
 
-def getSingleSignon(*args, **kwargs):
+def getSingleSignon(*args: Any) -> Any:
 	""" Returns information about the single signon settings for global security. """
 	...
 
-def getSupportedAuditEvents(*args, **kwargs):
+def getSupportedAuditEvents(*args: Any) -> Any:
 	""" Returns all supported audit events. """
 	...
 
-def getSupportedAuditOutcomes(*args, **kwargs):
+def getSupportedAuditOutcomes(*args: Any) -> Any:
 	""" Returns all supported audit outcomes. """
 	...
 
-def getTADataCollectionSummary(*args, **kwargs):
+def getTADataCollectionSummary(*args: Any) -> Any:
 	""" This command returns a summary of the Transformation Advisor data collection status. """
 	...
 
@@ -3063,71 +3063,71 @@ def getTCPEndPoint(target_object: ConfigurationObjectName, options: Union[str, L
     ...
 # --------------------------------------------------------------------------
 
-def getTargetGroupInfo(*args, **kwargs):
+def getTargetGroupInfo(*args: Any) -> Any:
 	""" Information regarding a group of Targets. """
 	...
 
-def getTargetGroupMembers(*args, **kwargs):
+def getTargetGroupMembers(*args: Any) -> Any:
 	""" This command is used to list members of a target group. """
 	...
 
-def getTargetKeys(*args, **kwargs):
+def getTargetKeys(*args: Any) -> Any:
 	""" Get properties keys associated with a specific Target. """
 	...
 
-def getTargetProperties(*args, **kwargs):
+def getTargetProperties(*args: Any) -> Any:
 	""" Get properties associated with a specific Target. """
 	...
 
-def getTrustAssociationInfo(*args, **kwargs):
+def getTrustAssociationInfo(*args: Any) -> Any:
 	""" Get information about a trust association. """
 	...
 
-def getTrustManager(*args, **kwargs):
+def getTrustManager(*args: Any) -> Any:
 	""" Get information about a trust manager. """
 	...
 
-def getUDPEndPoint(*args, **kwargs):
+def getUDPEndPoint(*args: Any) -> Any:
 	""" Get the NamedEndPoint endpoint that is associated with either a UDPInboundChannel, or a chain that contains a UDPInboundChannel """
 	...
 
-def getUnusedSDKsOnNode(*args, **kwargs):
+def getUnusedSDKsOnNode(*args: Any) -> Any:
 	""" Query unused SDKs on the node """
 	...
 
-def getUser(*args, **kwargs):
+def getUser(*args: Any) -> Any:
 	""" Retrieves the attributes of a PersonAccount. """
 	...
 
-def getUserRegistryInfo(*args, **kwargs):
+def getUserRegistryInfo(*args: Any) -> Any:
 	""" Returns information about a user registry from the administrative security configuration or an application security domain. """
 	...
 
-def getWSCertExpMonitor(*args, **kwargs):
+def getWSCertExpMonitor(*args: Any) -> Any:
 	""" Get information about a certificate expiration monitor. """
 	...
 
-def getWSN_SIBWSInboundPort(*args, **kwargs):
+def getWSN_SIBWSInboundPort(*args: Any) -> Any:
     """ Retrieve one of the service integration bus inbound ports from a WS-Notification service point. """
     ...
 
-def getWSN_SIBWSInboundService(*args, **kwargs):
+def getWSN_SIBWSInboundService(*args: Any) -> Any:
     """ Retrieve one of the service integration bus inbound services from a WS-Notification service. """
     ...
 
-def getWSNotifier(*args, **kwargs):
+def getWSNotifier(*args: Any) -> Any:
 	""" Get information about a notifier. """
 	...
 
-def getWSSchedule(*args, **kwargs):
+def getWSSchedule(*args: Any) -> Any:
 	""" Get schedule information. """
 	...
 
-def getWebService(*args, **kwargs):
+def getWebService(*args: Any) -> Any:
 	""" Gets the attributes for a Web service in an enterprise application. """
 	...
 
-def healthRestartAction(*args, **kwargs):
+def healthRestartAction(*args: Any) -> Any:
 	""" restarts the sick server """
 	...
 
@@ -3163,2858 +3163,2858 @@ def help(search_query: str = "", /) -> str:
     ...
 # --------------------------------------------------------------------------
 
-def importApplicationsFromWasprofile(*args, **kwargs):
+def importApplicationsFromWasprofile(*args: Any) -> Any:
 	""" Import the applications from a configuration archive file to a sepcified application server target. """
 	...
 
-def importAsset(*args, **kwargs):
+def importAsset(*args: Any) -> Any:
 	""" Import an application file into the product configuration repository as an asset. """
 	...
 
-def importAuditCertFromManagedKS(*args, **kwargs):
+def importAuditCertFromManagedKS(*args: Any) -> Any:
 	""" Imports a personal certificate from another managed key store. """
 	...
 
-def importAuditCertificate(*args, **kwargs):
+def importAuditCertificate(*args: Any) -> Any:
 	""" Import a Certificate from another keyStore to this KeyStore. """
 	...
 
-def importBinding(*args, **kwargs):
+def importBinding(*args: Any) -> Any:
 	""" The importBinding command imports a binding from a compressed archive onto a server environment. """
 	...
 
-def importCertFromManagedKS(*args, **kwargs):
+def importCertFromManagedKS(*args: Any) -> Any:
 	""" Import a personal certificate from managed keystore in the configuration. """
 	...
 
-def importCertificate(*args, **kwargs):
+def importCertificate(*args: Any) -> Any:
 	""" port a Certificate from another keystore to this keystore. """
 	...
 
-def importDeploymentManifest(*args, **kwargs):
+def importDeploymentManifest(*args: Any) -> Any:
 	""" Import the deployment manifest into the EBA asset. If the deployment manifest is resolved successfully, it will replace the existing deployment manifest in the asset. """
 	...
 
-def importEncryptionCertificate(*args, **kwargs):
+def importEncryptionCertificate(*args: Any) -> Any:
 	""" Import a Certificate from another keyStore to this KeyStore. """
 	...
 
-def importLTPAKeys(*args, **kwargs):
+def importLTPAKeys(*args: Any) -> Any:
 	""" Imports Lightweight Third Party Authentication keys into the configuration. """
 	...
 
-def importOAuthProps(*args, **kwargs):
+def importOAuthProps(*args: Any) -> Any:
 	""" Import OAuth Configuration After Export """
 	...
 
-def importPolicySet(*args, **kwargs):
+def importPolicySet(*args: Any) -> Any:
 	""" The importPolicySet command imports a policy set from a compressed archive onto a server environment. """
 	...
 
-def importProxyProfile(*args, **kwargs):
+def importProxyProfile(*args: Any) -> Any:
 	""" Import a Secure Proxy Profile into this cell. """
 	...
 
-def importProxyServer(*args, **kwargs):
+def importProxyServer(*args: Any) -> Any:
 	""" Import a Secure Proxy Server into a given Secure Proxy node. """
 	...
 
-def importSAMLIdpMetadata(*args, **kwargs):
+def importSAMLIdpMetadata(*args: Any) -> Any:
 	""" This command imports SAML IdP metadata to the security configuration SAML TAI. """
 	...
 
-def importServer(*args, **kwargs):
+def importServer(*args: Any) -> Any:
 	""" Import a server configuration from a configuration archive. This command creates a new server based on the server configuration defined in the archive. """
 	...
 
-def importTunnelTemplate(*args, **kwargs):
+def importTunnelTemplate(*args: Any) -> Any:
 	""" Import a tunnel template and its children into the cell-scoped config. """
 	...
 
-def importWasprofile(*args, **kwargs):
+def importWasprofile(*args: Any) -> Any:
 	""" Import the configuration of a wasprofile profile from a configuration archive. This command overwrites the configuration of the current wasprofile configuration. """
 	...
 
-def inspectServiceMapLibrary(*args, **kwargs):
+def inspectServiceMapLibrary(*args: Any) -> Any:
 	""" Use the "inspectServiceMapLibrary" command to display details about the service maps within a service map library. """
 	...
 
-def installPHPApp(*args, **kwargs):
+def installPHPApp(*args: Any) -> Any:
 	""" Use this command to install a PHP application. """
 	...
 
-def installResourceAdapter(*args, **kwargs):
+def installResourceAdapter(*args: Any) -> Any:
 	""" Install a J2C resource adapter """
 	...
 
-def installServiceMap(*args, **kwargs):
+def installServiceMap(*args: Any) -> Any:
 	""" Use the "installServiceMap" command to install a service map in a service map library. """
 	...
 
-def installWasCEApp(*args, **kwargs):
+def installWasCEApp(*args: Any) -> Any:
 	""" Use this command to install a WAS CE application. """
 	...
 
-def isAdminLockedOut(*args, **kwargs):
+def isAdminLockedOut(*args: Any) -> Any:
 	""" Checks to make sure that at least one admin user in the admin-authz.xml file exists in the input user registry. """
 	...
 
-def isAppSecurityEnabled(*args, **kwargs):
+def isAppSecurityEnabled(*args: Any) -> Any:
 	""" Returns the current Application Security setting of true or false. """
 	...
 
-def isAuditEnabled(*args, **kwargs):
+def isAuditEnabled(*args: Any) -> Any:
 	""" Returns the state of Security Auditing. """
 	...
 
-def isAuditEncryptionEnabled(*args, **kwargs):
+def isAuditEncryptionEnabled(*args: Any) -> Any:
 	""" Returns the state of audit encryption. """
 	...
 
-def isAuditFilterEnabled(*args, **kwargs):
+def isAuditFilterEnabled(*args: Any) -> Any:
 	""" Determination of enablement state of an Audit Specification. """
 	...
 
-def isAuditNotificationEnabled(*args, **kwargs):
+def isAuditNotificationEnabled(*args: Any) -> Any:
 	""" Returns the enabled state of the audit notification policy. """
 	...
 
-def isAuditSigningEnabled(*args, **kwargs):
+def isAuditSigningEnabled(*args: Any) -> Any:
 	""" Returns the state of audit signing. """
 	...
 
-def isEditionExists(*args, **kwargs):
+def isEditionExists(*args: Any) -> Any:
 	""" Use this command to check if the specified edition exists for the particular application. """
 	...
 
-def isEventEnabled(*args, **kwargs):
+def isEventEnabled(*args: Any) -> Any:
 	""" Returns a Boolean indicating if the event has at least one audit outcome for which it has been enabled. """
 	...
 
-def isFederated(*args, **kwargs):
+def isFederated(*args: Any) -> Any:
 	""" Check if the server is a standalone server or the node of the given server is federated with a deployment manager. Returns "true" if the node of the server is federated, "false" otherwise. """
 	...
 
-def isGlobalSecurityEnabled(*args, **kwargs):
+def isGlobalSecurityEnabled(*args: Any) -> Any:
 	""" Returns the current administrative security setting of true or false. """
 	...
 
-def isIdMgrUseGlobalSchemaForModel(*args, **kwargs):
+def isIdMgrUseGlobalSchemaForModel(*args: Any) -> Any:
 	""" Returns a boolean to indicate whether the global schema option is enabled for the data model in a multiple security domain environment. """
 	...
 
-def isInheritDefaultsForDestination(*args, **kwargs):
+def isInheritDefaultsForDestination(*args: Any) -> Any:
 	""" The command will return "true" if the destination specified inherits the default security permissions. """
 	...
 
-def isInheritReceiverForTopic(*args, **kwargs):
+def isInheritReceiverForTopic(*args: Any) -> Any:
 	""" Shows the inherit receiver defaults for a topic in a given topic space.  Returns "true" if the topic inherits from receiver default values. """
 	...
 
-def isInheritSenderForTopic(*args, **kwargs):
+def isInheritSenderForTopic(*args: Any) -> Any:
 	""" Shows the inherit sender defaults for a topic for a specified topic space.  Returns "true" if the topic inherits from sender default values. """
 	...
 
-def isJACCEnabled(*args, **kwargs):
+def isJACCEnabled(*args: Any) -> Any:
 	""" Checks if the current run time is JACC enabled in the global security domain. """
 	...
 
-def isNodeZOS(*args, **kwargs):
+def isNodeZOS(*args: Any) -> Any:
 	""" Determines whether or not a given node is a z/OS node. Returns "true" if node operating system is Z/OS, "false" otherwise. """
 	...
 
-def isPollingJobManager(*args, **kwargs):
+def isPollingJobManager(*args: Any) -> Any:
 	""" Query whether a managed node is periodically polling a JobManager """
 	...
 
-def isSAFVersionValidForIdentityMapping(*args, **kwargs):
+def isSAFVersionValidForIdentityMapping(*args: Any) -> Any:
 	""" Returns a Boolean indicating if the version of the SAF product supports distributed identity mapping. """
 	...
 
-def isSendEmailEnabled(*args, **kwargs):
+def isSendEmailEnabled(*args: Any) -> Any:
 	""" Returns the enabled state of sending audit notification emails. """
 	...
 
-def isSingleSecurityDomain(*args, **kwargs):
+def isSingleSecurityDomain(*args: Any) -> Any:
 	""" Checks if the current run time is a single security domain. """
 	...
 
-def isVerboseAuditEnabled(*args, **kwargs):
+def isVerboseAuditEnabled(*args: Any) -> Any:
 	""" Returns the state of verbose gathering of audit data. """
 	...
 
-def ldapSearch(*args, **kwargs):
+def ldapSearch(*args: Any) -> Any:
 	""" Performs ldapsearch according to search criteria from input parameter """
 	...
 
-def listAdminObjectInterfaces(*args, **kwargs):
+def listAdminObjectInterfaces(*args: Any) -> Any:
 	""" List all of the defined administrative object interfaces on the specified J2C resource adapter. """
 	...
 
-def listAllDestinationsWithRoles(*args, **kwargs):
+def listAllDestinationsWithRoles(*args: Any) -> Any:
 	""" Lists all destinations which have roles defined on them. """
 	...
 
-def listAllForeignBusesWithRoles(*args, **kwargs):
+def listAllForeignBusesWithRoles(*args: Any) -> Any:
 	""" Lists all foreign buses which have roles defined on them for the specified bus. """
 	...
 
-def listAllRolesForGroup(*args, **kwargs):
+def listAllRolesForGroup(*args: Any) -> Any:
 	""" Lists all the roles defined for a specified group. """
 	...
 
-def listAllRolesForUser(*args, **kwargs):
+def listAllRolesForUser(*args: Any) -> Any:
 	""" Lists all the roles defined for a specified user. """
 	...
 
-def listAllSIBBootstrapMembers(*args, **kwargs):
+def listAllSIBBootstrapMembers(*args: Any) -> Any:
 	""" Lists all the servers or clusters that can be used for bootstrap into the specified bus. """
 	...
 
-def listAllTopicsWithRoles(*args, **kwargs):
+def listAllTopicsWithRoles(*args: Any) -> Any:
 	""" Lists all the topics with roles defined for the specified topic space. """
 	...
 
-def listApplicationPorts(*args, **kwargs):
+def listApplicationPorts(*args: Any) -> Any:
 	""" Displays a list of ports that is used to access the specified application, including the node name, server name, named endpoint, and host and port values. """
 	...
 
-def listAssets(*args, **kwargs):
+def listAssets(*args: Any) -> Any:
 	""" List assets which have been imported into the product configuration repository. """
 	...
 
-def listAssetsAttachedToPolicySet(*args, **kwargs):
+def listAssetsAttachedToPolicySet(*args: Any) -> Any:
 	""" The listAssetsAttachedToPolicySet command lists the assets to which a specific policy set is attached. """
 	...
 
-def listAttachmentsForPolicySet(*args, **kwargs):
+def listAttachmentsForPolicySet(*args: Any) -> Any:
 	""" The listAttachmentsForPolicySet command lists the applications to which a specific policy set is attached. """
 	...
 
-def listAuditAuthorizationGroupsForGroupID(*args, **kwargs):
+def listAuditAuthorizationGroupsForGroupID(*args: Any) -> Any:
 	""" list all the AuthorizationGroups that a given group has access to """
 	...
 
-def listAuditAuthorizationGroupsForUserID(*args, **kwargs):
+def listAuditAuthorizationGroupsForUserID(*args: Any) -> Any:
 	""" list all the AuthorizationGroups that a given user has access to. """
 	...
 
-def listAuditEmitters(*args, **kwargs):
+def listAuditEmitters(*args: Any) -> Any:
 	""" Lists all the audit emitter implementation objects. """
 	...
 
-def listAuditEncryptionKeyStores(*args, **kwargs):
+def listAuditEncryptionKeyStores(*args: Any) -> Any:
 	""" Lists the audit record encryption keystores. """
 	...
 
-def listAuditEventFactories(*args, **kwargs):
+def listAuditEventFactories(*args: Any) -> Any:
 	""" Returns a list of the defined audit event factory implementations. """
 	...
 
-def listAuditFilters(*args, **kwargs):
+def listAuditFilters(*args: Any) -> Any:
 	""" Retrieves a list of all the audit specifications defined in the audit.xml. """
 	...
 
-def listAuditFiltersByEvent(*args, **kwargs):
+def listAuditFiltersByEvent(*args: Any) -> Any:
 	""" Returns a list of event and outcome types of the defined Audit Filters. """
 	...
 
-def listAuditFiltersByRef(*args, **kwargs):
+def listAuditFiltersByRef(*args: Any) -> Any:
 	""" Returns the references to the defined Audit Filters. """
 	...
 
-def listAuditGroupIDsOfAuthorizationGroup(*args, **kwargs):
+def listAuditGroupIDsOfAuthorizationGroup(*args: Any) -> Any:
 	""" list all the group IDs in an AuthorizationGroups """
 	...
 
-def listAuditKeyStores(*args, **kwargs):
+def listAuditKeyStores(*args: Any) -> Any:
 	""" Lists Audit keystores """
 	...
 
-def listAuditNotificationMonitors(*args, **kwargs):
+def listAuditNotificationMonitors(*args: Any) -> Any:
 	""" Lists the audit notification monitors. """
 	...
 
-def listAuditNotifications(*args, **kwargs):
+def listAuditNotifications(*args: Any) -> Any:
 	""" Lists the audit notifications. """
 	...
 
-def listAuditResourcesForGroupID(*args, **kwargs):
+def listAuditResourcesForGroupID(*args: Any) -> Any:
 	""" List all the objects that a given group has access to. """
 	...
 
-def listAuditResourcesForUserID(*args, **kwargs):
+def listAuditResourcesForUserID(*args: Any) -> Any:
 	""" List all the objects that a given user has access to. """
 	...
 
-def listAuditUserIDsOfAuthorizationGroup(*args, **kwargs):
+def listAuditUserIDsOfAuthorizationGroup(*args: Any) -> Any:
 	""" list all the users IDs in an AuthorizationGroups """
 	...
 
-def listAuthDataEntries(*args, **kwargs):
+def listAuthDataEntries(*args: Any) -> Any:
 	""" List authentication data entries in the administrative security configuration or a in a security domain. """
 	...
 
-def listAuthorizationGroups(*args, **kwargs):
+def listAuthorizationGroups(*args: Any) -> Any:
 	""" List existing Authorization Groups. """
 	...
 
-def listAuthorizationGroupsForGroupID(*args, **kwargs):
+def listAuthorizationGroupsForGroupID(*args: Any) -> Any:
 	""" list all the AuthorizationGroups that a given group has access to """
 	...
 
-def listAuthorizationGroupsForUserID(*args, **kwargs):
+def listAuthorizationGroupsForUserID(*args: Any) -> Any:
 	""" list all the AuthorizationGroups that a given user has access to. """
 	...
 
-def listAuthorizationGroupsOfResource(*args, **kwargs):
+def listAuthorizationGroupsOfResource(*args: Any) -> Any:
 	""" Get the authorization groups of a given Resource. """
 	...
 
-def listAvailableOSGiExtensions(*args, **kwargs):
+def listAvailableOSGiExtensions(*args: Any) -> Any:
 	""" Shows the possible extensions available to be attached to the composition unit. """
 	...
 
-def listBLAs(*args, **kwargs):
+def listBLAs(*args: Any) -> Any:
 	""" List business-level applications in the cell. """
 	...
 
-def listCAClients(*args, **kwargs):
+def listCAClients(*args: Any) -> Any:
 	""" Lists certificate authority (CA) client configurator objects. """
 	...
 
-def listCertAliases(*args, **kwargs):
+def listCertAliases(*args: Any) -> Any:
 	""" Lists the certificate aliases. """
 	...
 
-def listCertStatusForSecurityStandard(*args, **kwargs):
+def listCertStatusForSecurityStandard(*args: Any) -> Any:
 	""" Returns all the certificate used by SSL configuraiton and plugins. States if they comply with the requested security level. """
 	...
 
-def listCertificateRequests(*args, **kwargs):
+def listCertificateRequests(*args: Any) -> Any:
 	""" The list of certificate request in a keystore. """
 	...
 
-def listChainTemplates(*args, **kwargs):
+def listChainTemplates(*args: Any) -> Any:
 	""" Displays a list of templates that can be used to create chains in this configuration. All templates have a certain type of transport channel as the last transport channel in the chain. """
 	...
 
-def listChains(*args, **kwargs):
+def listChains(*args: Any) -> Any:
 	""" List all chains configured under a particular instance of TransportChannelService. """
 	...
 
-def listCheckpointDocuments(*args, **kwargs):
+def listCheckpointDocuments(*args: Any) -> Any:
 	""" List the existing checkpoint documents specified by the "checkpointName" """
 	...
 
-def listCheckpoints(*args, **kwargs):
+def listCheckpoints(*args: Any) -> Any:
 	""" List the existing checkpoints """
 	...
 
-def listClusterMemberTemplates(*args, **kwargs):
+def listClusterMemberTemplates(*args: Any) -> Any:
 	""" No description available """
 	...
 
-def listCompUnits(*args, **kwargs):
+def listCompUnits(*args: Any) -> Any:
 	""" List composition units belonging to a specified business-level application. """
 	...
 
-def listConnectionFactoryInterfaces(*args, **kwargs):
+def listConnectionFactoryInterfaces(*args: Any) -> Any:
 	""" List all of the defined connection factory interfaces on the specified J2C resource adapter. """
 	...
 
-def listControlOps(*args, **kwargs):
+def listControlOps(*args: Any) -> Any:
 	""" Lists control operations defined for a business-level application and its composition units. """
 	...
 
-def listCoreGroupServers(*args, **kwargs):
+def listCoreGroupServers(*args: Any) -> Any:
 	""" Returns a list of core group servers. """
 	...
 
-def listCoreGroups(*args, **kwargs):
+def listCoreGroups(*args: Any) -> Any:
 	""" Return a collection of core groups that are related to the specified core group. """
 	...
 
-def listDatasources(*args, **kwargs):
+def listDatasources(*args: Any) -> Any:
 	""" List the datasources that are contained in the specified scope. """
 	...
 
-def listDescriptiveProps(*args, **kwargs):
+def listDescriptiveProps(*args: Any) -> Any:
 	""" List descriptive properties under an object. """
 	...
 
-def listDisabledSessionCookie(*args, **kwargs):
+def listDisabledSessionCookie(*args: Any) -> Any:
 	""" Lists the sets of cookie configurations that will not be able to be programmatically modified """
 	...
 
-def listDynamicClusterIsolationGroupMembers(*args, **kwargs):
+def listDynamicClusterIsolationGroupMembers(*args: Any) -> Any:
 	""" List Dynamic Cluster isolation group members """
 	...
 
-def listDynamicClusterIsolationGroups(*args, **kwargs):
+def listDynamicClusterIsolationGroups(*args: Any) -> Any:
 	""" List Dynamic Cluster isolation groups """
 	...
 
-def listDynamicClusters(*args, **kwargs):
+def listDynamicClusters(*args: Any) -> Any:
 	""" List all dynamic clusters in the cell """
 	...
 
-def listDynamicSSLConfigSelections(*args, **kwargs):
+def listDynamicSSLConfigSelections(*args: Any) -> Any:
 	""" List all Dynamic SSL configuration selections. """
 	...
 
-def listEditions(*args, **kwargs):
+def listEditions(*args: Any) -> Any:
 	""" Use this command to list all the editions for a particular application. """
 	...
 
-def listElasticityActions(*args, **kwargs):
+def listElasticityActions(*args: Any) -> Any:
 	""" Command to list all elasticity actions """
 	...
 
-def listEligibleBridgeInterfaces(*args, **kwargs):
+def listEligibleBridgeInterfaces(*args: Any) -> Any:
 	""" Returns a collection of node, server and transport channel chain combinations that are eligible to become bridge interfaces for the specified core group access point. """
 	...
 
-def listExternalBundleRepositories(*args, **kwargs):
+def listExternalBundleRepositories(*args: Any) -> Any:
 	""" Lists the external bundle repositories in the configuration. """
 	...
 
-def listForeignServerTypes(*args, **kwargs):
+def listForeignServerTypes(*args: Any) -> Any:
 	""" Use this command to show all of the middleware server types """
 	...
 
-def listGroupIDsOfAuthorizationGroup(*args, **kwargs):
+def listGroupIDsOfAuthorizationGroup(*args: Any) -> Any:
 	""" list all the group IDs in an AuthorizationGroup """
 	...
 
-def listGroupsForNamingRoles(*args, **kwargs):
+def listGroupsForNamingRoles(*args: Any) -> Any:
 	""" List the groups and special subjects from all naming roles. """
 	...
 
-def listGroupsInBusConnectorRole(*args, **kwargs):
+def listGroupsInBusConnectorRole(*args: Any) -> Any:
 	""" List the groups in the bus connector role """
 	...
 
-def listGroupsInDefaultRole(*args, **kwargs):
+def listGroupsInDefaultRole(*args: Any) -> Any:
 	""" List the groups in the default role. """
 	...
 
-def listGroupsInDestinationRole(*args, **kwargs):
+def listGroupsInDestinationRole(*args: Any) -> Any:
 	""" List the groups in the specified role in the destination security space role for the given destination. """
 	...
 
-def listGroupsInForeignBusRole(*args, **kwargs):
+def listGroupsInForeignBusRole(*args: Any) -> Any:
 	""" List the groups in the specified role in the foreign bus security space role for the given bus. """
 	...
 
-def listGroupsInTopicRole(*args, **kwargs):
+def listGroupsInTopicRole(*args: Any) -> Any:
 	""" Lists the groups in the specified topic role for the specified topic space. """
 	...
 
-def listGroupsInTopicSpaceRootRole(*args, **kwargs):
+def listGroupsInTopicSpaceRootRole(*args: Any) -> Any:
 	""" Lists the groups in the specified topic space role for the specified topic space. """
 	...
 
-def listHealthActions(*args, **kwargs):
+def listHealthActions(*args: Any) -> Any:
 	""" Command to list all health actions """
 	...
 
-def listHealthPolicies(*args, **kwargs):
+def listHealthPolicies(*args: Any) -> Any:
 	""" Command to list all health policies """
 	...
 
-def listIdMgrCustomProperties(*args, **kwargs):
+def listIdMgrCustomProperties(*args: Any) -> Any:
 	""" Returns custom properties of specified repository configuration. """
 	...
 
-def listIdMgrGroupsForRoles(*args, **kwargs):
+def listIdMgrGroupsForRoles(*args: Any) -> Any:
 	""" Lists the uniqueName of groups for each role. """
 	...
 
-def listIdMgrLDAPAttrs(*args, **kwargs):
+def listIdMgrLDAPAttrs(*args: Any) -> Any:
 	""" Lists the name of all configured attributes for the specified LDAP repository. """
 	...
 
-def listIdMgrLDAPAttrsNotSupported(*args, **kwargs):
+def listIdMgrLDAPAttrsNotSupported(*args: Any) -> Any:
 	""" Lists the details of all virtual member manager properties not supported by the specified LDAP repository. """
 	...
 
-def listIdMgrLDAPBackupServers(*args, **kwargs):
+def listIdMgrLDAPBackupServers(*args: Any) -> Any:
 	""" Lists the backup LDAP servers. """
 	...
 
-def listIdMgrLDAPEntityTypes(*args, **kwargs):
+def listIdMgrLDAPEntityTypes(*args: Any) -> Any:
 	""" Lists the name of all configured entity types for the specified LDAP repository. """
 	...
 
-def listIdMgrLDAPExternalIdAttrs(*args, **kwargs):
+def listIdMgrLDAPExternalIdAttrs(*args: Any) -> Any:
 	""" Lists the details of all LDAP attributes used as an external ID. """
 	...
 
-def listIdMgrLDAPServers(*args, **kwargs):
+def listIdMgrLDAPServers(*args: Any) -> Any:
 	""" Lists all the configured primary LDAP servers. """
 	...
 
-def listIdMgrPropertyExtensions(*args, **kwargs):
+def listIdMgrPropertyExtensions(*args: Any) -> Any:
 	""" Lists the properties that have been extended for one or more entity types. """
 	...
 
-def listIdMgrRealmBaseEntries(*args, **kwargs):
+def listIdMgrRealmBaseEntries(*args: Any) -> Any:
 	""" Lists all base entries of the specified realm. """
 	...
 
-def listIdMgrRealmDefaultParents(*args, **kwargs):
+def listIdMgrRealmDefaultParents(*args: Any) -> Any:
 	""" Lists the mapping of default parent uniqueName for all entity types in a specified realm. If realm name is not specified, default realm is used. """
 	...
 
-def listIdMgrRealmURAttrMappings(*args, **kwargs):
+def listIdMgrRealmURAttrMappings(*args: Any) -> Any:
 	""" Returns mappings between user and group attributes of user registry to virtual member manager properties for a realm. """
 	...
 
-def listIdMgrRealms(*args, **kwargs):
+def listIdMgrRealms(*args: Any) -> Any:
 	""" Lists the name of configured realms. """
 	...
 
-def listIdMgrRepositories(*args, **kwargs):
+def listIdMgrRepositories(*args: Any) -> Any:
 	""" Lists names, types, and hostnames of all the configured repositories. """
 	...
 
-def listIdMgrRepositoryBaseEntries(*args, **kwargs):
+def listIdMgrRepositoryBaseEntries(*args: Any) -> Any:
 	""" Returns base entries for a specified repository. """
 	...
 
-def listIdMgrSupportedDBTypes(*args, **kwargs):
+def listIdMgrSupportedDBTypes(*args: Any) -> Any:
 	""" Returns a list of supported database types. """
 	...
 
-def listIdMgrSupportedEntityTypes(*args, **kwargs):
+def listIdMgrSupportedEntityTypes(*args: Any) -> Any:
 	""" Lists all the configured supported entity types. """
 	...
 
-def listIdMgrSupportedLDAPServerTypes(*args, **kwargs):
+def listIdMgrSupportedLDAPServerTypes(*args: Any) -> Any:
 	""" Returns list of supported LDAP server types. """
 	...
 
-def listIdMgrSupportedMessageDigestAlgorithms(*args, **kwargs):
+def listIdMgrSupportedMessageDigestAlgorithms(*args: Any) -> Any:
 	""" Returns a list of supported message digest algorithms. """
 	...
 
-def listIdMgrUsersForRoles(*args, **kwargs):
+def listIdMgrUsersForRoles(*args: Any) -> Any:
 	""" Lists the uniqueName of users for each role. """
 	...
 
-def listInheritDefaultsForDestination(*args, **kwargs):
+def listInheritDefaultsForDestination(*args: Any) -> Any:
 	""" List inherit defaults for destination (deprecated - use isInheritDefaultsForDestination instead) """
 	...
 
-def listInheritReceiverForTopic(*args, **kwargs):
+def listInheritReceiverForTopic(*args: Any) -> Any:
 	""" List Inherit Receiver For topic (deprecated - use isInheritReceiverForTopic instead) """
 	...
 
-def listInheritSenderForTopic(*args, **kwargs):
+def listInheritSenderForTopic(*args: Any) -> Any:
 	""" List Inherit Sender For topic (deprecated - use isInheritSenderForTopic instead) """
 	...
 
-def listInterceptors(*args, **kwargs):
+def listInterceptors(*args: Any) -> Any:
 	""" List interceptors from the global security configuration or from a security domain. """
 	...
 
-def listJ2CActivationSpecs(*args, **kwargs):
+def listJ2CActivationSpecs(*args: Any) -> Any:
 	""" List the J2C activation specifications that have a specified message listener type defined in the specified J2C resource adapter. """
 	...
 
-def listJ2CAdminObjects(*args, **kwargs):
+def listJ2CAdminObjects(*args: Any) -> Any:
 	""" List the J2C administrative objects that have a specified administrative object interface defined in the specified J2C resource adapter. """
 	...
 
-def listJ2CConnectionFactories(*args, **kwargs):
+def listJ2CConnectionFactories(*args: Any) -> Any:
 	""" List J2C connection factories that have a specified connection factory interface defined in the specified J2C resource adapter. """
 	...
 
-def listJAASLoginEntries(*args, **kwargs):
+def listJAASLoginEntries(*args: Any) -> Any:
 	""" List JAAS login entries from the administrative security configuration or from an application security domain. """
 	...
 
-def listJAXWSHandlerLists(*args, **kwargs):
+def listJAXWSHandlerLists(*args: Any) -> Any:
 	""" List the JAX-WS Handler Lists at a given cell scope """
 	...
 
-def listJAXWSHandlers(*args, **kwargs):
+def listJAXWSHandlers(*args: Any) -> Any:
 	""" List the JAX-WS Handlers at a given cell scope """
 	...
 
-def listJDBCProviders(*args, **kwargs):
+def listJDBCProviders(*args: Any) -> Any:
 	""" List the JDBC providers that are contained in the specified scope. """
 	...
 
-def listJSFImplementation(*args, **kwargs):
+def listJSFImplementation(*args: Any) -> Any:
 	""" Lists the JavaServer Faces implementation used by the WebSphere runtime for an application """
 	...
 
-def listJSFImplementations(*args, **kwargs):
+def listJSFImplementations(*args: Any) -> Any:
 	""" Lists the JavaServer Faces implementations allowed by the WebSphere runtime for an application """
 	...
 
-def listJobManagers(*args, **kwargs):
+def listJobManagers(*args: Any) -> Any:
 	""" List all JobManagers which a given managed node is registered with """
 	...
 
-def listJobSchedulerProperties(*args, **kwargs):
+def listJobSchedulerProperties(*args: Any) -> Any:
 	""" list properties of the job scheduler """
 	...
 
-def listKeyFileAliases(*args, **kwargs):
+def listKeyFileAliases(*args: Any) -> Any:
 	""" List personal certificate aliases in a keystore file """
 	...
 
-def listKeyManagers(*args, **kwargs):
+def listKeyManagers(*args: Any) -> Any:
 	""" List key managers within a give scope. """
 	...
 
-def listKeyReferences(*args, **kwargs):
+def listKeyReferences(*args: Any) -> Any:
 	""" Lists key references for the keys in a keySet. """
 	...
 
-def listKeySetGroups(*args, **kwargs):
+def listKeySetGroups(*args: Any) -> Any:
 	""" List key set groups within a scope. """
 	...
 
-def listKeySets(*args, **kwargs):
+def listKeySets(*args: Any) -> Any:
 	""" List key sets within a scope. """
 	...
 
-def listKeySizes(*args, **kwargs):
+def listKeySizes(*args: Any) -> Any:
 	""" Displays a list of certificate key sizes. """
 	...
 
-def listKeyStoreTypes(*args, **kwargs):
+def listKeyStoreTypes(*args: Any) -> Any:
 	""" List the supported keystore types. """
 	...
 
-def listKeyStoreUsages(*args, **kwargs):
+def listKeyStoreUsages(*args: Any) -> Any:
 	""" Returns a list of valid keystore usage types.  A usage is a way to identify how the keystore is intended to be used. """
 	...
 
-def listKeyStores(*args, **kwargs):
+def listKeyStores(*args: Any) -> Any:
 	""" List keystore objects in a particular scope. """
 	...
 
-def listKrbAuthMechanism(*args, **kwargs):
+def listKrbAuthMechanism(*args: Any) -> Any:
 	""" The KRB5 authentication mechanism security object field in the security configuration file is displayed. """
 	...
 
-def listLMServices(*args, **kwargs):
+def listLMServices(*args: Any) -> Any:
 	""" Use the "listLMServices" command to list the created local mapping services. """
 	...
 
-def listLocalRepositoryBundles(*args, **kwargs):
+def listLocalRepositoryBundles(*args: Any) -> Any:
 	""" Lists all bundles in the internal bundle repository. """
 	...
 
-def listLoginConfigs(*args, **kwargs):
+def listLoginConfigs(*args: Any) -> Any:
 	""" Lists the login module configuration aliases. """
 	...
 
-def listLoginModules(*args, **kwargs):
+def listLoginModules(*args: Any) -> Any:
 	""" List all login modules for a JAAS login entry. """
 	...
 
-def listLongRunningSchedulerProperties(*args, **kwargs):
+def listLongRunningSchedulerProperties(*args: Any) -> Any:
 	""" (Deprecated) list properties of the long-running scheduler. Use listJobSchedulerProperties. """
 	...
 
-def listManagedNodes(*args, **kwargs):
+def listManagedNodes(*args: Any) -> Any:
 	""" Use this command to list all registered managed nodes in the admin agent, or to list all federated nodes in the deployment manager. """
 	...
 
-def listManagementScopeOptions(*args, **kwargs):
+def listManagementScopeOptions(*args: Any) -> Any:
 	""" Returns a list of all cell, node, server, cluster, and nodegroups management scopes in the configuration. """
 	...
 
-def listManagementScopes(*args, **kwargs):
+def listManagementScopes(*args: Any) -> Any:
 	""" List all management scopes. """
 	...
 
-def listMessageListenerTypes(*args, **kwargs):
+def listMessageListenerTypes(*args: Any) -> Any:
 	""" List all of the defined message listener types on the specified J2C resource adapter. """
 	...
 
-def listMiddlewareAppEditions(*args, **kwargs):
+def listMiddlewareAppEditions(*args: Any) -> Any:
 	""" Use this command to list all editions for a middleware application. """
 	...
 
-def listMiddlewareAppWebModules(*args, **kwargs):
+def listMiddlewareAppWebModules(*args: Any) -> Any:
 	""" Use this command to list the web modules for a middleware application. """
 	...
 
-def listMiddlewareApps(*args, **kwargs):
+def listMiddlewareApps(*args: Any) -> Any:
 	""" Use this command to list all middleware applications. """
 	...
 
-def listMiddlewareDescriptorVersions(*args, **kwargs):
+def listMiddlewareDescriptorVersions(*args: Any) -> Any:
 	""" Use this command to list which versions have specific information provided in the middleware descriptor. """
 	...
 
-def listMiddlewareDescriptors(*args, **kwargs):
+def listMiddlewareDescriptors(*args: Any) -> Any:
 	""" Use this command to list the names of all installed middleware descriptors """
 	...
 
-def listMiddlewareServerTypes(*args, **kwargs):
+def listMiddlewareServerTypes(*args: Any) -> Any:
 	""" Use this command to show all of the middleware server types """
 	...
 
-def listMiddlewareServers(*args, **kwargs):
+def listMiddlewareServers(*args: Any) -> Any:
 	""" Use this command to show all of the servers of the specified server type.  If no server type is specified, then all servers are shown """
 	...
 
-def listMiddlewareTargets(*args, **kwargs):
+def listMiddlewareTargets(*args: Any) -> Any:
 	""" Use this command to list the deployment targets for a middleware application. """
 	...
 
-def listNodeGroupProperties(*args, **kwargs):
+def listNodeGroupProperties(*args: Any) -> Any:
 	""" list properties of a node group """
 	...
 
-def listNodeGroups(*args, **kwargs):
+def listNodeGroups(*args: Any) -> Any:
 	""" list node groups containing given node, or list all node groups if no target node is given """
 	...
 
-def listNodes(*args, **kwargs):
+def listNodes(*args: Any) -> Any:
 	""" list all the nodes in the cell or on a specified nodeGroup. """
 	...
 
-def listOSGiExtensions(*args, **kwargs):
+def listOSGiExtensions(*args: Any) -> Any:
 	""" Shows the current extensions attached to the composition unit. """
 	...
 
-def listPHPServers(*args, **kwargs):
+def listPHPServers(*args: Any) -> Any:
 	""" Use this command to list PHP Servers. """
 	...
 
-def listPasswordEncryptionKeys(*args, **kwargs):
+def listPasswordEncryptionKeys(*args: Any) -> Any:
 	""" Displays the list of key alias names and the current encryption key in the specified keystore file. The first item in the list is the current encryption key. """
 	...
 
-def listPersonalCertificates(*args, **kwargs):
+def listPersonalCertificates(*args: Any) -> Any:
 	""" The list of personal certificates in a given keystore. """
 	...
 
-def listPolicySets(*args, **kwargs):
+def listPolicySets(*args: Any) -> Any:
 	""" The listPolicySets command returns a list of all existing policy sets. """
 	...
 
-def listPolicyTypes(*args, **kwargs):
+def listPolicyTypes(*args: Any) -> Any:
 	""" The listPolicyTypes command returns a list of the names of the policies configured in the system, in a policy set, or in a binding. """
 	...
 
-def listPureQueryBindFiles(*args, **kwargs):
+def listPureQueryBindFiles(*args: Any) -> Any:
 	""" List the pureQuery bind files in an installed application. """
 	...
 
-def listRegistryGroups(*args, **kwargs):
+def listRegistryGroups(*args: Any) -> Any:
 	""" Returns a list of groups in a security realm, security domain, or resource. """
 	...
 
-def listRegistryUsers(*args, **kwargs):
+def listRegistryUsers(*args: Any) -> Any:
 	""" Returns a list of users in the specified security realm, security domain, or resource. """
 	...
 
-def listRemoteCellsFromIntelligentManagement(*args, **kwargs):
+def listRemoteCellsFromIntelligentManagement(*args: Any) -> Any:
 	""" Command to list remote cells from Intelligent Management """
 	...
 
-def listReplicationDomainReferences(*args, **kwargs):
+def listReplicationDomainReferences(*args: Any) -> Any:
 	""" List search object that participates in a specific data replication domain.  An object participates in a data replication domain if the object references the provided data replication domain name.  The command returns the objects that reference the data replication domain name regardless of whether replication is enabled or disabled for that object. """
 	...
 
-def listResourcesForGroupID(*args, **kwargs):
+def listResourcesForGroupID(*args: Any) -> Any:
 	""" List all the objects that a given group has access to. """
 	...
 
-def listResourcesForUserID(*args, **kwargs):
+def listResourcesForUserID(*args: Any) -> Any:
 	""" List all the objects that a given user has access to. """
 	...
 
-def listResourcesInSecurityDomain(*args, **kwargs):
+def listResourcesInSecurityDomain(*args: Any) -> Any:
 	""" List all resources mapped to the specified security domain. """
 	...
 
-def listResourcesOfAuthorizationGroup(*args, **kwargs):
+def listResourcesOfAuthorizationGroup(*args: Any) -> Any:
 	""" List all the resources within the given Authorization Group. """
 	...
 
-def listRoutingRules(*args, **kwargs):
+def listRoutingRules(*args: Any) -> Any:
 	""" Use this command to list routing policy rules. """
 	...
 
-def listRuleset(*args, **kwargs):
+def listRuleset(*args: Any) -> Any:
 	""" Use this command to list a ruleset. """
 	...
 
-def listSAMLIssuerConfig(*args, **kwargs):
+def listSAMLIssuerConfig(*args: Any) -> Any:
 	""" List SAML Issuer Configuration data """
 	...
 
-def listSIBDestinations(*args, **kwargs):
+def listSIBDestinations(*args: Any) -> Any:
 	""" List destinations belonging to a bus. """
 	...
 
-def listSIBEngines(*args, **kwargs):
+def listSIBEngines(*args: Any) -> Any:
 	""" List messaging engines. """
 	...
 
-def listSIBForeignBuses(*args, **kwargs):
+def listSIBForeignBuses(*args: Any) -> Any:
 	""" List the SIB foreign buses. """
 	...
 
-def listSIBJMSActivationSpecs(*args, **kwargs):
+def listSIBJMSActivationSpecs(*args: Any) -> Any:
 	""" List activation specifications on the SIB JMS resource adapter in given scope. """
 	...
 
-def listSIBJMSConnectionFactories(*args, **kwargs):
+def listSIBJMSConnectionFactories(*args: Any) -> Any:
 	""" List all SIB JMS connection factories of the specified type at the specified scope. """
 	...
 
-def listSIBJMSQueues(*args, **kwargs):
+def listSIBJMSQueues(*args: Any) -> Any:
 	""" List all SIB JMS queues at the specified scope. """
 	...
 
-def listSIBJMSTopics(*args, **kwargs):
+def listSIBJMSTopics(*args: Any) -> Any:
 	""" List all SIB JMS topics at the specified scope. """
 	...
 
-def listSIBLinks(*args, **kwargs):
+def listSIBLinks(*args: Any) -> Any:
 	""" List the SIB links. """
 	...
 
-def listSIBMQLinks(*args, **kwargs):
+def listSIBMQLinks(*args: Any) -> Any:
 	""" List the WebSphere MQ links. """
 	...
 
-def listSIBMediations(*args, **kwargs):
+def listSIBMediations(*args: Any) -> Any:
 	""" List the mediations on a bus. """
 	...
 
-def listSIBNominatedBootstrapMembers(*args, **kwargs):
+def listSIBNominatedBootstrapMembers(*args: Any) -> Any:
 	""" Lists all the servers or clusters that have been nominated for bootstrap into the specified bus. """
 	...
 
-def listSIBPermittedChains(*args, **kwargs):
+def listSIBPermittedChains(*args: Any) -> Any:
 	""" Lists the permitted chains for the specified bus. """
 	...
 
-def listSIBWMQServerBusMembers(*args, **kwargs):
+def listSIBWMQServerBusMembers(*args: Any) -> Any:
 	""" List all WebSphere MQ servers. """
 	...
 
-def listSIBWMQServers(*args, **kwargs):
+def listSIBWMQServers(*args: Any) -> Any:
 	""" List all WebSphere MQ servers. """
 	...
 
-def listSIBusMembers(*args, **kwargs):
+def listSIBusMembers(*args: Any) -> Any:
 	""" List the members on a bus. """
 	...
 
-def listSIBuses(*args, **kwargs):
+def listSIBuses(*args: Any) -> Any:
 	""" List all buses in the cell. """
 	...
 
-def listSSLCiphers(*args, **kwargs):
+def listSSLCiphers(*args: Any) -> Any:
 	""" List of ciphers. """
 	...
 
-def listSSLConfigGroups(*args, **kwargs):
+def listSSLConfigGroups(*args: Any) -> Any:
 	""" List all SSL configuration groups. """
 	...
 
-def listSSLConfigProperties(*args, **kwargs):
+def listSSLConfigProperties(*args: Any) -> Any:
 	""" List the properties for a given SSL configuration. """
 	...
 
-def listSSLConfigs(*args, **kwargs):
+def listSSLConfigs(*args: Any) -> Any:
 	""" List SSL configurations for a specific management scope. """
 	...
 
-def listSSLProtocolTypes(*args, **kwargs):
+def listSSLProtocolTypes(*args: Any) -> Any:
 	""" Lists the SSL protocols valid for the current FIPS configuration. If FIPS is not enabled, then the full list of valid SSL protocols are returned. """
 	...
 
-def listSSLRepertoires(*args, **kwargs):
+def listSSLRepertoires(*args: Any) -> Any:
 	""" List all SSLConfig instances that can be associated with an SSLInboundChannel """
 	...
 
-def listSTSAssignedEndpoints(*args, **kwargs):
+def listSTSAssignedEndpoints(*args: Any) -> Any:
 	""" Query the STS for a list of assigned endpoints. """
 	...
 
-def listSTSConfigurationProperties(*args, **kwargs):
+def listSTSConfigurationProperties(*args: Any) -> Any:
 	""" List the configuration properties under a configuration group. """
 	...
 
-def listSTSConfiguredTokenTypes(*args, **kwargs):
+def listSTSConfiguredTokenTypes(*args: Any) -> Any:
 	""" Query the STS for a list of configured token types. """
 	...
 
-def listSTSEndpointTokenTypes(*args, **kwargs):
+def listSTSEndpointTokenTypes(*args: Any) -> Any:
 	""" List assigned token types for an endpoint. """
 	...
 
-def listSTSProperties(*args, **kwargs):
+def listSTSProperties(*args: Any) -> Any:
 	""" List the configuration properties under a configuration group. """
 	...
 
-def listSecurityDomains(*args, **kwargs):
+def listSecurityDomains(*args: Any) -> Any:
 	""" Lists all security domains. """
 	...
 
-def listSecurityDomainsForResources(*args, **kwargs):
+def listSecurityDomainsForResources(*args: Any) -> Any:
 	""" Returns a list of resources and their associated domain for each resource provided. """
 	...
 
-def listSecurityRealms(*args, **kwargs):
+def listSecurityRealms(*args: Any) -> Any:
 	""" List all security realms in the configuration from global security and the security domains. """
 	...
 
-def listServerPorts(*args, **kwargs):
+def listServerPorts(*args: Any) -> Any:
 	""" Displays a list of ports that is used by a particular server, including the node name, server name, named endpoint, and host and port values. """
 	...
 
-def listServerTemplates(*args, **kwargs):
+def listServerTemplates(*args: Any) -> Any:
 	""" Lists the available Server Templates """
 	...
 
-def listServerTypes(*args, **kwargs):
+def listServerTypes(*args: Any) -> Any:
 	""" Lists the available serverTypes that have a template. """
 	...
 
-def listServers(*args, **kwargs):
+def listServers(*args: Any) -> Any:
 	""" list servers of specified server type and node name. If node name is not specified, whole cell will be searched. If the server type is not specified servers of all types are returned. """
 	...
 
-def listServiceMaps(*args, **kwargs):
+def listServiceMaps(*args: Any) -> Any:
 	""" Use the "listServiceMaps" command to list the installed service maps. """
 	...
 
-def listServiceRules(*args, **kwargs):
+def listServiceRules(*args: Any) -> Any:
 	""" Use this command to list service policy rules. """
 	...
 
-def listServices(*args, **kwargs):
+def listServices(*args: Any) -> Any:
 	""" Lists the services based on a generic query properties. It provides more generic query functions than listWebServices, listWebServiceEndpoints, listWebServiceOperations, and getWebService commands. """
 	...
 
-def listSignatureAlgorithms(*args, **kwargs):
+def listSignatureAlgorithms(*args: Any) -> Any:
 	""" List signature algorithms available for the current FIPS configuration. If FIPS is not enabled, then the full list of valid Signature Algorithms are returned. """
 	...
 
-def listSignerCertificates(*args, **kwargs):
+def listSignerCertificates(*args: Any) -> Any:
 	""" The list of signer certificates in a keystore. """
 	...
 
-def listSqljProfiles(*args, **kwargs):
+def listSqljProfiles(*args: Any) -> Any:
 	""" List the serialized SQLJ profiles that are in an installed application. """
 	...
 
-def listSupportedJPASpecifications(*args, **kwargs):
+def listSupportedJPASpecifications(*args: Any) -> Any:
 	""" Lists JPA Specification levels supported by this version of WebSphere. """
 	...
 
-def listSupportedJaxrsProviders(*args, **kwargs):
+def listSupportedJaxrsProviders(*args: Any) -> Any:
 	""" Lists JAXRS Providers supported by this version of WebSphere. """
 	...
 
-def listSupportedPolicySets(*args, **kwargs):
+def listSupportedPolicySets(*args: Any) -> Any:
 	""" listSupportedPolicySetsCmdDesc """
 	...
 
-def listTAMSettings(*args, **kwargs):
+def listTAMSettings(*args: Any) -> Any:
 	""" This command lists the current embedded Tivoli Access Manager configuration settings. """
 	...
 
-def listTCPEndPoints(*args, **kwargs):
+def listTCPEndPoints(*args: Any) -> Any:
 	""" Lists all NamedEndPoints that can be associated with a TCPInboundChannel """
 	...
 
-def listTCPThreadPools(*args, **kwargs):
+def listTCPThreadPools(*args: Any) -> Any:
 	""" Lists all ThreadPools that can be associated with a TCPInboundChannel or TCPOutboundChannel """
 	...
 
-def listTraceRulesForIntelligentManagement(*args, **kwargs):
+def listTraceRulesForIntelligentManagement(*args: Any) -> Any:
 	""" List trace rules for Intelligent Management """
 	...
 
-def listTrustManagers(*args, **kwargs):
+def listTrustManagers(*args: Any) -> Any:
 	""" List trust managers. """
 	...
 
-def listTrustedRealms(*args, **kwargs):
+def listTrustedRealms(*args: Any) -> Any:
 	""" List trusted realms trusted by a security realm, resource, or security domain. """
 	...
 
-def listUDPEndPoints(*args, **kwargs):
+def listUDPEndPoints(*args: Any) -> Any:
 	""" Lists all the NamedEndPoints endpoints that can be associated with a UDPInboundChannel """
 	...
 
-def listUnmanagedNodes(*args, **kwargs):
+def listUnmanagedNodes(*args: Any) -> Any:
 	""" Use this command to list all unmanaged nodes in the cell. """
 	...
 
-def listUserIDsOfAuthorizationGroup(*args, **kwargs):
+def listUserIDsOfAuthorizationGroup(*args: Any) -> Any:
 	""" list all the users IDs in an AuthorizationGroup """
 	...
 
-def listUsersForNamingRoles(*args, **kwargs):
+def listUsersForNamingRoles(*args: Any) -> Any:
 	""" List the users from all naming roles. """
 	...
 
-def listUsersInBusConnectorRole(*args, **kwargs):
+def listUsersInBusConnectorRole(*args: Any) -> Any:
 	""" List the users in the Bus Connector Role """
 	...
 
-def listUsersInDefaultRole(*args, **kwargs):
+def listUsersInDefaultRole(*args: Any) -> Any:
 	""" List the users in a default role. """
 	...
 
-def listUsersInDestinationRole(*args, **kwargs):
+def listUsersInDestinationRole(*args: Any) -> Any:
 	""" List the users in the specified role in the destination security space role for the given destination. """
 	...
 
-def listUsersInForeignBusRole(*args, **kwargs):
+def listUsersInForeignBusRole(*args: Any) -> Any:
 	""" List the users in the specified role in the foreign bus security space role for the given bus. """
 	...
 
-def listUsersInTopicRole(*args, **kwargs):
+def listUsersInTopicRole(*args: Any) -> Any:
 	""" Lists the users in the specified topic role for the specified topic space. """
 	...
 
-def listUsersInTopicSpaceRootRole(*args, **kwargs):
+def listUsersInTopicSpaceRootRole(*args: Any) -> Any:
 	""" Lists the users in the specified topic space role for the specified topic space. """
 	...
 
-def listWASServerTypes(*args, **kwargs):
+def listWASServerTypes(*args: Any) -> Any:
 	""" Use this command to show all of the middleware server types """
 	...
 
-def listWMQActivationSpecs(*args, **kwargs):
+def listWMQActivationSpecs(*args: Any) -> Any:
 	""" Lists the IBM MQ Activation Specification defined at the scope provided to the command. """
 	...
 
-def listWMQConnectionFactories(*args, **kwargs):
+def listWMQConnectionFactories(*args: Any) -> Any:
 	""" Lists the IBM MQ Connection Factories defined at the scope provided to the command. """
 	...
 
-def listWMQQueues(*args, **kwargs):
+def listWMQQueues(*args: Any) -> Any:
 	""" Lists the IBM MQ Queues defined at the scope provided to the command. """
 	...
 
-def listWMQTopics(*args, **kwargs):
+def listWMQTopics(*args: Any) -> Any:
 	""" Lists the IBM MQ Topics defined at the scope provided to the command. """
 	...
 
-def listWSCertExpMonitor(*args, **kwargs):
+def listWSCertExpMonitor(*args: Any) -> Any:
 	""" List all certificate expiration monitors. """
 	...
 
-def listWSNAdministeredSubscribers(*args, **kwargs):
+def listWSNAdministeredSubscribers(*args: Any) -> Any:
 	""" Lists all the WSNAdministeredSubscriber objects in the configuration of the target WSNServicePoint that match the specified input parameters. """
 	...
 
-def listWSNServicePoints(*args, **kwargs):
+def listWSNServicePoints(*args: Any) -> Any:
 	""" Lists all the WSNServicePoint objects in the configuration of the target WSNService that match the specified input parameters. """
 	...
 
-def listWSNServices(*args, **kwargs):
+def listWSNServices(*args: Any) -> Any:
 	""" Lists all the WSNService objects in the configuration that match the specified input parameters. """
 	...
 
-def listWSNTopicDocuments(*args, **kwargs):
+def listWSNTopicDocuments(*args: Any) -> Any:
 	""" Lists all the WSNTopicDocument objects in the configuration of the target WSNTopicNamespace that match the specified input parameters. """
 	...
 
-def listWSNTopicNamespaces(*args, **kwargs):
+def listWSNTopicNamespaces(*args: Any) -> Any:
 	""" Lists all the WSNTopicNamespace objects in the configuration of the target WSNService that match the specified input parameters. """
 	...
 
-def listWSNotifiers(*args, **kwargs):
+def listWSNotifiers(*args: Any) -> Any:
 	""" List all notifiers. """
 	...
 
-def listWSSchedules(*args, **kwargs):
+def listWSSchedules(*args: Any) -> Any:
 	""" List all schedules. """
 	...
 
-def listWebServerRoutingRules(*args, **kwargs):
+def listWebServerRoutingRules(*args: Any) -> Any:
 	""" Use this command to list routing rules and their associated properties. """
 	...
 
-def listWebServiceEndpoints(*args, **kwargs):
+def listWebServiceEndpoints(*args: Any) -> Any:
 	""" Lists the Web service endpoints that are port names defined in a Web service in an enterprise application. """
 	...
 
-def listWebServiceOperations(*args, **kwargs):
+def listWebServiceOperations(*args: Any) -> Any:
 	""" Lists the Web service operations defined in a logical endpoint. """
 	...
 
-def listWebServices(*args, **kwargs):
+def listWebServices(*args: Any) -> Any:
 	""" Lists the deployed Web services in enterprise applications. If there is no application name supplied, then all the Web services in the enterprise applications will are be listed. """
 	...
 
-def makeNonSystemTemplate(*args, **kwargs):
+def makeNonSystemTemplate(*args: Any) -> Any:
 	""" makeNonSystemTemplate """
 	...
 
-def manageWMQ(*args, **kwargs):
+def manageWMQ(*args: Any) -> Any:
 	""" Provides the ability to manage the settings associated with the IBM MQ resource adapter installed at a particular scope. """
 	...
 
-def mapAuditGroupIDsOfAuthorizationGroup(*args, **kwargs):
+def mapAuditGroupIDsOfAuthorizationGroup(*args: Any) -> Any:
 	""" Maps the special subjects to actual users in the registry. """
 	...
 
-def mapGroupsToAdminRole(*args, **kwargs):
+def mapGroupsToAdminRole(*args: Any) -> Any:
 	""" Map groupids to one or more admin role in the authorization group. """
 	...
 
-def mapGroupsToAuditRole(*args, **kwargs):
+def mapGroupsToAuditRole(*args: Any) -> Any:
 	""" Map groupids to one or more audit role in the authorization group. """
 	...
 
-def mapGroupsToNamingRole(*args, **kwargs):
+def mapGroupsToNamingRole(*args: Any) -> Any:
 	""" Map groups or special subjects or both to the naming roles """
 	...
 
-def mapIdMgrGroupToRole(*args, **kwargs):
+def mapIdMgrGroupToRole(*args: Any) -> Any:
 	""" Maps the group to the specified role of virtual member manager. """
 	...
 
-def mapIdMgrUserToRole(*args, **kwargs):
+def mapIdMgrUserToRole(*args: Any) -> Any:
 	""" Maps the user to the specified role of virtual member manager. """
 	...
 
-def mapResourceToSecurityDomain(*args, **kwargs):
+def mapResourceToSecurityDomain(*args: Any) -> Any:
 	""" Map a resource to a security domain. """
 	...
 
-def mapUsersToAdminRole(*args, **kwargs):
+def mapUsersToAdminRole(*args: Any) -> Any:
 	""" Map userids to one or more admin role in the authorization group. """
 	...
 
-def mapUsersToAuditRole(*args, **kwargs):
+def mapUsersToAuditRole(*args: Any) -> Any:
 	""" Map userids to one or more audit role in the authorization group. """
 	...
 
-def mapUsersToNamingRole(*args, **kwargs):
+def mapUsersToNamingRole(*args: Any) -> Any:
 	""" Map users to the naming roles """
 	...
 
-def mediateSIBDestination(*args, **kwargs):
+def mediateSIBDestination(*args: Any) -> Any:
 	""" Mediate a destination. """
 	...
 
-def migrateServerMEtoCluster(*args, **kwargs):
+def migrateServerMEtoCluster(*args: Any) -> Any:
 	""" This command will migrate a server messaging engine to a cluster messaging engine. It will not modify the messaging engine message store. Please ensure that the message store is suitable for the new clustered environment. If it is not, the migrated engine must be re-configured with a suitable message store before it is started, or the engine may fail to start. """
 	...
 
-def migrateWMQMLP(*args, **kwargs):
+def migrateWMQMLP(*args: Any) -> Any:
 	""" Migrates a IBM MQ message listener port definition to an activation specification definition. """
 	...
 
-def modifyAuditEmitter(*args, **kwargs):
+def modifyAuditEmitter(*args: Any) -> Any:
 	""" Modifies an audit service provider implementation in the audit.xml file """
 	...
 
-def modifyAuditEncryptionConfig(*args, **kwargs):
+def modifyAuditEncryptionConfig(*args: Any) -> Any:
 	""" Modifies the audit record encryption configuration. """
 	...
 
-def modifyAuditEventFactory(*args, **kwargs):
+def modifyAuditEventFactory(*args: Any) -> Any:
 	""" Modifies an entry in the audit.xml to reference the configuration of an audit event factory implementation of the Audit Event Factory interface. """
 	...
 
-def modifyAuditFilter(*args, **kwargs):
+def modifyAuditFilter(*args: Any) -> Any:
 	""" Modifies an audit specification entry in the audit.xml that matches the reference Id. """
 	...
 
-def modifyAuditKeyStore(*args, **kwargs):
+def modifyAuditKeyStore(*args: Any) -> Any:
 	""" Modifies a Keystore object. """
 	...
 
-def modifyAuditNotification(*args, **kwargs):
+def modifyAuditNotification(*args: Any) -> Any:
 	""" Modifies an audit notification. """
 	...
 
-def modifyAuditNotificationMonitor(*args, **kwargs):
+def modifyAuditNotificationMonitor(*args: Any) -> Any:
 	""" Modifies the audit notification monitor specified by the reference id. """
 	...
 
-def modifyAuditPolicy(*args, **kwargs):
+def modifyAuditPolicy(*args: Any) -> Any:
 	""" Modifies the audit policy attributes. """
 	...
 
-def modifyAuditSigningConfig(*args, **kwargs):
+def modifyAuditSigningConfig(*args: Any) -> Any:
 	""" Modifies the audit record signing configuration. """
 	...
 
-def modifyAuthDataEntry(*args, **kwargs):
+def modifyAuthDataEntry(*args: Any) -> Any:
 	""" Modify an authentication data entry """
 	...
 
-def modifyCAClient(*args, **kwargs):
+def modifyCAClient(*args: Any) -> Any:
 	""" Modifies a certificate authority (CA) client configurator object. """
 	...
 
-def modifyDescriptiveProp(*args, **kwargs):
+def modifyDescriptiveProp(*args: Any) -> Any:
 	""" Modify a descriptive property under an object. """
 	...
 
-def modifyDisabledSessionCookie(*args, **kwargs):
+def modifyDisabledSessionCookie(*args: Any) -> Any:
 	""" Modifies an existing cookie configuration """
 	...
 
-def modifyDynamicClusterIsolationProperties(*args, **kwargs):
+def modifyDynamicClusterIsolationProperties(*args: Any) -> Any:
 	""" Modify Dynamic Cluster isolation properties """
 	...
 
-def modifyElasticityAction(*args, **kwargs):
+def modifyElasticityAction(*args: Any) -> Any:
 	""" Command to modify a elasticity action """
 	...
 
-def modifyExternalBundleRepository(*args, **kwargs):
+def modifyExternalBundleRepository(*args: Any) -> Any:
 	""" Modifies the named external bundle repository with the given parameters. Unspecified parameters keep their existing values. To remove an existing value, specify an empty string for the parameter. """
 	...
 
-def modifyForeignServerProperty(*args, **kwargs):
+def modifyForeignServerProperty(*args: Any) -> Any:
 	""" Use this command to modify a property on a middleware server """
 	...
 
-def modifyHealthAction(*args, **kwargs):
+def modifyHealthAction(*args: Any) -> Any:
 	""" Command to modify a health action """
 	...
 
-def modifyHealthPolicy(*args, **kwargs):
+def modifyHealthPolicy(*args: Any) -> Any:
 	""" Command to modify a health policy """
 	...
 
-def modifyIntelligentManagement(*args, **kwargs):
+def modifyIntelligentManagement(*args: Any) -> Any:
 	""" Command to modify Intelligent Management properties """
 	...
 
-def modifyIntelligentManagementConnectorCluster(*args, **kwargs):
+def modifyIntelligentManagementConnectorCluster(*args: Any) -> Any:
 	""" Command to modify properties of ConnectorCluster """
 	...
 
-def modifyJAXWSHandler(*args, **kwargs):
+def modifyJAXWSHandler(*args: Any) -> Any:
 	""" Modify a JAX-WS Handler """
 	...
 
-def modifyJAXWSHandlerList(*args, **kwargs):
+def modifyJAXWSHandlerList(*args: Any) -> Any:
 	""" Modify a JAX-WS Handler List """
 	...
 
-def modifyJPASpecLevel(*args, **kwargs):
+def modifyJPASpecLevel(*args: Any) -> Any:
 	""" Changes the active JPA specification level for a Server or ServerCluster.The operation requires either an ObjectName referencing the target object, or parameters identifying the target node and server.  The specLevel parameter must always be specified. """
 	...
 
-def modifyJSFImplementation(*args, **kwargs):
+def modifyJSFImplementation(*args: Any) -> Any:
 	""" Modifies the JavaServer Faces implementation used by the WebSphere runtime for an application """
 	...
 
-def modifyJaspiProvider(*args, **kwargs):
+def modifyJaspiProvider(*args: Any) -> Any:
 	""" Modify configuration data for a given authentication provider. """
 	...
 
-def modifyJaxrsProvider(*args, **kwargs):
+def modifyJaxrsProvider(*args: Any) -> Any:
 	""" Changes the active JAXRS Provider for a Server or ServerCluster.The operation requires either an ObjectName referencing the target object, or parameters identifying the target node and server.  The Provider parameter must always be specified. """
 	...
 
-def modifyJobSchedulerAttribute(*args, **kwargs):
+def modifyJobSchedulerAttribute(*args: Any) -> Any:
 	""" modify a job scheduler attribute """
 	...
 
-def modifyJobSchedulerProperty(*args, **kwargs):
+def modifyJobSchedulerProperty(*args: Any) -> Any:
 	""" modify the property of the job scheduler """
 	...
 
-def modifyKeyManager(*args, **kwargs):
+def modifyKeyManager(*args: Any) -> Any:
 	""" Modify a key manager. """
 	...
 
-def modifyKeySet(*args, **kwargs):
+def modifyKeySet(*args: Any) -> Any:
 	""" Modify a Key Sets attributes. """
 	...
 
-def modifyKeySetGroup(*args, **kwargs):
+def modifyKeySetGroup(*args: Any) -> Any:
 	""" Modify the a key set group. """
 	...
 
-def modifyKeyStore(*args, **kwargs):
+def modifyKeyStore(*args: Any) -> Any:
 	""" Modifies a Keystore object. """
 	...
 
-def modifyKrbAuthMechanism(*args, **kwargs):
+def modifyKrbAuthMechanism(*args: Any) -> Any:
 	""" The KRB5 authentication mechanism security object field in the security configuration file is modified based on the user input. """
 	...
 
-def modifyLongRunningSchedulerAttribute(*args, **kwargs):
+def modifyLongRunningSchedulerAttribute(*args: Any) -> Any:
 	""" (Deprecated) modify a long-running scheduler attribute. Use modifyJobSchedulerAttribute. """
 	...
 
-def modifyLongRunningSchedulerProperty(*args, **kwargs):
+def modifyLongRunningSchedulerProperty(*args: Any) -> Any:
 	""" (Deprecated) modify the property of the long-running scheduler. Use modifyJobSchedulerProperty. """
 	...
 
-def modifyManagedNodeGroupInfo(*args, **kwargs):
+def modifyManagedNodeGroupInfo(*args: Any) -> Any:
 	""" Update information for a group of managed nodes. (deprecated) """
 	...
 
-def modifyManagedNodeProperties(*args, **kwargs):
+def modifyManagedNodeProperties(*args: Any) -> Any:
 	""" Modify properties associated with a specific managed node. (deprecated) """
 	...
 
-def modifyMiddlewareAppWebModule(*args, **kwargs):
+def modifyMiddlewareAppWebModule(*args: Any) -> Any:
 	""" Use this command to modify the web module of a middleware application. """
 	...
 
-def modifyMiddlewareDescriptorDiscoveryInterval(*args, **kwargs):
+def modifyMiddlewareDescriptorDiscoveryInterval(*args: Any) -> Any:
 	""" Use this command to modify the discovery interval of the specified middleware descriptor """
 	...
 
-def modifyMiddlewareDescriptorProperty(*args, **kwargs):
+def modifyMiddlewareDescriptorProperty(*args: Any) -> Any:
 	""" Use this command to modify a property of a specific version of the middleware platform that the descriptor represents.  If no version is specified, the "default" version will be updated. """
 	...
 
-def modifyNodeGroup(*args, **kwargs):
+def modifyNodeGroup(*args: Any) -> Any:
 	""" modify a node group configuration """
 	...
 
-def modifyNodeGroupProperty(*args, **kwargs):
+def modifyNodeGroupProperty(*args: Any) -> Any:
 	""" modify the property of a node group """
 	...
 
-def modifyPHPApp(*args, **kwargs):
+def modifyPHPApp(*args: Any) -> Any:
 	""" Use this command to modify a PHP application. """
 	...
 
-def modifyPasswordEncryption(*args, **kwargs):
+def modifyPasswordEncryption(*args: Any) -> Any:
 	""" Modifies the configuration of the password encryption. Note that the original value is unchanged unless the value is set by the parameter. To change the value to the default, use a blank string (""). """
 	...
 
-def modifyPolicy(*args, **kwargs):
+def modifyPolicy(*args: Any) -> Any:
 	""" Modify a policy that matches the provided policy name. """
 	...
 
-def modifyRemoteCellForIntelligentManagement(*args, **kwargs):
+def modifyRemoteCellForIntelligentManagement(*args: Any) -> Any:
 	""" Command to modify remote cell connectors for Intelligent Management """
 	...
 
-def modifySIBDestination(*args, **kwargs):
+def modifySIBDestination(*args: Any) -> Any:
 	""" Modify bus destination. """
 	...
 
-def modifySIBEngine(*args, **kwargs):
+def modifySIBEngine(*args: Any) -> Any:
 	""" Modify a messaging engine. """
 	...
 
-def modifySIBForeignBus(*args, **kwargs):
+def modifySIBForeignBus(*args: Any) -> Any:
 	""" Modify a SIB foreign bus. """
 	...
 
-def modifySIBJMSActivationSpec(*args, **kwargs):
+def modifySIBJMSActivationSpec(*args: Any) -> Any:
 	""" Modify the attributes of the given SIB JMS activation specification. """
 	...
 
-def modifySIBJMSConnectionFactory(*args, **kwargs):
+def modifySIBJMSConnectionFactory(*args: Any) -> Any:
 	""" Modify the attributes of the supplied SIB JMS connection factory using the supplied attribute values. """
 	...
 
-def modifySIBJMSQueue(*args, **kwargs):
+def modifySIBJMSQueue(*args: Any) -> Any:
 	""" Modify the attributes of the supplied SIB JMS queue using the supplied attribute values. """
 	...
 
-def modifySIBJMSTopic(*args, **kwargs):
+def modifySIBJMSTopic(*args: Any) -> Any:
 	""" Modify the attributes of the supplied SIB JMS topic using the supplied attribute values. """
 	...
 
-def modifySIBLink(*args, **kwargs):
+def modifySIBLink(*args: Any) -> Any:
 	""" Modify an existing SIB link. """
 	...
 
-def modifySIBMQLink(*args, **kwargs):
+def modifySIBMQLink(*args: Any) -> Any:
 	""" Modify an existing WebSphere MQ link. """
 	...
 
-def modifySIBMediation(*args, **kwargs):
+def modifySIBMediation(*args: Any) -> Any:
 	""" Modify a mediation. """
 	...
 
-def modifySIBWMQServer(*args, **kwargs):
+def modifySIBWMQServer(*args: Any) -> Any:
 	""" Modify a named WebSphere MQ server's attributes. """
 	...
 
-def modifySIBWMQServerBusMember(*args, **kwargs):
+def modifySIBWMQServerBusMember(*args: Any) -> Any:
 	""" Modify a named WebSphere MQ server bus member. """
 	...
 
-def modifySIBus(*args, **kwargs):
+def modifySIBus(*args: Any) -> Any:
 	""" Modify a bus. """
 	...
 
-def modifySIBusMemberPolicy(*args, **kwargs):
+def modifySIBusMemberPolicy(*args: Any) -> Any:
 	""" Modify a cluster bus members messaging engine policy assistance settings. """
 	...
 
-def modifySSLConfig(*args, **kwargs):
+def modifySSLConfig(*args: Any) -> Any:
 	""" Modify a SSL configuration. """
 	...
 
-def modifySSLConfigGroup(*args, **kwargs):
+def modifySSLConfigGroup(*args: Any) -> Any:
 	""" Modify a SSL configuration group. """
 	...
 
-def modifySecurityDomain(*args, **kwargs):
+def modifySecurityDomain(*args: Any) -> Any:
 	""" Modifies a security domain's description. """
 	...
 
-def modifyServerPort(*args, **kwargs):
+def modifyServerPort(*args: Any) -> Any:
 	""" Modifies the host or port of the named endpoint that is used by the specified server. """
 	...
 
-def modifySpnegoFilter(*args, **kwargs):
+def modifySpnegoFilter(*args: Any) -> Any:
 	""" This command modifies SPNEGO Web authentication Filter attributes in the security configuration. """
 	...
 
-def modifySpnegoTAIProperties(*args, **kwargs):
+def modifySpnegoTAIProperties(*args: Any) -> Any:
 	""" This command modifies SPNEGO TAI properties in the security configuration. """
 	...
 
-def modifyTAM(*args, **kwargs):
+def modifyTAM(*args: Any) -> Any:
 	""" This command modifies the configuration for embedded Tivoli Access Manager on the WebSphere Application Server node or nodes specified. """
 	...
 
-def modifyTargetGroupInfo(*args, **kwargs):
+def modifyTargetGroupInfo(*args: Any) -> Any:
 	""" Update information for a group of Targets. """
 	...
 
-def modifyTargetProperties(*args, **kwargs):
+def modifyTargetProperties(*args: Any) -> Any:
 	""" Modify properties associated with a specific Target. """
 	...
 
-def modifyTrustManager(*args, **kwargs):
+def modifyTrustManager(*args: Any) -> Any:
 	""" Modify a trust manager. """
 	...
 
-def modifyUnmanagedWebApp(*args, **kwargs):
+def modifyUnmanagedWebApp(*args: Any) -> Any:
 	""" Use this command to modify an unmanaged web application. """
 	...
 
-def modifyWMQActivationSpec(*args, **kwargs):
+def modifyWMQActivationSpec(*args: Any) -> Any:
 	""" Modifies the properties of the IBM MQ Activation Specification provided to the command. """
 	...
 
-def modifyWMQConnectionFactory(*args, **kwargs):
+def modifyWMQConnectionFactory(*args: Any) -> Any:
 	""" Modifies the properties of the IBM MQ Connection Factory provided to the command. """
 	...
 
-def modifyWMQQueue(*args, **kwargs):
+def modifyWMQQueue(*args: Any) -> Any:
 	""" Modifies the properties of the IBM MQ Queue provided to the command. """
 	...
 
-def modifyWMQTopic(*args, **kwargs):
+def modifyWMQTopic(*args: Any) -> Any:
 	""" Modifies the properties of the IBM MQ Topic provided to the command. """
 	...
 
-def modifyWSCertExpMonitor(*args, **kwargs):
+def modifyWSCertExpMonitor(*args: Any) -> Any:
 	""" Modify a certificate expiration monitor. """
 	...
 
-def modifyWSNotifier(*args, **kwargs):
+def modifyWSNotifier(*args: Any) -> Any:
 	""" Modify a notifier. """
 	...
 
-def modifyWSSchedule(*args, **kwargs):
+def modifyWSSchedule(*args: Any) -> Any:
 	""" Modify a schedule. """
 	...
 
-def modifyWasCEApp(*args, **kwargs):
+def modifyWasCEApp(*args: Any) -> Any:
 	""" Use this command to modify a WAS CE application. """
 	...
 
-def moveClusterToCoreGroup(*args, **kwargs):
+def moveClusterToCoreGroup(*args: Any) -> Any:
 	""" Move all servers in a cluster from one core group to another. """
 	...
 
-def moveServerToCoreGroup(*args, **kwargs):
+def moveServerToCoreGroup(*args: Any) -> Any:
 	""" Move a server from one core group to another. """
 	...
 
-def populateUniqueNames(*args, **kwargs):
+def populateUniqueNames(*args: Any) -> Any:
 	""" Attempt to populate any missing unique name entries in the authorization model for the specified bus using its user repository. """
 	...
 
-def prepareKeysForCellProfile(*args, **kwargs):
+def prepareKeysForCellProfile(*args: Any) -> Any:
 	""" Prepare keys and keystores for Cell profile creation. """
 	...
 
-def prepareKeysForSingleProfile(*args, **kwargs):
+def prepareKeysForSingleProfile(*args: Any) -> Any:
 	""" Prepare keys and keystores for a profile creation. """
 	...
 
-def processPureQueryBindFiles(*args, **kwargs):
+def processPureQueryBindFiles(*args: Any) -> Any:
 	""" Process the pureQuery bind files that are in an installed application.  Bind static SQL packages in a database.  Refer to the information center documentation for the pureQuery bind utility. """
 	...
 
-def processSqljProfiles(*args, **kwargs):
+def processSqljProfiles(*args: Any) -> Any:
 	""" Process the serialized SQLJ profiles that are in an installed application.  Customize the profiles with information for run time and bind static SQL packages in a database.  Refer to the DB2 information center documentation for the commands db2sqljcustomize and db2sqljbind. """
 	...
 
-def propagatePolicyToJACCProvider(*args, **kwargs):
+def propagatePolicyToJACCProvider(*args: Any) -> Any:
 	""" Propagate the security policies of the applications to the JACC provider. """
 	...
 
-def publishSIBWSInboundService(*args, **kwargs):
+def publishSIBWSInboundService(*args: Any) -> Any:
 	""" Publish an inbound service to a UDDI registry. """
 	...
 
-def purgeUserFromAuthCache(*args, **kwargs):
+def purgeUserFromAuthCache(*args: Any) -> Any:
 	""" Purges a user from the auth cache for a security domain; if no security domain is specified, the user will be purged from the admin security domain """
 	...
 
-def queryCACertificate(*args, **kwargs):
+def queryCACertificate(*args: Any) -> Any:
 	""" Queries a certificate authority (CA) to see if a certificate is complete. """
 	...
 
-def queryJobs(*args, **kwargs):
+def queryJobs(*args: Any) -> Any:
 	""" Query for previously submitted jobs. """
 	...
 
-def queryManagedNodeGroups(*args, **kwargs):
+def queryManagedNodeGroups(*args: Any) -> Any:
 	""" This command is used to query groups of Managed Nodes. (deprecated) """
 	...
 
-def queryManagedNodes(*args, **kwargs):
+def queryManagedNodes(*args: Any) -> Any:
 	""" Queries for all the managed nodes registered with the job manager. (deprecated) """
 	...
 
-def queryManagedResources(*args, **kwargs):
+def queryManagedResources(*args: Any) -> Any:
 	""" Queries for all managed resources. """
 	...
 
-def querySCClientCacheConfiguration(*args, **kwargs):
+def querySCClientCacheConfiguration(*args: Any) -> Any:
 	""" List the SC cache configuration """
 	...
 
-def querySCClientCacheCustomConfiguration(*args, **kwargs):
+def querySCClientCacheCustomConfiguration(*args: Any) -> Any:
 	""" List the SC custom properties """
 	...
 
-def querySTSDefaultTokenType(*args, **kwargs):
+def querySTSDefaultTokenType(*args: Any) -> Any:
 	""" Query the STS for the default token type. """
 	...
 
-def querySTSTokenTypeConfigurationCustomProperties(*args, **kwargs):
+def querySTSTokenTypeConfigurationCustomProperties(*args: Any) -> Any:
 	""" Query the STS for the values of the custom properties for a given token type. """
 	...
 
-def querySTSTokenTypeConfigurationDefaultProperties(*args, **kwargs):
+def querySTSTokenTypeConfigurationDefaultProperties(*args: Any) -> Any:
 	""" Query the STS for the values of the default properties for a given token type. """
 	...
 
-def queryServerAvailability(*args, **kwargs):
+def queryServerAvailability(*args: Any) -> Any:
 	""" checks the UCF server availability indicator on specified server """
 	...
 
-def queryTargetGroups(*args, **kwargs):
+def queryTargetGroups(*args: Any) -> Any:
 	""" This command is used to query groups of targets. """
 	...
 
-def queryTargets(*args, **kwargs):
+def queryTargets(*args: Any) -> Any:
 	""" Queries for all the Targets registered with the job manager. """
 	...
 
-def queryWSSDistributedCacheConfig(*args, **kwargs):
+def queryWSSDistributedCacheConfig(*args: Any) -> Any:
 	""" List the Web Services Security distributed cache configuration properties """
 	...
 
-def queryWSSDistributedCacheCustomConfig(*args, **kwargs):
+def queryWSSDistributedCacheCustomConfig(*args: Any) -> Any:
 	""" List Web Services Security distributed cache configuration custom properties """
 	...
 
-def receiveCertificate(*args, **kwargs):
+def receiveCertificate(*args: Any) -> Any:
 	""" Receive a certificate from a file. """
 	...
 
-def reconfigureTAM(*args, **kwargs):
+def reconfigureTAM(*args: Any) -> Any:
 	""" This command configures embedded Tivoli Access Manager on the WebSphere Application Server node or nodes specified. """
 	...
 
-def recoverMEConfig(*args, **kwargs):
+def recoverMEConfig(*args: Any) -> Any:
 	""" Use this command if there is no configuration data of crashed ME and user needs to recover persistent SBus ME data from message store. """
 	...
 
-def refreshCellForIntelligentManagement(*args, **kwargs):
+def refreshCellForIntelligentManagement(*args: Any) -> Any:
 	""" Command to refresh cell connectors for Intelligent Management """
 	...
 
-def refreshSIBWSInboundServiceWSDL(*args, **kwargs):
+def refreshSIBWSInboundServiceWSDL(*args: Any) -> Any:
 	""" Refresh the WSDL definition for an inbound service. """
 	...
 
-def refreshSIBWSOutboundServiceWSDL(*args, **kwargs):
+def refreshSIBWSOutboundServiceWSDL(*args: Any) -> Any:
 	""" Refresh the WSDL definition for an outbound service. """
 	...
 
-def refreshSTS(*args, **kwargs):
+def refreshSTS(*args: Any) -> Any:
 	""" Reload the STS configuration dynamically. """
 	...
 
-def regenPasswordEncryptionKey(*args, **kwargs):
+def regenPasswordEncryptionKey(*args: Any) -> Any:
 	""" Generates a new AES password encryption key, sets it as the current key for the encryption, and then updates the passwords with the new key. This command is disabled when the custom KeyManager class is used. """
 	...
 
-def registerApp(*args, **kwargs):
+def registerApp(*args: Any) -> Any:
 	""" Use this command to register a middleware application already installed on a server. """
 	...
 
-def registerHost(*args, **kwargs):
+def registerHost(*args: Any) -> Any:
 	""" Registers a host with the job manager. """
 	...
 
-def registerWithJobManager(*args, **kwargs):
+def registerWithJobManager(*args: Any) -> Any:
 	""" Register a managed node with a JobManager """
 	...
 
-def removeActionFromRule(*args, **kwargs):
+def removeActionFromRule(*args: Any) -> Any:
 	""" Use this command to remove an action from a rule. """
 	...
 
-def removeAutomaticEJBTimers(*args, **kwargs):
+def removeAutomaticEJBTimers(*args: Any) -> Any:
 	""" This command removes automatically created persistent EJBTimers for a specific application or module on a specific server.  Refer to the product InfoCenter for scenarios where this command might be used. """
 	...
 
-def removeConditionalTraceRuleForIntelligentManagement(*args, **kwargs):
+def removeConditionalTraceRuleForIntelligentManagement(*args: Any) -> Any:
 	""" Remove conditional trace for Intelligent Management """
 	...
 
-def removeCoreGroupBridgeInterface(*args, **kwargs):
+def removeCoreGroupBridgeInterface(*args: Any) -> Any:
 	""" Delete bridge interfaces associated with a specified core group, node and server. """
 	...
 
-def removeDefaultAction(*args, **kwargs):
+def removeDefaultAction(*args: Any) -> Any:
 	""" Use this command to remove a default action from a ruleset. """
 	...
 
-def removeDefaultRoles(*args, **kwargs):
+def removeDefaultRoles(*args: Any) -> Any:
 	""" Remove all default roles """
 	...
 
-def removeDestinationRoles(*args, **kwargs):
+def removeDestinationRoles(*args: Any) -> Any:
 	""" Removes all destination roles defined for the specified destination in the specified bus. """
 	...
 
-def removeDisabledSessionCookie(*args, **kwargs):
+def removeDisabledSessionCookie(*args: Any) -> Any:
 	""" Removes a cookie configuration so that applications will be able to programmatically modify """
 	...
 
-def removeExternalBundleRepository(*args, **kwargs):
+def removeExternalBundleRepository(*args: Any) -> Any:
 	""" Removes the named external bundle repository from the configuration. """
 	...
 
-def removeFeaturesFromServer(*args, **kwargs):
+def removeFeaturesFromServer(*args: Any) -> Any:
 	""" Remove feature pack or stack product features from existing server """
 	...
 
-def removeForeignBusRoles(*args, **kwargs):
+def removeForeignBusRoles(*args: Any) -> Any:
 	""" Remove all foreign bus roles defined for the specified bus """
 	...
 
-def removeForeignServersFromDynamicCluster(*args, **kwargs):
+def removeForeignServersFromDynamicCluster(*args: Any) -> Any:
 	""" Remove foreign servers from dynamic cluster """
 	...
 
-def removeFromPolicySetAttachment(*args, **kwargs):
+def removeFromPolicySetAttachment(*args: Any) -> Any:
 	""" The removeFromPolicySetAttachment command removes resources that apply to a policy set attachment. """
 	...
 
-def removeGroupFromAllRoles(*args, **kwargs):
+def removeGroupFromAllRoles(*args: Any) -> Any:
 	""" Removes a group from all roles defined. """
 	...
 
-def removeGroupFromBusConnectorRole(*args, **kwargs):
+def removeGroupFromBusConnectorRole(*args: Any) -> Any:
 	""" Remove a group's permission to connect to the specified bus. """
 	...
 
-def removeGroupFromDefaultRole(*args, **kwargs):
+def removeGroupFromDefaultRole(*args: Any) -> Any:
 	""" Removes a group from the specified role in the default security space role. """
 	...
 
-def removeGroupFromDestinationRole(*args, **kwargs):
+def removeGroupFromDestinationRole(*args: Any) -> Any:
 	""" Removes a group from the specified destination role for the specified destination. """
 	...
 
-def removeGroupFromForeignBusRole(*args, **kwargs):
+def removeGroupFromForeignBusRole(*args: Any) -> Any:
 	""" Removes a group from the specified foreign bus role for the bus specified """
 	...
 
-def removeGroupFromTopicRole(*args, **kwargs):
+def removeGroupFromTopicRole(*args: Any) -> Any:
 	""" Removes a groups permission to access the topic for the specified role. """
 	...
 
-def removeGroupFromTopicSpaceRootRole(*args, **kwargs):
+def removeGroupFromTopicSpaceRootRole(*args: Any) -> Any:
 	""" Removes a groups permission to access the topic space for the specified role. """
 	...
 
-def removeGroupsFromAdminRole(*args, **kwargs):
+def removeGroupsFromAdminRole(*args: Any) -> Any:
 	""" Remove groupids from one or more admin role in the AuthorizationGroup. """
 	...
 
-def removeGroupsFromAuditRole(*args, **kwargs):
+def removeGroupsFromAuditRole(*args: Any) -> Any:
 	""" Remove groupids from one or more audit role in the AuthorizationGroup. """
 	...
 
-def removeGroupsFromNamingRole(*args, **kwargs):
+def removeGroupsFromNamingRole(*args: Any) -> Any:
 	""" Remove groups or special subjects or both from a naming role """
 	...
 
-def removeIdMgrGroupsFromRole(*args, **kwargs):
+def removeIdMgrGroupsFromRole(*args: Any) -> Any:
 	""" Removes the groups from the specified virtual member manager role. If value for groupId parameter is specified as "*" all groups mapped for the role are removed. """
 	...
 
-def removeIdMgrLDAPBackupServer(*args, **kwargs):
+def removeIdMgrLDAPBackupServer(*args: Any) -> Any:
 	""" Removes a backup LDAP server. """
 	...
 
-def removeIdMgrUsersFromRole(*args, **kwargs):
+def removeIdMgrUsersFromRole(*args: Any) -> Any:
 	""" Removes the users from the specified virtual member manager role. If value for userId parameter is specified as "*" all users mapped for the role are removed. """
 	...
 
-def removeJaspiProvider(*args, **kwargs):
+def removeJaspiProvider(*args: Any) -> Any:
 	""" Remove the given authentication provider(s) from the security configuration. """
 	...
 
-def removeJobSchedulerProperty(*args, **kwargs):
+def removeJobSchedulerProperty(*args: Any) -> Any:
 	""" remove a property from the job scheduler """
 	...
 
-def removeLocalRepositoryBundle(*args, **kwargs):
+def removeLocalRepositoryBundle(*args: Any) -> Any:
 	""" Removes a bundle from the internal bundle repository. """
 	...
 
-def removeLocalRepositoryBundles(*args, **kwargs):
+def removeLocalRepositoryBundles(*args: Any) -> Any:
 	""" Removes one or more bundles from the internal bundle repository in a single operation. """
 	...
 
-def removeLongRunningSchedulerProperty(*args, **kwargs):
+def removeLongRunningSchedulerProperty(*args: Any) -> Any:
 	""" (Deprecated) remove a property from the long-running scheduler. Use removeJobSchedulerProperty. """
 	...
 
-def removeMemberFromGroup(*args, **kwargs):
+def removeMemberFromGroup(*args: Any) -> Any:
 	""" Removes a member (user or group) from a group. """
 	...
 
-def removeMiddlewareAppWebModule(*args, **kwargs):
+def removeMiddlewareAppWebModule(*args: Any) -> Any:
 	""" Use this command to remove a web module from a middleware application. """
 	...
 
-def removeMiddlewareTarget(*args, **kwargs):
+def removeMiddlewareTarget(*args: Any) -> Any:
 	""" Use this command to remove a deployment target from a middleware application. """
 	...
 
-def removeNodeFromNodeGroups(*args, **kwargs):
+def removeNodeFromNodeGroups(*args: Any) -> Any:
 	""" remove a given node from node groups """
 	...
 
-def removeNodeGroup(*args, **kwargs):
+def removeNodeGroup(*args: Any) -> Any:
 	""" remove a node group from the configuration. """
 	...
 
-def removeNodeGroupMember(*args, **kwargs):
+def removeNodeGroupMember(*args: Any) -> Any:
 	""" remove a member from the node group. """
 	...
 
-def removeNodeGroupProperty(*args, **kwargs):
+def removeNodeGroupProperty(*args: Any) -> Any:
 	""" remove a property from a node group """
 	...
 
-def removeOSGiExtension(*args, **kwargs):
+def removeOSGiExtension(*args: Any) -> Any:
 	""" Removes an extension from the composition unit. """
 	...
 
-def removeOSGiExtensions(*args, **kwargs):
+def removeOSGiExtensions(*args: Any) -> Any:
 	""" Removes multiple extensions from the composition unit. """
 	...
 
-def removePluginPropertyForIntelligentManagement(*args, **kwargs):
+def removePluginPropertyForIntelligentManagement(*args: Any) -> Any:
 	""" Remove plug-in property for Intelligent Management """
 	...
 
-def removeProductInfo(*args, **kwargs):
+def removeProductInfo(*args: Any) -> Any:
 	""" Remove feature pack or stack product information from product info. """
 	...
 
-def removeResourceFromAuthorizationGroup(*args, **kwargs):
+def removeResourceFromAuthorizationGroup(*args: Any) -> Any:
 	""" Remove resources from an existing authorization group. """
 	...
 
-def removeResourceFromSecurityDomain(*args, **kwargs):
+def removeResourceFromSecurityDomain(*args: Any) -> Any:
 	""" Remove a resource from a security domain. """
 	...
 
-def removeRoutingPolicyRoutingRule(*args, **kwargs):
+def removeRoutingPolicyRoutingRule(*args: Any) -> Any:
 	""" Use this command to remove a routing rule from an existing workclass """
 	...
 
-def removeRoutingRule(*args, **kwargs):
+def removeRoutingRule(*args: Any) -> Any:
 	""" Use this command to remove a routing policy rule. """
 	...
 
-def removeRuleFromRuleset(*args, **kwargs):
+def removeRuleFromRuleset(*args: Any) -> Any:
 	""" Use this command to remove a rule from a ruleset. """
 	...
 
-def removeSIBBootstrapMember(*args, **kwargs):
+def removeSIBBootstrapMember(*args: Any) -> Any:
 	""" Removes a nominated bootstrap server or cluster from the list of nominated bootstrap members for the bus. """
 	...
 
-def removeSIBPermittedChain(*args, **kwargs):
+def removeSIBPermittedChain(*args: Any) -> Any:
 	""" Removes the specified chain from the list of permitted chains for the specified bus. """
 	...
 
-def removeSIBWSInboundPort(*args, **kwargs):
+def removeSIBWSInboundPort(*args: Any) -> Any:
 	""" Remove an inbound port. """
 	...
 
-def removeSIBWSOutboundPort(*args, **kwargs):
+def removeSIBWSOutboundPort(*args: Any) -> Any:
 	""" Remove an outbound port. """
 	...
 
-def removeSIBusMember(*args, **kwargs):
+def removeSIBusMember(*args: Any) -> Any:
 	""" Remove a member from a bus. """
 	...
 
-def removeServicePolicyRoutingRule(*args, **kwargs):
+def removeServicePolicyRoutingRule(*args: Any) -> Any:
 	""" Use this command to remove a routing rule from an existing workclass """
 	...
 
-def removeServiceRule(*args, **kwargs):
+def removeServiceRule(*args: Any) -> Any:
 	""" Use this command to remove a service policy rule. """
 	...
 
-def removeTemplates(*args, **kwargs):
+def removeTemplates(*args: Any) -> Any:
 	""" Removes set of templates that are not required anymore when a feature pack or stack product is removed. """
 	...
 
-def removeTrustedRealms(*args, **kwargs):
+def removeTrustedRealms(*args: Any) -> Any:
 	""" Remove realms from the trusted realm list """
 	...
 
-def removeUnmanagedNode(*args, **kwargs):
+def removeUnmanagedNode(*args: Any) -> Any:
 	""" Use this command to remove an unmanaged node from a cell. """
 	...
 
-def removeUserFromAllRoles(*args, **kwargs):
+def removeUserFromAllRoles(*args: Any) -> Any:
 	""" Removes a user from all roles defined. """
 	...
 
-def removeUserFromBusConnectorRole(*args, **kwargs):
+def removeUserFromBusConnectorRole(*args: Any) -> Any:
 	""" Remove a user's permission to connect to the specified bus. """
 	...
 
-def removeUserFromDefaultRole(*args, **kwargs):
+def removeUserFromDefaultRole(*args: Any) -> Any:
 	""" Removes a user from the specified role in the default security space role. """
 	...
 
-def removeUserFromDestinationRole(*args, **kwargs):
+def removeUserFromDestinationRole(*args: Any) -> Any:
 	""" Removes a user from the specified destination role for the specified destination. """
 	...
 
-def removeUserFromForeignBusRole(*args, **kwargs):
+def removeUserFromForeignBusRole(*args: Any) -> Any:
 	""" Removes a user from the specified foreign bus role for the bus specified """
 	...
 
-def removeUserFromTopicRole(*args, **kwargs):
+def removeUserFromTopicRole(*args: Any) -> Any:
 	""" Removes a users permission to access the topic for the specified role. """
 	...
 
-def removeUserFromTopicSpaceRootRole(*args, **kwargs):
+def removeUserFromTopicSpaceRootRole(*args: Any) -> Any:
 	""" Removes a users permission to access the topic space for the specified role. """
 	...
 
-def removeUsersFromAdminRole(*args, **kwargs):
+def removeUsersFromAdminRole(*args: Any) -> Any:
 	""" Remove userids from one or more admin role in the AuthorizationGroup. """
 	...
 
-def removeUsersFromAuditRole(*args, **kwargs):
+def removeUsersFromAuditRole(*args: Any) -> Any:
 	""" Remove userids from one or more audit role in the AuthorizationGroup. """
 	...
 
-def removeUsersFromNamingRole(*args, **kwargs):
+def removeUsersFromNamingRole(*args: Any) -> Any:
 	""" Remove users from a naming role. """
 	...
 
-def removeVariable(*args, **kwargs):
+def removeVariable(*args: Any) -> Any:
 	""" Remove a variable definition from the system. A variable is a configuration property that can be used to provide a parameter for some values in the system. """
 	...
 
-def removeWSGWTargetService(*args, **kwargs):
+def removeWSGWTargetService(*args: Any) -> Any:
 	""" removeWSGWTargetService.description """
 	...
 
-def removeWebServerRoutingRule(*args, **kwargs):
+def removeWebServerRoutingRule(*args: Any) -> Any:
 	""" Use this command to remove an existing routing rule. """
 	...
 
-def renameCell(*args, **kwargs):
+def renameCell(*args: Any) -> Any:
 	""" Change the name of the cell.  This command can only run in local mode i.e.with wsadmin conntype NONE.1. Backing up your node configuration with the backupConfig tool fromprofile_root/bin directory is recommended before you change the cell name forthat node using the renameCell command.  If you are not satisfied with theresults of the renameCell command and if the renameCell command executionfailed unexpectedly, you use the restoreConfig tool to restore your backupconfiguration.2. Back up profile_root/bin/setupCmdLine script file. The command updates thecell name in this file with the new cell name as well, but is unable to changeit back if a user decides to discard the configuration change resulting fromthis command execution. If you decide to do so, you will need to restore thefile after you discard the configuration change; otherwise, you won't be ableto start a server in this profile. """
 	...
 
-def renameIdMgrRealm(*args, **kwargs):
+def renameIdMgrRealm(*args: Any) -> Any:
 	""" Renames the specified realm configuration. """
 	...
 
-def renameNode(*args, **kwargs):
+def renameNode(*args: Any) -> Any:
 	""" renameNode """
 	...
 
-def renewAuditCertificate(*args, **kwargs):
+def renewAuditCertificate(*args: Any) -> Any:
 	""" The task will renew a certificate as a self-signed based off the previous certificates attributes such as the common name, key size and validity. """
 	...
 
-def renewCertificate(*args, **kwargs):
+def renewCertificate(*args: Any) -> Any:
 	""" Renew a Certificate with a newly generated certificate. """
 	...
 
-def replaceCertificate(*args, **kwargs):
+def replaceCertificate(*args: Any) -> Any:
 	""" Replace a Certificate with a different certificate. """
 	...
 
-def reportConfigInconsistencies(*args, **kwargs):
+def reportConfigInconsistencies(*args: Any) -> Any:
 	""" Checks the configuation repository and reports any structural inconsistencies """
 	...
 
-def reportConfiguredPorts(*args, **kwargs):
+def reportConfiguredPorts(*args: Any) -> Any:
 	""" Generates a report of the ports configured in the cell """
 	...
 
-def republishEDMessages(*args, **kwargs):
+def republishEDMessages(*args: Any) -> Any:
 	""" Use the command to republish messages from the exception destination to the original destination. The messages are picked based on the criteria provided in the command execution. """
 	...
 
-def requestCACertificate(*args, **kwargs):
+def requestCACertificate(*args: Any) -> Any:
 	""" Sends a request to a certificate authority to create a certificate authority (CA) personal certificate. """
 	...
 
-def resetAuditSystemFailureAction(*args, **kwargs):
+def resetAuditSystemFailureAction(*args: Any) -> Any:
 	""" Resets the audit system failure policy to the default, NOWARN. """
 	...
 
-def resetIdMgrConfig(*args, **kwargs):
+def resetIdMgrConfig(*args: Any) -> Any:
 	""" Reloads the virtual member manager configuration from the virtual member manager configuration file. """
 	...
 
-def restoreCheckpoint(*args, **kwargs):
+def restoreCheckpoint(*args: Any) -> Any:
 	""" Restore the named checkpoint specified by the "checkpointName" """
 	...
 
-def resumeJob(*args, **kwargs):
+def resumeJob(*args: Any) -> Any:
 	""" Resumes a previously submitted job. """
 	...
 
-def retrieveSignerFromPort(*args, **kwargs):
+def retrieveSignerFromPort(*args: Any) -> Any:
 	""" Retrieve a signer certificate from a port and add it to the KeyStore. """
 	...
 
-def retrieveSignerInfoFromPort(*args, **kwargs):
+def retrieveSignerInfoFromPort(*args: Any) -> Any:
 	""" Retrieve signer information from a port. """
 	...
 
-def revokeCACertificate(*args, **kwargs):
+def revokeCACertificate(*args: Any) -> Any:
 	""" Sends a request to a certificate authority (CA) to revoke the certificate. """
 	...
 
-def rolloutEdition(*args, **kwargs):
+def rolloutEdition(*args: Any) -> Any:
 	""" Roll-out an edition. """
 	...
 
-def searchGroups(*args, **kwargs):
+def searchGroups(*args: Any) -> Any:
 	""" Searches groups. """
 	...
 
-def searchUsers(*args, **kwargs):
+def searchUsers(*args: Any) -> Any:
 	""" Searches PersonAccounts. """
 	...
 
-def setActiveAuthMechanism(*args, **kwargs):
+def setActiveAuthMechanism(*args: Any) -> Any:
 	""" This command sets the active authentication mechanism attribute in the security configuration. """
 	...
 
-def setAdminActiveSecuritySettings(*args, **kwargs):
+def setAdminActiveSecuritySettings(*args: Any) -> Any:
 	""" Sets the security attributes on the global administrative security configuration. """
 	...
 
-def setAdminProtocol(*args, **kwargs):
+def setAdminProtocol(*args: Any) -> Any:
 	""" Allows the user to set Administrative Protocol for a server or cell """
 	...
 
-def setAdminProtocolEnabled(*args, **kwargs):
+def setAdminProtocolEnabled(*args: Any) -> Any:
 	""" Sets an Admin Protocol enabled for a server or cell """
 	...
 
-def setAppActiveSecuritySettings(*args, **kwargs):
+def setAppActiveSecuritySettings(*args: Any) -> Any:
 	""" Sets the application level security active settings. """
 	...
 
-def setAuditEmitterFilters(*args, **kwargs):
+def setAuditEmitterFilters(*args: Any) -> Any:
 	""" Sets a list of references to defined filters for the supplied audit service provider. """
 	...
 
-def setAuditEventFactoryFilters(*args, **kwargs):
+def setAuditEventFactoryFilters(*args: Any) -> Any:
 	""" Sets a list of references to defined filters for the supplied event factory. """
 	...
 
-def setAuditSystemFailureAction(*args, **kwargs):
+def setAuditSystemFailureAction(*args: Any) -> Any:
 	""" Returns the state of Security Auditing. """
 	...
 
-def setAuditorId(*args, **kwargs):
+def setAuditorId(*args: Any) -> Any:
 	""" Sets the auditor identity in the audit.xml file. """
 	...
 
-def setAuditorPwd(*args, **kwargs):
+def setAuditorPwd(*args: Any) -> Any:
 	""" Sets the auditor password in the audit.xml file. """
 	...
 
-def setAutoCheckpointDepth(*args, **kwargs):
+def setAutoCheckpointDepth(*args: Any) -> Any:
 	""" Set the automatic checkpoints depth value """
 	...
 
-def setAutoCheckpointEnabled(*args, **kwargs):
+def setAutoCheckpointEnabled(*args: Any) -> Any:
 	""" Enable or disable the automatic checkpoints """
 	...
 
-def setBinding(*args, **kwargs):
+def setBinding(*args: Any) -> Any:
 	""" The setBinding command updates the binding configuration for a specified policy type and scope. Use this command to add a server-specific binding, update an attachment to use a custom binding, edit binding attributes, or remove a binding. """
 	...
 
-def setCheckpointLocation(*args, **kwargs):
+def setCheckpointLocation(*args: Any) -> Any:
 	""" Set the directory path where the checkpoints are stored """
 	...
 
-def setClientDynamicPolicyControl(*args, **kwargs):
+def setClientDynamicPolicyControl(*args: Any) -> Any:
 	""" The setClientDynamicPolicyControl command sets the WSPolicy client acquisition information for a specified resource within an application. """
 	...
 
-def setCompUnitTargetAutoStart(*args, **kwargs):
+def setCompUnitTargetAutoStart(*args: Any) -> Any:
 	""" Enable or disable "autostart" """
 	...
 
-def setDefaultBindings(*args, **kwargs):
+def setDefaultBindings(*args: Any) -> Any:
 	""" The setDefaultBindings command updates the default binding names for a specified domain or server. """
 	...
 
-def setDefaultContextService(*args, **kwargs):
+def setDefaultContextService(*args: Any) -> Any:
 	""" Set the JNDI name that is bound to java:comp/DefaultContextService. """
 	...
 
-def setDefaultDataSource(*args, **kwargs):
+def setDefaultDataSource(*args: Any) -> Any:
 	""" Set the JNDI name that is bound to java:comp/DefaultDataSource. """
 	...
 
-def setDefaultJMSConnectionFactory(*args, **kwargs):
+def setDefaultJMSConnectionFactory(*args: Any) -> Any:
 	""" Set the JNDI name that is bound to java:comp/DefaultJMSConnectionFactory. """
 	...
 
-def setDefaultManagedExecutor(*args, **kwargs):
+def setDefaultManagedExecutor(*args: Any) -> Any:
 	""" Set the JNDI name that is bound to java:comp/DefaultManagedExecutorService. """
 	...
 
-def setDefaultManagedScheduledExecutor(*args, **kwargs):
+def setDefaultManagedScheduledExecutor(*args: Any) -> Any:
 	""" Set the JNDI name that is bound to java:comp/DefaultManagedScheduledExecutorService. """
 	...
 
-def setDefaultManagedThreadFactory(*args, **kwargs):
+def setDefaultManagedThreadFactory(*args: Any) -> Any:
 	""" Set the JNDI name that is bound to java:comp/DefaultManagedThreadFactory. """
 	...
 
-def setDefaultSIBWSOutboundPort(*args, **kwargs):
+def setDefaultSIBWSOutboundPort(*args: Any) -> Any:
 	""" Set the default outbound port for an outbound service. """
 	...
 
-def setDefaultTraceRuleForIntelligentManagement(*args, **kwargs):
+def setDefaultTraceRuleForIntelligentManagement(*args: Any) -> Any:
 	""" Set default trace for Intelligent Management """
 	...
 
-def setDynamicClusterMaxInstances(*args, **kwargs):
+def setDynamicClusterMaxInstances(*args: Any) -> Any:
 	""" Set dynamic cluster maximum number of cluster instances """
 	...
 
-def setDynamicClusterMaxNodes(*args, **kwargs):
+def setDynamicClusterMaxNodes(*args: Any) -> Any:
 	""" Set dynamic cluster maximum number of cluster nodes """
 	...
 
-def setDynamicClusterMembershipPolicy(*args, **kwargs):
+def setDynamicClusterMembershipPolicy(*args: Any) -> Any:
 	""" Set dynamic cluster membership policy """
 	...
 
-def setDynamicClusterMinInstances(*args, **kwargs):
+def setDynamicClusterMinInstances(*args: Any) -> Any:
 	""" Set dynamic cluster minimum number of cluster instances """
 	...
 
-def setDynamicClusterMinNodes(*args, **kwargs):
+def setDynamicClusterMinNodes(*args: Any) -> Any:
 	""" Set dynamic cluster minimum number of cluster nodes """
 	...
 
-def setDynamicClusterOperationalMode(*args, **kwargs):
+def setDynamicClusterOperationalMode(*args: Any) -> Any:
 	""" Set dynamic cluster operational mode """
 	...
 
-def setDynamicClusterVerticalInstances(*args, **kwargs):
+def setDynamicClusterVerticalInstances(*args: Any) -> Any:
 	""" Set dynamic cluster vertical stacking of instances on node """
 	...
 
-def setEmailList(*args, **kwargs):
+def setEmailList(*args: Any) -> Any:
 	""" Sets the notification email list for the configured audit notification. """
 	...
 
-def setGenericJVMArguments(*args, **kwargs):
+def setGenericJVMArguments(*args: Any) -> Any:
 	""" Set Java virtual machine (JVM) Generic JVM Arguments Size """
 	...
 
-def setGlobalSecurity(*args, **kwargs):
+def setGlobalSecurity(*args: Any) -> Any:
 	""" The administrative security field in the security.xml file is updated based on the user input of true or false. """
 	...
 
-def setIdMgrCustomProperty(*args, **kwargs):
+def setIdMgrCustomProperty(*args: Any) -> Any:
 	""" Sets/adds/deletes custom property to a repository configuration. If value is not specified or an empty string then the property will be deleted from the repository configuration. If name does not exist then it will be added, if a value is specified. If name is "*" then all the custom properties will be deleted. """
 	...
 
-def setIdMgrDefaultRealm(*args, **kwargs):
+def setIdMgrDefaultRealm(*args: Any) -> Any:
 	""" Sets the name of the default realm. """
 	...
 
-def setIdMgrEntryMappingRepository(*args, **kwargs):
+def setIdMgrEntryMappingRepository(*args: Any) -> Any:
 	""" Sets or updates an entry mapping repository configuration. """
 	...
 
-def setIdMgrLDAPAttrCache(*args, **kwargs):
+def setIdMgrLDAPAttrCache(*args: Any) -> Any:
 	""" Sets up the LDAP attribute cache configuration. """
 	...
 
-def setIdMgrLDAPContextPool(*args, **kwargs):
+def setIdMgrLDAPContextPool(*args: Any) -> Any:
 	""" Sets up the LDAP context pool configuration. """
 	...
 
-def setIdMgrLDAPGroupConfig(*args, **kwargs):
+def setIdMgrLDAPGroupConfig(*args: Any) -> Any:
 	""" Sets up the LDAP group configuration. """
 	...
 
-def setIdMgrLDAPSearchResultCache(*args, **kwargs):
+def setIdMgrLDAPSearchResultCache(*args: Any) -> Any:
 	""" Sets up the LDAP search result cache configuration. """
 	...
 
-def setIdMgrPropertyExtensionRepository(*args, **kwargs):
+def setIdMgrPropertyExtensionRepository(*args: Any) -> Any:
 	""" Sets or updates the property mapping repository configuration. """
 	...
 
-def setIdMgrRealmDefaultParent(*args, **kwargs):
+def setIdMgrRealmDefaultParent(*args: Any) -> Any:
 	""" Sets the default parent of an entity type in a specified realm. If mapping does not exist it is added, else the mapping is updated. If realm name is not specified, default realm is used. """
 	...
 
-def setIdMgrRealmURAttrMapping(*args, **kwargs):
+def setIdMgrRealmURAttrMapping(*args: Any) -> Any:
 	""" Sets the user registry user or group attribute mapping for a realm. """
 	...
 
-def setIdMgrUseGlobalSchemaForModel(*args, **kwargs):
+def setIdMgrUseGlobalSchemaForModel(*args: Any) -> Any:
 	""" Sets the global schema option for the data model in a multiple security domain environment, where global schema refers to the schema of the admin domain. """
 	...
 
-def setInheritDefaultsForDestination(*args, **kwargs):
+def setInheritDefaultsForDestination(*args: Any) -> Any:
 	""" Allows the override for inheritance for an individual destination.  Setting the "inherit" value to true will allow the destination to inherit from the default values. """
 	...
 
-def setInheritReceiverForTopic(*args, **kwargs):
+def setInheritReceiverForTopic(*args: Any) -> Any:
 	""" Allows the override for receiver inheritance for an individual topic on a specified topic space.  Setting the "inherit" value to true will allow the topic to inherit from the default values. """
 	...
 
-def setInheritSenderForTopic(*args, **kwargs):
+def setInheritSenderForTopic(*args: Any) -> Any:
 	""" Allows the override for sender inheritance for an individual topic on a specified topic space.  Setting the "inherit" value to true will allow the topic to inherit from the default values. """
 	...
 
-def setJVMDebugMode(*args, **kwargs):
+def setJVMDebugMode(*args: Any) -> Any:
 	""" Set Java virtual machine (JVM) Debug Mode """
 	...
 
-def setJVMInitialHeapSize(*args, **kwargs):
+def setJVMInitialHeapSize(*args: Any) -> Any:
 	""" Set Java virtual machine (JVM) Initial Heap Size """
 	...
 
-def setJVMMaxHeapSize(*args, **kwargs):
+def setJVMMaxHeapSize(*args: Any) -> Any:
 	""" Set Java virtual machine (JVM) Maximum Heap Size """
 	...
 
-def setJVMMode(*args, **kwargs):
+def setJVMMode(*args: Any) -> Any:
 	""" Set the JVM mode to either 64-bit or 31-bit for a release prior to V9. Starting from V9, only 64-bit is supported. """
 	...
 
-def setJVMProperties(*args, **kwargs):
+def setJVMProperties(*args: Any) -> Any:
 	""" Set Java virtual machine (JVM) configuration for the application server. """
 	...
 
-def setJVMSystemProperties(*args, **kwargs):
+def setJVMSystemProperties(*args: Any) -> Any:
 	""" set Java virtual machine (JVM) system property for the application server's process. """
 	...
 
-def setLTPATimeout(*args, **kwargs):
+def setLTPATimeout(*args: Any) -> Any:
 	""" Set the LTPA authentication mechanism timeout from global security or an application security domain. """
 	...
 
-def setMaintenanceMode(*args, **kwargs):
+def setMaintenanceMode(*args: Any) -> Any:
 	""" sets maintenance mode indicator on specified server """
 	...
 
-def setNodeDefaultSDK(*args, **kwargs):
+def setNodeDefaultSDK(*args: Any) -> Any:
 	""" Set the default SDK by name or by location for the node """
 	...
 
-def setPolicyType(*args, **kwargs):
+def setPolicyType(*args: Any) -> Any:
 	""" The setPolicyType command updates the attributes of a specified policy. """
 	...
 
-def setPolicyTypeAttribute(*args, **kwargs):
+def setPolicyTypeAttribute(*args: Any) -> Any:
 	""" The setPolicyTypeAttribute command sets an attribute for a specific policy. """
 	...
 
-def setPreference(*args, **kwargs):
+def setPreference(*args: Any) -> Any:
 	""" Command to set a user preference """
 	...
 
-def setProcessDefinition(*args, **kwargs):
+def setProcessDefinition(*args: Any) -> Any:
 	""" Set the process definition of an application server. """
 	...
 
-def setProviderPolicySharingInfo(*args, **kwargs):
+def setProviderPolicySharingInfo(*args: Any) -> Any:
 	""" The setProviderPolicySharingInfo command sets the WSPolicy provider sharing information for a specified resource within an application. """
 	...
 
-def setResourceProperty(*args, **kwargs):
+def setResourceProperty(*args: Any) -> Any:
 	""" This command sets the value of a specified property defined on a resource provider such as JDBCProvider or a connection factory such as DataSource or JMSConnectionFactory. If the property with specified key is defined already, then this command overrides the value. If none property with specified key is defined yet, then this command will add the property with specified key and value. """
 	...
 
-def setRuntimeRegistrationProperties(*args, **kwargs):
+def setRuntimeRegistrationProperties(*args: Any) -> Any:
 	""" Set certain runtime properties for devices and job managers. Caution: a null ID implies each and everyone """
 	...
 
-def setSAMLIssuerConfigInBinding(*args, **kwargs):
+def setSAMLIssuerConfigInBinding(*args: Any) -> Any:
 	""" Set SAML Issuer Configuration in the specified bindings as custom properties """
 	...
 
-def setSendEmail(*args, **kwargs):
+def setSendEmail(*args: Any) -> Any:
 	""" Sets the option to send an audit notification email. """
 	...
 
-def setServerInstance(*args, **kwargs):
+def setServerInstance(*args: Any) -> Any:
 	""" Set Server Instance configuration. This command only applies to the z/OS platform. """
 	...
 
-def setServerSDK(*args, **kwargs):
+def setServerSDK(*args: Any) -> Any:
 	""" Set server SDK by name or by location """
 	...
 
-def setServerSecurityLevel(*args, **kwargs):
+def setServerSecurityLevel(*args: Any) -> Any:
 	""" Configure the security level for a secure proxy or management server. """
 	...
 
-def setTemplateProperty(*args, **kwargs):
+def setTemplateProperty(*args: Any) -> Any:
 	""" Set a property in server template's metadata. Use this command with caution. Changing a template metadata property incorrectly will result in new server creation failure. """
 	...
 
-def setTraceSpecification(*args, **kwargs):
+def setTraceSpecification(*args: Any) -> Any:
 	""" Set the trace specification for the server. If the server is running new trace specification takes effect immediately. This command also saves the trace specification in configuration. """
 	...
 
-def setUseRegistryServerId(*args, **kwargs):
+def setUseRegistryServerId(*args: Any) -> Any:
 	""" The useRegistryServerId security field in userRegistry object in the security.xml file is updated based on the user input of true or false. """
 	...
 
-def setVariable(*args, **kwargs):
+def setVariable(*args: Any) -> Any:
 	""" Set the value for a variable. A variable is a configuration property that can be used to provide a parameter for some values in the system. """
 	...
 
-def setWebServerRoutingRulesProperty(*args, **kwargs):
+def setWebServerRoutingRulesProperty(*args: Any) -> Any:
 	""" Use this command to set properties associated with routing rules. """
 	...
 
-def setupIdMgrDBTables(*args, **kwargs):
+def setupIdMgrDBTables(*args: Any) -> Any:
 	""" Creates and populates tables for database in virtual member manager. """
 	...
 
-def setupIdMgrEntryMappingRepositoryTables(*args, **kwargs):
+def setupIdMgrEntryMappingRepositoryTables(*args: Any) -> Any:
 	""" Creates and populates tables for entry mapping database in virtual member manager. """
 	...
 
-def setupIdMgrPropertyExtensionRepositoryTables(*args, **kwargs):
+def setupIdMgrPropertyExtensionRepositoryTables(*args: Any) -> Any:
 	""" Creates and populates tables for a property extension database in virtual member manager. """
 	...
 
-def showAuditLogEncryptionInfo(*args, **kwargs):
+def showAuditLogEncryptionInfo(*args: Any) -> Any:
 	""" Displays information about the keystore used during Audit Record encryption """
 	...
 
-def showExternalBundleRepository(*args, **kwargs):
+def showExternalBundleRepository(*args: Any) -> Any:
 	""" Shows the configured parameters of the named external bundle repository. """
 	...
 
-def showIdMgrConfig(*args, **kwargs):
+def showIdMgrConfig(*args: Any) -> Any:
 	""" Shows the current configuration with unsaved changes. """
 	...
 
-def showJAXWSHandler(*args, **kwargs):
+def showJAXWSHandler(*args: Any) -> Any:
 	""" Show the attributes of a JAX-WS Handler """
 	...
 
-def showJAXWSHandlerList(*args, **kwargs):
+def showJAXWSHandlerList(*args: Any) -> Any:
 	""" Show the attributes of a JAX-WS Handler List """
 	...
 
-def showJPASpecLevel(*args, **kwargs):
+def showJPASpecLevel(*args: Any) -> Any:
 	""" Displays the active JPA specification level for a Server or ServerCluster.The operation requires either an ObjectName referencing the target object, or parameters identifying the target node and server. """
 	...
 
-def showJVMProperties(*args, **kwargs):
+def showJVMProperties(*args: Any) -> Any:
 	""" List Java virtual machine (JVM) configuration for the application server's process. """
 	...
 
-def showJVMSystemProperties(*args, **kwargs):
+def showJVMSystemProperties(*args: Any) -> Any:
 	""" Show Java virtual machine (JVM) system properties for the application server.'s process. """
 	...
 
-def showJaxrsProvider(*args, **kwargs):
+def showJaxrsProvider(*args: Any) -> Any:
 	""" Displays the active JAXRS Provider for a Server or ServerCluster.The operation requires either an ObjectName referencing the target object, or parameters identifying the target node and server. """
 	...
 
-def showJobSchedulerAttributes(*args, **kwargs):
+def showJobSchedulerAttributes(*args: Any) -> Any:
 	""" list all job scheduler attributes """
 	...
 
-def showLMService(*args, **kwargs):
+def showLMService(*args: Any) -> Any:
 	""" Use the "showLMService" command to show the attributes of a local mapping service. """
 	...
 
-def showLocalRepositoryBundle(*args, **kwargs):
+def showLocalRepositoryBundle(*args: Any) -> Any:
 	""" Shows the information about a bundle in the internal bundle repository. """
 	...
 
-def showLongRunningSchedulerAttributes(*args, **kwargs):
+def showLongRunningSchedulerAttributes(*args: Any) -> Any:
 	""" (Deprecated) list all long-running scheduler attributes. Use showJobSchedulerAttributes. """
 	...
 
-def showMiddlewareApp(*args, **kwargs):
+def showMiddlewareApp(*args: Any) -> Any:
 	""" Use this command to show the attributes of a middleware application. """
 	...
 
-def showMiddlewareDescriptorInformation(*args, **kwargs):
+def showMiddlewareDescriptorInformation(*args: Any) -> Any:
 	""" Use this command to display the contents of the specified middleware descriptor """
 	...
 
-def showMiddlewareServerInfo(*args, **kwargs):
+def showMiddlewareServerInfo(*args: Any) -> Any:
 	""" Use this command to show information on the middleware server """
 	...
 
-def showProcessDefinition(*args, **kwargs):
+def showProcessDefinition(*args: Any) -> Any:
 	""" Show the process definition of the server """
 	...
 
-def showResourceProperties(*args, **kwargs):
+def showResourceProperties(*args: Any) -> Any:
 	""" This command list all the property values defined on a resource provider such as JDBCProvider or a connection factory such as DataSource or JMSConnectionFactory. """
 	...
 
-def showSAMLIdpPartner(*args, **kwargs):
+def showSAMLIdpPartner(*args: Any) -> Any:
 	""" This command displays the SAML TAI IdP partner in the security configuration. If an idpId is not specified, all the SAML TAI IdP partners are displayed. """
 	...
 
-def showSAMLTAISSO(*args, **kwargs):
+def showSAMLTAISSO(*args: Any) -> Any:
 	""" This command displays the SAML TAI SSO in the security configuration. If an ssoId is not specified, all the SAML TAI SSO service providers are displayed. """
 	...
 
-def showSIBDestination(*args, **kwargs):
+def showSIBDestination(*args: Any) -> Any:
 	""" Show a bus destination's attributes. """
 	...
 
-def showSIBEngine(*args, **kwargs):
+def showSIBEngine(*args: Any) -> Any:
 	""" Show a messaging engine's attributes. """
 	...
 
-def showSIBForeignBus(*args, **kwargs):
+def showSIBForeignBus(*args: Any) -> Any:
 	""" Show detail for a SIB foreign bus. """
 	...
 
-def showSIBJMSActivationSpec(*args, **kwargs):
+def showSIBJMSActivationSpec(*args: Any) -> Any:
 	""" Show the attributes of target SIB JMS activation specification. """
 	...
 
-def showSIBJMSConnectionFactory(*args, **kwargs):
+def showSIBJMSConnectionFactory(*args: Any) -> Any:
 	""" Return a list containing the SIB JMS connection factory's attribute names and values. """
 	...
 
-def showSIBJMSQueue(*args, **kwargs):
+def showSIBJMSQueue(*args: Any) -> Any:
 	""" Return a list containing the SIB JMS queue's attribute names and values. """
 	...
 
-def showSIBJMSTopic(*args, **kwargs):
+def showSIBJMSTopic(*args: Any) -> Any:
 	""" Return a list containing the SIB JMS topic's attribute names and values. """
 	...
 
-def showSIBLink(*args, **kwargs):
+def showSIBLink(*args: Any) -> Any:
 	""" Show detail for a SIB link. """
 	...
 
-def showSIBMQLink(*args, **kwargs):
+def showSIBMQLink(*args: Any) -> Any:
 	""" Show detail for a WebSphere MQ link. """
 	...
 
-def showSIBMediation(*args, **kwargs):
+def showSIBMediation(*args: Any) -> Any:
 	""" Show the attributes of a mediation. """
 	...
 
-def showSIBWMQServer(*args, **kwargs):
+def showSIBWMQServer(*args: Any) -> Any:
 	""" Display a named WebSphere MQ server's attributes. """
 	...
 
-def showSIBWMQServerBusMember(*args, **kwargs):
+def showSIBWMQServerBusMember(*args: Any) -> Any:
 	""" Display a named WebSphere MQ server bus members attributes. """
 	...
 
-def showSIBus(*args, **kwargs):
+def showSIBus(*args: Any) -> Any:
 	""" Show the attributes of a bus. """
 	...
 
-def showSIBusMember(*args, **kwargs):
+def showSIBusMember(*args: Any) -> Any:
 	""" Show a member from a bus. """
 	...
 
-def showServerInfo(*args, **kwargs):
+def showServerInfo(*args: Any) -> Any:
 	""" show detailed information of a specified server. """
 	...
 
-def showServerInstance(*args, **kwargs):
+def showServerInstance(*args: Any) -> Any:
 	""" Show Server Instance configuration. This command only applies to the z/OS platform. """
 	...
 
-def showServerTypeInfo(*args, **kwargs):
+def showServerTypeInfo(*args: Any) -> Any:
 	""" Show server type information. """
 	...
 
-def showServiceMap(*args, **kwargs):
+def showServiceMap(*args: Any) -> Any:
 	""" Use the "showServiceMap" command to show the attributes of a service map. """
 	...
 
-def showSpnego(*args, **kwargs):
+def showSpnego(*args: Any) -> Any:
 	""" This command displays the SPNEGO Web authentication in the security configuration. """
 	...
 
-def showSpnegoFilter(*args, **kwargs):
+def showSpnegoFilter(*args: Any) -> Any:
 	""" This command displays the SPNEGO Web authentication Filter in the security configuration. If a host name is not specified, all the SPNEGO Web authentication Filters are displayed. """
 	...
 
-def showSpnegoTAIProperties(*args, **kwargs):
+def showSpnegoTAIProperties(*args: Any) -> Any:
 	""" This command displays the SPNEGO TAI properties in the security configuration. If an spnId is not specified, all the SPNEGO TAI properties are displayed. """
 	...
 
-def showTemplateInfo(*args, **kwargs):
+def showTemplateInfo(*args: Any) -> Any:
 	""" A command that displays all the Metadata about a given template. """
 	...
 
-def showVariables(*args, **kwargs):
+def showVariables(*args: Any) -> Any:
 	""" List variable values under a scope. """
 	...
 
-def showWMQ(*args, **kwargs):
+def showWMQ(*args: Any) -> Any:
 	""" Shows all IBM MQ resource adapter and IBM MQ messaging provider settings which can be set by the manageWMQ command. """
 	...
 
-def showWMQActivationSpec(*args, **kwargs):
+def showWMQActivationSpec(*args: Any) -> Any:
 	""" Shows the attributes of the IBM MQ Activation Specification provided to the command. """
 	...
 
-def showWMQConnectionFactory(*args, **kwargs):
+def showWMQConnectionFactory(*args: Any) -> Any:
 	""" Shows the attributes of the IBM MQ Connection Factory provided to the command. """
 	...
 
-def showWMQQueue(*args, **kwargs):
+def showWMQQueue(*args: Any) -> Any:
 	""" Shows the attributes of the IBM MQ Queue provided to the command. """
 	...
 
-def showWMQTopic(*args, **kwargs):
+def showWMQTopic(*args: Any) -> Any:
 	""" Shows the attributes of the IBM MQ Topic provided to the command. """
 	...
 
-def showWSNAdministeredSubscriber(*args, **kwargs):
+def showWSNAdministeredSubscriber(*args: Any) -> Any:
 	""" Show the properties of a WSNAdministeredSubscriber object in a human readable form. """
 	...
 
-def showWSNService(*args, **kwargs):
+def showWSNService(*args: Any) -> Any:
 	""" Show the properties of a WSNService object in a human readable form. """
 	...
 
-def showWSNServicePoint(*args, **kwargs):
+def showWSNServicePoint(*args: Any) -> Any:
 	""" Show the properties of a WSNServicePoint object in a human readable form. """
 	...
 
-def showWSNTopicDocument(*args, **kwargs):
+def showWSNTopicDocument(*args: Any) -> Any:
 	""" Show the properties of a WSNTopicDocument in a human readable form. """
 	...
 
-def showWSNTopicNamespace(*args, **kwargs):
+def showWSNTopicNamespace(*args: Any) -> Any:
 	""" Show the properties of a WSNTopicNamespace object in a human readable form. """
 	...
 
-def startBLA(*args, **kwargs):
+def startBLA(*args: Any) -> Any:
 	""" Start all composition units of a specified business-level application. """
 	...
 
-def startCertificateExpMonitor(*args, **kwargs):
+def startCertificateExpMonitor(*args: Any) -> Any:
 	""" Start the Certificate Expiration Monitor. """
 	...
 
-def startLMService(*args, **kwargs):
+def startLMService(*args: Any) -> Any:
 	""" Use the "startLMService" command to start a stopped local mapping service. """
 	...
 
-def startMiddlewareServer(*args, **kwargs):
+def startMiddlewareServer(*args: Any) -> Any:
 	""" Use this command to start a middleware server """
 	...
 
-def startPollingJobManager(*args, **kwargs):
+def startPollingJobManager(*args: Any) -> Any:
 	""" Start a managed node's polling against a JobManager, possibly after a certain delay """
 	...
 
-def startWasCEApp(*args, **kwargs):
+def startWasCEApp(*args: Any) -> Any:
 	""" Use this command to start a WAS CE application. """
 	...
 
-def stopBLA(*args, **kwargs):
+def stopBLA(*args: Any) -> Any:
 	""" Stop all composition units of a specified business-level application. """
 	...
 
-def stopLMService(*args, **kwargs):
+def stopLMService(*args: Any) -> Any:
 	""" Use the "stopLMService" command to stop a started local mapping service. """
 	...
 
-def stopMiddlewareServer(*args, **kwargs):
+def stopMiddlewareServer(*args: Any) -> Any:
 	""" Use this command to stop a middleware server """
 	...
 
-def stopPollingJobManager(*args, **kwargs):
+def stopPollingJobManager(*args: Any) -> Any:
 	""" Stop a managed node's polling against a JobManager """
 	...
 
-def stopWasCEApp(*args, **kwargs):
+def stopWasCEApp(*args: Any) -> Any:
 	""" Use this command to stop a WAS CE application. """
 	...
 
-def submitJob(*args, **kwargs):
+def submitJob(*args: Any) -> Any:
 	""" Submits a new job for execution. """
 	...
 
-def suspendJob(*args, **kwargs):
+def suspendJob(*args: Any) -> Any:
 	""" Suspends a previously submitted job. """
 	...
 
-def testDynamicClusterMembershipPolicy(*args, **kwargs):
+def testDynamicClusterMembershipPolicy(*args: Any) -> Any:
 	""" Test the dynamic cluster membership policy to see what nodes will be returned """
 	...
 
-def transferAttachmentsForPolicySet(*args, **kwargs):
+def transferAttachmentsForPolicySet(*args: Any) -> Any:
 	""" The transferAttachmentsForPolicySet command transfers all attachments from one policy set to another policy set. """
 	...
 
-def unassignSTSEndpointTokenType(*args, **kwargs):
+def unassignSTSEndpointTokenType(*args: Any) -> Any:
 	""" Disassociate an endpoint from its token type. """
 	...
 
-def unconfigureAuthzConfig(*args, **kwargs):
+def unconfigureAuthzConfig(*args: Any) -> Any:
 	""" Removes the external JAAC authorization provider """
 	...
 
-def unconfigureCSIInbound(*args, **kwargs):
+def unconfigureCSIInbound(*args: Any) -> Any:
 	""" Removes CSI inbound information from an application security domain. """
 	...
 
-def unconfigureCSIOutbound(*args, **kwargs):
+def unconfigureCSIOutbound(*args: Any) -> Any:
 	""" Removes CSI outbound information from an application security domain. """
 	...
 
-def unconfigureInterceptor(*args, **kwargs):
+def unconfigureInterceptor(*args: Any) -> Any:
 	""" Removes an interceptor from global security configuration or from a security domain. """
 	...
 
-def unconfigureJAASLogin(*args, **kwargs):
+def unconfigureJAASLogin(*args: Any) -> Any:
 	""" Unconfigures a JAAS login in an application security domain.  This removes the JAAS login object and all it's entries. """
 	...
 
-def unconfigureJAASLoginEntry(*args, **kwargs):
+def unconfigureJAASLoginEntry(*args: Any) -> Any:
 	""" Unconfigures a JAAS login entry in the administrative security configuration or in an application security domain.  Note: note all JAAS login entries can be removed. """
 	...
 
-def unconfigureJaspi(*args, **kwargs):
+def unconfigureJaspi(*args: Any) -> Any:
 	""" Removes the Jaspi configuration from a security domain. """
 	...
 
-def unconfigureLoginModule(*args, **kwargs):
+def unconfigureLoginModule(*args: Any) -> Any:
 	""" Unconfigures a login module from a login entry in the administrative security configuration or in an application security domain. """
 	...
 
-def unconfigureSpnego(*args, **kwargs):
+def unconfigureSpnego(*args: Any) -> Any:
 	""" This command unconfigures SPNEGO Web authentication in the security configuration. """
 	...
 
-def unconfigureTAM(*args, **kwargs):
+def unconfigureTAM(*args: Any) -> Any:
 	""" This command unconfigures embedded Tivoli Access Manager on the WebSphere Application Server node or nodes specified. """
 	...
 
-def unconfigureTAMTAI(*args, **kwargs):
+def unconfigureTAMTAI(*args: Any) -> Any:
 	""" This command unconfigures the embedded Tivoli Access Manager Trust Association Interceptor with classname TAMTrustAsociationInterceptorPlus. This task does not include removing any custom properties from the security configuration """
 	...
 
-def unconfigureTAMTAIPdjrte(*args, **kwargs):
+def unconfigureTAMTAIPdjrte(*args: Any) -> Any:
 	""" This command performs the tasks necessary to unconfigure the Tivoli Access Manager Runtime for Java. The specific tasks run are PDJrteCfg and SvrSslCfg. """
 	...
 
-def unconfigureTAMTAIProperties(*args, **kwargs):
+def unconfigureTAMTAIProperties(*args: Any) -> Any:
 	""" This command removes the custom properties from the security configuration for the embedded Tivoli Access Manager Trust Association Interceptor with classname TAMTrustAsociationInterceptorPlus. """
 	...
 
-def unconfigureTrustAssociation(*args, **kwargs):
+def unconfigureTrustAssociation(*args: Any) -> Any:
 	""" Removes the trust association object from a security domain. """
 	...
 
-def unconfigureTrustedRealms(*args, **kwargs):
+def unconfigureTrustedRealms(*args: Any) -> Any:
 	""" Unconfigures an inbound or outbound trusted realms by removing the realm object from the configuration. """
 	...
 
-def unconfigureUserRegistry(*args, **kwargs):
+def unconfigureUserRegistry(*args: Any) -> Any:
 	""" Unconfigure a user registry in the administrative security configuration or an application security domain. """
 	...
 
-def undeployWasCEApp(*args, **kwargs):
+def undeployWasCEApp(*args: Any) -> Any:
 	""" Use this command to undeploy a WAS CE application from a server. """
 	...
 
-def uninstallMiddlewareApp(*args, **kwargs):
+def uninstallMiddlewareApp(*args: Any) -> Any:
 	""" Use this command to uninstall a middleware application. """
 	...
 
-def uninstallServiceMap(*args, **kwargs):
+def uninstallServiceMap(*args: Any) -> Any:
 	""" Use the "uninstallServiceMap" command to uninstall a service map. """
 	...
 
-def unmediateSIBDestination(*args, **kwargs):
+def unmediateSIBDestination(*args: Any) -> Any:
 	""" Mediate a destination. """
 	...
 
-def unpublishSIBWSInboundService(*args, **kwargs):
+def unpublishSIBWSInboundService(*args: Any) -> Any:
 	""" Unpublish an inbound service from a UDDI registry. """
 	...
 
-def unregisterApp(*args, **kwargs):
+def unregisterApp(*args: Any) -> Any:
 	""" Use this command to unregister a middleware application. """
 	...
 
-def unregisterHost(*args, **kwargs):
+def unregisterHost(*args: Any) -> Any:
 	""" Unregister a host from the job manager. """
 	...
 
-def unregisterWithJobManager(*args, **kwargs):
+def unregisterWithJobManager(*args: Any) -> Any:
 	""" Unregister a managed node from a JobManager """
 	...
 
-def unsetAppActiveSecuritySettings(*args, **kwargs):
+def unsetAppActiveSecuritySettings(*args: Any) -> Any:
 	""" Unsets active security settings on a security domain.  The attribute is removed from the security domain configuration. """
 	...
 
-def unsetMaintenanceMode(*args, **kwargs):
+def unsetMaintenanceMode(*args: Any) -> Any:
 	""" unsets maintenance mode indicator on specified server """
 	...
 
-def updateARSConfig(*args, **kwargs):
+def updateARSConfig(*args: Any) -> Any:
 	""" Updates the installation/deployment of the Asynchronous Response Servlet which is used when JAX-WS client applications use the JAX-WS asynchronous API """
 	...
 
-def updateAppOnCluster(*args, **kwargs):
+def updateAppOnCluster(*args: Any) -> Any:
 	""" Updates all cluster members about the application config changes. """
 	...
 
-def updateAsset(*args, **kwargs):
+def updateAsset(*args: Any) -> Any:
 	""" Update an imported asset file. """
 	...
 
-def updateCluster(*args, **kwargs):
+def updateCluster(*args: Any) -> Any:
 	""" Updates the configuration of an application server cluster. """
 	...
 
-def updateClusterMemberWeights(*args, **kwargs):
+def updateClusterMemberWeights(*args: Any) -> Any:
 	""" Updates the weights of the specified cluster members. """
 	...
 
-def updateDistributedCacheProperty(*args, **kwargs):
+def updateDistributedCacheProperty(*args: Any) -> Any:
 	""" updateSeveralWSSDistributedCacheConfigCmdDesc """
 	...
 
-def updateGroup(*args, **kwargs):
+def updateGroup(*args: Any) -> Any:
 	""" Updates the attributes of a group. """
 	...
 
-def updateIdMgrDBRepository(*args, **kwargs):
+def updateIdMgrDBRepository(*args: Any) -> Any:
 	""" Updates a database repository configuration. """
 	...
 
-def updateIdMgrFileRepository(*args, **kwargs):
+def updateIdMgrFileRepository(*args: Any) -> Any:
 	""" Updates a file repository configuration. """
 	...
 
-def updateIdMgrLDAPAttrCache(*args, **kwargs):
+def updateIdMgrLDAPAttrCache(*args: Any) -> Any:
 	""" Updates the LDAP attribute cache configuration. """
 	...
 
-def updateIdMgrLDAPBindInfo(*args, **kwargs):
+def updateIdMgrLDAPBindInfo(*args: Any) -> Any:
 	""" Dynamically updates the LDAP server bind information. If bindDN is specified bindPassword must be specified. If only id is specified then LDAP server information is refreshed. """
 	...
 
-def updateIdMgrLDAPContextPool(*args, **kwargs):
+def updateIdMgrLDAPContextPool(*args: Any) -> Any:
 	""" Updates the LDAP context pool configuration. """
 	...
 
-def updateIdMgrLDAPEntityType(*args, **kwargs):
+def updateIdMgrLDAPEntityType(*args: Any) -> Any:
 	""" Updates an existing LDAP entity type definition to an LDAP repository configuration. This command can be used to add more values to multivalued parameters. """
 	...
 
-def updateIdMgrLDAPGroupDynamicMemberAttr(*args, **kwargs):
+def updateIdMgrLDAPGroupDynamicMemberAttr(*args: Any) -> Any:
 	""" Updates a dynamic member attribute configuration of an LDAP group configuration. """
 	...
 
-def updateIdMgrLDAPGroupMemberAttr(*args, **kwargs):
+def updateIdMgrLDAPGroupMemberAttr(*args: Any) -> Any:
 	""" Updates a member attribute configuration of an LDAP group configuration. """
 	...
 
-def updateIdMgrLDAPRepository(*args, **kwargs):
+def updateIdMgrLDAPRepository(*args: Any) -> Any:
 	""" Updates an LDAP repository configuration. """
 	...
 
-def updateIdMgrLDAPSearchResultCache(*args, **kwargs):
+def updateIdMgrLDAPSearchResultCache(*args: Any) -> Any:
 	""" Updates the LDAP search result cache configuration. """
 	...
 
-def updateIdMgrLDAPServer(*args, **kwargs):
+def updateIdMgrLDAPServer(*args: Any) -> Any:
 	""" Updates an LDAP server configuration of the LDAP repository configuration. """
 	...
 
-def updateIdMgrRealm(*args, **kwargs):
+def updateIdMgrRealm(*args: Any) -> Any:
 	""" Updates the configuration of the specified realm. """
 	...
 
-def updateIdMgrRepository(*args, **kwargs):
+def updateIdMgrRepository(*args: Any) -> Any:
 	""" Updates the configuration of the specified repository. To add multiple values to a multivalued parameter, call this command repeatedly. """
 	...
 
-def updateIdMgrRepositoryBaseEntry(*args, **kwargs):
+def updateIdMgrRepositoryBaseEntry(*args: Any) -> Any:
 	""" Updates a base entry for the specified repository. """
 	...
 
-def updateIdMgrSupportedEntityType(*args, **kwargs):
+def updateIdMgrSupportedEntityType(*args: Any) -> Any:
 	""" Updates a supported entity type configuration. """
 	...
 
-def updateLMService(*args, **kwargs):
+def updateLMService(*args: Any) -> Any:
 	""" Use the "updateLMService" command to update details about an existing local mapping service. """
 	...
 
-def updatePolicySet(*args, **kwargs):
+def updatePolicySet(*args: Any) -> Any:
 	""" The updatePolicySet command enables you to input an attribute list to update the policy set. You can use this command to update all attributes for the policy set, or a subset of attributes. """
 	...
 
-def updatePolicySetAttachment(*args, **kwargs):
+def updatePolicySetAttachment(*args: Any) -> Any:
 	""" The updatePolicySetAttachment command updates the resources that apply to a policy set attachment. """
 	...
 
-def updateRAR(*args, **kwargs):
+def updateRAR(*args: Any) -> Any:
 	""" Update an existing resource adapter with the supplied RAR file and configure any new properties that exist on deployed objects within the resource adapter to be updated. 
     
     Before using the updateRAR command, use the compareResourceAdapterToRAR command to verify the RAR is compatible for upgrading the resource adapter, and use the findOtherRAsToUpdate command to determine the set of resources adapters that need be updated using the supplied RAR.
     """
 	...
 
-def updateSAMLIssuerConfig(*args, **kwargs):
+def updateSAMLIssuerConfig(*args: Any) -> Any:
 	""" Update SAML Issuer Configuration data """
 	...
 
-def updateSCClientCacheConfiguration(*args, **kwargs):
+def updateSCClientCacheConfiguration(*args: Any) -> Any:
 	""" Update the SC cache configuration """
 	...
 
-def updateSCClientCacheCustomConfiguration(*args, **kwargs):
+def updateSCClientCacheCustomConfiguration(*args: Any) -> Any:
 	""" Update the SC custom config """
 	...
 
-def updateSTSEndpointTokenType(*args, **kwargs):
+def updateSTSEndpointTokenType(*args: Any) -> Any:
 	""" Update the assigned token type for an endpoint. If the local name parameter is omitted, the default token type is assumed. """
 	...
 
-def updateSTSTokenTypeConfiguration(*args, **kwargs):
+def updateSTSTokenTypeConfiguration(*args: Any) -> Any:
 	""" Update the configuration for an existing token type. Token type URIs must be unique. """
 	...
 
-def updateUser(*args, **kwargs):
+def updateUser(*args: Any) -> Any:
 	""" Updates the attributes of a user. """
 	...
 
-def updateWSSDistributedCacheConfig(*args, **kwargs):
+def updateWSSDistributedCacheConfig(*args: Any) -> Any:
 	""" Update Web Services Security Distrubuted Cache configuration properties """
 	...
 
-def updateWSSDistributedCacheCustomConfig(*args, **kwargs):
+def updateWSSDistributedCacheCustomConfig(*args: Any) -> Any:
 	""" Update Web Services Security distributed cache configuration custom properties """
 	...
 
-def upgradeBindings(*args, **kwargs):
+def upgradeBindings(*args: Any) -> Any:
 	""" The upgradeBindings command upgrades bindings of an older version to the current version. """
 	...
 
-def validateAdminName(*args, **kwargs):
+def validateAdminName(*args: Any) -> Any:
 	""" Validates the existence of the administrator name in the input user registry. """
 	...
 
-def validateConfigProperties(*args, **kwargs):
+def validateConfigProperties(*args: Any) -> Any:
 	""" Validate configuration properties in properites file """
 	...
 
-def validateEdition(*args, **kwargs):
+def validateEdition(*args: Any) -> Any:
 	""" Prepares an edition for VALIDATION. """
 	...
 
-def validateKrbConfig(*args, **kwargs):
+def validateKrbConfig(*args: Any) -> Any:
 	""" Validates the Kerberos configuration data either in the global security configuration file security.xml or specified as an input parameters. """
 	...
 
-def validateLDAPConnection(*args, **kwargs):
+def validateLDAPConnection(*args: Any) -> Any:
 	""" Validates the connection to the specified LDAP server. """
 	...
 
-def validatePolicySet(*args, **kwargs):
+def validatePolicySet(*args: Any) -> Any:
 	""" The validatePolicySet command validates the policies in the policy set. """
 	...
 
-def validateSpnegoConfig(*args, **kwargs):
+def validateSpnegoConfig(*args: Any) -> Any:
 	""" Validates the SPNEGO Web authentication configuration. """
 	...
 
-def viewAsset(*args, **kwargs):
+def viewAsset(*args: Any) -> Any:
 	""" View options for a specified asset. """
 	...
 
-def viewBLA(*args, **kwargs):
+def viewBLA(*args: Any) -> Any:
 	""" View options for a specified business-level application. """
 	...
 
-def viewCompUnit(*args, **kwargs):
+def viewCompUnit(*args: Any) -> Any:
 	""" View options for specified a composition unit of a business-level application. """
 	...
 
