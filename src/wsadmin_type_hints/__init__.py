@@ -39,7 +39,7 @@ __all__ = [
 # Additional try/except to ensure that even if installed in a real environment,
 # the original modules do not get overwritten.
 try:
-    (AdminControl, AdminConfig, AdminApp, AdminTask, Help) # type: ignore
+    (AdminControl, AdminConfig, AdminApp, AdminTask, Help) # pyright: ignore[reportUnboundVariable, reportUnusedExpression]
 except NameError:
     # ----- Interact with a configuration object    -----
     from . import AdminApp # pyright: ignore[reportMissingModuleSource]
