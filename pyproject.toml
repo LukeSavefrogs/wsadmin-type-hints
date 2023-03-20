@@ -71,15 +71,14 @@ sequence = [
 
 
 [tool.mypy]
-# strict = true
+strict = true
 warn_no_return = false
 warn_return_any = false
 allow_untyped_defs = true
 warn_incomplete_stub = false
-# ignore_missing_imports = true
+ignore_missing_imports = true
 
-# disable_error_code = "no-untyped-def, empty-body"
-# disable_error_code = 'misc'
+disable_error_code = "no-untyped-def, empty-body, misc"
 
 [tool.pyright]
 typeCheckingMode = "strict"
