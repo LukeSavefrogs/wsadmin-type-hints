@@ -16,7 +16,7 @@ reconnecting with a server, and converting data types.
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admincontrol-object-using-wsadmin).
 """
 
-from typing import Union
+from typing import Any, Union
 from wsadmin_type_hints.typing_objects.object_name import RunningObjectName, RunningObjectTemplate
 from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList
 
@@ -134,67 +134,67 @@ def getAttributes(object_name, attributes, /):
 
     """
 
-def getAttributes_jmx(): # undocumented
+def getAttributes_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def getCell(): # undocumented
+def getCell(*args: Any) -> Any: # undocumented
     """ """
 
-def getConfigId(): # undocumented
+def getConfigId(*args: Any) -> Any: # undocumented
     """ """
 
-def getDefaultDomain(): # undocumented
+def getDefaultDomain(*args: Any) -> Any: # undocumented
     """ """
 
-def getDomainName(): # undocumented
+def getDomainName(*args: Any) -> Any: # undocumented
     """ """
 
-def getHost(): # undocumented
+def getHost(*args: Any) -> Any: # undocumented
     """ """
 
-def getMBeanCount(): # undocumented
+def getMBeanCount(*args: Any) -> Any: # undocumented
     """ """
 
-def getMBeanInfo_jmx(): # undocumented
+def getMBeanInfo_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def getNode(): # undocumented
+def getNode(*args: Any) -> Any: # undocumented
     """ """
 
-def getObjectInstance(): # undocumented
+def getObjectInstance(*args: Any) -> Any: # undocumented
     """ """
 
-def getPort(): # undocumented
+def getPort(*args: Any) -> Any: # undocumented
     """ """
 
-def getPropertiesForDataSource(): # undocumented
+def getPropertiesForDataSource(*args: Any) -> Any: # undocumented
     """ (Deprecated) """
 
-def getType(): # undocumented
+def getType(*args: Any) -> Any: # undocumented
     """ """
 
-def help(): # undocumented
+def help(*args: Any) -> Any: # undocumented
     """ """
 
-def invoke(): # undocumented
+def invoke(*args: Any) -> Any: # undocumented
     """ """
 
-def invoke_jmx(): # undocumented
+def invoke_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def isRegistered(): # undocumented
+def isRegistered(*args: Any) -> Any: # undocumented
     """ """
 
-def isRegistered_jmx(): # undocumented
+def isRegistered_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def makeObjectName(): # undocumented
+def makeObjectName(*args: Any) -> Any: # undocumented
     """ """
 
-def queryMBeans(): # undocumented
+def queryMBeans(*args: Any) -> Any: # undocumented
     """ """
 
-def queryNames() -> MultilineList[RunningObjectName]: # undocumented
+def queryNames(pattern: str) -> MultilineList[RunningObjectName]: # undocumented
     """
 	Example:
 		```pycon
@@ -205,33 +205,33 @@ def queryNames() -> MultilineList[RunningObjectName]: # undocumented
 	"""
     ...
 
-def queryNames_jmx(): # undocumented
+def queryNames_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def reconnect(): # undocumented
+def reconnect(*args: Any) -> Any: # undocumented
     """ """
 
-def setAttribute(): # undocumented
+def setAttribute(*args: Any) -> Any: # undocumented
     """ """
 
-def setAttribute_jmx(): # undocumented
+def setAttribute_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def setAttributes(): # undocumented
+def setAttributes(*args: Any) -> Any: # undocumented
     """ """
 
-def setAttributes_jmx(): # undocumented
+def setAttributes_jmx(*args: Any) -> Any: # undocumented
     """ """
 
-def startServer(): # undocumented
+def startServer(*args: Any) -> Any: # undocumented
     """ """
 
-def stopServer(): # undocumented
+def stopServer(*args: Any) -> Any: # undocumented
     """ """
 
-def testConnection(): # undocumented
+def testConnection(*args: Any) -> Any: # undocumented
     """ """
 
-def trace(): # undocumented
+def trace(*args: Any) -> Any: # undocumented
     """ """
 

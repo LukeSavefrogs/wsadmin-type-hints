@@ -178,7 +178,7 @@ def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[
     ...
 # --------------------------------------------------------------------------
 
-def createClusterMember(): # undocumented
+def createClusterMember(*args: Any) -> Any: # undocumented
     ...
 
 def createDocument(document_uri: str, filename: str, /) -> Any:
@@ -202,7 +202,7 @@ def createDocument(document_uri: str, filename: str, /) -> Any:
     """    
     ...
 
-def createUsingTemplate(): # undocumented
+def createUsingTemplate(*args: Any) -> Any: # undocumented
     ...
 
 def defaults(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
@@ -516,7 +516,7 @@ def help(method_name: str = "", /) -> str: # type: ignore[misc]
     ...
 # --------------------------------------------------------------------------
 
-def installResourceAdapter(): # undocumented
+def installResourceAdapter(*args: Any) -> Any: # undocumented
     ...
 
 # --------------------------------------------------------------------------
@@ -780,7 +780,7 @@ def queryChanges() -> MultilineList[str]:
     """
     ...
 
-def remove(): # undocumented
+def remove(*args: Any) -> Any: # undocumented
     ...
 
 def required(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
@@ -827,7 +827,7 @@ def reset() -> Literal['']:
     """
     ...
 
-def resetAttributes(): # undocumented
+def resetAttributes(*args: Any) -> Any: # undocumented
     ...
 
 def save() -> Literal['']:
@@ -915,10 +915,10 @@ def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"
     """
     ...
 
-def show(): # undocumented
+def show(*args: Any) -> Any: # undocumented
     ...
 
-def showall(): # undocumented
+def showall(*args: Any) -> Any: # undocumented
     ...
 
 def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> str:
@@ -1010,10 +1010,10 @@ def types(pattern: Optional[str] = "", /) -> MultilineList[ObjectType]: # type: 
     ...
 # --------------------------------------------------------------------------
 
-def uninstallResourceAdapter(): # undocumented
+def uninstallResourceAdapter(*args: Any) -> Any: # undocumented
     ...
 
-def unsetAttributes(): # undocumented
+def unsetAttributes(*args: Any) -> Any: # undocumented
     ...
 
 # --------------------------------------------------------------------------

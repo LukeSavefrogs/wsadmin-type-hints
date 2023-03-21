@@ -9,68 +9,71 @@ exporting, and so on.
 
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminapp-object-using-wsadmin).
 """
-def deleteUserAndGroupEntries(): # undocumented
+from typing import Any
+
+
+def deleteUserAndGroupEntries(*args: Any) -> Any: # undocumented
     ...
 
-def edit(): # undocumented
+def edit(*args: Any) -> Any: # undocumented
     ...
 
-def editInteractive(): # undocumented
+def editInteractive(*args: Any) -> Any: # undocumented
     ...
 
-def export(): # undocumented
+def export(*args: Any) -> Any: # undocumented
     ...
 
-def exportDDL(): # undocumented
+def exportDDL(*args: Any) -> Any: # undocumented
     ...
 
-def exportFile(): # undocumented
+def exportFile(*args: Any) -> Any: # undocumented
     ...
 
-def getDeployStatus(): # undocumented
+def getDeployStatus(*args: Any) -> Any: # undocumented
     ...
 
-def help(): # undocumented
+def help(*args: Any) -> Any: # undocumented
     ...
 
-def install(): # undocumented
+def install(*args: Any) -> Any: # undocumented
     ...
 
-def installInteractive(): # undocumented
+def installInteractive(*args: Any) -> Any: # undocumented
     ...
 
-def isAppReady(): # undocumented
+def isAppReady(*args: Any) -> Any: # undocumented
     ...
 
-def list(): # undocumented
+def list(*args: Any) -> Any: # undocumented
     ...
 
-def listModules(): # undocumented
+def listModules(*args: Any) -> Any: # undocumented
     ...
 
-def options(): # undocumented
+def options(*args: Any) -> Any: # undocumented
     ...
 
-def publishWSDL(): # undocumented
+def publishWSDL(*args: Any) -> Any: # undocumented
     ...
 
-def searchJNDIReferences(): # undocumented
+def searchJNDIReferences(*args: Any) -> Any: # undocumented
     ...
 
-def taskInfo(): # undocumented
+def taskInfo(*args: Any) -> Any: # undocumented
     ...
 
-def uninstall(): # undocumented
+def uninstall(*args: Any) -> Any: # undocumented
     ...
 
-def update(): # undocumented
+def update(*args: Any) -> Any: # undocumented
     ...
 
-def updateAccessIDs(): # undocumented
+def updateAccessIDs(*args: Any) -> Any: # undocumented
     ...
 
-def updateInteractive(): # undocumented
+def updateInteractive(*args: Any) -> Any: # undocumented
     ...
 
-def view(): # undocumented
+def view(*args: Any) -> Any: # undocumented
     ...
