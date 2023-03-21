@@ -1,0 +1,75 @@
+#!/bin/bash
+#set -x
+###################################################
+# A simple Git Hook to validate the commit message
+# Validations
+# 1. There should be a commit message !
+# 2. In dev branch, the related JIRA Issue needs to be mentioned
+# 3. In bug branch commit, the Incident Number (INC) needs to be mentioned
+# 4. In main branch, if you're making any changes , you need to have a Change request number.
+####################################################
+# shellcheck disable=SC2059,SC2250
+
+
+shopt -s nocasematch                            # Case insensitive Cases 
+COMMIT_MSG_FILE=$1                          # Receive the commit message .git/COMMIT_EDITMSG
+
+declare style_bold="\033[1m" \
+		style_underlined="\033[4m" \
+		style_yellow="\033[0;33m" \
+		style_red="\033[0;31m" \
+		style_green="\033[0;32m" \
+		style_cyan="\033[36m" \
+		style_reset="\033[0m" \
+		style_magenta="\033[35m";
+
+# Throw error if the message is empty
+if ! grep -q '[^[:space:]]' "$COMMIT_MSG_FILE"; then
+    printf "Aborting commit. The commit message MUST NOT be empty!!\n" >&2
+    printf "Commit aborted.\n\n"
+    exit 1
+fi
+
+## The branch name standards followed in the project
+DEV_BRANCH="dev"                            
+BUGFIX_BRANCH="bug"
+MAIN_BRANCH="main"
+
+
+## Find the current branch we are in
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+## Create regex strings and error message based on the branch
+
+# case "$current_branch" in
+#     $DEV_BRANCH)
+#         # the script considers PROJ as the Jira Project ID
+#         error_msg="Aborting commit. Please add JIRA Issue (PROJ-XXXX) on commit message."
+#         commit_regex_string="(PROJ-[0-9]+)"
+#         ;;
+#     $BUGFIX_BRANCH)
+#         error_msg="Aborting commit. Please add Incident Number (INCXXXXX) on commit message."
+#         commit_regex_string="(INC[0-9]+)"
+#         ;;
+
+#     $MAIN_BRANCH)
+#         error_msg="Aborting commit. Please add Release Number (CRQXXXXX) on commit message."
+#         commit_regex_string="(CRQ[0-9]+|Merge)"
+#         ;;
+#     *)
+#         #echo "Unhandled value $i" >&2
+#         #exit 2
+#     ;;
+# esac
+
+keywords="feat,fix,docs,style,refactor,test,build,ci,perf,chore"
+commit_regex_string="^(${keywords//,/|})((.+))?:.*"
+error_msg="Aborting commit. Please follow the Angular commit message format."
+
+## Validate the commit message adheres to the standard regex.
+if ! grep -qP "$commit_regex_string" "$COMMIT_MSG_FILE"; then
+    echo "$error_msg" >&2
+    echo "Exiting...." >&2
+    exit 1
+fi
+exit 0
