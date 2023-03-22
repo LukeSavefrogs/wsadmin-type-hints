@@ -32,7 +32,7 @@ Let's explore these options in detail...
 #### 1. Define `True`/`False`
 To use `True` and `False` in the scripts **add the following line** at the top of your code, then you'll be able to write your scripts as usual:
 ```python
-exec("try: (True, False)\nexcept NameError: True = 1==1; False = 1==0")
+exec("try: (True, False)\nexcept NameError: exec('True = 1==1; False = 1==0')")
 ```
 
 !!! Info
@@ -40,6 +40,7 @@ exec("try: (True, False)\nexcept NameError: True = 1==1; False = 1==0")
 
     1. To provide a **oneliner** fix, easier to _copy-paste_, thus _reducing errors_;
     1. To **elude linters and static type checkers** like `pylint` or `mypy` which consider this an error _(while it is only a false positive, since we're dealing with old legacy Python versions)_.
+    1. The inner `exec` call serves the sole purpose of safe guarding in case the script is being executed (while testing) on Python 3.x (the `SyntaxError` raised when trying to assign a keyword cannot be catched).
 
 !!! quote "Source"
     This **workaround** is inspired by [this SO answer](https://stackoverflow.com/q/31042827/8965861){: target=_blank}.
@@ -47,7 +48,7 @@ exec("try: (True, False)\nexcept NameError: True = 1==1; False = 1==0")
 !!! Example
     The following example shows how the `False` value gets correctly evaluated in a condition:
     ```pycon
-    >>> exec("try: (True, False)\nexcept NameError: True = 1==1; False = 1==0")
+    >>> exec("try: (True, False)\nexcept NameError: exec('True = 1==1; False = 1==0')")
     >>> exists = True
     
     >>> if exists:
