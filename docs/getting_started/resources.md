@@ -17,8 +17,9 @@
 
 ## Collection of scripts
 - [`Websphere Configuration Comparison Tool`](https://github.com/IBM/websphere-cct){: target=_blank} by [@IBM](https://github.com/IBM){: target=_blank} - Light weight **comparison utility** for WebSphere Application Server traditional.
-- [`wsadmin-tools`](https://github.com/sgurjar/wsadmin-tools/blob/master/tools.py){: target=_blank} by [@sgurjar](https://github.com/sgurjar){: target=_blank} - Collection of **useful functions** meant to ease server administration through `wsadmin`.
+- [`WDR`](https://github.com/WDR/WDR){: target=_blank} by [@WDR](https://github.com/WDR){: target=_blank} - A **library** which aims to greatly simplify WebSphere scripting.
 - [`wsadminlib`](https://github.com/wsadminlib/wsadminlib){: target=_blank} by [@wsadminlib](https://github.com/wsadminlib){: target=_blank} - A **library** which simplifies configuration of IBM WebSphere AppServer using python scripting.
+- [`wsadmin-tools`](https://github.com/sgurjar/wsadmin-tools/blob/master/tools.py){: target=_blank} by [@sgurjar](https://github.com/sgurjar){: target=_blank} - Collection of **useful functions** meant to ease server administration through `wsadmin`.
 
 
 
