@@ -1,11 +1,11 @@
-import sys
 from typing import Literal
 
+# TypeAlias is available in the `typing` module starting from python version 3.10
 # https://mypy.readthedocs.io/en/stable/common_issues.html#variables-vs-type-aliases
-if sys.version_info <= (3, 9):
+try:
+    from typing import TypeAlias # type: ignore
+except ImportError:
     from typing_extensions import TypeAlias
-else:
-    from typing import TypeAlias
 
 _ObjectType = Literal [
     "AccessPointGroup",
