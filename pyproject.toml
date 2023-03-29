@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wsadmin-type-hints"
-version = "0.2.1"
+version = "0.2.2"
 description = "Provide type hints for `wsadmin` object methods"
 authors = ["Luca Salvarani <lucasalvarani99@gmail.com>"]
 license = "MIT"
