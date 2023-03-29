@@ -3,6 +3,8 @@ name: Publish Python 🐍 distributions 📦 to PyPI and TestPyPI
 
 on:
   push:
+    branches: 
+      - main
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+**'
 
@@ -10,6 +12,7 @@ jobs:
   build-n-publish:
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
     steps:
       - name: "🛒 Checkout repository"
         uses: actions/checkout@v3
@@ -33,7 +36,6 @@ jobs:
 
       - name: "🔍 Install dependencies"
         run: poetry install --with dev
-
 
       - name: 📷 Replace image URLs
         run: sed -i '/\.png/s_](_](https://raw.githubusercontent.com/LukeSavefrogs/wsadmin-type-hints/main/_' README.md
