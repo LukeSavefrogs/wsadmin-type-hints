@@ -1,12 +1,5 @@
 from typing import Literal
 
-# TypeAlias is available in the `typing` module starting from python version 3.10
-# https://mypy.readthedocs.io/en/stable/common_issues.html#variables-vs-type-aliases
-try:
-    from typing import TypeAlias # type: ignore
-except ImportError:
-    from typing_extensions import TypeAlias
-
 _ObjectType = Literal [
     "AccessPointGroup",
     "Action",
@@ -947,7 +940,7 @@ _ObjectType = Literal [
 """ Actual types, stored in a separate variable ONLY to trick mkdocs-docstring into showing only the shorter alias. """
 
 
-ObjectType: TypeAlias = _ObjectType
+ObjectType = _ObjectType
 """ List of all the available `wsadmin` object types, as returned by the [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] command.
 
     !!! Warning 
