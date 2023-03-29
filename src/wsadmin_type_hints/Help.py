@@ -7,6 +7,8 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
 """
 from typing import Optional
 
+from wsadmin_type_hints.typing_objects.object_name import RunningObjectName
+
 
 def AdminApp() -> str:
     """
@@ -83,12 +85,12 @@ def AdminTask() -> str:
     """
     ...
 
-def all(mbean_name: str, /) -> str:
+def all(mbean_name: RunningObjectName, /) -> str:
     """Use the `all` command to view a summary of all the information associated with the MBean 
         identified by `mbean_name`.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
 
     Returns:
         str: Summary of the information requested.
@@ -153,12 +155,12 @@ def attributes(mbean_name: str, attribute_name: Optional[str] = None, /) -> str:
     """
     ...
 
-def classname(mbean_name: str, /) -> str:
+def classname(mbean_name: RunningObjectName, /) -> str:
     """Use the `classname` command to get the class name associated with the MBean 
         identified by `mbean_name`.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
 
     Returns:
         str: The class name represented by the MBean name.
@@ -172,12 +174,12 @@ def classname(mbean_name: str, /) -> str:
     """
     ...
 
-def constructors(mbean_name: str, /) -> str:
+def constructors(mbean_name: RunningObjectName, /) -> str:
     """Use the `constructors` command to get all the constructors associated with the MBean 
         identified by `mbean_name`.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
 
     Returns:
         str: The summary of all the constructors.
@@ -191,11 +193,11 @@ def constructors(mbean_name: str, /) -> str:
     """
     ...
 
-def description(mbean_name: str, /) -> str:
+def description(mbean_name: RunningObjectName, /) -> str:
     """Use the `description` command to view a description of the MBean identified by `mbean_name`.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
 
     Returns:
         str: The description of the requested MBean.
@@ -245,12 +247,12 @@ def message(message_id: str, /) -> str:
     """
     ...
 
-def notifications(mbean_name: str, /) -> str:
+def notifications(mbean_name: RunningObjectName, /) -> str:
     """Use the `notifications` command to view a summary of all the notifications associated with the MBean 
         identified by `mbean_name`.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
 
     Returns:
         str: A **multiline** string containing all the MBean notifications.
@@ -271,7 +273,7 @@ def notifications(mbean_name: str, /) -> str:
     """
     ...
 
-def operations(mbean_name: str, operation_name: Optional[str] = None, /):
+def operations(mbean_name: RunningObjectName, operation_name: Optional[str] = None, /):
     """Use the `operations` command to view a summary of all the operations associated with the MBean 
         identified by `mbean_name`.
         
@@ -279,44 +281,74 @@ def operations(mbean_name: str, operation_name: Optional[str] = None, /):
         requested operation.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
         operation_name (str, optional): The operation of interest. Defaults to None.
     
     Example:
+        - Get a list of all the available operations on the provided MBean:
+
         ```pycon
         >>> mbean = AdminControl.queryNames('type=Server,*').splitlines()[0]
         >>> print(Help.operations(mbean))
         Operation
-        int getRingBufferSize()
-        void setRingBufferSize(int)
-        java.lang.String getTraceSpecification()
-        void setTraceState(java.lang.String)
-        void appendTraceString(java.lang.String)
-        void dumpRingBuffer(java.lang.String)
-        void clearRingBuffer()
-        [Ljava.lang.String; listAllRegisteredComponents()
-        [Ljava.lang.String; listAllRegisteredGroups()
-        [Ljava.lang.String; listComponentsInGroup(java.lang.String)
-        [Lcom.ibm.websphere.ras.TraceElementState; getTracedComponents()
-        [Lcom.ibm.websphere.ras.TraceElementState; getTracedGroups()
-        java.lang.String getTraceSpecification(java.lang.String)
-        void processDumpString(java.lang.String)
-        void checkTraceString(java.lang.String)
-        void setTraceOutputToFile(java.lang.String, int, int, java.lang.String)
-        void setTraceOutputToRingBuffer(int, java.lang.String)
-        java.lang.String rolloverLogFileImmediate(java.lang.String, java.lang.String)
+        java.lang.String getName()
+        java.lang.String getShortName()
+        int getThreadMonitorInterval()
+        void setThreadMonitorInterval(int)
+        int getThreadMonitorThreshold()
+        void setThreadMonitorThreshold(int)
+        int getThreadMonitorAdjustmentThreshold()
+        void setThreadMonitorAdjustmentThreshold(int)
+        String dumpThreadMonitorHungThreads()
+        java.lang.String getPid()
+        java.lang.String getCellName()
+        java.lang.String getCellShortName()
+        ```
 
-        >>> print(Help.operations(mbean, 'processDumpString'))
-        void processDumpString(string)
+        - Get help on a specific operation:
+        
+        ```pycon
+        >>> mbean = AdminControl.queryNames('type=Server,*').splitlines()[0]
+        >>> print(Help.operations(mbean, "stop"))
+        void stop()
 
-        Description: Write the contents of the Ras 
-        services ring buffer to the specified file.
+        Description: Stop the server process.
 
         Parameters:
 
-        Type         string
-        Name         dumpString
-        Description  A String in the specified format to process or null.
+        -------------------------------------------------------
+
+        void stop(java.lang.Boolean, java.lang.Integer)
+
+        Description: Stop the server process and callback.
+
+        Parameters:
+
+        Type  java.lang.Boolean
+        Name  callback
+        Description  perform callback to requester.
+
+        Type  java.lang.Integer
+        Name  port
+        Description  port number for callback.
+
+        -------------------------------------------------------
+
+        void stop(java.lang.String, java.lang.Integer)
+
+        Description: Stop the server process and callback to a host and port.
+
+        Parameters:
+
+        Type  java.lang.String
+        Name  host
+        Description  host for callback.
+
+        Type  java.lang.Integer
+        Name  port
+        Description  port number for callback.
+
+        -------------------------------------------------------
         ```
     """
     ...
