@@ -7,9 +7,9 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
 """
 from typing import Any, List, Literal, Optional, Union, overload
 
-from .typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
-from .typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, MultilineTableWithoutHeader, OpaqueDigestObject
-from .typing_objects.object_types import ObjectType
+from wsadmin_type_hints.typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
+from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, MultilineTableWithoutHeader, OpaqueDigestObject
+from wsadmin_type_hints.typing_objects.object_types import ObjectType
 
 def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
     """ Displays all the possible **attributes** contained by an object of type `object_type`.

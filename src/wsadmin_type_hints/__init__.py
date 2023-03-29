@@ -42,14 +42,14 @@ try:
     (AdminControl, AdminConfig, AdminApp, AdminTask, Help) # pyright: ignore[reportUnboundVariable, reportUnusedExpression]
 except NameError:
     # ----- Interact with a configuration object    -----
-    from . import AdminApp # pyright: ignore[reportMissingModuleSource]
-    from . import AdminConfig # pyright: ignore[reportMissingModuleSource]
-    from . import AdminTask # pyright: ignore[reportMissingModuleSource]
+    from wsadmin_type_hints import AdminApp
+    from wsadmin_type_hints import AdminConfig
+    from wsadmin_type_hints import AdminTask
 
 
     # -----     Interact with a runtime object      -----
-    from . import AdminControl # pyright: ignore[reportMissingModuleSource]
+    from wsadmin_type_hints import AdminControl
 
 
     # -----              Helper module              -----
-    from . import Help # pyright: ignore[reportMissingModuleSource]
+    from wsadmin_type_hints import Help
