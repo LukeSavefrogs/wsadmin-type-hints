@@ -13,22 +13,24 @@
       
       
       
+        <link rel="prev" href="../AdminJ2C/">
       
-        <link rel="next" href="getting_started/getting-started/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../AdminJMS/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
-        <title>Python wsadmin</title>
+        <title>AdminJDBC - Python wsadmin</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.240905d7.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.240905d7.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -44,15 +46,15 @@
       
     
     
-      <link rel="stylesheet" href="css/timeago.css">
+      <link rel="stylesheet" href="../../../../css/timeago.css">
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/material.css">
+      <link rel="stylesheet" href="../../../../stylesheets/material.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -81,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSource" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +97,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Python wsadmin" class="md-header__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
+    <a href="../../../.." title="Python wsadmin" class="md-header__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              AdminJDBC
             
           </span>
         </div>
@@ -210,12 +212,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -227,7 +227,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="getting_started/getting-started/" class="md-tabs__link">
+    <a href="../../../../getting_started/getting-started/" class="md-tabs__link">
       Getting started
     </a>
   </li>
@@ -239,7 +239,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="cookbook/" class="md-tabs__link">
+    <a href="../../../../cookbook/" class="md-tabs__link">
       Cookbook
     </a>
   </li>
@@ -248,13 +248,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="reference/wsadmin_type_hints/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         API Reference
       </a>
     </li>
@@ -282,7 +284,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Python wsadmin" class="md-nav__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
+    <a href="../../../.." title="Python wsadmin" class="md-nav__button md-logo" aria-label="Python wsadmin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -311,61 +313,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page...">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page...
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#gallery" class="md-nav__link">
-    Gallery
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disclaimer" class="md-nav__link">
-    Disclaimer
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -392,7 +344,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="getting_started/getting-started/">Getting started</a>
+          <a href="../../../../getting_started/getting-started/">Getting started</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -413,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/faq/" class="md-nav__link">
+      <a href="../../../../getting_started/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -427,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/resources/" class="md-nav__link">
+      <a href="../../../../getting_started/resources/" class="md-nav__link">
         Useful resources
       </a>
     </li>
@@ -441,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/tips-n-tricks/" class="md-nav__link">
+      <a href="../../../../getting_started/tips-n-tricks/" class="md-nav__link">
         Tips and Tricks
       </a>
     </li>
@@ -477,7 +429,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="cookbook/">Cookbook</a>
+          <a href="../../../../cookbook/">Cookbook</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -498,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cookbook/servers/" class="md-nav__link">
+      <a href="../../../../cookbook/servers/" class="md-nav__link">
         Servers
       </a>
     </li>
@@ -512,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cookbook/custom_properties/" class="md-nav__link">
+      <a href="../../../../cookbook/custom_properties/" class="md-nav__link">
         Custom Properties
       </a>
     </li>
@@ -532,16 +484,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -550,7 +502,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           API Reference
@@ -561,25 +513,25 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
       
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="reference/wsadmin_type_hints/">wsadmin_type_hints</a>
+          <a href="../../">wsadmin_type_hints</a>
           
             <label for="__nav_4_1">
               <span class="md-nav__icon md-icon"></span>
@@ -587,7 +539,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
           wsadmin_type_hints
@@ -614,7 +566,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="reference/wsadmin_type_hints/core/">core</a>
+          <a href="../../core/">core</a>
           
             <label for="__nav_4_1_1">
               <span class="md-nav__icon md-icon"></span>
@@ -635,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/core/AdminApp/" class="md-nav__link">
+      <a href="../../core/AdminApp/" class="md-nav__link">
         AdminApp
       </a>
     </li>
@@ -649,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/core/AdminConfig/" class="md-nav__link">
+      <a href="../../core/AdminConfig/" class="md-nav__link">
         AdminConfig
       </a>
     </li>
@@ -663,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/core/AdminControl/" class="md-nav__link">
+      <a href="../../core/AdminControl/" class="md-nav__link">
         AdminControl
       </a>
     </li>
@@ -677,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/core/AdminTask/" class="md-nav__link">
+      <a href="../../core/AdminTask/" class="md-nav__link">
         AdminTask
       </a>
     </li>
@@ -691,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/core/Help/" class="md-nav__link">
+      <a href="../../core/Help/" class="md-nav__link">
         Help
       </a>
     </li>
@@ -710,23 +662,23 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" checked>
       
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="reference/wsadmin_type_hints/scripting/">scripting</a>
+          <a href="../">scripting</a>
           
             <label for="__nav_4_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -734,7 +686,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_1_2">
           <span class="md-nav__icon md-icon"></span>
           scripting
@@ -747,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminApplication/" class="md-nav__link">
+      <a href="../AdminApplication/" class="md-nav__link">
         AdminApplication
       </a>
     </li>
@@ -761,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminAuthorizations/" class="md-nav__link">
+      <a href="../AdminAuthorizations/" class="md-nav__link">
         AdminAuthorizations
       </a>
     </li>
@@ -775,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminBLA/" class="md-nav__link">
+      <a href="../AdminBLA/" class="md-nav__link">
         AdminBLA
       </a>
     </li>
@@ -789,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminClusterManagement/" class="md-nav__link">
+      <a href="../AdminClusterManagement/" class="md-nav__link">
         AdminClusterManagement
       </a>
     </li>
@@ -803,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminJ2C/" class="md-nav__link">
+      <a href="../AdminJ2C/" class="md-nav__link">
         AdminJ2C
       </a>
     </li>
@@ -815,11 +767,134 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminJDBC/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AdminJDBC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         AdminJDBC
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page...">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page...
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSource" class="md-nav__link">
+    createDataSource()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceAtScope" class="md-nav__link">
+    createDataSourceAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplate" class="md-nav__link">
+    createDataSourceUsingTemplate()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplateAtScope" class="md-nav__link">
+    createDataSourceUsingTemplateAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProvider" class="md-nav__link">
+    createJDBCProvider()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderAtScope" class="md-nav__link">
+    createJDBCProviderAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplate" class="md-nav__link">
+    createJDBCProviderUsingTemplate()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplateAtScope" class="md-nav__link">
+    createJDBCProviderUsingTemplateAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.help" class="md-nav__link">
+    help()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listDataSourceTemplates" class="md-nav__link">
+    listDataSourceTemplates()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listDataSources" class="md-nav__link">
+    listDataSources()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviderTemplates" class="md-nav__link">
+    listJDBCProviderTemplates()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviders" class="md-nav__link">
+    listJDBCProviders()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -831,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminJMS/" class="md-nav__link">
+      <a href="../AdminJMS/" class="md-nav__link">
         AdminJMS
       </a>
     </li>
@@ -845,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminLibHelp/" class="md-nav__link">
+      <a href="../AdminLibHelp/" class="md-nav__link">
         AdminLibHelp
       </a>
     </li>
@@ -859,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminNodeGroupManagement/" class="md-nav__link">
+      <a href="../AdminNodeGroupManagement/" class="md-nav__link">
         AdminNodeGroupManagement
       </a>
     </li>
@@ -873,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminNodeManagement/" class="md-nav__link">
+      <a href="../AdminNodeManagement/" class="md-nav__link">
         AdminNodeManagement
       </a>
     </li>
@@ -887,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminResources/" class="md-nav__link">
+      <a href="../AdminResources/" class="md-nav__link">
         AdminResources
       </a>
     </li>
@@ -901,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminServerManagement/" class="md-nav__link">
+      <a href="../AdminServerManagement/" class="md-nav__link">
         AdminServerManagement
       </a>
     </li>
@@ -915,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/scripting/AdminUtilities/" class="md-nav__link">
+      <a href="../AdminUtilities/" class="md-nav__link">
         AdminUtilities
       </a>
     </li>
@@ -950,7 +1025,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="reference/wsadmin_type_hints/typing_objects/">typing_objects</a>
+          <a href="../../typing_objects/">typing_objects</a>
           
             <label for="__nav_4_1_3">
               <span class="md-nav__icon md-icon"></span>
@@ -971,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/typing_objects/object_name/" class="md-nav__link">
+      <a href="../../typing_objects/object_name/" class="md-nav__link">
         object_name
       </a>
     </li>
@@ -985,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/typing_objects/object_types/" class="md-nav__link">
+      <a href="../../typing_objects/object_types/" class="md-nav__link">
         object_types
       </a>
     </li>
@@ -999,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/wsadmin_type_hints/typing_objects/wsadmin_types/" class="md-nav__link">
+      <a href="../../typing_objects/wsadmin_types/" class="md-nav__link">
         wsadmin_types
       </a>
     </li>
@@ -1046,8 +1121,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1056,15 +1129,92 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gallery" class="md-nav__link">
-    Gallery
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSource" class="md-nav__link">
+    createDataSource()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#disclaimer" class="md-nav__link">
-    Disclaimer
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceAtScope" class="md-nav__link">
+    createDataSourceAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplate" class="md-nav__link">
+    createDataSourceUsingTemplate()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplateAtScope" class="md-nav__link">
+    createDataSourceUsingTemplateAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProvider" class="md-nav__link">
+    createJDBCProvider()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderAtScope" class="md-nav__link">
+    createJDBCProviderAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplate" class="md-nav__link">
+    createJDBCProviderUsingTemplate()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplateAtScope" class="md-nav__link">
+    createJDBCProviderUsingTemplateAtScope()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.help" class="md-nav__link">
+    help()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listDataSourceTemplates" class="md-nav__link">
+    listDataSourceTemplates()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listDataSources" class="md-nav__link">
+    listDataSources()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviderTemplates" class="md-nav__link">
+    listJDBCProviderTemplates()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviders" class="md-nav__link">
+    listJDBCProviders()
   </a>
   
 </li>
@@ -1087,65 +1237,295 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Anchor link to this section for reference">&para;</a></h1>
-<p>This project aims to provide a <strong>better developer experience</strong> while developing <code>wsadmin</code> scripts for IBM® Websphere Application Server.</p>
-<p>It does so by providing:</p>
-<ul>
-<li><strong>Autocompletion</strong> through the intellisense.</li>
-<li><strong>Type hints</strong> (function parameters and function return types)</li>
-</ul>
-<p>This leads to lots of advantages to the developer, such as:</p>
-<ul>
-<li><strong>Faster development</strong>, since you don't need to leave the editor to know what was the name of some method.</li>
-<li><strong>Less errors</strong>, since you don't need to manually re-type the method names and an error will show up if you mistype the methods.</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code>wsadmin</code> scripting tool only supports <strong>Jython up to 2.7</strong> (some still have Jython 2.1!), so the following requirements must still be satisfied:</p>
-<ul>
-<li>you MUST use <strong>Python 2 syntax</strong> (check the <em>Jython</em> version to know which one you'll need to target)</li>
-<li>some packages available on development environments might not be available or might have some differences.</li>
-</ul>
-<p>Make sure to check that your script matches your workplace/environment requirements before submitting it.
-This package DOES NOT in any way prevent you from writing bugged code, or could even contain <strong>old modules</strong> not used anymore in the official documentation (since it was originally written for my workplace production environment using <em>Websphere Application Server 8.5.5/9.0</em> and <em>Jython 2.1</em>).</p>
-<p><strong>Always check that your environment requirements/versions are the same as this library</strong>. </p>
+  <h1>AdminJDBC</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+  <div class="doc doc-contents first">
+  
+      <p>The <code>AdminJDBC</code> script library provides the script
+procedures that configure and query Java Database Connectivity (JDBC) provider and data source settings.</p>
+<p>The <code>AdminJDBC</code> script library provides the following script procedures.
+To display detailed information about each script procedures, use the help command
+for the <code>AdminJDBC</code> script library, specifying the name of the script of interest
+as an argument.
+The script procedures that take the scope argument can be specified
+in following formats (Cell, Node, Server, Cluster):
+for example, a cluster can be specified as:
+        "Cell=myCell,Cluster=myCluster" or
+        "/Cell:myCell/ServerCluster:myCluster/" or
+        "myCluster(cells/myCell/clusters/myCluster|cluster.xml#Cluster_1)"</p>
+
+<details class="a-node-can-be-specified-as">
+  <summary>A node can be specified as</summary>
+  <p>"Cell=myCell,Node=myNode" or
+"/Cell:myCell/Node:myNode/" or
+"myNode(cells/myCell/nodes/myNode|node.xml#Node_1)"</p>
+</details>
+<details class="a-server-can-be-specified-as">
+  <summary>A server can be specified as</summary>
+  <p>"Cell=myCell,Node=myNode,Server=myServer" or
+"/Cell:myCell/Node:myNode/Server:myServer/" or
+"myServer(cells/myCell/nodes/myNode/servers/myServer|server.xml#Server_1)"</p>
+</details>      <p>The script procedures that take the optional arguments can be specified
+with a list or string format:
+for example, otherAttributeList can be specified as:
+        "description=my new resource, isolatedClassLoader=true" or
+        [["description", "my new resource"], ["isolatedClassLoader", "true"]]</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createDataSource" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createDataSource</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSource" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a new data source in your configuration.</p>
+
+  </div>
+
 </div>
-<h2 id="gallery">Gallery<a class="headerlink" href="#gallery" title="Anchor link to this section for reference">&para;</a></h2>
-<p>Here's some screenshots showing the features of this package. The IDE I'm using here is <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
-<figure>
-<p><img alt="Image title" src="images/60817fad50b7491f2d03e29e93568bfb74dd0ce265319675f2fb83cad67a46fa.png" width="600" />
-  </p>
-<figcaption>Autocompletion for the <code>AdminControl</code> command.</figcaption>
-</figure>
-<figure>
-<p><img alt="Image title" src="images/e84d4763b6a93d5950af4b85e9b43d04f8fda9b35a9c4d16ed0f52084dd27195.png" width="600" />
-  </p>
-<figcaption>Type hint for function parameters as well as return types.</figcaption>
-</figure>
-<figure>
-<p><img alt="Image title" src="images/effc6528764e161a1dcd38fd64001001d6b528531ea5638f7e4232075f990949.png" width="600" />
-  </p>
-<figcaption>An error will show up if you mistype the method.</figcaption>
-</figure>
-<figure>
-<p><img alt="Image title" src="images/81b0b5b198a29fd8c37c63ef095f8ce3972b9d4526dc5e836e94a5b19cb9757e.png" width="600" />
-  </p>
-<figcaption>Autocompletion based on the <code>AdminConfig.attributes(...)</code> return type (<code>str</code>).</figcaption>
-</figure>
-<h2 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Anchor link to this section for reference">&para;</a></h2>
-<p>This is an unofficial package created for speeding up the development process and is not in any way affiliated with IBM®. All trademarks and registered trademarks are the property of their respective company owners.</p>
-<p>The code does not include any implementation detail, and includes only the informations (such as parameter numbers, types and descriptions) publicly available on the official Websphere Application Server® documentation.</p>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createDataSourceAtScope" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createDataSourceAtScope</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceAtScope" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a new data source in your configuration on the specified scope.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createDataSourceUsingTemplate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a template to create a new data source in your configuration.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplateAtScope" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createDataSourceUsingTemplateAtScope</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createDataSourceUsingTemplateAtScope" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a template to create a new data source in your configuration on the specified scope.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createJDBCProvider" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createJDBCProvider</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProvider" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a new JDBC provider in your environment.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderAtScope" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createJDBCProviderAtScope</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderAtScope" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a new JDBC provider in your environment on the specified scope.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createJDBCProviderUsingTemplate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a template to create a new JDBC provider in your environment.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplateAtScope" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">createJDBCProviderUsingTemplateAtScope</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.createJDBCProviderUsingTemplateAtScope" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Use a template to create a new JDBC provider in your environment on the specified scope.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.help" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.help" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Display AdminJDBC script library online help.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.listDataSourceTemplates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">listDataSourceTemplates</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.listDataSourceTemplates" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Display a list of configuration IDs for the data source templates in your environment.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.listDataSources" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">listDataSources</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.listDataSources" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Display a list of configuration IDs for the data sources in your configuration.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviderTemplates" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">listJDBCProviderTemplates</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviderTemplates" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Display a list of configuration IDs for the JDBC provider templates in your environment.</p>
+
+  </div>
+
+</div>
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviders" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AdminJDBC</span><span class="o">.</span><span class="n">listJDBCProviders</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#wsadmin_type_hints.scripting.AdminJDBC.listJDBCProviders" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Display a list of configuration IDs for the JDBC providers in your environment.</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-11T00:29:47+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-30T02:17:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-30</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-02-09T23:05:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-02-09</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-30T02:17:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-30</span>
       
     
   </small>
@@ -1222,14 +1602,14 @@ This package DOES NOT in any way prevent you from writing bugged code, or could 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.tabs", "toc.follow", "content.code.copy", "content.tabs.link", "navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.tabs", "toc.follow", "content.code.copy", "content.tabs.link", "navigation.sections", "navigation.expand", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.19047be9.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.19047be9.min.js"></script>
       
-        <script src="js/timeago.min.js"></script>
+        <script src="../../../../js/timeago.min.js"></script>
       
-        <script src="js/timeago_mkdocs_material.js"></script>
+        <script src="../../../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>
