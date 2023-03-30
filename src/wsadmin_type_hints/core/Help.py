@@ -117,7 +117,7 @@ def all(mbean_name: RunningObjectName, /) -> str:
     ...
 
 
-def attributes(mbean_name: str, attribute_name: Optional[str] = None, /) -> str:
+def attributes(mbean_name: RunningObjectName, attribute_name: Optional[str] = None, /) -> str:
     """Use the `attributes` command to view a summary of all the attributes of the MBean identified by `mbean_name`. 
     
     - If the `attribute_name` parameter is _omitted_, the command displays information about all the attributes, operations, 
@@ -127,7 +127,7 @@ def attributes(mbean_name: str, attribute_name: Optional[str] = None, /) -> str:
         the specified attribute.
 
     Args:
-        mbean_name (str): The object name which identifies the desired MBean.
+        mbean_name (RunningObjectName): The object name which identifies the desired MBean.
         attribute_name (str, optional): The attribute of interest. Defaults to None.
 
     Returns:
