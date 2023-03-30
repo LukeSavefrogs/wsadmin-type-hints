@@ -39,7 +39,7 @@ Use it like this:
 try:
     (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-    from wsadmin_type_hints import *
+    from wsadmin_type_hints import AdminControl, AdminConfig, AdminApp, AdminTask, Help
 else:
     print("AdminControl is already defined, i'm not needed here 😃")
 ```

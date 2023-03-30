@@ -1,35 +1,52 @@
 """
-`import` this module to gain intellisense on the 5 main `wsadmin.sh` Jython language objects:
+`import` this module to gain intellisense on the 5 main `wsadmin.sh` Jython
+language objects and all the scripts in the Jython scripting library.
 
-- [`AdminControl`](/reference/wsadmin_type_hints/AdminControl/)
-- [`AdminConfig`](/reference/wsadmin_type_hints/AdminConfig/)
-- [`AdminApp`](/reference/wsadmin_type_hints/AdminApp/)
-- [`AdminTask`](/reference/wsadmin_type_hints/AdminTask/)
-- [`Help`](/reference/wsadmin_type_hints/Help/)
-
-
-Use it like this:
+Use it like this: 
 ```python
 try:
     (AdminControl, AdminConfig, AdminApp, AdminTask, Help)
 except NameError:
-    from wsadmin_type_hints import *   # type: ignore
-else:
-    print("AdminControl is already defined, no shim needed")
+    from wsadmin_type_hints import AdminControl, AdminConfig, AdminApp, AdminTask, Help
 ```
+
+!!! Warning
+    Importing with a **wildcard import** is _generally discouraged_ and considered **bad practice**, so **avoid it if possible**.
+
+    From my tests I've also found that intellisense **may** not work properly when modules are imported through a wildcard.
+    In my case Visual Studio Code was not be able to provide suggestions for a module function.
+
+    - **Works**:
+        ```python
+        try:
+            (AdminControl, AdminConfig, AdminApp, AdminTask, Help)  # type: ignore
+        except NameError:
+            from wsadmin_type_hints import AdminConfig, AdminTask, AdminJMS
+        ```
+
+    - Also **works** (use parenthesis for _better readability_ through nesting):
+        ```python
+        try:
+            (AdminControl, AdminConfig, AdminApp, AdminTask, Help)  # type: ignore
+        except NameError:
+            from wsadmin_type_hints import (
+                AdminConfig, 
+                AdminTask, 
+                AdminJMS
+            )
+        ```
+
+    - **_MAY_ not work**:
+        ```python
+        try:
+            (AdminControl, AdminConfig, AdminApp, AdminTask, Help)  # type: ignore
+        except NameError:
+            from wsadmin_type_hints import *
+        ```
+
 
 This way it will be imported only in your development environment.
 """
-
-
-__all__ = [
-    "AdminApp",
-    "AdminConfig",
-    "AdminTask",
-    "AdminControl",
-    "Help",
-]
-
 
 # import sys
 # if sys.version_info <= (3, 5):
@@ -41,15 +58,8 @@ __all__ = [
 try:
     (AdminControl, AdminConfig, AdminApp, AdminTask, Help) # pyright: ignore[reportUnboundVariable, reportUnusedExpression]
 except NameError:
-    # ----- Interact with a configuration object    -----
-    from wsadmin_type_hints import AdminApp
-    from wsadmin_type_hints import AdminConfig
-    from wsadmin_type_hints import AdminTask
+    # -----     Core wsadmin objects     -----
+    from wsadmin_type_hints.core import *
 
-
-    # -----     Interact with a runtime object      -----
-    from wsadmin_type_hints import AdminControl
-
-
-    # -----              Helper module              -----
-    from wsadmin_type_hints import Help
+    # -----   Jython Scripting library   -----
+    from wsadmin_type_hints.scripting import *
