@@ -921,7 +921,7 @@ def show(*args: Any) -> Any: # undocumented
 def showall(*args: Any) -> Any: # undocumented
     ...
 
-def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> str:
+def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> Any:
     """Shows the value of the single attribute specified for the configuration object named by `configuration_id`.
     
     The output of this command is different from the output of [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show] when a single
@@ -933,7 +933,7 @@ def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) 
         attribute (str): The name of the attribute value to retrieve.
 
     Returns:
-        attribute_value (str): The value of the single attribute specified.
+        attribute_value (Any): The value of the single attribute specified.
 
     !!! Tip
         For a complete list of attributes available for the configuration object use the [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes] 
