@@ -58,7 +58,7 @@ build-backend = "poetry.core.masonry.api"
 env = { IS_PRODUCTION = "false", SERVER_ADDRESS = "127.0.0.1:8000", PYTHONPATH="." }
 help = "Start the local server to test the documentation."
 sequence = [
-    # { script = "webbrowser:open('http://' + environ['SERVER_ADDRESS'] + '/')" },
+    { script = "scripts.build:clear_cache()" },
     { cmd = "mkdocs serve --watch-theme --dev-addr $SERVER_ADDRESS" },
 ]
 
