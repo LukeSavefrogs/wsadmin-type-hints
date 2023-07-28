@@ -1684,18 +1684,22 @@ creating a data source.</p>
     it is listed as <code>ENUM</code>, followed by the possible values in parentheses.</li>
 </ul>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_type</code></td>
           <td class="doc-param-details">
-            <p>name of the object type. Use <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.types"><code>AdminConfig.types()</code></a> to get a list of available types.</p>
+            <div class="doc-md-description">
+              <p>name of the object type. Use <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.types"><code>AdminConfig.types()</code></a> to get a list of available types.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1706,6 +1710,8 @@ creating a data source.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -1720,8 +1726,10 @@ creating a data source.</p>
               <code>attributes_table</code>
           </td>
           <td class="doc-returns-details">
-            <p>Multiline table with the attributes of the given type.
+            <div class="doc-md-description">
+              <p>Multiline table with the attributes of the given type.
 The first "word" in each line is the <strong>attribute name</strong>, and the rest is the <strong>attribute</strong> value <strong>type</strong>.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -1733,7 +1741,7 @@ The first "word" in each line is the <strong>attribute name</strong>, and the re
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">attributes</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">))</span>
 <span class="go">adjustPort Boolean</span>
@@ -1764,19 +1772,23 @@ The first "word" in each line is the <strong>attribute name</strong>, and the re
   
       <p>Checks a document into the configuration repository.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
-            <p>The document URI, relative to the root of the configuration repository. 
+            <div class="doc-md-description">
+              <p>The document URI, relative to the root of the configuration repository. 
 This document MUST exist in the repository.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1788,7 +1800,9 @@ This document MUST exist in the repository.</p>
         <tr>
           <td><code>filename</code></td>
           <td class="doc-param-details">
-            <p>The valid local filename where the contents of the document are located.</p>
+            <div class="doc-md-description">
+              <p>The valid local filename where the contents of the document are located.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1800,7 +1814,9 @@ This document MUST exist in the repository.</p>
         <tr>
           <td><code>digest</code></td>
           <td class="doc-param-details">
-            <p>The opaque object returned by a prior call to the <code>AdminConfig.extract()</code> command.</p>
+            <div class="doc-md-description">
+              <p>The opaque object returned by a prior call to the <code>AdminConfig.extract()</code> command.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1812,7 +1828,7 @@ This document MUST exist in the repository.</p>
     </tbody>
   </table>
 
-<details class="question">
+<details class="question" open>
   <summary>More testing needed</summary>
   <p>The <strong>return type</strong> needs to be checked.</p>
 </details>      <div class="admonition abstract">
@@ -1843,18 +1859,22 @@ This document MUST exist in the repository.</p>
     and makes the server specified by <code>server_id</code> the first member of this cluster.</p>
 <p>Applications loaded on this server are now configured on the new cluster.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>server_id</code></td>
           <td class="doc-param-details">
-            <p>The ID of the server to use as the first member of the cluster.</p>
+            <div class="doc-md-description">
+              <p>The ID of the server to use as the first member of the cluster.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1866,7 +1886,9 @@ This document MUST exist in the repository.</p>
         <tr>
           <td><code>cluster_name</code></td>
           <td class="doc-param-details">
-            <p>The name of the new cluster.</p>
+            <div class="doc-md-description">
+              <p>The name of the new cluster.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1877,6 +1899,8 @@ This document MUST exist in the repository.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -1891,7 +1915,9 @@ This document MUST exist in the repository.</p>
               <code>cluster_id</code>
           </td>
           <td class="doc-returns-details">
-            <p>The configuration ID of the newly created Cluster.</p>
+            <div class="doc-md-description">
+              <p>The configuration ID of the newly created Cluster.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -1903,7 +1929,7 @@ This document MUST exist in the repository.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">server</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s1">&#39;/Server:myServer/&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">new_cluster</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">convertToCluster</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="s1">&#39;myCluster&#39;</span><span class="p">)</span>
@@ -1932,18 +1958,22 @@ This document MUST exist in the repository.</p>
     by <code>attributes</code> and, optionally, the attribute name in the parent given by
     <code>parent_attribute_name</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>type</code></td>
           <td class="doc-param-details">
-            <p>The type of the configuration object that will be created.</p>
+            <div class="doc-md-description">
+              <p>The type of the configuration object that will be created.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1955,7 +1985,9 @@ This document MUST exist in the repository.</p>
         <tr>
           <td><code>parent</code></td>
           <td class="doc-param-details">
-            <p>The configuration ID of the parent object.</p>
+            <div class="doc-md-description">
+              <p>The configuration ID of the parent object.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1967,7 +1999,9 @@ This document MUST exist in the repository.</p>
         <tr>
           <td><code>attributes</code></td>
           <td class="doc-param-details">
-            <p>A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see <code>attributes</code> for more information).</p>
+            <div class="doc-md-description">
+              <p>A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see <code>attributes</code> for more information).</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1979,7 +2013,9 @@ This document MUST exist in the repository.</p>
         <tr>
           <td><code>parent_attribute_name</code></td>
           <td class="doc-param-details">
-            <p><em>description</em>. Defaults to "".</p>
+            <div class="doc-md-description">
+              <p><em>description</em>. Defaults to "".</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1995,6 +2031,8 @@ This document MUST exist in the repository.</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2008,7 +2046,9 @@ This document MUST exist in the repository.</p>
               <code>new_object</code>
           </td>
           <td class="doc-returns-details">
-            <p>The newly created configuration object.</p>
+            <div class="doc-md-description">
+              <p>The newly created configuration object.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2020,7 +2060,7 @@ This document MUST exist in the repository.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>
@@ -2037,7 +2077,7 @@ This document MUST exist in the repository.</p>
 </li>
 </ul>
 </details>
-<details class="question">
+<details class="question" open>
   <summary>More testing needed</summary>
   <p>The documentation is not clear on how to use the <code>create</code> method.</p>
 <p>For example, on the offline server documentation, the <strong>additional <code>parent_attribute_name</code></strong> is cited, while 
@@ -2083,18 +2123,22 @@ in the online server documentation this is <strong>not present</strong>.</p>
   
       <p>Creates a document in the configuration repository.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
-            <p>The document to be created in the repository.</p>
+            <div class="doc-md-description">
+              <p>The document to be created in the repository.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2106,7 +2150,9 @@ in the online server documentation this is <strong>not present</strong>.</p>
         <tr>
           <td><code>filename</code></td>
           <td class="doc-param-details">
-            <p>A valid local filename where the contents of the document are located.</p>
+            <div class="doc-md-description">
+              <p>A valid local filename where the contents of the document are located.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2118,12 +2164,12 @@ in the online server documentation this is <strong>not present</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createDocument</span><span class="p">(</span><span class="s1">&#39;cells/myCell/myfile.xml&#39;</span><span class="p">,</span> <span class="s1">&#39;/mydir/myfile&#39;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<details class="question">
+<details class="question" open>
   <summary>More testing needed</summary>
   <p>The <strong>return type</strong> needs to be checked.</p>
 </details>      <div class="admonition abstract">
@@ -2167,18 +2213,22 @@ in the online server documentation this is <strong>not present</strong>.</p>
       <p>Displays all the possible attributes contained by an object of type <code>object_type</code>, along with 
     the type and default value of each attribute, if the attribute has a default value.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_type</code></td>
           <td class="doc-param-details">
-            <p>The type of the object</p>
+            <div class="doc-md-description">
+              <p>The type of the object</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2189,6 +2239,8 @@ in the online server documentation this is <strong>not present</strong>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2203,13 +2255,15 @@ in the online server documentation this is <strong>not present</strong>.</p>
               <code>defaults</code>
           </td>
           <td class="doc-returns-details">
-            <p>Tab-separated table with all the attribute defaults. 
+            <div class="doc-md-description">
+              <p>Tab-separated table with all the attribute defaults. 
 The table consists of the following columns:</p>
 <ol>
 <li><code>Attribute</code>: Attribute name</li>
 <li><code>Type</code>: Attribute type</li>
 <li><code>Default</code>: Default value</li>
 </ol>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2221,7 +2275,7 @@ The table consists of the following columns:</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">defaults</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">)</span>
 <span class="go">Attribute                       Type                            Default</span>
@@ -2252,18 +2306,22 @@ The table consists of the following columns:</p>
   
       <p>Deletes a document from the configuration repository.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
-            <p>The document to be deleted from the repository.</p>
+            <div class="doc-md-description">
+              <p>The document to be deleted from the repository.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2275,12 +2333,12 @@ The table consists of the following columns:</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">deleteDocument</span><span class="p">(</span><span class="s1">&#39;cells/mycell/myfile.xml&#39;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<details class="question">
+<details class="question" open>
   <summary>More testing needed</summary>
   <p>The <strong>return type</strong> needs to be checked.</p>
 </details>      <div class="admonition abstract">
@@ -2308,18 +2366,22 @@ The table consists of the following columns:</p>
   
       <p>Tests to see if a document exists in the configuration repository.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
-            <p>The document to be tested in the repository.</p>
+            <div class="doc-md-description">
+              <p>The document to be tested in the repository.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2330,6 +2392,8 @@ The table consists of the following columns:</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2344,7 +2408,9 @@ The table consists of the following columns:</p>
               <code>exists</code>
           </td>
           <td class="doc-returns-details">
-            <p>Returns <code>1</code> if the document exists; <code>0</code> otherwise.</p>
+            <div class="doc-md-description">
+              <p>Returns <code>1</code> if the document exists; <code>0</code> otherwise.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2356,7 +2422,7 @@ The table consists of the following columns:</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">exists</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">existsDocument</span><span class="p">(</span><span class="s1">&#39;cells/mycell/myfile.xml&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">exists</span><span class="p">)</span>
@@ -2394,18 +2460,22 @@ The table consists of the following columns:</p>
       <p>Extracts a configuration repository file that is described by the document URI and places it in the file named by filename. 
 This method only applies to deployment manager configurations.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
-            <p>The document URI, relative to the root of the configuration repository. This MUST exist in the repository.</p>
+            <div class="doc-md-description">
+              <p>The document URI, relative to the root of the configuration repository. This MUST exist in the repository.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2417,7 +2487,9 @@ This method only applies to deployment manager configurations.</p>
         <tr>
           <td><code>filename</code></td>
           <td class="doc-param-details">
-            <p>The name of the source file to check. If it exists already, it will be overwritten.</p>
+            <div class="doc-md-description">
+              <p>The name of the source file to check. If it exists already, it will be overwritten.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2428,6 +2500,8 @@ This method only applies to deployment manager configurations.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2442,7 +2516,9 @@ This method only applies to deployment manager configurations.</p>
               <code>OpaqueDigestObject</code>
           </td>
           <td class="doc-returns-details">
-            <p>An opaque "digest" object which should be used to check the file back in using the checkin command.</p>
+            <div class="doc-md-description">
+              <p>An opaque "digest" object which should be used to check the file back in using the checkin command.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2477,6 +2553,8 @@ This method only applies to deployment manager configurations.</p>
   
       <p>Returns a message giving the current cross-document enablement setting.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2490,7 +2568,9 @@ This method only applies to deployment manager configurations.</p>
               <code>message</code>
           </td>
           <td class="doc-returns-details">
-            <p>The current cross-document enablement setting.</p>
+            <div class="doc-md-description">
+              <p>The current cross-document enablement setting.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2502,7 +2582,7 @@ This method only applies to deployment manager configurations.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getCrossDocumentValidationEnabled</span><span class="p">())</span>
 <span class="go">WASX7188I: Cross-document validation enablement set to true</span>
@@ -2532,18 +2612,22 @@ This method only applies to deployment manager configurations.</p>
       <p>Returns a string version of the ObjectName for the MBean that corresponds to this configuration ID. </p>
 <p>If there is no such running MBean this returns an empty string.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>configuration_id</code></td>
           <td class="doc-param-details">
-            <p>The configuration ID of the object</p>
+            <div class="doc-md-description">
+              <p>The configuration ID of the object</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2554,6 +2638,8 @@ This method only applies to deployment manager configurations.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2568,7 +2654,9 @@ This method only applies to deployment manager configurations.</p>
               <code>mbean_object_name</code>
           </td>
           <td class="doc-returns-details">
-            <p>ObjectName of the MBean corresponding to the specified configuration ID.</p>
+            <div class="doc-md-description">
+              <p>ObjectName of the MBean corresponding to the specified configuration ID.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2580,7 +2668,7 @@ This method only applies to deployment manager configurations.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="go"># Search the configuration ID of the object</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">server</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Node:myNode/Server:myServer/&quot;</span><span class="p">)</span>
@@ -2610,18 +2698,22 @@ This method only applies to deployment manager configurations.</p>
   
       <p>Displays the configuration object type indentified by <code>configuration_id</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>configuration_id</code></td>
           <td class="doc-param-details">
-            <p>The configuration object which type is being requested.</p>
+            <div class="doc-md-description">
+              <p>The configuration object which type is being requested.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2632,6 +2724,8 @@ This method only applies to deployment manager configurations.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2646,7 +2740,9 @@ This method only applies to deployment manager configurations.</p>
               <code>object_type</code>
           </td>
           <td class="doc-returns-details">
-            <p>The object type indentified by <code>configuration_id</code>.</p>
+            <div class="doc-md-description">
+              <p>The object type indentified by <code>configuration_id</code>.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2658,7 +2754,7 @@ This method only applies to deployment manager configurations.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">configuration_id</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Cell:myCell/&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getObjectType</span><span class="p">(</span><span class="n">configuration_id</span><span class="p">))</span>
@@ -2682,6 +2778,8 @@ This method only applies to deployment manager configurations.</p>
   
       <p>Returns the mode that will be used when the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.save"><code>AdminConfig.save()</code></a> method will be invoked.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2695,7 +2793,8 @@ This method only applies to deployment manager configurations.</p>
               <code>save_mode</code>
           </td>
           <td class="doc-returns-details">
-            <p>The mode used when <code>save</code> is invoked.
+            <div class="doc-md-description">
+              <p>The mode used when <code>save</code> is invoked.
 Possible values are:</p>
 <ul>
 <li><code>"overwriteOnConflict"</code> to save changes even if they conflict 
@@ -2704,6 +2803,7 @@ Possible values are:</p>
 changes conflict with other configuration changes;
 this value is the default.</li>
 </ul>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2715,7 +2815,7 @@ this value is the default.</li>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getSaveMode</span><span class="p">())</span>
 <span class="go">rollbackOnConflict</span>
@@ -2746,6 +2846,8 @@ this value is the default.</li>
   
       <p>Returns a message giving the current validation level.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2759,7 +2861,9 @@ this value is the default.</li>
               <code>message</code>
           </td>
           <td class="doc-returns-details">
-            <p>The current validation level.</p>
+            <div class="doc-md-description">
+              <p>The current validation level.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2771,7 +2875,7 @@ this value is the default.</li>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationLevel</span><span class="p">())</span>
 <span class="go">WASX7189I: Validation level set to HIGHEST</span>
@@ -2801,19 +2905,23 @@ this value is the default.</li>
       <p>Returns the number of validation messages with the given
     severity from the most recent validation.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>severity</code></td>
           <td class="doc-param-details">
-            <p>The severity level for which to return the number of validation messages. 
+            <div class="doc-md-description">
+              <p>The severity level for which to return the number of validation messages. 
 Specify an integer value <strong>between 0 and 9</strong>.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2824,6 +2932,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2838,7 +2948,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>messages_count</code>
           </td>
           <td class="doc-returns-details">
-            <p>A string that indicates the number of validation messages of the given severity.</p>
+            <div class="doc-md-description">
+              <p>A string that indicates the number of validation messages of the given severity.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2850,7 +2962,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationSeverityResult</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <span class="go">16</span>
@@ -2874,18 +2986,22 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
       <p>Returns the unique configuration ID for an object described by the
     given containment path.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>containment_path</code></td>
           <td class="doc-param-details">
-            <p>The containment path of the requested object</p>
+            <div class="doc-md-description">
+              <p>The containment path of the requested object</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2896,6 +3012,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2910,7 +3028,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>configuration_id</code>
           </td>
           <td class="doc-returns-details">
-            <p>The configuration ID for the object</p>
+            <div class="doc-md-description">
+              <p>The configuration ID for the object</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2922,7 +3042,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Node:myNode/Server:myServer/&quot;</span><span class="p">))</span>
 <span class="go">myServer(cells/myCell/nodes/myNode/servers/myServer|server.xml#Server_1)</span>
@@ -2945,6 +3065,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
   
       <p>Check if there are unsaved configuration changes.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2958,7 +3080,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>has_changes</code>
           </td>
           <td class="doc-returns-details">
-            <p>Truthy (actual value is <code>1</code>) if unsaved configuration changes exist, falsy (<code>0</code>) otherwise.</p>
+            <div class="doc-md-description">
+              <p>Truthy (actual value is <code>1</code>) if unsaved configuration changes exist, falsy (<code>0</code>) otherwise.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2970,7 +3094,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">hasChanges</span><span class="p">())</span>
 <span class="go">0</span>
@@ -2993,18 +3117,22 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
   
       <p>Displays help for the <code>AdminConfig</code> module and its methods.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>method_name</code></td>
           <td class="doc-param-details">
-            <p>The name of the method whose description needs to be retrieved.</p>
+            <div class="doc-md-description">
+              <p>The name of the method whose description needs to be retrieved.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3020,6 +3148,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -3033,7 +3163,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>message</code>
           </td>
           <td class="doc-returns-details">
-            <p>The help message regarding the method <code>method_name</code> (if provided), otherwise the description of the <code>AdminConfig</code> module and its methods.</p>
+            <div class="doc-md-description">
+              <p>The help message regarding the method <code>method_name</code> (if provided), otherwise the description of the <code>AdminConfig</code> module and its methods.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3045,7 +3177,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>
@@ -3106,18 +3238,22 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
   
       <p>Lists all the configuration objects of the type named by <code>object_type</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_type</code></td>
           <td class="doc-param-details">
-            <p>The name of the object type.</p>
+            <div class="doc-md-description">
+              <p>The name of the object type.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3129,11 +3265,13 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         <tr>
           <td><code>scope_or_pattern</code></td>
           <td class="doc-param-details">
-            <p>This parameter causes a different behaviour depending on its type:</p>
+            <div class="doc-md-description">
+              <p>This parameter causes a different behaviour depending on its type:</p>
 <ul>
 <li><code>ConfigurationObjectName</code>: Limit the search within the scope of the configuration object named by <code>scope</code>.</li>
 <li><code>str</code>: Search all the configuration objects matching wildcard characters or Java regular expressions.</li>
 </ul>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3149,6 +3287,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -3162,7 +3302,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>objects</code>
           </td>
           <td class="doc-returns-details">
-            <p>Multiline list of objects of a given type, possibly scoped by a parent.</p>
+            <div class="doc-md-description">
+              <p>Multiline list of objects of a given type, possibly scoped by a parent.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3174,7 +3316,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <p>If the <code>scope_or_pattern</code> parameter is omitted, then will be returned a list of all servers defined:
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">))</span>
@@ -3211,18 +3353,22 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
       <p>Returns a list of the templates available for the given type that match the provided <code>pattern</code>.</p>
 <p>These templates may be used in invocations of <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.createUsingTemplate"><code>AdminConfig.createUsingTemplate</code></a>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>type</code></td>
           <td class="doc-param-details">
-            <p>The name of the target object type.</p>
+            <div class="doc-md-description">
+              <p>The name of the target object type.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3234,7 +3380,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         <tr>
           <td><code>pattern</code></td>
           <td class="doc-param-details">
-            <p>A query (wildcard characters or Java regular expressions) to filter the results.</p>
+            <div class="doc-md-description">
+              <p>A query (wildcard characters or Java regular expressions) to filter the results.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3250,6 +3398,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -3263,7 +3413,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>configuration_ids</code>
           </td>
           <td class="doc-returns-details">
-            <p>Multiline string with the requested templates configuration IDs.</p>
+            <div class="doc-md-description">
+              <p>Multiline string with the requested templates configuration IDs.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3275,7 +3427,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">listTemplates</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">,</span> <span class="s2">&quot;php&quot;</span><span class="p">))</span>
 <span class="go">phpserver(templates/servertypes/PHP_SERVER/servers/APACHE13_PHP4|server.xml#Server_1)</span>
@@ -3310,18 +3462,22 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
       <p>Change only the attributes specified by <code>attributes</code> 
     for the configuration object named by <code>configuration_id</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>configuration_id</code></td>
           <td class="doc-param-details">
-            <p>The configuration ID of the object whose <code>attribute</code>s need to be changed.</p>
+            <div class="doc-md-description">
+              <p>The configuration ID of the object whose <code>attribute</code>s need to be changed.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3333,7 +3489,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         <tr>
           <td><code>attributes</code></td>
           <td class="doc-param-details">
-            <p>The attributes to modify, along with their new value.</p>
+            <div class="doc-md-description">
+              <p>The attributes to modify, along with their new value.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3344,6 +3502,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -3358,7 +3518,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>empty</code>
           </td>
           <td class="doc-returns-details">
-            <p>An empty string.</p>
+            <div class="doc-md-description">
+              <p>An empty string.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3370,7 +3532,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <p>In this example we'll take for granted that every code block is preceded by the following commands: 
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">datasource</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s2">&quot;DataSource&quot;</span><span class="p">,</span> <span class="s2">&quot;*LUCAXA*&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
@@ -3432,18 +3594,22 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
   
       <p>Displays the object types that can contain <code>type</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>type</code></td>
           <td class="doc-param-details">
-            <p>The object type you want to find parents of.</p>
+            <div class="doc-md-description">
+              <p>The object type you want to find parents of.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3454,6 +3620,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -3468,7 +3636,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>parents</code>
           </td>
           <td class="doc-returns-details">
-            <p>The parent object types.</p>
+            <div class="doc-md-description">
+              <p>The parent object types.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3480,7 +3650,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">parents</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">))</span>
 <span class="go">DynamicCluster</span>
@@ -3505,6 +3675,8 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
   
       <p>Returns a list of unsaved configuration files.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -3518,7 +3690,9 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
               <code>changed_files</code>
           </td>
           <td class="doc-returns-details">
-            <p>Multiline list of unsaved configuration files.</p>
+            <div class="doc-md-description">
+              <p>Multiline list of unsaved configuration files.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3530,7 +3704,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>
@@ -3586,18 +3760,22 @@ If that is your goal, see if you can use the <a class="autorefs autorefs-interna
   
       <p>Displays a table with the required attributes contained by an object of type <code>object_type</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_type</code></td>
           <td class="doc-param-details">
-            <p>The object type as returned by the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.types"><code>AdminConfig.types()</code></a> method.</p>
+            <div class="doc-md-description">
+              <p>The object type as returned by the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.types"><code>AdminConfig.types()</code></a> method.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3608,6 +3786,8 @@ If that is your goal, see if you can use the <a class="autorefs autorefs-interna
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -3622,8 +3802,10 @@ If that is your goal, see if you can use the <a class="autorefs autorefs-interna
               <code>required_schema</code>
           </td>
           <td class="doc-returns-details">
-            <p>A table with the required attributes contained by the object. 
+            <div class="doc-md-description">
+              <p>A table with the required attributes contained by the object. 
 The first row contains the header.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3635,7 +3817,7 @@ The first row contains the header.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <p>This is an example of how to use the <code>required()</code> method:
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">required</span><span class="p">(</span><span class="s2">&quot;Server&quot;</span><span class="p">))</span>
@@ -3643,7 +3825,7 @@ The first row contains the header.</p>
 <span class="go">name                            String</span>
 </code></pre></div></p>
 </details>
-<details class="warning">
+<details class="warning" open>
   <summary>Warning</summary>
   <p>When the type has <strong>no required attributes</strong>, the returned table will NOT be an empty string.
 Instead, it will contain only the message <em><code>WASX7361I</code></em>:
@@ -3676,6 +3858,8 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
   
       <p>Discard unsaved configuration changes.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -3689,7 +3873,9 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
               <code>empty</code>
           </td>
           <td class="doc-returns-details">
-            <p>An empty string is always returned</p>
+            <div class="doc-md-description">
+              <p>An empty string is always returned</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3739,6 +3925,8 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
   
       <p>Commits unsaved changes to the configuration repository.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -3752,7 +3940,9 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
               <code>empty</code>
           </td>
           <td class="doc-returns-details">
-            <p>An empty string is always returned</p>
+            <div class="doc-md-description">
+              <p>An empty string is always returned</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3787,18 +3977,22 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
   
       <p>Enables or disables the cross-document validation.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>flag</code></td>
           <td class="doc-param-details">
-            <p>Pass <code>true</code> to enable the cross-document validation, or <code>false</code> to disable it.</p>
+            <div class="doc-md-description">
+              <p>Pass <code>true</code> to enable the cross-document validation, or <code>false</code> to disable it.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3809,6 +4003,8 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -3823,7 +4019,9 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
               <code>message</code>
           </td>
           <td class="doc-returns-details">
-            <p>The same message returned by <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.getCrossDocumentValidationEnabled"><code>AdminConfig.getCrossDocumentValidationEnabled()</code></a>.</p>
+            <div class="doc-md-description">
+              <p>The same message returned by <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.getCrossDocumentValidationEnabled"><code>AdminConfig.getCrossDocumentValidationEnabled()</code></a>.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3835,7 +4033,7 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getCrossDocumentValidationEnabled</span><span class="p">())</span>
 <span class="go">WASX7188I: Cross-document validation enablement set to true</span>
@@ -3870,18 +4068,22 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
   
       <p>Changes the mode that will be used when the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.save"><code>AdminConfig.save()</code></a> method will be invoked.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>save_mode</code></td>
           <td class="doc-param-details">
-            <p>The save mode for the configuration repository</p>
+            <div class="doc-md-description">
+              <p>The save mode for the configuration repository</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3893,7 +4095,7 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getSaveMode</span><span class="p">())</span>
 <span class="go">rollbackOnConflict</span>
@@ -3927,18 +4129,22 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
   
       <p>Sets the validation used when files are extracted from the repository.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>level</code></td>
           <td class="doc-param-details">
-            <p>The validation level to use.</p>
+            <div class="doc-md-description">
+              <p>The validation level to use.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -3949,6 +4155,8 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -3963,7 +4171,9 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
               <code>message</code>
           </td>
           <td class="doc-returns-details">
-            <p>A message indicating the current validation level.</p>
+            <div class="doc-md-description">
+              <p>A message indicating the current validation level.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -3975,7 +4185,7 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getValidationLevel</span><span class="p">())</span>
 <span class="go">WASX7188I: Validation level set to &quot;none&quot;</span>
@@ -4001,12 +4211,107 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
 
 
 <h2 id="wsadmin_type_hints.core.AdminConfig.show" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">configuration_id</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminConfig.show" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Displays all the attributes for the configuration object named by <code>configuration_id</code>. </p>
+<p>If the <code>attributes</code> parameter is not specified, all the attributes for the configuration 
+object are displayed, otherwise only the attributes specified in the <code>attributes</code> parameter.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>configuration_id</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The configuration ID for the configuration object to display.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>attributes</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>A list of attributes to display. If not specified, all the attributes are displayed.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>attributes</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The list of attributes for the configuration object.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">variable_id</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s2">&quot;VariableSubstitutionEntry&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">variable_id</span><span class="p">))</span>
+<span class="go">[description []]</span>
+<span class="go">[symbolicName DB2_JCC_DRIVER_PATH]</span>
+<span class="go">[value /opt/XLWAS/drivers/DB2V11/4.23.1044]</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.showall"><code>AdminConfig.showall()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.attributes"><code>AdminConfig.attributes()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.showAttribute"><code>AdminConfig.showAttribute()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -4028,18 +4333,22 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
 attribute is specified: the <code>AdminConfig.showAttribute</code> command does not display a
 list containing the attribute name and value; rather, the <strong>attribute value alone</strong> is displayed.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>configuration_id</code></td>
           <td class="doc-param-details">
-            <p>The configuration ID for the parent object of the <code>attribute</code>.</p>
+            <div class="doc-md-description">
+              <p>The configuration ID for the parent object of the <code>attribute</code>.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -4051,7 +4360,9 @@ list containing the attribute name and value; rather, the <strong>attribute valu
         <tr>
           <td><code>attribute</code></td>
           <td class="doc-param-details">
-            <p>The name of the attribute value to retrieve.</p>
+            <div class="doc-md-description">
+              <p>The name of the attribute value to retrieve.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -4062,6 +4373,8 @@ list containing the attribute name and value; rather, the <strong>attribute valu
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -4076,11 +4389,13 @@ list containing the attribute name and value; rather, the <strong>attribute valu
               <code>attribute_value</code>
           </td>
           <td class="doc-returns-details">
-            <p>The value of the single attribute specified.</p>
+            <div class="doc-md-description">
+              <p>The value of the single attribute specified.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
-                    <code>str</code>
+                    <code><span title="typing.Any">Any</span></code>
                 </span>
               </p>
           </td>
@@ -4094,7 +4409,7 @@ method passing the object type as a parameter.</p>
 <p>For example, if you don't remember the name of an attribute for the <code>Server</code> object type, you can <code>print(AdminConfig.attributes("Server"))</code>.</p>
 </div>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">server</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Node:myNode/Server:myServer/&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">server_name</span><span class="p">,</span> <span class="n">server_cluster</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">showAttribute</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">),</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">showAttribute</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="s2">&quot;clusterName&quot;</span><span class="p">)</span>
@@ -4110,12 +4425,127 @@ method passing the object type as a parameter.</p>
 
 
 <h2 id="wsadmin_type_hints.core.AdminConfig.showall" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">showall</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">showall</span><span class="p">(</span><span class="n">configuration_id</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminConfig.showall" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Recursively displays all the attributes for the configuration object named by <code>configuration_id</code>.</p>
+<p>If the <code>attributes</code> parameter is not specified, all the attributes for the configuration
+object are displayed, otherwise only the attributes specified in the <code>attributes</code> parameter.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>configuration_id</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The configuration ID for the configuration object to display.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>attributes</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>A list of attributes to display. If not specified, all the attributes are displayed.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>attributes</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The list of attributes for the configuration object.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>In the following examples you can see the difference between the <code>AdminConfig.show()</code> 
+and <code>AdminConfig.showall()</code> methods:</p>
+<ul>
+<li>When the <code>AdminConfig.showall()</code> method encounters a reference to another configuration object,
+it <em>recursively</em> descends into the referenced configuration object and displays its attributes, 
+continuing until all children and grand-children are "expanded".</li>
+<li>On the other hand, the <code>AdminConfig.show()</code> method always returns the <em>string representation</em> of the 
+configuration object ID.</li>
+</ul>
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">server_id</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Node:myNode/Server:myServer/&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">server_id</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;errorStreamRedirect&quot;</span><span class="p">])</span>
+<span class="go">[errorStreamRedirect (cells/myCell/nodes/myNode/servers/myServer|server.xml#StreamRedirect_1599578915053)]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">showall</span><span class="p">(</span><span class="n">server_id</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;errorStreamRedirect&quot;</span><span class="p">])</span>
+<span class="go">[errorStreamRedirect [[baseHour 1]</span>
+<span class="go">[fileName /WebSphere_LOG/was/myCell/myNode/myCluster/APPSERVER/myServer-SystemErr.log]</span>
+<span class="go">[formatWrites false]</span>
+<span class="go">[maxNumberOfBackupFiles 5]</span>
+<span class="go">[messageFormatKind BASIC]</span>
+<span class="go">[rolloverPeriod 24]</span>
+<span class="go">[rolloverSize 100]</span>
+<span class="go">[rolloverType BOTH]</span>
+<span class="go">[suppressStackTrace false]</span>
+<span class="go">[suppressWrites false]]]</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.show"><code>AdminConfig.show()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.attributes"><code>AdminConfig.attributes()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.showAttribute"><code>AdminConfig.showAttribute()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -4135,18 +4565,22 @@ method passing the object type as a parameter.</p>
       <p>Displays all the possible top-level configuration object types, restricting the 
 search to the types matching the <code>pattern</code> parameter, if specified.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>pattern</code></td>
           <td class="doc-param-details">
-            <p>A wildcard or a regular expression matching the type to search.</p>
+            <div class="doc-md-description">
+              <p>A wildcard or a regular expression matching the type to search.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -4162,6 +4596,8 @@ search to the types matching the <code>pattern</code> parameter, if specified.</
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -4175,8 +4611,10 @@ search to the types matching the <code>pattern</code> parameter, if specified.</
               <code>types</code>
           </td>
           <td class="doc-returns-details">
-            <p>A multiline list of all the possible top-level configuration object types
+            <div class="doc-md-description">
+              <p>A multiline list of all the possible top-level configuration object types
 matching the provided <code>pattern</code> (if specified).</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -4188,7 +4626,7 @@ matching the provided <code>pattern</code> (if specified).</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>Print <strong>all</strong> the available types:
@@ -4260,18 +4698,22 @@ files in your workspace, the value of the cross-document validation
 enabled flag, and the validation level setting.</p>
 <p>If provided, the <strong>scope</strong> of this request will be the object named by <code>configuration_id</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>configuration_id</code></td>
           <td class="doc-param-details">
-            <p>The scope of the request.</p>
+            <div class="doc-md-description">
+              <p>The scope of the request.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -4287,6 +4729,8 @@ enabled flag, and the validation level setting.</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -4300,10 +4744,12 @@ enabled flag, and the validation level setting.</p>
               <code>validation_result</code>
           </td>
           <td class="doc-returns-details">
-            <p>The result of the validation request. 
+            <div class="doc-md-description">
+              <p>The result of the validation request. 
 The number of messages is always stored in the first line and can be matched using the following regex:
 <div class="language-text highlight"><pre><span></span><code>Total number of messages: ([0-9]+)
 </code></pre></div></p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -4324,7 +4770,7 @@ Instead, it will contain only the first line (<em><code>WASX7193I</code></em>):
 </code></pre></div></p>
 </div>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>
@@ -4360,11 +4806,11 @@ Instead, it will contain only the first line (<em><code>WASX7193I</code></em>):
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:24:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:24:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
     
   </small>

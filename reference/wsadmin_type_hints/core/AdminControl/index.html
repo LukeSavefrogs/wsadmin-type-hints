@@ -1606,18 +1606,22 @@ For example, the template might be <code>type=Server,*</code>.</p>
     use <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.queryNames"><code>AdminControl.queryNames(...)</code></a>.</p>
 </div>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>template</code></td>
           <td class="doc-param-details">
-            <p>The object name (already completed or a template) to complete.</p>
+            <div class="doc-md-description">
+              <p>The object name (already completed or a template) to complete.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1628,6 +1632,8 @@ For example, the template might be <code>type=Server,*</code>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -1642,7 +1648,9 @@ For example, the template might be <code>type=Server,*</code>.</p>
               <code>object_name</code>
           </td>
           <td class="doc-returns-details">
-            <p>The complete object name of the running MBean.</p>
+            <div class="doc-md-description">
+              <p>The complete object name of the running MBean.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -1654,13 +1662,13 @@ For example, the template might be <code>type=Server,*</code>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">completeObjectName</span><span class="p">(</span><span class="s1">&#39;node=myNode,type=Server,*&#39;</span><span class="p">))</span>
 <span class="go">    WebSphere:name=myServer,process=myServer,platform=proxy,node=myNode,j2eeType=J2EEServer,version=9.0.5.14,type=Server,mbeanIdentifier=cells/myCell/nodes/myNode/servers/myServer/server.xml#Server_1,cell=myCell,spec=1.0,processType=ManagedProcess</span>
 </code></pre></div>
 </details>
-<details class="question">
+<details class="question" open>
   <summary>More testing needed</summary>
   <p>The difference between <code>object_name</code> and <code>template</code> needs to be checked, since the official documentation does not provide any info on how to use them.</p>
 </details>
@@ -1681,18 +1689,22 @@ For example, the template might be <code>type=Server,*</code>.</p>
   
       <p>Returns value of <code>attribute</code> for the MBean described by <code>object_name</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_name</code></td>
           <td class="doc-param-details">
-            <p>The object name of the MBean.</p>
+            <div class="doc-md-description">
+              <p>The object name of the MBean.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1704,7 +1716,9 @@ For example, the template might be <code>type=Server,*</code>.</p>
         <tr>
           <td><code>attribute</code></td>
           <td class="doc-param-details">
-            <p>The name of the attribute to retrieve.</p>
+            <div class="doc-md-description">
+              <p>The name of the attribute to retrieve.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1715,6 +1729,8 @@ For example, the template might be <code>type=Server,*</code>.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -1729,7 +1745,9 @@ For example, the template might be <code>type=Server,*</code>.</p>
               <code>value</code>
           </td>
           <td class="doc-returns-details">
-            <p>The attribute value.</p>
+            <div class="doc-md-description">
+              <p>The attribute value.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -1755,7 +1773,7 @@ For example, the template might be <code>type=Server,*</code>.</p>
 </code></pre></div></p>
 </div>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-python highlight"><pre><span></span><code><span class="n">objNameString</span> <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">completeObjectName</span><span class="p">(</span><span class="s1">&#39;WebSphere:type=Server,*&#39;</span><span class="p">)</span> 
 <span class="n">process_type</span>  <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="n">objNameString</span><span class="p">,</span> <span class="s1">&#39;processType&#39;</span><span class="p">)</span>
@@ -1780,18 +1798,22 @@ For example, the template might be <code>type=Server,*</code>.</p>
   
       <p>Use the <code>getAttribute_jmx</code> command to return the value of the attribute for the name that you provide.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_name</code></td>
           <td class="doc-param-details">
-            <p>Specifies the object name of the MBean of interest.</p>
+            <div class="doc-md-description">
+              <p>Specifies the object name of the MBean of interest.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1803,7 +1825,9 @@ For example, the template might be <code>type=Server,*</code>.</p>
         <tr>
           <td><code>attribute</code></td>
           <td class="doc-param-details">
-            <p>Specifies the name of the attribute to query.</p>
+            <div class="doc-md-description">
+              <p>Specifies the name of the attribute to query.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1815,7 +1839,7 @@ For example, the template might be <code>type=Server,*</code>.</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-text highlight"><pre><span></span><code>import javax.management as mgmt 
 
@@ -1826,7 +1850,7 @@ process_type  = AdminControl.getAttribute_jmx(objName, &#39;processType&#39;)
 print(process_type)
 </code></pre></div>
 </details>
-<details class="question">
+<details class="question" open>
   <summary>Investigation needed</summary>
   <p>This is not very clear in the documentation, so it needs more research.</p>
 </details>
@@ -1847,18 +1871,22 @@ print(process_type)
   
       <p>Returns a string listing the values of the attributes named in <code>attributes</code> for the object named by <code>object_name</code>.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>object_name</code></td>
           <td class="doc-param-details">
-            <p>Use the getAttributes command to return the attribute values for the names that you provide.</p>
+            <div class="doc-md-description">
+              <p>Use the getAttributes command to return the attribute values for the names that you provide.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1870,7 +1898,9 @@ print(process_type)
         <tr>
           <td><code>attributes</code></td>
           <td class="doc-param-details">
-            <p>Specifies the names of the attributes to query.</p>
+            <div class="doc-md-description">
+              <p>Specifies the names of the attributes to query.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1882,7 +1912,7 @@ print(process_type)
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>Using Jython with string attributes:</li>
@@ -2257,7 +2287,7 @@ print(process_type)
   <div class="doc doc-contents ">
   
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <p>```pycon</p>
 <blockquote>
@@ -2458,11 +2488,11 @@ print(process_type)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:24:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:24:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
     
   </small>

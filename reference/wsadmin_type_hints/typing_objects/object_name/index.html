@@ -1141,20 +1141,20 @@
 
 
 <h2 id="wsadmin_type_hints.typing_objects.object_name.ConfigurationContainmentPath" class="doc doc-heading">
-        <code>ConfigurationContainmentPath</code>
+          <code>ConfigurationContainmentPath</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.object_name.ConfigurationContainmentPath" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code></p>
 
   
       <p>Represents the path of a resource in the configuration.</p>
 
-<details class="warning">
+<details class="warning" open>
   <summary>Warning</summary>
   <p>The containment path MUST contain the <strong>correct hierarchical order</strong>.</p>
 <p>For example, if you specify <code>/Server:server1/Node:node/</code> as the containment path, 
@@ -1165,7 +1165,12 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 <div class="language-text highlight"><pre><span></span><code>/Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/
 </code></pre></div>
 </div>
-
+<div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.getid"><code>AdminConfig.getid()</code></a></li>
+</ul>
+</div>
 
 
   </div>
@@ -1177,15 +1182,15 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 
 
 <h2 id="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" class="doc doc-heading">
-        <code>ConfigurationObjectName</code>
+          <code>ConfigurationObjectName</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code></p>
 
   
       <p>Object name representing an entry in the configuration.</p>
@@ -1194,7 +1199,29 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 <div class="language-text highlight"><pre><span></span><code>Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)
 </code></pre></div>
 </div>
-
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If the configuration object name contains a space, the entire ID will be enclosed in double quotes (<code>"</code>):</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;My JDBC Driver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)&quot;
+</code></pre></div>
+<p>The configuration ID could also not include a name, as in the following example:</p>
+<div class="language-text highlight"><pre><span></span><code>(cells/testcell/nodes/testnode/servers/dmgr|server.xml#TransportChannelService_1)
+</code></pre></div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.create"><code>AdminConfig.create()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.getObjectName"><code>AdminConfig.getObjectName()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.getObjectType"><code>AdminConfig.getObjectType()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.list"><code>AdminConfig.list()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.modify"><code>AdminConfig.modify()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.remove"><code>AdminConfig.remove()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.show"><code>AdminConfig.show()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.showall"><code>AdminConfig.showall()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../core/AdminConfig/#wsadmin_type_hints.core.AdminConfig.showAttribute"><code>AdminConfig.showAttribute()</code></a></li>
+</ul>
+</div>
 
 
   </div>
@@ -1206,15 +1233,15 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 
 
 <h2 id="wsadmin_type_hints.typing_objects.object_name.RunningObjectName" class="doc doc-heading">
-        <code>RunningObjectName</code>
+          <code>RunningObjectName</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.object_name.RunningObjectName" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code></p>
 
   
       <p>This <code>ObjectName</code> uniquely identifies running objects and is in the 
@@ -1240,7 +1267,6 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 </div>
 
 
-
   </div>
 
 </div>
@@ -1250,15 +1276,15 @@ of <code>Server</code> and comes before Server in the hierarchy.</p>
 
 
 <h2 id="wsadmin_type_hints.typing_objects.object_name.RunningObjectTemplate" class="doc doc-heading">
-        <code>RunningObjectTemplate</code>
+          <code>RunningObjectTemplate</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.object_name.RunningObjectTemplate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code></p>
 
   
       <p>This <code>ObjectName</code> is a string containing a segment of the object name to be matched. 
@@ -1267,7 +1293,7 @@ The template has the same format as an object name with the following pattern: <
 <p>You can use the asterisk (<code>*</code>) at the end as a <strong>wildcard character</strong>, so that you do not have to specify the entire set of key properties.</p>
 <p>For more info see the <a href="https://www.ibm.com/docs/en/was-nd/8.5.5?topic=administration-objectname-attribute-attributelist-classes-using-wsadmin-scripting">official documentation</a>.</p>
 
-<details class="note">
+<details class="note" open>
   <summary>Note</summary>
   <p>The only difference between a <code>template</code> and an <code>object name</code> is that the template can be partial and use wildcards.
 It can then be used to retrieve a complete Object Name.</p>
@@ -1276,7 +1302,6 @@ It can then be used to retrieve a complete Object Name.</p>
 <div class="language-text highlight"><pre><span></span><code>WebSphere:name=&quot;My Server&quot;,type=ApplicationServer,node=n1,*
 </code></pre></div>
 </div>
-
 
 
   </div>
@@ -1297,11 +1322,11 @@ It can then be used to retrieve a complete Object Name.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:25:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:25:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
     
   </small>

@@ -1165,15 +1165,15 @@
 
 
 <h2 id="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" class="doc doc-heading">
-        <code>MultilineList</code>
+          <code>MultilineList</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code>, <code><span title="typing.Generic">Generic</span>[<span title="wsadmin_type_hints.typing_objects.wsadmin_types._Line">_Line</span>]</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code>, <code><span title="typing.Generic">Generic</span>[<span title="wsadmin_type_hints.typing_objects.wsadmin_types._Line">_Line</span>]</code></p>
 
   
       <p>A <code>wsadmin</code> response which is composed of a multiline string representing a list of values. </p>
@@ -1197,7 +1197,7 @@ With Jython one you have to do tricks like this one to get server list as list:<
 <p><a href="https://stackoverflow.com/a/12910544/8965861"><em>Source</em></a></p>
 </div>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <p>To use it you must pass the multiline type between square brackets:
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">wsadmin_type_hints.typing_objects.wsadmin_types</span> <span class="kn">import</span> <span class="n">MultilineList</span>
@@ -1206,7 +1206,6 @@ With Jython one you have to do tricks like this one to get server list as list:<
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="p">:</span> <span class="n">MultilineList</span><span class="p">[</span><span class="n">RunningObjectName</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 </code></pre></div></p>
 </details>
-
 
   
 
@@ -1224,7 +1223,7 @@ With Jython one you have to do tricks like this one to get server list as list:<
 
 
 <h3 id="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList.splitlines" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">wsadmin_types</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="bp">Ellipsis</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">wsadmin_types</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=...</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList.splitlines" class="headerlink" title="Anchor link to this section for reference">&para;</a></h3>
 
@@ -1248,22 +1247,22 @@ With Jython one you have to do tricks like this one to get server list as list:<
 
 
 <h2 id="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineTableWithHeader" class="doc doc-heading">
-        <code>MultilineTableWithHeader</code>
+          <code>MultilineTableWithHeader</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineTableWithHeader" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code>, <code><span title="typing.Generic">Generic</span>[<span title="wsadmin_type_hints.typing_objects.wsadmin_types._Line">_Line</span>]</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code>, <code><span title="typing.Generic">Generic</span>[<span title="wsadmin_type_hints.typing_objects.wsadmin_types._Line">_Line</span>]</code></p>
 
   
       <p>A <code>wsadmin</code> response which is composed of a multiline table <strong>with header</strong>.</p>
 <p>This class is meant to be used as a type, and takes another type in input
     which represents the <strong>type of each line</strong> of the text (i.e. <code>MultilineList[RunningObjectName]</code>).</p>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>This is an example of a multiline table <strong>with header</strong>:
@@ -1274,7 +1273,6 @@ With Jython one you have to do tricks like this one to get server list as list:<
 </ul>
 </details>
 
-
   </div>
 
 </div>
@@ -1284,22 +1282,22 @@ With Jython one you have to do tricks like this one to get server list as list:<
 
 
 <h2 id="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineTableWithoutHeader" class="doc doc-heading">
-        <code>MultilineTableWithoutHeader</code>
+          <code>MultilineTableWithoutHeader</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineTableWithoutHeader" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>str</code>, <code><span title="typing.Generic">Generic</span>[<span title="wsadmin_type_hints.typing_objects.wsadmin_types._Line">_Line</span>]</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>str</code>, <code><span title="typing.Generic">Generic</span>[<span title="wsadmin_type_hints.typing_objects.wsadmin_types._Line">_Line</span>]</code></p>
 
   
       <p>A <code>wsadmin</code> response which is composed of a multiline table <strong>without header</strong>.</p>
 <p>This class is meant to be used as a type, and takes another type in input
     which represents the <strong>type of each line</strong> of the text (i.e. <code>MultilineList[RunningObjectName]</code>).</p>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <ul>
 <li>This is an example of a multiline table <strong>without header</strong>:
@@ -1313,7 +1311,6 @@ With Jython one you have to do tricks like this one to get server list as list:<
 </ul>
 </details>
 
-
   </div>
 
 </div>
@@ -1323,24 +1320,23 @@ With Jython one you have to do tricks like this one to get server list as list:<
 
 
 <h2 id="wsadmin_type_hints.typing_objects.wsadmin_types.OpaqueDigestObject" class="doc doc-heading">
-        <code>OpaqueDigestObject</code>
+          <code>OpaqueDigestObject</code>
 
 
 <a href="#wsadmin_type_hints.typing_objects.wsadmin_types.OpaqueDigestObject" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>object</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>object</code></p>
 
   
       <p>Opaque "digest" object returned by a call to the <code>AdminConfig.extract()</code> method.</p>
 
-<details class="question">
+<details class="question" open>
   <summary>More testing needed</summary>
   <p>I <strong>didn't test this command</strong> in my test environment but i will need to, in order to better understand it.</p>
 </details>
-
 
   </div>
 
@@ -1360,11 +1356,11 @@ With Jython one you have to do tricks like this one to get server list as list:<
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:25:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:25:00+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
     
   </small>

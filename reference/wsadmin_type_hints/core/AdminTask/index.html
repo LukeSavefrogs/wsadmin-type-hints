@@ -26707,18 +26707,22 @@ client is started and <strong>depends on the edition</strong> of WebSphere Appli
     be created in <em>interactive mode</em>.</li>
 </ul>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>target_object</code></td>
           <td class="doc-param-details">
-            <p>Parent instance of the TransportChannelService that contains the TCPInboundChannel.</p>
+            <div class="doc-md-description">
+              <p>Parent instance of the TransportChannelService that contains the TCPInboundChannel.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -26730,8 +26734,10 @@ client is started and <strong>depends on the edition</strong> of WebSphere Appli
         <tr>
           <td><code>options</code></td>
           <td class="doc-param-details">
-            <p>String containing the <code>-name</code>, <code>-host</code> and <code>-port</code> parameters (all <strong>required</strong>) with their values set. 
+            <div class="doc-md-description">
+              <p>String containing the <code>-name</code>, <code>-host</code> and <code>-port</code> parameters (all <strong>required</strong>) with their values set. 
 If <code>options</code> is set to a string with value <code>"-interactive"</code>, the endpoint will be created in <em>interactive mode</em>.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -26742,6 +26748,8 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -26756,7 +26764,9 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
               <code>ConfigurationObjectName</code>
           </td>
           <td class="doc-returns-details">
-            <p>The object name of the endpoint that was created.</p>
+            <div class="doc-md-description">
+              <p>The object name of the endpoint that was created.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -26768,7 +26778,7 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TransportChannelService_1&#39;</span>
 
@@ -34467,18 +34477,22 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
     be retrieved in <em>interactive mode</em>.</li>
 </ul>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>target_object</code></td>
           <td class="doc-param-details">
-            <p>The TCPInboundChannel, or containing chain, instance that is associated with a NamedEndPoint. </p>
+            <div class="doc-md-description">
+              <p>The TCPInboundChannel, or containing chain, instance that is associated with a NamedEndPoint. </p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -34489,6 +34503,8 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -34503,7 +34519,9 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
               <code>ConfigurationObjectName</code>
           </td>
           <td class="doc-returns-details">
-            <p>The object name of an existing named end point that is associated with the TCP inbound channel instance or a channel chain.</p>
+            <div class="doc-md-description">
+              <p>The object name of an existing named end point that is associated with the TCP inbound channel instance or a channel chain.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -34515,7 +34533,7 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;TCP_1(cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TCPInboundChannel_1)&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">AdminTask</span><span class="o">.</span><span class="n">getTCPEndPoint</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
@@ -34838,18 +34856,22 @@ commands and their parameters:</p>
 <li><code>AdminTask.help("commandGroupName")</code>           display detailed information for the specified command group</li>
 </ul>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
         <tr>
           <td><code>search_query</code></td>
           <td class="doc-param-details">
-            <p>Pass a query to filter the desired results. Defaults to "".</p>
+            <div class="doc-md-description">
+              <p>Pass a query to filter the desired results. Defaults to "".</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -34865,6 +34887,8 @@ commands and their parameters:</p>
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -34878,7 +34902,9 @@ commands and their parameters:</p>
               <code>str</code>
           </td>
           <td class="doc-returns-details">
-            <p>The detailed help string</p>
+            <div class="doc-md-description">
+              <p>The detailed help string</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -34890,7 +34916,7 @@ commands and their parameters:</p>
     </tbody>
   </table>
 
-<details class="example">
+<details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">(</span><span class="n">AdminTask</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;createTCPEndPoint&quot;</span><span class="p">))</span>
 <span class="go">WASX8006I: Detailed help for command: createTCPEndPoint</span>
@@ -36334,14 +36360,47 @@ commands and their parameters:</p>
 
 
 <h2 id="wsadmin_type_hints.core.AdminTask.listChains" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">listChains</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">listChains</span><span class="p">(</span><span class="n">acceptor_filter</span><span class="p">,</span> <span class="n">endpoint_filter</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminTask.listChains" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>List all chains configured under a particular instance of TransportChannelService.</p>
+      <p>List all chains configured under a particular instance of TransportChannelService. </p>
+<div class="language-text highlight"><pre><span></span><code>Args:
+acceptor_filter (ConfigurationObjectName): Chains returned by this method should all have a transport channel instance of the specified type as the last transport channel in the chain.
+endpoint_filter (str): Chains returned by this method should all have a TCPInboundChannel using an end point with the specified name.
+</code></pre></div>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>chains</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>List of all the chains satisfying the filters specified by <code>endpoint_filter</code></p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 
@@ -47037,11 +47096,11 @@ commands and their parameters:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:24:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T07:52:41+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-07-28T14:24:56+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-07-28</span>
       
     
   </small>

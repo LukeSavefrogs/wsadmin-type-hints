@@ -1175,22 +1175,22 @@
 <span class="go">WASX7015E: Exception running command: &quot;AdminConfig.help(method_name=&quot;help&quot;)&quot;; exception information:</span>
 <span class="go">com.ibm.bsf.BSFException: exception from Jython:</span>
 <span class="go">Traceback (innermost last):</span>
-<span class="go">  File &quot;&lt;input&gt;&quot;, line 1, in ?</span>
-<span class="go">TypeError: help(): takes no keyword arguments</span>
+  File <span class="nb">&quot;&lt;input&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">?</span>
+<span class="gr">TypeError</span>: <span class="n">help(): takes no keyword arguments</span>
 </code></pre></div></p>
 <p>You can however write <strong>custom functions</strong> or methods that accept both <strong>positional and keyword arguments</strong>:
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">):</span>
 <span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; argument&quot;</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">()</span>
 <span class="go">Default argument</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;positional&quot;</span><span class="p">)</span>
 <span class="go">Positional argument</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="s2">&quot;keyword&quot;</span><span class="p">)</span>
 <span class="go">Keyword argument</span>
-<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt;</span>
 </code></pre></div></p>
 
   <hr>
