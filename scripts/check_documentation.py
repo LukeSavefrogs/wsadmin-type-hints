@@ -6,7 +6,7 @@ import sys
 import os
 import importlib
 
-from documentation.core import get_updated_modules
+from ibm_documentation.core import get_updated_modules
 
 def main():
 	api_information = get_updated_modules()

@@ -32,18 +32,24 @@ servers = AdminConfig.list("Server", cluster).splitlines()
 ### Restart server
 ```python
 # Query the servers that need to be restarted
-server = AdminControl.queryNames('WebSphere:*,cell=mycell,node=mynode,name=server1,type=Server,*')
+server = AdminControl.queryNames('WebSphere:cell=mycell,node=mynode,name=server1,type=Server,*')
 
 AdminControl.invoke(server, 'restart')
 ```
 
 ### Start server
-- Using `AdminControl.invoke`:
-```python
-# Query the servers that need to be started
-server = AdminControl.queryNames('WebSphere:*,cell=mycell,node=mynode,name=server1,type=Server,*')
 
-AdminControl.invoke(server, 'start')
+- Using `AdminControl.invoke`:
+
+```python
+# Name of the server that needs to be started
+server = "myServer"
+
+# Query the node agent
+nodeagent = AdminControl.queryNames('WebSphere:cell=myCell,node=myNode,type=NodeAgent,*')
+
+# Start the server
+AdminControl.invoke(nodeagent, 'launchProcess', '[%s]' % server)
 ```
 
 - Using `AdminControl.startServer`:
@@ -56,7 +62,7 @@ AdminControl.invoke(server, 'start')
 - Using `AdminControl.invoke`:
 ```python
 # Query the servers that need to be stopped
-server = AdminControl.queryNames('WebSphere:*,cell=mycell,node=mynode,name=server1,type=Server,*')
+server = AdminControl.queryNames('WebSphere:cell=mycell,node=mynode,name=server1,type=Server,*')
 
 AdminControl.invoke(server, 'stop')
 ```

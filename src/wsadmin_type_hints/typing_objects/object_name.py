@@ -5,6 +5,30 @@ class ConfigurationObjectName(str):
         ``` 
         Db2JdbcDriver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)
         ```
+    
+    !!! Info
+        If the configuration object name contains a space, the entire ID will be enclosed in double quotes (`"`):
+        
+        ```
+        "My JDBC Driver(cells/testcell/nodes/testnode|resources.xml#JDBCProvider_1)"
+        ```
+
+        The configuration ID could also not include a name, as in the following example:
+        
+        ```
+        (cells/testcell/nodes/testnode/servers/dmgr|server.xml#TransportChannelService_1)
+        ```
+    
+    !!! abstract "See also"
+        - [`AdminConfig.create()`][wsadmin_type_hints.AdminConfig.create]
+        - [`AdminConfig.getObjectName()`][wsadmin_type_hints.AdminConfig.getObjectName]
+        - [`AdminConfig.getObjectType()`][wsadmin_type_hints.AdminConfig.getObjectType]
+        - [`AdminConfig.list()`][wsadmin_type_hints.AdminConfig.list]
+        - [`AdminConfig.modify()`][wsadmin_type_hints.AdminConfig.modify]
+        - [`AdminConfig.remove()`][wsadmin_type_hints.AdminConfig.remove]
+        - [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show]
+        - [`AdminConfig.showall()`][wsadmin_type_hints.AdminConfig.showall]
+        - [`AdminConfig.showAttribute()`][wsadmin_type_hints.AdminConfig.showAttribute]
     """
     ...
 
@@ -22,6 +46,9 @@ class ConfigurationContainmentPath(str):
         ``` 
         /Cell:testcell/Node:testNode/JDBCProvider:Db2JdbcDriver/
         ```
+    
+    !!! abstract "See also"
+        - [`AdminConfig.getid()`][wsadmin_type_hints.AdminConfig.getid]
     """
     ...
 

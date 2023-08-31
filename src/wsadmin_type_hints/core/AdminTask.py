@@ -13,6 +13,7 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
 from typing import Any, Literal, Union, overload, List
 
 from wsadmin_type_hints.typing_objects.object_name import ConfigurationObjectName
+from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList
 
 
 def WIMCheckPassword(*args: Any) -> Any:
@@ -3499,8 +3500,16 @@ def listChainTemplates(*args: Any) -> Any:
 	""" Displays a list of templates that can be used to create chains in this configuration. All templates have a certain type of transport channel as the last transport channel in the chain. """
 	...
 
-def listChains(*args: Any) -> Any:
-	""" List all chains configured under a particular instance of TransportChannelService. """
+def listChains(acceptor_filter: ConfigurationObjectName, endpoint_filter: str, /) -> MultilineList[ConfigurationObjectName]:
+	""" List all chains configured under a particular instance of TransportChannelService. 
+    
+	Args:
+        acceptor_filter (ConfigurationObjectName): Chains returned by this method should all have a transport channel instance of the specified type as the last transport channel in the chain.
+        endpoint_filter (str): Chains returned by this method should all have a TCPInboundChannel using an end point with the specified name.
+
+    Returns:
+        chains (ConfigurationObjectName): List of all the chains satisfying the filters specified by `endpoint_filter`
+    """
 	...
 
 def listCheckpointDocuments(*args: Any) -> Any:

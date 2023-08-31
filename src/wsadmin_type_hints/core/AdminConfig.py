@@ -915,13 +915,85 @@ def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"
     """
     ...
 
-def show(*args: Any) -> Any: # undocumented
+def show(configuration_id: ConfigurationObjectName, attributes: Optional[List[str]] = None, /) -> str:
+    """ Displays all the attributes for the configuration object named by `configuration_id`. 
+
+    If the `attributes` parameter is not specified, all the attributes for the configuration 
+    object are displayed, otherwise only the attributes specified in the `attributes` parameter.
+
+    Args:
+        configuration_id (ConfigurationObjectName): The configuration ID for the configuration object to display.
+        attributes (Optional[List[str]]): A list of attributes to display. If not specified, all the attributes are displayed.
+
+    Returns:
+        attributes (str): The list of attributes for the configuration object.
+
+    Example:
+        ```pycon
+        >>> variable_id = AdminConfig.list("VariableSubstitutionEntry").splitlines()[0]
+        >>> print(AdminConfig.show(variable_id))
+        [description []]
+        [symbolicName DB2_JCC_DRIVER_PATH]
+        [value /opt/XLWAS/drivers/DB2V11/4.23.1044]
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.showall()`][wsadmin_type_hints.AdminConfig.showall]
+        - [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes]
+        - [`AdminConfig.showAttribute()`][wsadmin_type_hints.AdminConfig.showAttribute]
+    """
     ...
 
-def showall(*args: Any) -> Any: # undocumented
+def showall(configuration_id: ConfigurationObjectName, attributes: Optional[List[str]] = None, /) -> str:
+    """ Recursively displays all the attributes for the configuration object named by `configuration_id`.
+
+    If the `attributes` parameter is not specified, all the attributes for the configuration
+    object are displayed, otherwise only the attributes specified in the `attributes` parameter.
+
+    Args:
+        configuration_id (ConfigurationObjectName): The configuration ID for the configuration object to display.
+        attributes (Optional[List[str]]): A list of attributes to display. If not specified, all the attributes are displayed.
+
+    Returns:
+        attributes (str): The list of attributes for the configuration object.
+
+    Example:
+        In the following examples you can see the difference between the `AdminConfig.show()` 
+        and `AdminConfig.showall()` methods:
+
+        - When the `AdminConfig.showall()` method encounters a reference to another configuration object,
+        it _recursively_ descends into the referenced configuration object and displays its attributes, 
+        continuing until all children and grand-children are "expanded".
+        - On the other hand, the `AdminConfig.show()` method always returns the _string representation_ of the 
+        configuration object ID.
+
+        ```pycon
+        >>> server_id = AdminConfig.getid("/Node:myNode/Server:myServer/")
+        
+        >>> print AdminConfig.show(server_id, ["errorStreamRedirect"])
+        [errorStreamRedirect (cells/myCell/nodes/myNode/servers/myServer|server.xml#StreamRedirect_1599578915053)]
+        
+        >>> print AdminConfig.showall(server_id, ["errorStreamRedirect"])
+        [errorStreamRedirect [[baseHour 1]
+        [fileName /WebSphere_LOG/was/myCell/myNode/myCluster/APPSERVER/myServer-SystemErr.log]
+        [formatWrites false]
+        [maxNumberOfBackupFiles 5]
+        [messageFormatKind BASIC]
+        [rolloverPeriod 24]
+        [rolloverSize 100]
+        [rolloverType BOTH]
+        [suppressStackTrace false]
+        [suppressWrites false]]]
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show]
+        - [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes]
+        - [`AdminConfig.showAttribute()`][wsadmin_type_hints.AdminConfig.showAttribute]
+    """
     ...
 
-def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> str:
+def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> Any:
     """Shows the value of the single attribute specified for the configuration object named by `configuration_id`.
     
     The output of this command is different from the output of [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show] when a single
@@ -933,7 +1005,7 @@ def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) 
         attribute (str): The name of the attribute value to retrieve.
 
     Returns:
-        attribute_value (str): The value of the single attribute specified.
+        attribute_value (Any): The value of the single attribute specified.
 
     !!! Tip
         For a complete list of attributes available for the configuration object use the [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes] 

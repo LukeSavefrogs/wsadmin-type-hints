@@ -24,7 +24,7 @@
 
 
 ## Other
-- [Stackoverflow](https://stackoverflow.com/questions/tagged/wsadmin){: target=\_blank} - _Doesn't need any explanation_ 😶
+- Stackoverflow ["wsadmin"](https://stackoverflow.com/questions/tagged/wsadmin){: target=\_blank} or ["jython"](https://stackoverflow.com/questions/tagged/jython+or+python+websphere){: target=\_blank} - _Doesn't need any explanation_ 😶
 
 - [IBM WebSphere Application Server Network Deployment V8.0 Core Administration Guide](http://java.boot.by/ibm-317/){: target=_blank} - Guide for the administration of Websphere Application Server to be used along other sources.
 - [FreeKB "IBM Websphere" articles](http://www.freekb.net/Articles?tag=IBM%20WebSphere){: target=_blank} - Collection of articles about the **administration** of an "**IBM WebSphere Application Server**" infrastructure (not only with `wsadmin`)
