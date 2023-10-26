@@ -140,7 +140,7 @@ def getAttributes_jmx(*args: Any) -> Any: # undocumented
 def getCell(*args: Any) -> Any: # undocumented
     """ """
 
-def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_ConfigurationObjectName, _Literal[""]]: # undocumented
+def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_ConfigurationObjectName, _Literal[""]]:
     """ Given the object name of a running MBean, return the **configuration ID** of the object.
 
     This function communicates with the configuration service to look up
@@ -153,7 +153,7 @@ def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_Configurat
         object_name (RunningObjectName | str): The object name of the MBean.
 
     Returns:
-        configuration_id(ConfigurationObjectName | ""): The configuration ID of the object. Empty string if not found.
+        configuration_id(_ConfigurationObjectName | ""): The configuration ID of the object. Empty string if not found.
 
     Example:
         Using `getConfigId` we can get the configuration ID of a running server:
@@ -174,6 +174,7 @@ def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_Configurat
     !!! abstract "See also"
         - [`AdminConfig.getObjectName()`][wsadmin_type_hints.AdminConfig.getObjectName]
     """
+    ...
 
 def getDefaultDomain(*args: Any) -> Any: # undocumented
     """ """
