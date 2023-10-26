@@ -3,15 +3,17 @@ Use the `AdminConfig` object to invoke configuration commands and to create or
 change elements of the WebSphere® Application Server configuration, for example, 
 creating a data source.
 
+TODO: Check renamed symbols get resolved in the documentation.
+
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-adminconfig-object-using-wsadmin).
 """
-from typing import Any, List, Literal, Optional, Union, overload
+from typing import Any as _Any, List as _List, Literal as _Literal, Optional as _Optional, Union as _Union, overload as _overload
 
-from wsadmin_type_hints.typing_objects.object_name import ConfigurationContainmentPath, ConfigurationObjectName, RunningObjectName
-from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList, MultilineTableWithHeader, MultilineTableWithoutHeader, OpaqueDigestObject
-from wsadmin_type_hints.typing_objects.object_types import ObjectType
+from wsadmin_type_hints.typing_objects.object_name import ConfigurationContainmentPath as _ConfigurationContainmentPath, ConfigurationObjectName as _ConfigurationObjectName, RunningObjectName as _RunningObjectName
+from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList as _MultilineList, MultilineTableWithHeader as _MultilineTableWithHeader, MultilineTableWithoutHeader as _MultilineTableWithoutHeader, OpaqueDigestObject as _OpaqueDigestObject
+from wsadmin_type_hints.typing_objects.object_types import ObjectType as _ObjectType
 
-def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
+def attributes(object_type: _ObjectType, /) -> _MultilineTableWithoutHeader[str]:
     """ Displays all the possible **attributes** contained by an object of type `object_type`.
 
     The _attribute types_ are also displayed:
@@ -26,10 +28,10 @@ def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
         it is listed as `ENUM`, followed by the possible values in parentheses.
 
     Args:
-        object_type (ObjectType): name of the object type. Use [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] to get a list of available types.
+        object_type (_ObjectType): name of the object type. Use [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] to get a list of available types.
 
     Returns:
-        attributes_table (MultilineTableWithoutHeader[str]): Multiline table with the attributes of the given type.
+        attributes_table (_MultilineTableWithoutHeader[str]): Multiline table with the attributes of the given type.
             The first "word" in each line is the **attribute name**, and the rest is the **attribute** value **type**.
     
     Example:
@@ -49,14 +51,14 @@ def attributes(object_type: ObjectType, /) -> MultilineTableWithoutHeader[str]:
     ...
 
 # TODO: Check return type
-def checkin(document_uri: str, filename: str, digest: OpaqueDigestObject, /) -> Any:
+def checkin(document_uri: str, filename: str, digest: _OpaqueDigestObject, /) -> _Any:
     """ Checks a document into the configuration repository.
 
     Args:
         document_uri (str): The document URI, relative to the root of the configuration repository. 
             This document MUST exist in the repository.
         filename (str): The valid local filename where the contents of the document are located.
-        digest (OpaqueDigestObject): The opaque object returned by a prior call to the `AdminConfig.extract()` command.
+        digest (_OpaqueDigestObject): The opaque object returned by a prior call to the `AdminConfig.extract()` command.
     
     Question: More testing needed
         The **return type** needs to be checked.
@@ -66,7 +68,7 @@ def checkin(document_uri: str, filename: str, digest: OpaqueDigestObject, /) -> 
     """
     ...
 
-def convertToCluster(server_id: ConfigurationObjectName, cluster_name: str, /) -> ConfigurationObjectName:
+def convertToCluster(server_id: _ConfigurationObjectName, cluster_name: str, /) -> _ConfigurationObjectName:
     """ Converts the server `server_id` so that it is the first member of the
         new server cluster `cluster_name`.
 
@@ -76,11 +78,11 @@ def convertToCluster(server_id: ConfigurationObjectName, cluster_name: str, /) -
     Applications loaded on this server are now configured on the new cluster.
 
     Args:
-        server_id (ConfigurationObjectName): The ID of the server to use as the first member of the cluster.
+        server_id (_ConfigurationObjectName): The ID of the server to use as the first member of the cluster.
         cluster_name (str): The name of the new cluster.
 
     Returns:
-        cluster_id(ConfigurationObjectName): The configuration ID of the newly created Cluster.
+        cluster_id(_ConfigurationObjectName): The configuration ID of the newly created Cluster.
 
     Example:
         ```pycon
@@ -93,8 +95,8 @@ def convertToCluster(server_id: ConfigurationObjectName, cluster_name: str, /) -
     ...
 
 # --------------------------------------------------------------------------
-@overload
-def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[str, List[List[str]]], /) -> ConfigurationObjectName:
+@_overload
+def create(type: _ObjectType, parent: _ConfigurationObjectName, attributes: _Union[str, _List[_List[str]]], /) -> _ConfigurationObjectName:
     """ Create a new configuration object.
 
     Create a configuration object of the type named by
@@ -102,17 +104,17 @@ def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[
         `attributes`.
 
     Args:
-        type (ObjectType): The type of the configuration object that will be created.
-        parent (ConfigurationObjectName): The configuration ID of the parent object.
-        attributes (Union[str, List[List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
+        type (_ObjectType): The type of the configuration object that will be created.
+        parent (_ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (_Union[str, _List[_List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
 
     Returns:
-        new_object(ConfigurationObjectName): The newly created configuration object.
+        new_object(_ConfigurationObjectName): The newly created configuration object.
     """    
     ...
 
-@overload
-def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[str, List[List[str]]], parent_attribute_name: str = "", /) -> ConfigurationObjectName:
+@_overload
+def create(type: _ObjectType, parent: _ConfigurationObjectName, attributes: _Union[str, _List[_List[str]]], parent_attribute_name: str = "", /) -> _ConfigurationObjectName:
     """ Create a new configuration object.
 
     Create a configuration object of the type named by
@@ -121,17 +123,17 @@ def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[
         `parent_attribute_name`.
 
     Args:
-        type (ObjectType): The type of the configuration object that will be created.
-        parent (ConfigurationObjectName): The configuration ID of the parent object.
-        attributes (Union[str, List[List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
+        type (_ObjectType): The type of the configuration object that will be created.
+        parent (_ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (_Union[str, _List[_List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
         parent_attribute_name (str, optional): _description_. Defaults to "".
 
     Returns:
-        new_object(ConfigurationObjectName): The newly created configuration object.
+        new_object(_ConfigurationObjectName): The newly created configuration object.
     """
     ...
 
-def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[str, List[List[str]]], parent_attribute_name: str = "", /) -> ConfigurationObjectName:  # type: ignore[misc]
+def create(type: _ObjectType, parent: _ConfigurationObjectName, attributes: _Union[str, _List[_List[str]]], parent_attribute_name: str = "", /) -> _ConfigurationObjectName:  # type: ignore[misc]
     """ Create a new configuration object.
     
     Create a configuration object of the type named by
@@ -140,13 +142,13 @@ def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[
         `parent_attribute_name`.
 
     Args:
-        type (ObjectType): The type of the configuration object that will be created.
-        parent (ConfigurationObjectName): The configuration ID of the parent object.
-        attributes (Union[str, List[List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
+        type (_ObjectType): The type of the configuration object that will be created.
+        parent (_ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (_Union[str, _List[_List[str]]]): A list of attributes to add to the new configuration object. Can be either in the string format or in the list format (see `attributes` for more information).
         parent_attribute_name (str, optional): _description_. Defaults to "".
 
     Returns:
-        new_object(ConfigurationObjectName): The newly created configuration object.
+        new_object(_ConfigurationObjectName): The newly created configuration object.
     
     Example:
 
@@ -178,10 +180,10 @@ def create(type: ObjectType, parent: ConfigurationObjectName, attributes: Union[
     ...
 # --------------------------------------------------------------------------
 
-def createClusterMember(*args: Any) -> Any: # undocumented
+def createClusterMember(*args: _Any) -> _Any: # undocumented
     ...
 
-def createDocument(document_uri: str, filename: str, /) -> Any:
+def createDocument(document_uri: str, filename: str, /) -> _Any:
     """ Creates a document in the configuration repository.
 
     Args:
@@ -202,18 +204,18 @@ def createDocument(document_uri: str, filename: str, /) -> Any:
     """    
     ...
 
-def createUsingTemplate(*args: Any) -> Any: # undocumented
+def createUsingTemplate(*args: _Any) -> _Any: # undocumented
     ...
 
-def defaults(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
+def defaults(object_type: _ObjectType, /) -> _MultilineTableWithHeader[str]:
     """ Displays all the possible attributes contained by an object of type `object_type`, along with 
         the type and default value of each attribute, if the attribute has a default value.
 
     Args:
-        object_type (ObjectType): The type of the object
+        object_type (_ObjectType): The type of the object
 
     Returns:
-        defaults (MultilineTableWithHeader[str]): Tab-separated table with all the attribute defaults. 
+        defaults (_MultilineTableWithHeader[str]): Tab-separated table with all the attribute defaults. 
             The table consists of the following columns:
             
             1. `Attribute`: Attribute name
@@ -237,7 +239,7 @@ def defaults(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
     """
     ...
 
-def deleteDocument(document_uri: str, /) -> Any:
+def deleteDocument(document_uri: str, /) -> _Any:
     """Deletes a document from the configuration repository.
 
     Args:
@@ -285,7 +287,7 @@ def existsDocument(document_uri: str, /) -> bool:
     """    
     ...
 
-def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
+def extract(document_uri: str, filename: str, /) -> _OpaqueDigestObject:
     """Extracts a configuration repository file that is described by the document URI and places it in the file named by filename. 
     This method only applies to deployment manager configurations.
 
@@ -294,7 +296,7 @@ def extract(document_uri: str, filename: str, /) -> OpaqueDigestObject:
         filename (str): The name of the source file to check. If it exists already, it will be overwritten.
 
     Returns:
-        OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
+        _OpaqueDigestObject: An opaque "digest" object which should be used to check the file back in using the checkin command.
 
     !!! abstract "See also"
         - [`AdminConfig.checkin()`][wsadmin_type_hints.AdminConfig.checkin]
@@ -318,15 +320,15 @@ def getCrossDocumentValidationEnabled() -> str:
     """
     ...
 
-def getid(containment_path: ConfigurationContainmentPath, /) -> ConfigurationObjectName:
+def getid(containment_path: _ConfigurationContainmentPath, /) -> _ConfigurationObjectName:
     """Returns the unique configuration ID for an object described by the
         given containment path.
 
     Args:
-        containment_path (ConfigurationContainmentPath): The containment path of the requested object
+        containment_path (_ConfigurationContainmentPath): The containment path of the requested object
 
     Returns:
-        configuration_id (ConfigurationObjectName): The configuration ID for the object
+        configuration_id (_ConfigurationObjectName): The configuration ID for the object
 
     Example:
         ```pycon
@@ -336,16 +338,16 @@ def getid(containment_path: ConfigurationContainmentPath, /) -> ConfigurationObj
     """
     ...
 
-def getObjectName(configuration_id: ConfigurationObjectName, /) -> Union[RunningObjectName, Literal[""]]:
+def getObjectName(configuration_id: _ConfigurationObjectName, /) -> _Union[_RunningObjectName, _Literal[""]]:
     """ Returns a string version of the ObjectName for the MBean that corresponds to this configuration ID. 
     
     If there is no such running MBean this returns an empty string.
 
     Args:
-        configuration_id (ConfigurationObjectName): The configuration ID of the object
+        configuration_id (_ConfigurationObjectName): The configuration ID of the object
 
     Returns:
-        mbean_object_name (RunningObjectName | Literal[""]): ObjectName of the MBean corresponding to the specified configuration ID.
+        mbean_object_name (_RunningObjectName | _Literal[""]): ObjectName of the MBean corresponding to the specified configuration ID.
 
     Example:
         ```pycon
@@ -362,14 +364,14 @@ def getObjectName(configuration_id: ConfigurationObjectName, /) -> Union[Running
     """    
     ...
 
-def getObjectType(configuration_id: ConfigurationObjectName, /) -> ObjectType:
+def getObjectType(configuration_id: _ConfigurationObjectName, /) -> _ObjectType:
     """Displays the configuration object type indentified by `configuration_id`.
 
     Args:
-        configuration_id (ConfigurationObjectName): The configuration object which type is being requested.
+        configuration_id (_ConfigurationObjectName): The configuration object which type is being requested.
 
     Returns:
-        object_type (ObjectType): The object type indentified by `configuration_id`.
+        object_type (_ObjectType): The object type indentified by `configuration_id`.
 
     Example:
         ```pycon
@@ -380,11 +382,11 @@ def getObjectType(configuration_id: ConfigurationObjectName, /) -> ObjectType:
     """
     ...
 
-def getSaveMode() -> Literal["overwriteOnConflict", "rollbackOnConflict"]:
+def getSaveMode() -> _Literal["overwriteOnConflict", "rollbackOnConflict"]:
     """Returns the mode that will be used when the [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save] method will be invoked.
 
     Returns:
-        save_mode (Literal["overwriteOnConflict", "rollbackOnConflict"]): The mode used when `save` is invoked.
+        save_mode (_Literal["overwriteOnConflict", "rollbackOnConflict"]): The mode used when `save` is invoked.
             Possible values are:
         
             - `"overwriteOnConflict"` to save changes even if they conflict 
@@ -423,7 +425,7 @@ def getValidationLevel() -> str:
     """
     ...
 
-def getValidationSeverityResult(severity: Literal[0,1,2,3,4,5,6,7,8,9], /) -> int:
+def getValidationSeverityResult(severity: _Literal[0,1,2,3,4,5,6,7,8,9], /) -> int:
     """Returns the number of validation messages with the given
         severity from the most recent validation.
 
@@ -457,7 +459,7 @@ def hasChanges() -> bool:
     ...
 
 # --------------------------------------------------------------------------
-@overload
+@_overload
 def help() -> str:
     """ Displays general help for the `AdminConfig` module.
 
@@ -466,7 +468,7 @@ def help() -> str:
     """
     ...
 
-@overload
+@_overload
 def help(method_name: str, /) -> str:
     """ Displays help for the `AdminConfig` method specified by `method_name`.
 
@@ -516,61 +518,61 @@ def help(method_name: str = "", /) -> str: # type: ignore[misc]
     ...
 # --------------------------------------------------------------------------
 
-def installResourceAdapter(*args: Any) -> Any: # undocumented
+def installResourceAdapter(*args: _Any) -> _Any: # undocumented
     ...
 
 # --------------------------------------------------------------------------
-@overload
-def list(object_type: ObjectType, /) -> MultilineList[ConfigurationObjectName]:
+@_overload
+def list(object_type: _ObjectType, /) -> _MultilineList[_ConfigurationObjectName]:
     """Lists all the configuration objects of the type named by `object_type`.
 
     Args:
-        object_type (ObjectType): The name of the object type.
+        object_type (_ObjectType): The name of the object type.
 
     Returns:
-        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type.
+        objects(_MultilineList[_ConfigurationObjectName]): Multiline list of objects of the given type.
     """
     ...
 
-@overload
-def list(object_type: ObjectType, scope: ConfigurationObjectName, /) -> MultilineList[ConfigurationObjectName]:
+@_overload
+def list(object_type: _ObjectType, scope: _ConfigurationObjectName, /) -> _MultilineList[_ConfigurationObjectName]:
     """Lists all the configuration objects of the type named by `object_type` in the scope of `scope`.
 
     Args:
-        object_type (ObjectType): The name of the object type.
-        scope (ConfigurationObjectName): The scope of the search.
+        object_type (_ObjectType): The name of the object type.
+        scope (_ConfigurationObjectName): The scope of the search.
 
     Returns:
-        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type found under the scope of `scope`.
+        objects(_MultilineList[_ConfigurationObjectName]): Multiline list of objects of the given type found under the scope of `scope`.
     """
     ...
 
-@overload
-def list(object_type: ObjectType, pattern: str, /) -> MultilineList[ConfigurationObjectName]:
+@_overload
+def list(object_type: _ObjectType, pattern: str, /) -> _MultilineList[_ConfigurationObjectName]:
     """Lists all the configuration objects of the type named by `object_type` and matching 
     wildcard characters or Java regular expressions.
 
     Args:
-        object_type (ObjectType): The name of the object type.
+        object_type (_ObjectType): The name of the object type.
         pattern (str): The pattern (wildcard characters or Java regular expressions) that needs to be matched.
 
     Returns:
-        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of the given type matching the pattern `pattern`
+        objects(_MultilineList[_ConfigurationObjectName]): Multiline list of objects of the given type matching the pattern `pattern`
     """
     ...
 
-def list(object_type: ObjectType, scope_or_pattern: Optional[Union[ConfigurationObjectName, str]] = "", /) -> MultilineList[ConfigurationObjectName]: # type: ignore[misc]
+def list(object_type: _ObjectType, scope_or_pattern: _Optional[_Union[_ConfigurationObjectName, str]] = "", /) -> _MultilineList[_ConfigurationObjectName]: # type: ignore[misc]
     """Lists all the configuration objects of the type named by `object_type`.
     
     Args:
-        object_type (ObjectType): The name of the object type.
-        scope_or_pattern (Union[ConfigurationObjectName, str], optional): This parameter causes a different behaviour depending on its type:
+        object_type (_ObjectType): The name of the object type.
+        scope_or_pattern (_Union[_ConfigurationObjectName, str], optional): This parameter causes a different behaviour depending on its type:
             
-            - `ConfigurationObjectName`: Limit the search within the scope of the configuration object named by `scope`.
+            - `_ConfigurationObjectName`: Limit the search within the scope of the configuration object named by `scope`.
             - `str`: Search all the configuration objects matching wildcard characters or Java regular expressions.
 
     Returns:
-        objects(MultilineList[ConfigurationObjectName]): Multiline list of objects of a given type, possibly scoped by a parent.
+        objects(_MultilineList[_ConfigurationObjectName]): Multiline list of objects of a given type, possibly scoped by a parent.
     
     Example:
         If the `scope_or_pattern` parameter is omitted, then will be returned a list of all servers defined:
@@ -597,17 +599,17 @@ def list(object_type: ObjectType, scope_or_pattern: Optional[Union[Configuration
     ...
 # --------------------------------------------------------------------------
 
-@overload
-def listTemplates(type: ObjectType, /) -> MultilineList[ConfigurationObjectName]:
+@_overload
+def listTemplates(type: _ObjectType, /) -> _MultilineList[_ConfigurationObjectName]:
     """ Returns a list of all the templates available for the given type.
     
     These templates may be used in invocations of [`AdminConfig.createUsingTemplate`][wsadmin_type_hints.AdminConfig.createUsingTemplate].
 
     Args:
-        type (ObjectType): The name of the target object type.
+        type (_ObjectType): The name of the target object type.
 
     Returns:
-        MultilineList[ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
+        _MultilineList[_ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
         
     Example:
         ```pycon
@@ -624,18 +626,18 @@ def listTemplates(type: ObjectType, /) -> MultilineList[ConfigurationObjectName]
     """    
     ...
 
-@overload
-def listTemplates(type: ObjectType, pattern: str, /) -> MultilineList[ConfigurationObjectName]:
+@_overload
+def listTemplates(type: _ObjectType, pattern: str, /) -> _MultilineList[_ConfigurationObjectName]:
     """ Returns a list of the templates available for the given type that match the provided `pattern`.
     
     These templates may be used in invocations of [`AdminConfig.createUsingTemplate`][wsadmin_type_hints.AdminConfig.createUsingTemplate].
 
     Args:
-        type (ObjectType): The name of the target object type.
+        type (_ObjectType): The name of the target object type.
         pattern (str): A query (wildcard characters or Java regular expressions) to filter the results.
 
     Returns:
-        MultilineList[ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
+        _MultilineList[_ConfigurationObjectName]: Multiline string with the requested templates configuration IDs.
 
     Example:
         ```pycon
@@ -650,17 +652,17 @@ def listTemplates(type: ObjectType, pattern: str, /) -> MultilineList[Configurat
     """    
     ...
 
-def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[ConfigurationObjectName]: # type: ignore[misc]
+def listTemplates(type: _ObjectType, pattern: str = "", /) -> _MultilineList[_ConfigurationObjectName]: # type: ignore[misc]
     """ Returns a list of the templates available for the given type that match the provided `pattern`.
     
     These templates may be used in invocations of [`AdminConfig.createUsingTemplate`][wsadmin_type_hints.AdminConfig.createUsingTemplate].
 
     Args:
-        type (ObjectType): The name of the target object type.
+        type (_ObjectType): The name of the target object type.
         pattern (str): A query (wildcard characters or Java regular expressions) to filter the results.
 
     Returns:
-        configuration_ids (MultilineList[ConfigurationObjectName]): Multiline string with the requested templates configuration IDs.
+        configuration_ids (_MultilineList[_ConfigurationObjectName]): Multiline string with the requested templates configuration IDs.
     
     Example:
         ```pycon
@@ -680,16 +682,16 @@ def listTemplates(type: ObjectType, pattern: str = "", /) -> MultilineList[Confi
 
 # --------------------------------------------------------------------------
 
-def modify(configuration_id: ConfigurationObjectName, attributes: Union[str, List[List[str]]], /) -> Literal['']:
+def modify(configuration_id: _ConfigurationObjectName, attributes: _Union[str, _List[_List[str]]], /) -> _Literal['']:
     """ Change only the attributes specified by `attributes` 
         for the configuration object named by `configuration_id`.
 
     Args:
-        configuration_id (ConfigurationObjectName): The configuration ID of the object whose `attribute`s need to be changed.
-        attributes (str | List[List[str]]): The attributes to modify, along with their new value.
+        configuration_id (_ConfigurationObjectName): The configuration ID of the object whose `attribute`s need to be changed.
+        attributes (str | _List[_List[str]]): The attributes to modify, along with their new value.
         
     Returns:
-        empty (Literal['']): An empty string.
+        empty (_Literal['']): An empty string.
     
     Example:
         In this example we'll take for granted that every code block is preceded by the following commands: 
@@ -733,14 +735,14 @@ def modify(configuration_id: ConfigurationObjectName, attributes: Union[str, Lis
     """        
     ...
 
-def parents(type: ObjectType, /) -> MultilineList[ObjectType]:
+def parents(type: _ObjectType, /) -> _MultilineList[_ObjectType]:
     """ Displays the object types that can contain `type`.
 
     Args:
-        type (ObjectType): The object type you want to find parents of.
+        type (_ObjectType): The object type you want to find parents of.
 
     Returns:
-        parents (MultilineList[ObjectType]): The parent object types.
+        parents (_MultilineList[_ObjectType]): The parent object types.
     
     Example:
         ```pycon
@@ -752,7 +754,7 @@ def parents(type: ObjectType, /) -> MultilineList[ObjectType]:
     """
     ...
 
-def queryChanges() -> MultilineList[str]:
+def queryChanges() -> _MultilineList[str]:
     """Returns a list of unsaved configuration files.
 
     Returns:
@@ -780,17 +782,17 @@ def queryChanges() -> MultilineList[str]:
     """
     ...
 
-def remove(*args: Any) -> Any: # undocumented
+def remove(*args: _Any) -> _Any: # undocumented
     ...
 
-def required(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
+def required(object_type: _ObjectType, /) -> _MultilineTableWithHeader[str]:
     """Displays a table with the required attributes contained by an object of type `object_type`.
 
     Args:
-        object_type (ObjectType): The object type as returned by the [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] method.
+        object_type (_ObjectType): The object type as returned by the [`AdminConfig.types()`][wsadmin_type_hints.AdminConfig.types] method.
 
     Returns:
-        required_schema (MultilineTableWithHeader[str]): A table with the required attributes contained by the object. 
+        required_schema (_MultilineTableWithHeader[str]): A table with the required attributes contained by the object. 
             The first row contains the header.
     
     Example:
@@ -816,36 +818,36 @@ def required(object_type: ObjectType, /) -> MultilineTableWithHeader[str]:
     """
     ...
 
-def reset() -> Literal['']:
+def reset() -> _Literal['']:
     """ Discard unsaved configuration changes.
         
     Returns:
-        empty (Literal['']): An empty string is always returned
+        empty (_Literal['']): An empty string is always returned
     
     !!! abstract "See also"
         - For the opposite operation, see [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save]
     """
     ...
 
-def resetAttributes(*args: Any) -> Any: # undocumented
+def resetAttributes(*args: _Any) -> _Any: # undocumented
     ...
 
-def save() -> Literal['']:
+def save() -> _Literal['']:
     """ Commits unsaved changes to the configuration repository.
     
     Returns:
-        empty (Literal['']): An empty string is always returned
+        empty (_Literal['']): An empty string is always returned
 
     !!! abstract "See also"
         - For the opposite operation, see [`AdminConfig.reset()`][wsadmin_type_hints.AdminConfig.reset]
     """
     ...
 
-def setCrossDocumentValidationEnabled(flag: Literal["true", "false"], /) -> str:
+def setCrossDocumentValidationEnabled(flag: _Literal["true", "false"], /) -> str:
     """ Enables or disables the cross-document validation.
     
     Args:
-        flag (Literal["true", "false"]): Pass `true` to enable the cross-document validation, or `false` to disable it.
+        flag (_Literal["true", "false"]): Pass `true` to enable the cross-document validation, or `false` to disable it.
     
     Returns:
         message (str): The same message returned by [`AdminConfig.getCrossDocumentValidationEnabled()`][wsadmin_type_hints.AdminConfig.getCrossDocumentValidationEnabled].
@@ -867,11 +869,11 @@ def setCrossDocumentValidationEnabled(flag: Literal["true", "false"], /) -> str:
     """
     ...
 
-def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"], /) -> Literal['']:
+def setSaveMode(save_mode: _Literal["overwriteOnConflict", "rollbackOnConflict"], /) -> _Literal['']:
     """ Changes the mode that will be used when the [`AdminConfig.save()`][wsadmin_type_hints.AdminConfig.save] method will be invoked.
     
     Args:
-        save_mode (Literal["overwriteOnConflict", "rollbackOnConflict"]): The save mode for the configuration repository
+        save_mode (_Literal["overwriteOnConflict", "rollbackOnConflict"]): The save mode for the configuration repository
     
     Example:
         ```pycon
@@ -889,11 +891,11 @@ def setSaveMode(save_mode: Literal["overwriteOnConflict", "rollbackOnConflict"],
     """
     ...
 
-def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"], /) -> str:
+def setValidationLevel(level: _Literal["none", "low", "medium", "high", "highest"], /) -> str:
     """Sets the validation used when files are extracted from the repository.
 
     Args:
-        level (Literal["none", "low", "medium", "high", "highest"]): The validation level to use.
+        level (_Literal["none", "low", "medium", "high", "highest"]): The validation level to use.
 
     Returns:
         message(str): A message indicating the current validation level.
@@ -915,15 +917,15 @@ def setValidationLevel(level: Literal["none", "low", "medium", "high", "highest"
     """
     ...
 
-def show(configuration_id: ConfigurationObjectName, attributes: Optional[List[str]] = None, /) -> str:
+def show(configuration_id: _ConfigurationObjectName, attributes: _Optional[_List[str]] = None, /) -> str:
     """ Displays all the attributes for the configuration object named by `configuration_id`. 
 
     If the `attributes` parameter is not specified, all the attributes for the configuration 
     object are displayed, otherwise only the attributes specified in the `attributes` parameter.
 
     Args:
-        configuration_id (ConfigurationObjectName): The configuration ID for the configuration object to display.
-        attributes (Optional[List[str]]): A list of attributes to display. If not specified, all the attributes are displayed.
+        configuration_id (_ConfigurationObjectName): The configuration ID for the configuration object to display.
+        attributes (_Optional[_List[str]]): A list of attributes to display. If not specified, all the attributes are displayed.
 
     Returns:
         attributes (str): The list of attributes for the configuration object.
@@ -944,15 +946,15 @@ def show(configuration_id: ConfigurationObjectName, attributes: Optional[List[st
     """
     ...
 
-def showall(configuration_id: ConfigurationObjectName, attributes: Optional[List[str]] = None, /) -> str:
+def showall(configuration_id: _ConfigurationObjectName, attributes: _Optional[_List[str]] = None, /) -> str:
     """ Recursively displays all the attributes for the configuration object named by `configuration_id`.
 
     If the `attributes` parameter is not specified, all the attributes for the configuration
     object are displayed, otherwise only the attributes specified in the `attributes` parameter.
 
     Args:
-        configuration_id (ConfigurationObjectName): The configuration ID for the configuration object to display.
-        attributes (Optional[List[str]]): A list of attributes to display. If not specified, all the attributes are displayed.
+        configuration_id (_ConfigurationObjectName): The configuration ID for the configuration object to display.
+        attributes (_Optional[_List[str]]): A list of attributes to display. If not specified, all the attributes are displayed.
 
     Returns:
         attributes (str): The list of attributes for the configuration object.
@@ -993,7 +995,7 @@ def showall(configuration_id: ConfigurationObjectName, attributes: Optional[List
     """
     ...
 
-def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) -> Any:
+def showAttribute(configuration_id: _ConfigurationObjectName, attribute: str, /) -> _Any:
     """Shows the value of the single attribute specified for the configuration object named by `configuration_id`.
     
     The output of this command is different from the output of [`AdminConfig.show()`][wsadmin_type_hints.AdminConfig.show] when a single
@@ -1001,11 +1003,11 @@ def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) 
     list containing the attribute name and value; rather, the **attribute value alone** is displayed.
 
     Args:
-        configuration_id (ConfigurationObjectName): The configuration ID for the parent object of the `attribute`.
+        configuration_id (_ConfigurationObjectName): The configuration ID for the parent object of the `attribute`.
         attribute (str): The name of the attribute value to retrieve.
 
     Returns:
-        attribute_value (Any): The value of the single attribute specified.
+        attribute_value (_Any): The value of the single attribute specified.
 
     !!! Tip
         For a complete list of attributes available for the configuration object use the [`AdminConfig.attributes()`][wsadmin_type_hints.AdminConfig.attributes] 
@@ -1024,17 +1026,17 @@ def showAttribute(configuration_id: ConfigurationObjectName, attribute: str, /) 
     ...
 
 # --------------------------------------------------------------------------
-@overload
-def types() -> MultilineList[ObjectType]:
+@_overload
+def types() -> _MultilineList[_ObjectType]:
     """Displays all the possible top-level configuration object types.
 
     Returns:
-        types(MultilineList[ObjectType]): All the top-level configuration object types.
+        types(_MultilineList[_ObjectType]): All the top-level configuration object types.
     """
     ...
 
-@overload
-def types(pattern: str, /) -> MultilineList[ObjectType]:
+@_overload
+def types(pattern: str, /) -> _MultilineList[_ObjectType]:
     """Displays all the possible top-level configuration object types matching
     with the `pattern`, which can be a wildcard or a regular expression.
 
@@ -1042,20 +1044,20 @@ def types(pattern: str, /) -> MultilineList[ObjectType]:
         pattern (str): A wildcard or a regular expression matching the type to search.
 
     Returns:
-        types(MultilineList[ObjectType]): A multiline list of all the possible top-level configuration object types
+        types(_MultilineList[_ObjectType]): A multiline list of all the possible top-level configuration object types
             matching the provided `pattern`.
     """
     ...
 
-def types(pattern: Optional[str] = "", /) -> MultilineList[ObjectType]: # type: ignore[misc]
+def types(pattern: _Optional[str] = "", /) -> _MultilineList[_ObjectType]: # type: ignore[misc]
     """Displays all the possible top-level configuration object types, restricting the 
     search to the types matching the `pattern` parameter, if specified.
 
     Args:
-        pattern (Optional[str], optional): A wildcard or a regular expression matching the type to search.
+        pattern (_Optional[str], optional): A wildcard or a regular expression matching the type to search.
     
     Returns:
-        types(MultilineList[ObjectType]): A multiline list of all the possible top-level configuration object types
+        types(_MultilineList[_ObjectType]): A multiline list of all the possible top-level configuration object types
             matching the provided `pattern` (if specified).
 
     Example:
@@ -1082,14 +1084,14 @@ def types(pattern: Optional[str] = "", /) -> MultilineList[ObjectType]: # type: 
     ...
 # --------------------------------------------------------------------------
 
-def uninstallResourceAdapter(*args: Any) -> Any: # undocumented
+def uninstallResourceAdapter(*args: _Any) -> _Any: # undocumented
     ...
 
-def unsetAttributes(*args: Any) -> Any: # undocumented
+def unsetAttributes(*args: _Any) -> _Any: # undocumented
     ...
 
 # --------------------------------------------------------------------------
-@overload
+@_overload
 def validate() -> str:
     r""" Requests **configuration validation** results based on the
     files in your workspace, the value of the cross-document validation
@@ -1107,8 +1109,8 @@ def validate() -> str:
     """
     ...
 
-@overload
-def validate(configuration_id: ConfigurationObjectName, /) -> str:
+@_overload
+def validate(configuration_id: _ConfigurationObjectName, /) -> str:
     r""" Requests **configuration validation** results based on the
     files in your workspace, the value of the cross-document validation
     enabled flag, and the validation level setting. 
@@ -1116,7 +1118,7 @@ def validate(configuration_id: ConfigurationObjectName, /) -> str:
     The **scope** of this request is the object named by `configuration_id`.
 
     Args:
-        configuration_id (ConfigurationObjectName, optional): The scope of the request.
+        configuration_id (_ConfigurationObjectName, optional): The scope of the request.
 
     Returns:
         validation_result (str): The result of the validation request.
@@ -1130,7 +1132,7 @@ def validate(configuration_id: ConfigurationObjectName, /) -> str:
     """
     ...
 
-def validate(configuration_id: ConfigurationObjectName = "", /) -> str: # type: ignore[misc]
+def validate(configuration_id: _ConfigurationObjectName = "", /) -> str: # type: ignore[misc]
     r""" Requests **configuration validation** results based on the
     files in your workspace, the value of the cross-document validation
     enabled flag, and the validation level setting.
@@ -1138,7 +1140,7 @@ def validate(configuration_id: ConfigurationObjectName = "", /) -> str: # type: 
     If provided, the **scope** of this request will be the object named by `configuration_id`.
 
     Args:
-        configuration_id (ConfigurationObjectName, optional): The scope of the request.
+        configuration_id (_ConfigurationObjectName, optional): The scope of the request.
 
     Returns:
         validation_result (str): The result of the validation request. 
