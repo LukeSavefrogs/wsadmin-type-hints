@@ -16,8 +16,8 @@ reconnecting with a server, and converting data types.
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admincontrol-object-using-wsadmin).
 """
 
-from typing import Any, Union
-from wsadmin_type_hints.typing_objects.object_name import RunningObjectName, RunningObjectTemplate
+from typing import Any, Union, Literal as _Literal
+from wsadmin_type_hints.typing_objects.object_name import RunningObjectName, RunningObjectTemplate, ConfigurationObjectName as _ConfigurationObjectName
 from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList
 
 
@@ -140,8 +140,40 @@ def getAttributes_jmx(*args: Any) -> Any: # undocumented
 def getCell(*args: Any) -> Any: # undocumented
     """ """
 
-def getConfigId(*args: Any) -> Any: # undocumented
-    """ """
+def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_ConfigurationObjectName, _Literal[""]]: # undocumented
+    """ Given the object name of a running MBean, return the **configuration ID** of the object.
+
+    This function communicates with the configuration service to look up
+    a configuration ID that can be used by `AdminConfig`.
+    
+    If no configuration object exists that corresponds to the supplied `object_name` string,
+    `getConfigId` returns an empty string.
+
+    Args:
+        object_name (RunningObjectName | str): The object name of the MBean.
+
+    Returns:
+        configuration_id(ConfigurationObjectName | ""): The configuration ID of the object. Empty string if not found.
+
+    Example:
+        Using `getConfigId` we can get the configuration ID of a running server:
+        ```pycon
+        >>> dmgr = AdminControl.getConfigId("name=dmgr,type=Server,*")
+        >>> print(dmgr)
+        dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml#Server_1)
+        ```
+
+        This ID can be used as usual, even transforming it again into the object name of the MBean (the reverse operation):
+        ```pycon
+        >>> print(AdminConfig.getObjectName(dmgr))
+        WebSphere:name=dmgr,process=dmgr,platform=proxy,node=myNode,j2eeType=J2EEServer,version=8.5.5.23,
+        type=Server,mbeanIdentifier=cells/myCell/nodes/myNode/servers/dmgr/server.xml#Server_1,cell=myCell,
+        spec=1.0,processType=DeploymentManager
+        ```
+
+    !!! abstract "See also"
+        - [`AdminConfig.getObjectName()`][wsadmin_type_hints.AdminConfig.getObjectName]
+    """
 
 def getDefaultDomain(*args: Any) -> Any: # undocumented
     """ """
