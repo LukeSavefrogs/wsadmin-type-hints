@@ -2253,14 +2253,94 @@ print(process_type)
 
 
 <h2 id="wsadmin_type_hints.core.AdminControl.getConfigId" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getConfigId</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getConfigId</span><span class="p">(</span><span class="n">object_name</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminControl.getConfigId" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      
+      <p>Given the object name of a running MBean, return the <strong>configuration ID</strong> of the object.</p>
+<p>This function communicates with the configuration service to look up
+a configuration ID that can be used by <code>AdminConfig</code>.</p>
+<p>If no configuration object exists that corresponds to the supplied <code>object_name</code> string,
+<code>getConfigId</code> returns an empty string.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>object_name</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The object name of the MBean.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.RunningObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.RunningObjectName">RunningObjectName</a> | str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>configuration_id</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The configuration ID of the object. Empty string if not found.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>ConfigurationObjectName | &#39;&#39;</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Using <code>getConfigId</code> we can get the configuration ID of a running server:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dmgr</span> <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">getConfigId</span><span class="p">(</span><span class="s2">&quot;name=dmgr,type=Server,*&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dmgr</span><span class="p">)</span>
+<span class="go">dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml#Server_1)</span>
+</code></pre></div></p>
+<p>This ID can be used as usual, even transforming it again into the object name of the MBean (the reverse operation):
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">getObjectName</span><span class="p">(</span><span class="n">dmgr</span><span class="p">))</span>
+<span class="go">WebSphere:name=dmgr,process=dmgr,platform=proxy,node=myNode,j2eeType=J2EEServer,version=8.5.5.23,</span>
+<span class="go">type=Server,mbeanIdentifier=cells/myCell/nodes/myNode/servers/dmgr/server.xml#Server_1,cell=myCell,</span>
+<span class="go">spec=1.0,processType=DeploymentManager</span>
+</code></pre></div></p>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../AdminConfig/#wsadmin_type_hints.core.AdminConfig.getObjectName"><code>AdminConfig.getObjectName()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2768,11 +2848,11 @@ print(process_type)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-19T09:23:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-26T09:59:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-19T09:23:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-19</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-26T09:59:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span>
       
     
   </small>

@@ -25138,14 +25138,46 @@ client is started and <strong>depends on the edition</strong> of WebSphere Appli
 
 
 <h2 id="wsadmin_type_hints.core.AdminTask.createDatasource" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">createDatasource</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">createDatasource</span><span class="p">(</span><span class="n">jdbc_provider</span><span class="p">,</span> <span class="n">datasource_config</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminTask.createDatasource" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Create a new Datasource to access the backend data store.  Application components use the Datasource to access connection instances to your database. A connection pool is associated with each Datasource.</p>
+      <p>Create a new Datasource to access the backend data store.</p>
+<div class="language-text highlight"><pre><span></span><code>Application components use the Datasource to access connection instances to your database.
+A connection pool is associated with each Datasource.
+
+Required parameters:
+- `-name`:
+The name of the data source. (String, required)
+</code></pre></div>
+<ul>
+<li><code>-jndiName</code>:
+    The Java Naming and Directory Interface (JNDI) name. (String, required)</li>
+<li><code>-dataStoreHelperClassName</code>:
+    The name of the DataStoreHelper implementation class that extends the capabilities of the selected JDBC driver implementation class to perform data-specific functions. WebSphere® Application Server provides a set of DataStoreHelper implementation classes for each of the JDBC provider drivers it supports. (String, required)
+    configureResourceProperties
+    This command step configures the resource properties that are required by the data source. (Required) You can specify the following parameters for this step:<ul>
+<li><code>name</code>:
+The name of the resource property. (String, required)</li>
+<li><code>type</code>:
+The type of the resource property. (String, required)</li>
+<li><code>value</code>:
+The value of the resource property. (String, required)</li>
+</ul>
+</li>
+</ul>
+<p>Optional parameters:
+- <code>-description</code>:
+    The description of the data source. (String, optional)
+- <code>-category</code>:
+    The category that you can use to classify a group of data sources. (String, optional)
+- <code>-componentManagedAuthenticationAlias</code>:
+    The alias used for database authentication at run time. This alias is only used when the application resource reference is using res-auth=Application. (String, optional)
+- <code>-containerManagedPersistence</code>:
+    Specifies if the data source is used for container managed persistence for enterprise beans. The default value is true. (Boolean, optional)</p>
 
   </div>
 
@@ -25723,7 +25755,7 @@ client is started and <strong>depends on the edition</strong> of WebSphere Appli
 
   <div class="doc doc-contents ">
   
-      <p>Create a JAX-WS Handler List</p>
+      <p>Create a JAX-WS Handler _List</p>
 
   </div>
 
@@ -28614,7 +28646,7 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
 
   <div class="doc doc-contents ">
   
-      <p>Delete a JAX-WS Handler List</p>
+      <p>Delete a JAX-WS Handler _List</p>
 
   </div>
 
@@ -34776,7 +34808,7 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a> | <span title="typing.Literal">Literal</span>[&#39;-interactive&#39;]</code>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a> | <span title="typing.Literal">_Literal</span>[&#39;-interactive&#39;]</code>
                 </span>
             </p>
           </td>
@@ -36669,7 +36701,7 @@ endpoint_filter (str): Chains returned by this method should all have a TCPInbou
           </td>
           <td class="doc-returns-details">
             <div class="doc-md-description">
-              <p>List of all the chains satisfying the filters specified by <code>endpoint_filter</code></p>
+              <p>_List of all the chains satisfying the filters specified by <code>endpoint_filter</code></p>
             </div>
               <p>
                 <span class="doc-returns-annotation">
@@ -36833,7 +36865,21 @@ endpoint_filter (str): Chains returned by this method should all have a TCPInbou
 
   <div class="doc doc-contents ">
   
-      <p>List the datasources that are contained in the specified scope.</p>
+      <p>List the datasources that are contained in the specified scope. </p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>```pycon
+    &gt;&gt;&gt; print AdminTask.listDatasources()</p>
+</details>      <p>DUMMYDS(cells/myCell/clusters/myCluster|resources.xml#DataSource_1599813633144)
+DUMMYDB2(cells/myCell/clusters/myCluster|resources.xml#DataSource_1621589409106)
+DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)
+test_cluster_datasource(cells/myCell/clusters/myCluster|resources.xml#DataSource_1696520870045)
+DefaultEJBTimerDataSource(cells/myCell/nodes/myNode2/servers/US00EBASG38|resources.xml#DataSource_1000001)
+DefaultEJBTimerDataSource(cells/myCell/nodes/myNode1/servers/US00EBASG37|resources.xml#DataSource_1000001)
+DefaultEJBTimerDataSource(cells/myCell/applications/commsvc.ear/deployments/commsvc|resources.xml#DataSource_1228749623069)
+wsadmin&gt;
+```</p>
 
   </div>
 
@@ -40539,7 +40585,7 @@ endpoint_filter (str): Chains returned by this method should all have a TCPInbou
 
   <div class="doc doc-contents ">
   
-      <p>Modify a JAX-WS Handler List</p>
+      <p>Modify a JAX-WS Handler _List</p>
 
   </div>
 
@@ -45061,7 +45107,7 @@ endpoint_filter (str): Chains returned by this method should all have a TCPInbou
 
   <div class="doc doc-contents ">
   
-      <p>Show the attributes of a JAX-WS Handler List</p>
+      <p>Show the attributes of a JAX-WS Handler _List</p>
 
   </div>
 
@@ -47376,11 +47422,11 @@ endpoint_filter (str): Chains returned by this method should all have a TCPInbou
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-19T09:23:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-26T09:59:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-19T09:23:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-19</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-26T09:59:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span>
       
     
   </small>
