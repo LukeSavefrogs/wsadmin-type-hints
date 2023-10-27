@@ -263,8 +263,21 @@ def getObjectInstance(*args: Any) -> Any:  # undocumented
     """ """
 
 
-def getPort(*args: Any) -> Any:  # undocumented
-    """ """
+def getPort() -> str:
+    """Returns the port used for scripting connection.
+
+    Example:
+        ```pycon
+        >>> print(AdminControl.getPort())
+        10003
+        ```
+
+    !!! abstract "See also"
+        - [`AdminControl.getCell()`][wsadmin_type_hints.AdminControl.getCell]
+        - [`AdminControl.getHost()`][wsadmin_type_hints.AdminControl.getHost]
+        - [`AdminControl.getNode()`][wsadmin_type_hints.AdminControl.getNode]
+        - [`AdminControl.getType()`][wsadmin_type_hints.AdminControl.getType]
+    """
 
 
 def getPropertiesForDataSource(*args: Any) -> Any:  # undocumented
