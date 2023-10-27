@@ -17,15 +17,21 @@ For more info see the [official documentation](https://www.ibm.com/docs/en/was-n
 """
 
 from typing import Any, Union, Literal as _Literal
-from wsadmin_type_hints.typing_objects.object_name import RunningObjectName, RunningObjectTemplate, ConfigurationObjectName as _ConfigurationObjectName
+from wsadmin_type_hints.typing_objects.object_name import (
+    RunningObjectName,
+    RunningObjectTemplate,
+    ConfigurationObjectName as _ConfigurationObjectName,
+)
 from wsadmin_type_hints.typing_objects.wsadmin_types import MultilineList
 
 
-def completeObjectName(template: Union[RunningObjectName, RunningObjectTemplate], /) -> RunningObjectName:
+def completeObjectName(
+    template: Union[RunningObjectName, RunningObjectTemplate], /
+) -> RunningObjectName:
     """
     Returns a string version of an **object name** that matches the `template`.
     For example, the template might be `type=Server,*`.
-    
+
     !!! Warning
         If there are several MBeans that match the template, **only the first match** is returned.
 
@@ -48,13 +54,14 @@ def completeObjectName(template: Union[RunningObjectName, RunningObjectTemplate]
         The difference between `object_name` and `template` needs to be checked, since the official documentation does not provide any info on how to use them.
     """
 
+
 def getAttribute(object_name: RunningObjectName, attribute: str, /) -> str:
     """Returns value of `attribute` for the MBean described by `object_name`.
 
     Args:
         object_name (RunningObjectName): The object name of the MBean.
         attribute (str): The name of the attribute to retrieve.
-    
+
     Returns:
         value(str): The attribute value.
 
@@ -72,15 +79,16 @@ def getAttribute(object_name: RunningObjectName, attribute: str, /) -> str:
         [...]
         >>> print(AdminControl.getAttribute(server, "clusterName"))
         ```
-        
+
     Example:
         ```python
-        objNameString = AdminControl.completeObjectName('WebSphere:type=Server,*') 
+        objNameString = AdminControl.completeObjectName('WebSphere:type=Server,*')
         process_type  = AdminControl.getAttribute(objNameString, 'processType')
-        
+
         print(process_type)
         ```
     """
+
 
 def getAttribute_jmx(object_name, attribute, /):
     """Use the `getAttribute_jmx` command to return the value of the attribute for the name that you provide.
@@ -88,21 +96,22 @@ def getAttribute_jmx(object_name, attribute, /):
     Args:
         object_name (ObjectName): Specifies the object name of the MBean of interest.
         attribute (str): Specifies the name of the attribute to query.
-    
+
     Example:
         ```
-        import javax.management as mgmt 
+        import javax.management as mgmt
 
-        objNameString = AdminControl.completeObjectName('WebSphere:=type=Server,*') 
+        objNameString = AdminControl.completeObjectName('WebSphere:=type=Server,*')
         objName       = mgmt.ObjectName(objNameString)
         process_type  = AdminControl.getAttribute_jmx(objName, 'processType')
-        
+
         print(process_type)
         ```
-    
+
     Question: Investigation needed
         This is not very clear in the documentation, so it needs more research.
     """
+
 
 def getAttributes(object_name, attributes, /):
     """Returns a string listing the values of the attributes named in `attributes` for the object named by `object_name`.
@@ -110,42 +119,45 @@ def getAttributes(object_name, attributes, /):
     Args:
         object_name (ObjectName): Use the getAttributes command to return the attribute values for the names that you provide.
         attributes (java.lang.String[] or java.lang.Object[]): Specifies the names of the attributes to query.
-    
+
     Example:
-        
+
         - Using Jython with string attributes:
 
         ```python
         objNameString = AdminControl.completeObjectname('WebSphere:type=Server,*)
         attributes    = AdminControl.getAttributes(objNameString, '[cellName nodeName]')
-        
+
         print(attributes)
         ```
 
         - Using Jython with object attributes:
-        
+
         ```python
         objNameString = AdminControl.completeObjectname('WebSphere:type=Server,*)
         attributes    = AdminControl.getAttributes(objNameString, ['cellName', 'nodeName'])
-        
+
         print(attributes)
         ```
-
-
     """
 
-def getAttributes_jmx(*args: Any) -> Any: # undocumented
+
+def getAttributes_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def getCell(*args: Any) -> Any: # undocumented
+
+def getCell(*args: Any) -> Any:  # undocumented
     """ """
 
-def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_ConfigurationObjectName, _Literal[""]]:
-    """ Given the object name of a running MBean, return the **configuration ID** of the object.
+
+def getConfigId(
+    object_name: Union[RunningObjectName, str]
+) -> Union[_ConfigurationObjectName, _Literal[""]]:
+    """Given the object name of a running MBean, return the **configuration ID** of the object.
 
     This function communicates with the configuration service to look up
     a configuration ID that can be used by `AdminConfig`.
-    
+
     If no configuration object exists that corresponds to the supplied `object_name` string,
     `getConfigId` returns an empty string.
 
@@ -176,95 +188,122 @@ def getConfigId(object_name: Union[RunningObjectName, str]) -> Union[_Configurat
     """
     ...
 
-def getDefaultDomain(*args: Any) -> Any: # undocumented
+
+def getDefaultDomain(*args: Any) -> Any:  # undocumented
     """ """
 
-def getDomainName(*args: Any) -> Any: # undocumented
+
+def getDomainName(*args: Any) -> Any:  # undocumented
     """ """
 
-def getHost(*args: Any) -> Any: # undocumented
+
+def getHost(*args: Any) -> Any:  # undocumented
     """ """
 
-def getMBeanCount(*args: Any) -> Any: # undocumented
+
+def getMBeanCount(*args: Any) -> Any:  # undocumented
     """ """
 
-def getMBeanInfo_jmx(*args: Any) -> Any: # undocumented
+
+def getMBeanInfo_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def getNode(*args: Any) -> Any: # undocumented
+
+def getNode(*args: Any) -> Any:  # undocumented
     """ """
 
-def getObjectInstance(*args: Any) -> Any: # undocumented
+
+def getObjectInstance(*args: Any) -> Any:  # undocumented
     """ """
 
-def getPort(*args: Any) -> Any: # undocumented
+
+def getPort(*args: Any) -> Any:  # undocumented
     """ """
 
-def getPropertiesForDataSource(*args: Any) -> Any: # undocumented
-    """ (Deprecated) """
 
-def getType(*args: Any) -> Any: # undocumented
+def getPropertiesForDataSource(*args: Any) -> Any:  # undocumented
+    """(Deprecated)"""
+
+
+def getType(*args: Any) -> Any:  # undocumented
     """ """
 
-def help(*args: Any) -> Any: # undocumented
+
+def help(*args: Any) -> Any:  # undocumented
     """ """
 
-def invoke(*args: Any) -> Any: # undocumented
+
+def invoke(*args: Any) -> Any:  # undocumented
     """ """
 
-def invoke_jmx(*args: Any) -> Any: # undocumented
+
+def invoke_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def isRegistered(*args: Any) -> Any: # undocumented
+
+def isRegistered(*args: Any) -> Any:  # undocumented
     """ """
 
-def isRegistered_jmx(*args: Any) -> Any: # undocumented
+
+def isRegistered_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def makeObjectName(*args: Any) -> Any: # undocumented
+
+def makeObjectName(*args: Any) -> Any:  # undocumented
     """ """
 
-def queryMBeans(*args: Any) -> Any: # undocumented
+
+def queryMBeans(*args: Any) -> Any:  # undocumented
     """ """
 
-def queryNames(pattern: str) -> MultilineList[RunningObjectName]: # undocumented
+
+def queryNames(pattern: str) -> MultilineList[RunningObjectName]:  # undocumented
     """
-	Example:
-		```pycon
-		>>> print(AdminControl.queryNames('*'))
+    Example:
+        ```pycon
+        >>> print(AdminControl.queryNames('*'))
         WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
         [...]
-		```
-	"""
+        ```
+    """
     ...
 
-def queryNames_jmx(*args: Any) -> Any: # undocumented
+
+def queryNames_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def reconnect(*args: Any) -> Any: # undocumented
+
+def reconnect(*args: Any) -> Any:  # undocumented
     """ """
 
-def setAttribute(*args: Any) -> Any: # undocumented
+
+def setAttribute(*args: Any) -> Any:  # undocumented
     """ """
 
-def setAttribute_jmx(*args: Any) -> Any: # undocumented
+
+def setAttribute_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def setAttributes(*args: Any) -> Any: # undocumented
+
+def setAttributes(*args: Any) -> Any:  # undocumented
     """ """
 
-def setAttributes_jmx(*args: Any) -> Any: # undocumented
+
+def setAttributes_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
-def startServer(*args: Any) -> Any: # undocumented
+
+def startServer(*args: Any) -> Any:  # undocumented
     """ """
 
-def stopServer(*args: Any) -> Any: # undocumented
+
+def stopServer(*args: Any) -> Any:  # undocumented
     """ """
 
-def testConnection(*args: Any) -> Any: # undocumented
+
+def testConnection(*args: Any) -> Any:  # undocumented
     """ """
 
-def trace(*args: Any) -> Any: # undocumented
-    """ """
 
+def trace(*args: Any) -> Any:  # undocumented
+    """ """
