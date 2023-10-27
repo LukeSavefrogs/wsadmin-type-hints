@@ -146,8 +146,29 @@ def getAttributes_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
 
-def getCell(*args: Any) -> Any:  # undocumented
-    """ """
+def getCell() -> str:
+    """ Returns the **cell name** to which the scripting process is connected.
+    
+    Example:
+        The following code will show the cell name:
+        ```pycon
+        >>> print(AdminControl.getCell())
+        myCell
+        ```
+
+        To get the full configuration ID of the cell, use [`AdminConfig.list("Cell")`][wsadmin_type_hints.AdminConfig.list] instead:
+        ```pycon
+        >>> print(AdminConfig.list("Cell"))
+        myCell(cells/myCell|cell.xml#Cell_1)
+        ```
+
+    !!! abstract "See also"
+        - [`AdminControl.getHost()`][wsadmin_type_hints.AdminControl.getHost]
+        - [`AdminControl.getNode()`][wsadmin_type_hints.AdminControl.getNode]
+        - [`AdminControl.getPort()`][wsadmin_type_hints.AdminControl.getPort]
+        - [`AdminControl.getType()`][wsadmin_type_hints.AdminControl.getType]
+        - [`AdminControl.getDomainName()`][wsadmin_type_hints.AdminControl.getDomainName]
+    """
 
 
 def getConfigId(
