@@ -242,8 +242,21 @@ def getMBeanInfo_jmx(*args: Any) -> Any:  # undocumented
     """ """
 
 
-def getNode(*args: Any) -> Any:  # undocumented
-    """ """
+def getNode() -> str:
+    """Returns the **name** of the **node** to which the scripting process is connected.
+
+    Example:
+        ```pycon
+        >>> print(AdminControl.getNode())
+        myNode
+        ```
+
+    !!! abstract "See also"
+        - [`AdminControl.getCell()`][wsadmin_type_hints.AdminControl.getCell]
+        - [`AdminControl.getHost()`][wsadmin_type_hints.AdminControl.getHost]
+        - [`AdminControl.getPort()`][wsadmin_type_hints.AdminControl.getPort]
+        - [`AdminControl.getType()`][wsadmin_type_hints.AdminControl.getType]
+    """
 
 
 def getObjectInstance(*args: Any) -> Any:  # undocumented
