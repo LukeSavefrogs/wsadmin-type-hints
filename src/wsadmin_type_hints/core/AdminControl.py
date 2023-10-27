@@ -285,7 +285,20 @@ def getPropertiesForDataSource(*args: Any) -> Any:  # undocumented
 
 
 def getType(*args: Any) -> Any:  # undocumented
-    """ """
+    """Returns the **connection type** used for scripting connection.
+
+    Example:
+        ```pycon
+        >>> print(AdminControl.getType())
+        SOAP
+        ```
+
+    !!! abstract "See also"
+        - [`AdminControl.getCell()`][wsadmin_type_hints.AdminControl.getCell]
+        - [`AdminControl.getHost()`][wsadmin_type_hints.AdminControl.getHost]
+        - [`AdminControl.getNode()`][wsadmin_type_hints.AdminControl.getNode]
+        - [`AdminControl.getPort()`][wsadmin_type_hints.AdminControl.getPort]
+    """
 
 
 def help(*args: Any) -> Any:  # undocumented
