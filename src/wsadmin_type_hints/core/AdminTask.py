@@ -4136,12 +4136,69 @@ def listServerTemplates(*args: _Any) -> _Any:
 	""" Lists the available Server Templates """
 	...
 
-def listServerTypes(*args: _Any) -> _Any:
-	""" Lists the available serverTypes that have a template. """
+def listServerTypes(target_node: _Union[ConfigurationObjectName, str] = "") -> MultilineList[str]:
+	""" Lists the available serverTypes that have a template.
+	
+	Args:
+	    target_node (ConfigurationObjectName, optional): The node name or configuration id whose available serverTypes are to be displayed. Defaults to "".
+	
+    Returns:
+        server_types (MultilineList[str]): A list of all the available serverTypes.
+        
+	Example:
+	    ```pycon
+        >>> print(AdminTask.listServerTypes())
+        TOMCAT_SERVER
+        APPLICATION_SERVER
+        LIBERTY_SERVER
+        CUSTOMHTTP_SERVER
+        WASCE_SERVER
+        ONDEMAND_ROUTER
+        APACHE_SERVER
+        WEB_SERVER
+        PROXY_SERVER
+        WASAPP_SERVER
+        JBOSS_SERVER
+        WEBLOGIC_SERVER
+        GENERIC_SERVER
+        PHP_SERVER
+        ```
+		
+    Question: Documentation unclear
+        The documentation is not clear on whether the `target_node` parameter must be the node name or configuration ID (or both).
+		Both work, but it is not clear if this is intended or not.
+	"""
 	...
 
-def listServers(*args: _Any) -> _Any:
-	""" list servers of specified server type and node name. If node name is not specified, whole cell will be searched. If the server type is not specified servers of all types are returned. """
+def listServers(arguments: str) -> MultilineList[ConfigurationObjectName]:
+	""" List servers of specified server type and node name. 
+	
+	If node name is not specified, the whole cell will be searched. 
+	If the server type is not specified servers of all types are returned.
+	
+	The available parameters are:
+	- serverType: The ServerType (eg. `APPLICATION_SERVER`)
+    - nodeName: The Node Name (eg. `myNode`)
+	
+	Args:
+        arguments (str): The arguments to pass to the `listServers` command in the form `[ -paramName paramValue ]` 
+		    (the square brackets are not required).
+		
+    Returns:
+        servers (MultilineList[ConfigurationObjectName]): A list of all the servers matching the specified parameters.
+
+	Example:
+        ```pycon
+		>>> print(AdminTask.listServers('[-serverType DEPLOYMENT_MANAGER]'))
+        dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml)
+		
+		>>> print(AdminTask.listServers('-serverType APPLICATION_SERVER -nodeName myNode1'))
+        server1(cells/myCell/nodes/myNode1/servers/server1|server.xml#Server_1)
+        ```
+
+    !!! abstract "See also"
+        - [`AdminTask.listServerTypes()`][wsadmin_type_hints.AdminTask.listServerTypes]
+	"""
 	...
 
 def listServiceMaps(*args: _Any) -> _Any:
