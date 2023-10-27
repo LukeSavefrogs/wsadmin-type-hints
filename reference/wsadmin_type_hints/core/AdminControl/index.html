@@ -2236,14 +2236,34 @@ print(process_type)
 
 
 <h2 id="wsadmin_type_hints.core.AdminControl.getCell" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getCell</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getCell</span><span class="p">()</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminControl.getCell" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      
+      <p>Returns the <strong>cell name</strong> to which the scripting process is connected.</p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>The following code will show the cell name:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">getCell</span><span class="p">())</span>
+<span class="go">myCell</span>
+</code></pre></div></p>
+<p>To get the full configuration ID of the cell, use <a class="autorefs autorefs-internal" href="../AdminConfig/#wsadmin_type_hints.core.AdminConfig.list"><code>AdminConfig.list("Cell")</code></a> instead:
+<div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s2">&quot;Cell&quot;</span><span class="p">))</span>
+<span class="go">myCell(cells/myCell|cell.xml#Cell_1)</span>
+</code></pre></div></p>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getHost"><code>AdminControl.getHost()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getNode"><code>AdminControl.getNode()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getPort"><code>AdminControl.getPort()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getType"><code>AdminControl.getType()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2384,14 +2404,29 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
 
 
 <h2 id="wsadmin_type_hints.core.AdminControl.getHost" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getHost</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getHost</span><span class="p">()</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminControl.getHost" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      
+      <p>Returns the <strong>host</strong> to which the scripting process is connected.</p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">getHost</span><span class="p">())</span>
+<span class="go">myHost.internal.cloud</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getCell"><code>AdminControl.getCell()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getNode"><code>AdminControl.getNode()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getPort"><code>AdminControl.getPort()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getType"><code>AdminControl.getType()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2435,14 +2470,29 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
 
 
 <h2 id="wsadmin_type_hints.core.AdminControl.getNode" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getNode</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getNode</span><span class="p">()</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminControl.getNode" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      
+      <p>Returns the <strong>name</strong> of the <strong>node</strong> to which the scripting process is connected.</p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">getNode</span><span class="p">())</span>
+<span class="go">myNode</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getCell"><code>AdminControl.getCell()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getHost"><code>AdminControl.getHost()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getPort"><code>AdminControl.getPort()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getType"><code>AdminControl.getType()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2469,14 +2519,29 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
 
 
 <h2 id="wsadmin_type_hints.core.AdminControl.getPort" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getPort</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminControl</span><span class="o">.</span><span class="n">getPort</span><span class="p">()</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminControl.getPort" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      
+      <p>Returns the port used for scripting connection.</p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">getPort</span><span class="p">())</span>
+<span class="go">10003</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getCell"><code>AdminControl.getCell()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getHost"><code>AdminControl.getHost()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getNode"><code>AdminControl.getNode()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getType"><code>AdminControl.getType()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2510,7 +2575,22 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
 
   <div class="doc doc-contents ">
   
-      
+      <p>Returns the <strong>connection type</strong> used for scripting connection.</p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">getType</span><span class="p">())</span>
+<span class="go">SOAP</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getCell"><code>AdminControl.getCell()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getHost"><code>AdminControl.getHost()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getNode"><code>AdminControl.getNode()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.getPort"><code>AdminControl.getPort()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -2646,14 +2726,81 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
 
   <div class="doc doc-contents ">
   
+      <p>Returns all the <strong>object names</strong> that match the input object template (<em>which may include a wild card</em>).</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pattern</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The object template to match (eg. <code>type=Server,*</code>).</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.RunningObjectTemplate" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.RunningObjectTemplate">RunningObjectTemplate</a> | str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>object_names</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>A newline-separated list of object names that match the template.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.RunningObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.RunningObjectName">RunningObjectName</a>]</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 <details class="example" open>
   <summary>Example</summary>
   <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">queryNames</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">))</span>
 <span class="go">WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1</span>
 <span class="go">[...]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">queryNames</span><span class="p">(</span><span class="s1">&#39;type=DataSource,*&#39;</span><span class="p">))</span>
+<span class="go">WebSphere:name=myDataSource,process=XYZ,platform=dynamicproxy,node=myNode,JDBCProvider=[...]</span>
+<span class="go">[...]</span>
 </code></pre></div>
-</details>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminControl.completeObjectName"><code>AdminControl.completeObjectName()</code></a></li>
+</ul>
+<p>To better understand how object templates work, see <a class="autorefs autorefs-internal" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.RunningObjectTemplate"><em>this explanation</em></a>.</p>
+</div>
+
   </div>
 
 </div>
@@ -2841,11 +2988,11 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:42:57+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:42:57+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
     
   </small>
