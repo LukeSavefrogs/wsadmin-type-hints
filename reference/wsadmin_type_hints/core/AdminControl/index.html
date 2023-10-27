@@ -2055,7 +2055,7 @@ For example, the template might be <code>type=Server,*</code>.</p>
 
 <details class="example" open>
   <summary>Example</summary>
-  <div class="language-python highlight"><pre><span></span><code><span class="n">objNameString</span> <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">completeObjectName</span><span class="p">(</span><span class="s1">&#39;WebSphere:type=Server,*&#39;</span><span class="p">)</span> 
+  <div class="language-python highlight"><pre><span></span><code><span class="n">objNameString</span> <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">completeObjectName</span><span class="p">(</span><span class="s1">&#39;WebSphere:type=Server,*&#39;</span><span class="p">)</span>
 <span class="n">process_type</span>  <span class="o">=</span> <span class="n">AdminControl</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="n">objNameString</span><span class="p">,</span> <span class="s1">&#39;processType&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">process_type</span><span class="p">)</span>
@@ -2121,9 +2121,9 @@ For example, the template might be <code>type=Server,*</code>.</p>
 
 <details class="example" open>
   <summary>Example</summary>
-  <div class="language-text highlight"><pre><span></span><code>import javax.management as mgmt 
+  <div class="language-text highlight"><pre><span></span><code>import javax.management as mgmt
 
-objNameString = AdminControl.completeObjectName(&#39;WebSphere:=type=Server,*&#39;) 
+objNameString = AdminControl.completeObjectName(&#39;WebSphere:=type=Server,*&#39;)
 objName       = mgmt.ObjectName(objNameString)
 process_type  = AdminControl.getAttribute_jmx(objName, &#39;processType&#39;)
 
@@ -2649,18 +2649,11 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
 
 <details class="example" open>
   <summary>Example</summary>
-  <p>```pycon</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>print(AdminControl.queryNames('*'))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</details>      <p>WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
-[...]
-        ```</p>
-
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminControl</span><span class="o">.</span><span class="n">queryNames</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">))</span>
+<span class="go">WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1</span>
+<span class="go">[...]</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
@@ -2848,11 +2841,11 @@ a configuration ID that can be used by <code>AdminConfig</code>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T13:37:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T13:37:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
     
   </small>

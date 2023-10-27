@@ -1955,13 +1955,13 @@ creating a data source.</p>
       <p>Displays all the possible <strong>attributes</strong> contained by an object of type <code>object_type</code>.</p>
 <p>The <em>attribute types</em> are also displayed:</p>
 <ul>
-<li>When the attribute represents a <strong>reference to another object</strong>, 
-    the type of the attribute has a suffix of <code>@</code>. </li>
-<li>When the attribute represents a <strong>collection of objects</strong>, 
+<li>When the attribute represents a <strong>reference to another object</strong>,
+    the type of the attribute has a suffix of <code>@</code>.</li>
+<li>When the attribute represents a <strong>collection of objects</strong>,
     the type has a suffix of <code>*</code>.</li>
-<li>If the type represents a <strong>base type</strong>, 
+<li>If the type represents a <strong>base type</strong>,
     possible subtypes are listed after the base type in parenthesis.</li>
-<li>If the type is an <strong>enumeration</strong>, 
+<li>If the type is an <strong>enumeration</strong>,
     it is listed as <code>ENUM</code>, followed by the possible values in parentheses.</li>
 </ul>
 
@@ -2067,7 +2067,7 @@ The first "word" in each line is the <strong>attribute name</strong>, and the re
           <td><code>document_uri</code></td>
           <td class="doc-param-details">
             <div class="doc-md-description">
-              <p>The document URI, relative to the root of the configuration repository. 
+              <p>The document URI, relative to the root of the configuration repository.
 This document MUST exist in the repository.</p>
             </div>
             <p>
@@ -2136,7 +2136,7 @@ This document MUST exist in the repository.</p>
   
       <p>Converts the server <code>server_id</code> so that it is the first member of the
     new server cluster <code>cluster_name</code>.</p>
-<p>Creates a new <code>ServerCluster</code> object with the name specified by <code>cluster_name</code>, 
+<p>Creates a new <code>ServerCluster</code> object with the name specified by <code>cluster_name</code>,
     and makes the server specified by <code>server_id</code> the first member of this cluster.</p>
 <p>Applications loaded on this server are now configured on the new cluster.</p>
 
@@ -2361,7 +2361,7 @@ This document MUST exist in the repository.</p>
 <details class="question" open>
   <summary>More testing needed</summary>
   <p>The documentation is not clear on how to use the <code>create</code> method.</p>
-<p>For example, on the offline server documentation, the <strong>additional <code>parent_attribute_name</code></strong> is cited, while 
+<p>For example, on the offline server documentation, the <strong>additional <code>parent_attribute_name</code></strong> is cited, while
 in the online server documentation this is <strong>not present</strong>.</p>
 <p>The examples should be tested.</p>
 </details>      <div class="admonition abstract">
@@ -2491,7 +2491,7 @@ in the online server documentation this is <strong>not present</strong>.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Displays all the possible attributes contained by an object of type <code>object_type</code>, along with 
+      <p>Displays all the possible attributes contained by an object of type <code>object_type</code>, along with
     the type and default value of each attribute, if the attribute has a default value.</p>
 
 
@@ -2537,7 +2537,7 @@ in the online server documentation this is <strong>not present</strong>.</p>
           </td>
           <td class="doc-returns-details">
             <div class="doc-md-description">
-              <p>Tab-separated table with all the attribute defaults. 
+              <p>Tab-separated table with all the attribute defaults.
 The table consists of the following columns:</p>
 <ol>
 <li><code>Attribute</code>: Attribute name</li>
@@ -2738,7 +2738,7 @@ The table consists of the following columns:</p>
 
   <div class="doc doc-contents ">
   
-      <p>Extracts a configuration repository file that is described by the document URI and places it in the file named by filename. 
+      <p>Extracts a configuration repository file that is described by the document URI and places it in the file named by filename.
 This method only applies to deployment manager configurations.</p>
 
 
@@ -2890,7 +2890,7 @@ This method only applies to deployment manager configurations.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Returns a string version of the ObjectName for the MBean that corresponds to this configuration ID. </p>
+      <p>Returns a string version of the ObjectName for the MBean that corresponds to this configuration ID.</p>
 <p>If there is no such running MBean this returns an empty string.</p>
 
 
@@ -3078,7 +3078,7 @@ This method only applies to deployment manager configurations.</p>
               <p>The mode used when <code>save</code> is invoked.
 Possible values are:</p>
 <ul>
-<li><code>"overwriteOnConflict"</code> to save changes even if they conflict 
+<li><code>"overwriteOnConflict"</code> to save changes even if they conflict
     with other configuration changes;</li>
 <li><code>"rollbackOnConflict"</code> to cause a save operation to fail if
 changes conflict with other configuration changes;
@@ -3200,7 +3200,7 @@ this value is the default.</li>
           <td><code>severity</code></td>
           <td class="doc-param-details">
             <div class="doc-md-description">
-              <p>The severity level for which to return the number of validation messages. 
+              <p>The severity level for which to return the number of validation messages.
 Specify an integer value <strong>between 0 and 9</strong>.</p>
             </div>
             <p>
@@ -3740,7 +3740,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Change only the attributes specified by <code>attributes</code> 
+      <p>Change only the attributes specified by <code>attributes</code>
     for the configuration object named by <code>configuration_id</code>.</p>
 
 
@@ -3815,7 +3815,7 @@ Specify an integer value <strong>between 0 and 9</strong>.</p>
 
 <details class="example" open>
   <summary>Example</summary>
-  <p>In this example we'll take for granted that every code block is preceded by the following commands: 
+  <p>In this example we'll take for granted that every code block is preceded by the following commands:
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">datasource</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s2">&quot;DataSource&quot;</span><span class="p">,</span> <span class="s2">&quot;*LUCAXA*&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">datasource</span><span class="p">)</span>
 <span class="go">DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)</span>
@@ -4084,7 +4084,7 @@ If that is your goal, see if you can use the <a class="autorefs autorefs-interna
           </td>
           <td class="doc-returns-details">
             <div class="doc-md-description">
-              <p>A table with the required attributes contained by the object. 
+              <p>A table with the required attributes contained by the object.
 The first row contains the header.</p>
             </div>
               <p>
@@ -4499,8 +4499,8 @@ Instead, it will contain only the message <em><code>WASX7361I</code></em>:
 
   <div class="doc doc-contents ">
   
-      <p>Displays all the attributes for the configuration object named by <code>configuration_id</code>. </p>
-<p>If the <code>attributes</code> parameter is not specified, all the attributes for the configuration 
+      <p>Displays all the attributes for the configuration object named by <code>configuration_id</code>.</p>
+<p>If the <code>attributes</code> parameter is not specified, all the attributes for the configuration
 object are displayed, otherwise only the attributes specified in the <code>attributes</code> parameter.</p>
 
 
@@ -4685,7 +4685,7 @@ list containing the attribute name and value; rather, the <strong>attribute valu
   </table>
       <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For a complete list of attributes available for the configuration object use the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.attributes"><code>AdminConfig.attributes()</code></a> 
+<p>For a complete list of attributes available for the configuration object use the <a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.attributes"><code>AdminConfig.attributes()</code></a>
 method passing the object type as a parameter.</p>
 <p>For example, if you don't remember the name of an attribute for the <code>Server</code> object type, you can <code>print(AdminConfig.attributes("Server"))</code>.</p>
 </div>
@@ -4793,13 +4793,13 @@ object are displayed, otherwise only the attributes specified in the <code>attri
 
 <details class="example" open>
   <summary>Example</summary>
-  <p>In the following examples you can see the difference between the <code>AdminConfig.show()</code> 
+  <p>In the following examples you can see the difference between the <code>AdminConfig.show()</code>
 and <code>AdminConfig.showall()</code> methods:</p>
 <ul>
 <li>When the <code>AdminConfig.showall()</code> method encounters a reference to another configuration object,
-it <em>recursively</em> descends into the referenced configuration object and displays its attributes, 
+it <em>recursively</em> descends into the referenced configuration object and displays its attributes,
 continuing until all children and grand-children are "expanded".</li>
-<li>On the other hand, the <code>AdminConfig.show()</code> method always returns the <em>string representation</em> of the 
+<li>On the other hand, the <code>AdminConfig.show()</code> method always returns the <em>string representation</em> of the
 configuration object ID.</li>
 </ul>
 <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">server_id</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s2">&quot;/Node:myNode/Server:myServer/&quot;</span><span class="p">)</span>
@@ -4843,7 +4843,7 @@ configuration object ID.</li>
 
   <div class="doc doc-contents ">
   
-      <p>Displays all the possible top-level configuration object types, restricting the 
+      <p>Displays all the possible top-level configuration object types, restricting the
 search to the types matching the <code>pattern</code> parameter, if specified.</p>
 
 
@@ -5026,7 +5026,7 @@ enabled flag, and the validation level setting.</p>
           </td>
           <td class="doc-returns-details">
             <div class="doc-md-description">
-              <p>The result of the validation request. 
+              <p>The result of the validation request.
 The number of messages is always stored in the first line and can be matched using the following regex:
 <div class="language-text highlight"><pre><span></span><code>Total number of messages: ([0-9]+)
 </code></pre></div></p>
@@ -5087,11 +5087,11 @@ Instead, it will contain only the first line (<em><code>WASX7193I</code></em>):
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T13:37:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T13:37:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
     
   </small>

@@ -22004,8 +22004,8 @@
 client is started and <strong>depends on the edition</strong> of WebSphere Application Server you install.</p>
 <p>For more info see the <a href="https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin">official documentation</a>.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>All methods and descriptions were generated using the <code>AdminTask.help("-commands")</code> command.</p>
+<p class="admonition-title">Note<p>All methods and descriptions were generated using the <code>AdminTask.help("-commands")</code> command.</p>
+</p>
 </div>
 
   
@@ -23969,10 +23969,15 @@ client is started and <strong>depends on the edition</strong> of WebSphere Appli
 
   <div class="doc doc-contents ">
   
-      <p>Compares the version of a given node with the specified version.  Only the number of levels in the specified version number are compared.  For example, if "6.0" compared to a node version of "6.0.1.0", they will compare as equal.  The possible return values are -1, 0, and 1. They are defined as follows: 
-- <code>-1</code>: node version is less than the specified version
-- <code>0</code>: node version is equal to the specified version
-- <code>1</code>: node version is greater than the specified version</p>
+      <p>Compares the version of a given node with the specified version.</p>
+<p>Only the number of levels in the specified version number are compared.
+For example, if <code>"6.0"</code> is compared to a node version of <code>"6.0.1.0"</code>, they will compare as equal.</p>
+<p>The possible return values are <code>-1</code>, <code>0</code>, and <code>1</code>. They are defined as follows:</p>
+<ul>
+<li><code>-1</code>: node version is less than the specified version</li>
+<li><code>0</code>: node version is equal to the specified version</li>
+<li><code>1</code>: node version is greater than the specified version</li>
+</ul>
 
   </div>
 
@@ -25146,38 +25151,35 @@ client is started and <strong>depends on the edition</strong> of WebSphere Appli
   <div class="doc doc-contents ">
   
       <p>Create a new Datasource to access the backend data store.</p>
-<div class="language-text highlight"><pre><span></span><code>Application components use the Datasource to access connection instances to your database.
-A connection pool is associated with each Datasource.
-
-Required parameters:
-- `-name`:
-The name of the data source. (String, required)
-</code></pre></div>
+<p>Application components use the Datasource to access connection instances to your database.
+A connection pool is associated with each Datasource.</p>
+<p>Required parameters:</p>
 <ul>
+<li><code>-name</code>:
+    The name of the data source. (String, required)</li>
 <li><code>-jndiName</code>:
     The Java Naming and Directory Interface (JNDI) name. (String, required)</li>
 <li><code>-dataStoreHelperClassName</code>:
     The name of the DataStoreHelper implementation class that extends the capabilities of the selected JDBC driver implementation class to perform data-specific functions. WebSphere® Application Server provides a set of DataStoreHelper implementation classes for each of the JDBC provider drivers it supports. (String, required)
     configureResourceProperties
     This command step configures the resource properties that are required by the data source. (Required) You can specify the following parameters for this step:<ul>
-<li><code>name</code>:
-The name of the resource property. (String, required)</li>
-<li><code>type</code>:
-The type of the resource property. (String, required)</li>
-<li><code>value</code>:
-The value of the resource property. (String, required)</li>
+<li><code>name</code>: The name of the resource property. (String, required)</li>
+<li><code>type</code>: The type of the resource property. (String, required)</li>
+<li><code>value</code>: The value of the resource property. (String, required)</li>
 </ul>
 </li>
 </ul>
-<p>Optional parameters:
-- <code>-description</code>:
-    The description of the data source. (String, optional)
-- <code>-category</code>:
-    The category that you can use to classify a group of data sources. (String, optional)
-- <code>-componentManagedAuthenticationAlias</code>:
-    The alias used for database authentication at run time. This alias is only used when the application resource reference is using res-auth=Application. (String, optional)
-- <code>-containerManagedPersistence</code>:
-    Specifies if the data source is used for container managed persistence for enterprise beans. The default value is true. (Boolean, optional)</p>
+<p>Optional parameters:</p>
+<ul>
+<li><code>-description</code>:
+    The description of the data source. (String, optional)</li>
+<li><code>-category</code>:
+    The category that you can use to classify a group of data sources. (String, optional)</li>
+<li><code>-componentManagedAuthenticationAlias</code>:
+    The alias used for database authentication at run time. This alias is only used when the application resource reference is using res-auth=Application. (String, optional)</li>
+<li><code>-containerManagedPersistence</code>:
+    Specifies if the data source is used for container managed persistence for enterprise beans. The default value is true. (Boolean, optional)</li>
+</ul>
 
   </div>
 
@@ -27015,7 +27017,7 @@ The value of the resource property. (String, required)</li>
   
       <p>Create a new endpoint that you can associate with a TCP inbound channel.</p>
 <ul>
-<li>If <code>options</code> is set to a string with value <code>"-interactive"</code>, the endpoint will 
+<li>If <code>options</code> is set to a string with value <code>"-interactive"</code>, the endpoint will
     be created in <em>interactive mode</em>.</li>
 </ul>
 
@@ -27047,7 +27049,7 @@ The value of the resource property. (String, required)</li>
           <td><code>options</code></td>
           <td class="doc-param-details">
             <div class="doc-md-description">
-              <p>String containing the <code>-name</code>, <code>-host</code> and <code>-port</code> parameters (all <strong>required</strong>) with their values set. 
+              <p>String containing the <code>-name</code>, <code>-host</code> and <code>-port</code> parameters (all <strong>required</strong>) with their values set.
 If <code>options</code> is set to a string with value <code>"-interactive"</code>, the endpoint will be created in <em>interactive mode</em>.</p>
             </div>
             <p>
@@ -34785,7 +34787,7 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
   
       <p>Get the NamedEndPoint associated with either a TCPInboundChannel, or a chain that contains a TCPInboundChannel.</p>
 <ul>
-<li>If <code>target_object</code> is set to a string with value <code>"-interactive"</code>, the endpoint will 
+<li>If <code>target_object</code> is set to a string with value <code>"-interactive"</code>, the endpoint will
     be retrieved in <em>interactive mode</em>.</li>
 </ul>
 
@@ -34803,7 +34805,7 @@ If <code>options</code> is set to a string with value <code>"-interactive"</code
           <td><code>target_object</code></td>
           <td class="doc-param-details">
             <div class="doc-md-description">
-              <p>The TCPInboundChannel, or containing chain, instance that is associated with a NamedEndPoint. </p>
+              <p>The TCPInboundChannel, or containing chain, instance that is associated with a NamedEndPoint.</p>
             </div>
             <p>
                 <span class="doc-param-annotation">
@@ -36679,11 +36681,48 @@ commands and their parameters:</p>
 
   <div class="doc doc-contents ">
   
-      <p>List all chains configured under a particular instance of TransportChannelService. </p>
-<div class="language-text highlight"><pre><span></span><code>Args:
-acceptor_filter (ConfigurationObjectName): Chains returned by this method should all have a transport channel instance of the specified type as the last transport channel in the chain.
-endpoint_filter (str): Chains returned by this method should all have a TCPInboundChannel using an end point with the specified name.
-</code></pre></div>
+      <p>List all chains configured under a particular instance of TransportChannelService.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>acceptor_filter</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Chains returned by this method should all have a transport channel instance of the specified type as the last transport channel in the chain.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>endpoint_filter</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Chains returned by this method should all have a TCPInboundChannel using an end point with the specified name.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 
 
@@ -36865,22 +36904,21 @@ endpoint_filter (str): Chains returned by this method should all have a TCPInbou
 
   <div class="doc doc-contents ">
   
-      <p>List the datasources that are contained in the specified scope. </p>
+      <p>List the datasources that are contained in the specified scope.</p>
 
 <details class="example" open>
   <summary>Example</summary>
-  <p>```pycon
-    &gt;&gt;&gt; print AdminTask.listDatasources()</p>
-</details>      <p>DUMMYDS(cells/myCell/clusters/myCluster|resources.xml#DataSource_1599813633144)
-DUMMYDB2(cells/myCell/clusters/myCluster|resources.xml#DataSource_1621589409106)
-DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)
-test_cluster_datasource(cells/myCell/clusters/myCluster|resources.xml#DataSource_1696520870045)
-DefaultEJBTimerDataSource(cells/myCell/nodes/myNode2/servers/US00EBASG38|resources.xml#DataSource_1000001)
-DefaultEJBTimerDataSource(cells/myCell/nodes/myNode1/servers/US00EBASG37|resources.xml#DataSource_1000001)
-DefaultEJBTimerDataSource(cells/myCell/applications/commsvc.ear/deployments/commsvc|resources.xml#DataSource_1228749623069)
-wsadmin&gt;
-```</p>
-
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">AdminTask</span><span class="o">.</span><span class="n">listDatasources</span><span class="p">()</span>
+<span class="go">DUMMYDS(cells/myCell/clusters/myCluster|resources.xml#DataSource_1599813633144)</span>
+<span class="go">DUMMYDB2(cells/myCell/clusters/myCluster|resources.xml#DataSource_1621589409106)</span>
+<span class="go">DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)</span>
+<span class="go">test_cluster_datasource(cells/myCell/clusters/myCluster|resources.xml#DataSource_1696520870045)</span>
+<span class="go">DefaultEJBTimerDataSource(cells/myCell/nodes/myNode2/servers/US00EBASG38|resources.xml#DataSource_1000001)</span>
+<span class="go">DefaultEJBTimerDataSource(cells/myCell/nodes/myNode1/servers/US00EBASG37|resources.xml#DataSource_1000001)</span>
+<span class="go">DefaultEJBTimerDataSource(cells/myCell/applications/commsvc.ear/deployments/commsvc|resources.xml#DataSource_1228749623069)</span>
+<span class="go">wsadmin&gt;</span>
+</code></pre></div>
+</details>
   </div>
 
 </div>
@@ -39209,9 +39247,37 @@ wsadmin&gt;
   <div class="doc doc-contents ">
   
       <p>Lists the available serverTypes that have a template.</p>
-<div class="language-text highlight"><pre><span></span><code>Args:
-    target_node (ConfigurationObjectName, optional): The node name or configuration id whose available serverTypes are to be displayed. Defaults to &quot;&quot;.
-</code></pre></div>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>target_node</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The node name or configuration id whose available serverTypes are to be displayed. Defaults to "".</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a></code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>&#39;&#39;</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 
 
@@ -39239,227 +39305,33 @@ wsadmin&gt;
               </p>
           </td>
         </tr>
-        <tr>
-          <td>
-              <code>Example</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>```pycon</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-                </span>
-              </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <blockquote>
-<blockquote>
-<blockquote>
-<p>print(AdminTask.listServerTypes())</p>
-</blockquote>
-</blockquote>
-</blockquote>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>TOMCAT_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>APPLICATION_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>LIBERTY_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>CUSTOMHTTP_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>WASCE_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>ONDEMAND_ROUTER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>APACHE_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>WEB_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>PROXY_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>WASAPP_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>JBOSS_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>WEBLOGIC_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>GENERIC_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>PHP_SERVER</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[str]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>```</p>
-            </div>
-          </td>
-        </tr>
     </tbody>
   </table>
 
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminTask</span><span class="o">.</span><span class="n">listServerTypes</span><span class="p">())</span>
+<span class="go">TOMCAT_SERVER</span>
+<span class="go">APPLICATION_SERVER</span>
+<span class="go">LIBERTY_SERVER</span>
+<span class="go">CUSTOMHTTP_SERVER</span>
+<span class="go">WASCE_SERVER</span>
+<span class="go">ONDEMAND_ROUTER</span>
+<span class="go">APACHE_SERVER</span>
+<span class="go">WEB_SERVER</span>
+<span class="go">PROXY_SERVER</span>
+<span class="go">WASAPP_SERVER</span>
+<span class="go">JBOSS_SERVER</span>
+<span class="go">WEBLOGIC_SERVER</span>
+<span class="go">GENERIC_SERVER</span>
+<span class="go">PHP_SERVER</span>
+</code></pre></div>
+</details>
 <details class="question" open>
   <summary>Documentation unclear</summary>
-  <p>The documentation is not clear on whether the <code>target_node</code> parameter must be the node name or configuration ID (or both).
-        Both work, but it is not clear if this is intended or not.</p>
+  <p>The documentation is not clear on whether the <code>target_node</code> parameter should be the <em>node name</em> or the
+<em>configuration ID</em> (or both).</p>
+<p>Both work but, again, it is not clear if this is intended or not.</p>
 </details>
   </div>
 
@@ -39469,28 +39341,51 @@ wsadmin&gt;
 
 
 <h2 id="wsadmin_type_hints.core.AdminTask.listServers" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">listServers</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminTask</span><span class="o">.</span><span class="n">listServers</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminTask.listServers" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>List servers of specified server type and node name. </p>
-<div class="language-text highlight"><pre><span></span><code>If node name is not specified, the whole cell will be searched. 
-If the server type is not specified servers of all types are returned.
+      <p>List servers of specified server type and node name.</p>
+<p>If node name is not specified, the whole cell will be searched.
+If the server type is not specified servers of all types are returned.</p>
+<p>The available parameters are:
+- serverType: The ServerType (eg. <code>APPLICATION_SERVER</code>)
+- nodeName: The Node Name (eg. <code>myNode</code>)</p>
 
-The available parameters are:
-- serverType: The ServerType (eg. `APPLICATION_SERVER`)
-</code></pre></div>
-<ul>
-<li>
-<p>nodeName: The Node Name (eg. <code>myNode</code>)</p>
-<p>Args:
-arguments (str): The arguments to pass to the <code>listServers</code> command in the form <code>[ -paramName paramValue ]</code> 
-            (the square brackets are not required).</p>
-</li>
-</ul>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>arguments</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The arguments to pass to the command in the form <code>[ -paramName paramValue ]</code>
+(the square brackets are not required). Defaults to <code>""</code>.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>&#39;&#39;</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 
 
@@ -39518,76 +39413,18 @@ arguments (str): The arguments to pass to the <code>listServers</code> command i
               </p>
           </td>
         </tr>
-        <tr>
-          <td>
-              <code>Example</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a>]</code>
-                </span>
-              </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a>]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>```pycon
-    &gt;&gt;&gt; print(AdminTask.listServers('[-serverType DEPLOYMENT_MANAGER]'))</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a>]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml)</p>
-<div class="language-text highlight"><pre><span></span><code>&gt;&gt;&gt; print(AdminTask.listServers(&#39;-serverType APPLICATION_SERVER -nodeName myNode1&#39;))
-</code></pre></div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a>]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>server1(cells/myCell/nodes/myNode1/servers/server1|server.xml#Server_1)</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList" href="../../typing_objects/wsadmin_types/#wsadmin_type_hints.typing_objects.wsadmin_types.MultilineList">MultilineList</a>[<a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">ConfigurationObjectName</a>]</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>```</p>
-            </div>
-          </td>
-        </tr>
     </tbody>
   </table>
-      <div class="admonition abstract">
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminTask</span><span class="o">.</span><span class="n">listServers</span><span class="p">(</span><span class="s1">&#39;[-serverType DEPLOYMENT_MANAGER]&#39;</span><span class="p">))</span>
+<span class="go">dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminTask</span><span class="o">.</span><span class="n">listServers</span><span class="p">(</span><span class="s1">&#39;-serverType APPLICATION_SERVER -nodeName myNode1&#39;</span><span class="p">))</span>
+<span class="go">server1(cells/myCell/nodes/myNode1/servers/server1|server.xml#Server_1)</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
 <p class="admonition-title">See also</p>
 <ul>
 <li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminTask.listServerTypes"><code>AdminTask.listServerTypes()</code></a></li>
@@ -47446,7 +47283,7 @@ arguments (str): The arguments to pass to the <code>listServers</code> command i
 
   <div class="doc doc-contents ">
   
-      <p>Update an existing resource adapter with the supplied RAR file and configure any new properties that exist on deployed objects within the resource adapter to be updated. </p>
+      <p>Update an existing resource adapter with the supplied RAR file and configure any new properties that exist on deployed objects within the resource adapter to be updated.</p>
 <p>Before using the updateRAR command, use the compareResourceAdapterToRAR command to verify the RAR is compatible for upgrading the resource adapter, and use the findOtherRAsToUpdate command to determine the set of resources adapters that need be updated using the supplied RAR.</p>
 
   </div>
@@ -47789,11 +47626,11 @@ arguments (str): The arguments to pass to the <code>listServers</code> command i
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T13:37:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T13:37:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-27T14:03:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-27</span>
       
     
   </small>
