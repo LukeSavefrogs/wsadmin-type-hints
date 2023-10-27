@@ -7,7 +7,7 @@ client is started and **depends on the edition** of WebSphere Application Server
 For more info see the [official documentation](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=scripting-commands-admintask-object-using-wsadmin).
 
 !!! Note
-    All methods and descriptions were generated using the `AdminTask.help("-commands")` command.
+	All methods and descriptions were generated using the `AdminTask.help("-commands")` command.
 """
 
 from typing import Any as _Any, Literal as _Literal, Union as _Union, overload as _overload, List as _List
@@ -474,10 +474,10 @@ def compareMultipleResourceAdapters(*args: _Any) -> _Any:
 
 def compareNodeVersion(*args: _Any) -> _Any:
 	""" Compares the version of a given node with the specified version.  Only the number of levels in the specified version number are compared.  For example, if "6.0" compared to a node version of "6.0.1.0", they will compare as equal.  The possible return values are -1, 0, and 1. They are defined as follows: 
-            - `-1`: node version is less than the specified version
-            - `0`: node version is equal to the specified version
-            - `1`: node version is greater than the specified version
-    """
+			- `-1`: node version is less than the specified version
+			- `0`: node version is equal to the specified version
+			- `1`: node version is greater than the specified version
+	"""
 	...
 
 def compareResourceAdapterToRAR(*args: _Any) -> _Any:
@@ -760,30 +760,30 @@ def createDatasource(jdbc_provider: ConfigurationObjectName, datasource_config: 
 	
 	Required parameters:
 	- `-name`:
-        The name of the data source. (String, required)
-    - `-jndiName`:
-        The Java Naming and Directory Interface (JNDI) name. (String, required)
-    - `-dataStoreHelperClassName`:
-        The name of the DataStoreHelper implementation class that extends the capabilities of the selected JDBC driver implementation class to perform data-specific functions. WebSphere® Application Server provides a set of DataStoreHelper implementation classes for each of the JDBC provider drivers it supports. (String, required)
-        configureResourceProperties
-        This command step configures the resource properties that are required by the data source. (Required) You can specify the following parameters for this step:
-        - `name`:
-        The name of the resource property. (String, required)
-        - `type`:
-        The type of the resource property. (String, required)
-        - `value`:
-        The value of the resource property. (String, required)
+		The name of the data source. (String, required)
+	- `-jndiName`:
+		The Java Naming and Directory Interface (JNDI) name. (String, required)
+	- `-dataStoreHelperClassName`:
+		The name of the DataStoreHelper implementation class that extends the capabilities of the selected JDBC driver implementation class to perform data-specific functions. WebSphere® Application Server provides a set of DataStoreHelper implementation classes for each of the JDBC provider drivers it supports. (String, required)
+		configureResourceProperties
+		This command step configures the resource properties that are required by the data source. (Required) You can specify the following parameters for this step:
+		- `name`:
+		The name of the resource property. (String, required)
+		- `type`:
+		The type of the resource property. (String, required)
+		- `value`:
+		The value of the resource property. (String, required)
 
-    Optional parameters:
-    - `-description`:
-        The description of the data source. (String, optional)
-    - `-category`:
-        The category that you can use to classify a group of data sources. (String, optional)
-    - `-componentManagedAuthenticationAlias`:
-        The alias used for database authentication at run time. This alias is only used when the application resource reference is using res-auth=Application. (String, optional)
-    - `-containerManagedPersistence`:
-        Specifies if the data source is used for container managed persistence for enterprise beans. The default value is true. (Boolean, optional)
-    """
+	Optional parameters:
+	- `-description`:
+		The description of the data source. (String, optional)
+	- `-category`:
+		The category that you can use to classify a group of data sources. (String, optional)
+	- `-componentManagedAuthenticationAlias`:
+		The alias used for database authentication at run time. This alias is only used when the application resource reference is using res-auth=Application. (String, optional)
+	- `-containerManagedPersistence`:
+		Specifies if the data source is used for container managed persistence for enterprise beans. The default value is true. (Boolean, optional)
+	"""
 	...
 
 def createDefaultARPWorkClass(*args: _Any) -> _Any:
@@ -1217,42 +1217,42 @@ def createTADataCollection(*args: _Any) -> _Any:
 # --------------------------------------------------------------------------
 @_overload
 def createTCPEndPoint(target_object: _Literal['-interactive'], /) -> _Any:
-    ...
+	...
 
 @_overload
 def createTCPEndPoint(target_object: ConfigurationObjectName, /) -> ConfigurationObjectName:
-    ...
+	...
 
 @_overload
 def createTCPEndPoint(target_object: ConfigurationObjectName, options: _Union[str, _List[str]], /) -> ConfigurationObjectName:
-    ...
+	...
 
 def createTCPEndPoint(target_object: _Union[_Literal['-interactive'], ConfigurationObjectName], options: _Union[str, _List[str]], /) -> ConfigurationObjectName: # type: ignore[misc]
-    """Create a new endpoint that you can associate with a TCP inbound channel.
+	"""Create a new endpoint that you can associate with a TCP inbound channel.
 
-    - If `options` is set to a string with value `"-interactive"`, the endpoint will 
-        be created in _interactive mode_.
+	- If `options` is set to a string with value `"-interactive"`, the endpoint will 
+		be created in _interactive mode_.
 
-    Args:
-        target_object (ConfigurationObjectName): Parent instance of the TransportChannelService that contains the TCPInboundChannel.
-        options (str | list): String containing the `-name`, `-host` and `-port` parameters (all **required**) with their values set. 
-            If `options` is set to a string with value `"-interactive"`, the endpoint will be created in _interactive mode_.
+	Args:
+		target_object (ConfigurationObjectName): Parent instance of the TransportChannelService that contains the TCPInboundChannel.
+		options (str | list): String containing the `-name`, `-host` and `-port` parameters (all **required**) with their values set. 
+			If `options` is set to a string with value `"-interactive"`, the endpoint will be created in _interactive mode_.
 
-    Returns:
-        ConfigurationObjectName: The object name of the endpoint that was created.
+	Returns:
+		ConfigurationObjectName: The object name of the endpoint that was created.
 
-    Example:
-        ```pycon
-        >>> target = 'cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TransportChannelService_1'
-        
-        # As a string...
-        >>> AdminTask.createTCPEndPoint(target, '[-name Sample_End_Pt_Name -host mybuild.location.ibm.com -port 8978]')
-        
-        # ... or as a list...
-        >>> AdminTask.createTCPEndPoint(target, ['-name', 'Sample_End_Pt_Name', '-host', 'mybuild.location.ibm.com', '-port', '8978'])
-        ```
-    """
-    ...
+	Example:
+		```pycon
+		>>> target = 'cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TransportChannelService_1'
+		
+		# As a string...
+		>>> AdminTask.createTCPEndPoint(target, '[-name Sample_End_Pt_Name -host mybuild.location.ibm.com -port 8978]')
+		
+		# ... or as a list...
+		>>> AdminTask.createTCPEndPoint(target, ['-name', 'Sample_End_Pt_Name', '-host', 'mybuild.location.ibm.com', '-port', '8978'])
+		```
+	"""
+	...
 # --------------------------------------------------------------------------
 
 
@@ -3063,35 +3063,35 @@ def getTADataCollectionSummary(*args: _Any) -> _Any:
 # --------------------------------------------------------------------------
 @_overload
 def getTCPEndPoint(options: _Literal['-interactive'], /) -> _Any:
-    ...
+	...
 
 @_overload
 def getTCPEndPoint(target_object: ConfigurationObjectName, /) -> ConfigurationObjectName:
-    ...
+	...
 
 @_overload
 def getTCPEndPoint(target_object: ConfigurationObjectName, options: _Union[str, _List[str]], /) -> ConfigurationObjectName:
-    ...
+	...
 
 def getTCPEndPoint(target_object: ConfigurationObjectName, options: _Union[str, _List[str]], /) -> ConfigurationObjectName: # type: ignore[misc]
-    """Get the NamedEndPoint associated with either a TCPInboundChannel, or a chain that contains a TCPInboundChannel.
+	"""Get the NamedEndPoint associated with either a TCPInboundChannel, or a chain that contains a TCPInboundChannel.
 
-    - If `target_object` is set to a string with value `"-interactive"`, the endpoint will 
-        be retrieved in _interactive mode_.
+	- If `target_object` is set to a string with value `"-interactive"`, the endpoint will 
+		be retrieved in _interactive mode_.
 
-    Args:
-        target_object (ConfigurationObjectName | _Literal['-interactive']): The TCPInboundChannel, or containing chain, instance that is associated with a NamedEndPoint. 
+	Args:
+		target_object (ConfigurationObjectName | _Literal['-interactive']): The TCPInboundChannel, or containing chain, instance that is associated with a NamedEndPoint. 
 
-    Returns:
-        ConfigurationObjectName: The object name of an existing named end point that is associated with the TCP inbound channel instance or a channel chain.
-    
-    Example:
-        ```pycon
-        >>> target = 'TCP_1(cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TCPInboundChannel_1)'
-        >>> AdminTask.getTCPEndPoint(target)
-        ```
-    """
-    ...
+	Returns:
+		ConfigurationObjectName: The object name of an existing named end point that is associated with the TCP inbound channel instance or a channel chain.
+	
+	Example:
+		```pycon
+		>>> target = 'TCP_1(cells/mybuildCell01/nodes/mybuildCellManager01/servers/dmgr|server.xml#TCPInboundChannel_1)'
+		>>> AdminTask.getTCPEndPoint(target)
+		```
+	"""
+	...
 # --------------------------------------------------------------------------
 
 def getTargetGroupInfo(*args: _Any) -> _Any:
@@ -3139,12 +3139,12 @@ def getWSCertExpMonitor(*args: _Any) -> _Any:
 	...
 
 def getWSN_SIBWSInboundPort(*args: _Any) -> _Any:
-    """ Retrieve one of the service integration bus inbound ports from a WS-Notification service point. """
-    ...
+	""" Retrieve one of the service integration bus inbound ports from a WS-Notification service point. """
+	...
 
 def getWSN_SIBWSInboundService(*args: _Any) -> _Any:
-    """ Retrieve one of the service integration bus inbound services from a WS-Notification service. """
-    ...
+	""" Retrieve one of the service integration bus inbound services from a WS-Notification service. """
+	...
 
 def getWSNotifier(*args: _Any) -> _Any:
 	""" Get information about a notifier. """
@@ -3164,34 +3164,34 @@ def healthRestartAction(*args: _Any) -> _Any:
 
 # --------------------------------------------------------------------------
 def help(search_query: str = "", /) -> str:
-    """The number of admin commands varies and depends on your WebSphere
-    install. Use the following help commands to obtain a list of supported
-    commands and their parameters:
+	"""The number of admin commands varies and depends on your WebSphere
+	install. Use the following help commands to obtain a list of supported
+	commands and their parameters:
 
-    - `AdminTask.help("-commands")`                  list all the admin commands
-    - `AdminTask.help("-commands <pattern>")`        list admin commands matching with wildcard "pattern"
-    - `AdminTask.help("-commandGroups")`             list all the admin command groups
-    - `AdminTask.help("-commandGroups <pattern>")`   list admin command groups matching with wildcard "pattern"
-    - `AdminTask.help("commandName")`                display detailed information for the specified command
-    - `AdminTask.help("commandName stepName")`       display detailed information for the specified step belonging to the specified command
-    - `AdminTask.help("commandGroupName")`           display detailed information for the specified command group
+	- `AdminTask.help("-commands")`                  list all the admin commands
+	- `AdminTask.help("-commands <pattern>")`        list admin commands matching with wildcard "pattern"
+	- `AdminTask.help("-commandGroups")`             list all the admin command groups
+	- `AdminTask.help("-commandGroups <pattern>")`   list admin command groups matching with wildcard "pattern"
+	- `AdminTask.help("commandName")`                display detailed information for the specified command
+	- `AdminTask.help("commandName stepName")`       display detailed information for the specified step belonging to the specified command
+	- `AdminTask.help("commandGroupName")`           display detailed information for the specified command group
 
 
-    Args:
-        search_query (str, optional): Pass a query to filter the desired results. Defaults to "".
+	Args:
+		search_query (str, optional): Pass a query to filter the desired results. Defaults to "".
 
-    Returns:
-        str: The detailed help string
-    
-    Example:
-        ```pycon
-        >>> print (AdminTask.help("createTCPEndPoint"))
-        WASX8006I: Detailed help for command: createTCPEndPoint
-        Description: Create a new NamedEndPoint that can be associated with a TCPInboundChannel
-        [...]
-        ```
-    """
-    ...
+	Returns:
+		str: The detailed help string
+	
+	Example:
+		```pycon
+		>>> print (AdminTask.help("createTCPEndPoint"))
+		WASX8006I: Detailed help for command: createTCPEndPoint
+		Description: Create a new NamedEndPoint that can be associated with a TCPInboundChannel
+		[...]
+		```
+	"""
+	...
 # --------------------------------------------------------------------------
 
 def importApplicationsFromWasprofile(*args: _Any) -> _Any:
@@ -3532,14 +3532,14 @@ def listChainTemplates(*args: _Any) -> _Any:
 
 def listChains(acceptor_filter: ConfigurationObjectName, endpoint_filter: str, /) -> MultilineList[ConfigurationObjectName]:
 	""" List all chains configured under a particular instance of TransportChannelService. 
-    
+	
 	Args:
-        acceptor_filter (ConfigurationObjectName): Chains returned by this method should all have a transport channel instance of the specified type as the last transport channel in the chain.
-        endpoint_filter (str): Chains returned by this method should all have a TCPInboundChannel using an end point with the specified name.
+		acceptor_filter (ConfigurationObjectName): Chains returned by this method should all have a transport channel instance of the specified type as the last transport channel in the chain.
+		endpoint_filter (str): Chains returned by this method should all have a TCPInboundChannel using an end point with the specified name.
 
-    Returns:
-        chains (ConfigurationObjectName): _List of all the chains satisfying the filters specified by `endpoint_filter`
-    """
+	Returns:
+		chains (ConfigurationObjectName): _List of all the chains satisfying the filters specified by `endpoint_filter`
+	"""
 	...
 
 def listCheckpointDocuments(*args: _Any) -> _Any:
@@ -3578,17 +3578,17 @@ def listDatasources(*args: _Any) -> _Any:
 	""" List the datasources that are contained in the specified scope. 
 	
 	Example:
-	    ```pycon
+		```pycon
 		>>> print AdminTask.listDatasources()
-        DUMMYDS(cells/myCell/clusters/myCluster|resources.xml#DataSource_1599813633144)
-        DUMMYDB2(cells/myCell/clusters/myCluster|resources.xml#DataSource_1621589409106)
-        DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)
-        test_cluster_datasource(cells/myCell/clusters/myCluster|resources.xml#DataSource_1696520870045)
-        DefaultEJBTimerDataSource(cells/myCell/nodes/myNode2/servers/US00EBASG38|resources.xml#DataSource_1000001)
-        DefaultEJBTimerDataSource(cells/myCell/nodes/myNode1/servers/US00EBASG37|resources.xml#DataSource_1000001)
-        DefaultEJBTimerDataSource(cells/myCell/applications/commsvc.ear/deployments/commsvc|resources.xml#DataSource_1228749623069)
-        wsadmin>
-        ```
+		DUMMYDS(cells/myCell/clusters/myCluster|resources.xml#DataSource_1599813633144)
+		DUMMYDB2(cells/myCell/clusters/myCluster|resources.xml#DataSource_1621589409106)
+		DUMMYDB24LUCAXA(cells/myCell/clusters/myCluster|resources.xml#DataSource_1678720288191)
+		test_cluster_datasource(cells/myCell/clusters/myCluster|resources.xml#DataSource_1696520870045)
+		DefaultEJBTimerDataSource(cells/myCell/nodes/myNode2/servers/US00EBASG38|resources.xml#DataSource_1000001)
+		DefaultEJBTimerDataSource(cells/myCell/nodes/myNode1/servers/US00EBASG37|resources.xml#DataSource_1000001)
+		DefaultEJBTimerDataSource(cells/myCell/applications/commsvc.ear/deployments/commsvc|resources.xml#DataSource_1228749623069)
+		wsadmin>
+		```
 	"""
 	...
 
@@ -4136,41 +4136,43 @@ def listServerTemplates(*args: _Any) -> _Any:
 	""" Lists the available Server Templates """
 	...
 
-def listServerTypes(target_node: _Union[ConfigurationObjectName, str] = "") -> MultilineList[str]:
+def listServerTypes(target_node: _Union[ConfigurationObjectName, str] = "", /) -> MultilineList[str]:
 	""" Lists the available serverTypes that have a template.
 	
 	Args:
-	    target_node (ConfigurationObjectName, optional): The node name or configuration id whose available serverTypes are to be displayed. Defaults to "".
+		target_node (ConfigurationObjectName, optional): The node name or configuration id whose available serverTypes are to be displayed. Defaults to "".
 	
-    Returns:
-        server_types (MultilineList[str]): A list of all the available serverTypes.
-        
-	Example:
-	    ```pycon
-        >>> print(AdminTask.listServerTypes())
-        TOMCAT_SERVER
-        APPLICATION_SERVER
-        LIBERTY_SERVER
-        CUSTOMHTTP_SERVER
-        WASCE_SERVER
-        ONDEMAND_ROUTER
-        APACHE_SERVER
-        WEB_SERVER
-        PROXY_SERVER
-        WASAPP_SERVER
-        JBOSS_SERVER
-        WEBLOGIC_SERVER
-        GENERIC_SERVER
-        PHP_SERVER
-        ```
+	Returns:
+		server_types (MultilineList[str]): A list of all the available serverTypes.
 		
-    Question: Documentation unclear
-        The documentation is not clear on whether the `target_node` parameter must be the node name or configuration ID (or both).
-		Both work, but it is not clear if this is intended or not.
+	Example:
+		```pycon
+		>>> print(AdminTask.listServerTypes())
+		TOMCAT_SERVER
+		APPLICATION_SERVER
+		LIBERTY_SERVER
+		CUSTOMHTTP_SERVER
+		WASCE_SERVER
+		ONDEMAND_ROUTER
+		APACHE_SERVER
+		WEB_SERVER
+		PROXY_SERVER
+		WASAPP_SERVER
+		JBOSS_SERVER
+		WEBLOGIC_SERVER
+		GENERIC_SERVER
+		PHP_SERVER
+		```
+		
+	Question: Documentation unclear
+		The documentation is not clear on whether the `target_node` parameter should be the _node name_ or the 
+		_configuration ID_ (or both).
+		
+		Both work but, again, it is not clear if this is intended or not.
 	"""
 	...
 
-def listServers(arguments: str) -> MultilineList[ConfigurationObjectName]:
+def listServers(arguments: str = "", /) -> MultilineList[ConfigurationObjectName]:
 	""" List servers of specified server type and node name. 
 	
 	If node name is not specified, the whole cell will be searched. 
@@ -4178,26 +4180,26 @@ def listServers(arguments: str) -> MultilineList[ConfigurationObjectName]:
 	
 	The available parameters are:
 	- serverType: The ServerType (eg. `APPLICATION_SERVER`)
-    - nodeName: The Node Name (eg. `myNode`)
+	- nodeName: The Node Name (eg. `myNode`)
 	
 	Args:
-        arguments (str): The arguments to pass to the `listServers` command in the form `[ -paramName paramValue ]` 
-		    (the square brackets are not required).
+		arguments (str, optional): The arguments to pass to the command in the form `[ -paramName paramValue ]` 
+			(the square brackets are not required). Defaults to `""`.
 		
-    Returns:
-        servers (MultilineList[ConfigurationObjectName]): A list of all the servers matching the specified parameters.
+	Returns:
+		servers (MultilineList[ConfigurationObjectName]): A list of all the servers matching the specified parameters.
 
 	Example:
-        ```pycon
+		```pycon
 		>>> print(AdminTask.listServers('[-serverType DEPLOYMENT_MANAGER]'))
-        dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml)
+		dmgr(cells/myCell/nodes/myNode/servers/dmgr|server.xml)
 		
 		>>> print(AdminTask.listServers('-serverType APPLICATION_SERVER -nodeName myNode1'))
-        server1(cells/myCell/nodes/myNode1/servers/server1|server.xml#Server_1)
-        ```
+		server1(cells/myCell/nodes/myNode1/servers/server1|server.xml#Server_1)
+		```
 
-    !!! abstract "See also"
-        - [`AdminTask.listServerTypes()`][wsadmin_type_hints.AdminTask.listServerTypes]
+	!!! abstract "See also"
+		- [`AdminTask.listServerTypes()`][wsadmin_type_hints.AdminTask.listServerTypes]
 	"""
 	...
 
@@ -6047,9 +6049,9 @@ def updatePolicySetAttachment(*args: _Any) -> _Any:
 
 def updateRAR(*args: _Any) -> _Any:
 	""" Update an existing resource adapter with the supplied RAR file and configure any new properties that exist on deployed objects within the resource adapter to be updated. 
-    
-    Before using the updateRAR command, use the compareResourceAdapterToRAR command to verify the RAR is compatible for upgrading the resource adapter, and use the findOtherRAsToUpdate command to determine the set of resources adapters that need be updated using the supplied RAR.
-    """
+	
+	Before using the updateRAR command, use the compareResourceAdapterToRAR command to verify the RAR is compatible for upgrading the resource adapter, and use the findOtherRAsToUpdate command to determine the set of resources adapters that need be updated using the supplied RAR.
+	"""
 	...
 
 def updateSAMLIssuerConfig(*args: _Any) -> _Any:
