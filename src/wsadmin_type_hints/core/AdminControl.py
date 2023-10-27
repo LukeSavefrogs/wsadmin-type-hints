@@ -329,14 +329,31 @@ def queryMBeans(*args: Any) -> Any:  # undocumented
     """ """
 
 
-def queryNames(pattern: str) -> MultilineList[RunningObjectName]:  # undocumented
-    """
+def queryNames(
+    pattern: Union[RunningObjectTemplate, str]
+) -> MultilineList[RunningObjectName]:
+    """Returns all the **object names** that match the input object template (_which may include a wild card_).
+
+    Args:
+        pattern (RunningObjectTemplate | str): The object template to match (eg. `type=Server,*`).
+
+    Returns:
+        object_names(MultilineList[RunningObjectName]): A newline-separated list of object names that match the template.
+
     Example:
         ```pycon
         >>> print(AdminControl.queryNames('*'))
         WebSphere:cell=MyCell,name=TraceService,mbeanIdentifier=TraceService,type=TraceService,node=MyNode,process=server1
         [...]
+        >>> print(AdminControl.queryNames('type=DataSource,*'))
+        WebSphere:name=myDataSource,process=XYZ,platform=dynamicproxy,node=myNode,JDBCProvider=[...]
+        [...]
         ```
+
+    !!! abstract "See also"
+        - [`AdminControl.completeObjectName()`][wsadmin_type_hints.AdminControl.completeObjectName]
+
+        To better understand how object templates work, see [_this explanation_][wsadmin_type_hints.typing_objects.object_name.RunningObjectTemplate].
     """
     ...
 
