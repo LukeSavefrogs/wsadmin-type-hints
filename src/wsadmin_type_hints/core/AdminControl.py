@@ -147,8 +147,8 @@ def getAttributes_jmx(*args: Any) -> Any:  # undocumented
 
 
 def getCell() -> str:
-    """ Returns the **cell name** to which the scripting process is connected.
-    
+    """Returns the **cell name** to which the scripting process is connected.
+
     Example:
         The following code will show the cell name:
         ```pycon
@@ -167,7 +167,6 @@ def getCell() -> str:
         - [`AdminControl.getNode()`][wsadmin_type_hints.AdminControl.getNode]
         - [`AdminControl.getPort()`][wsadmin_type_hints.AdminControl.getPort]
         - [`AdminControl.getType()`][wsadmin_type_hints.AdminControl.getType]
-        - [`AdminControl.getDomainName()`][wsadmin_type_hints.AdminControl.getDomainName]
     """
 
 
@@ -218,8 +217,21 @@ def getDomainName(*args: Any) -> Any:  # undocumented
     """ """
 
 
-def getHost(*args: Any) -> Any:  # undocumented
-    """ """
+def getHost() -> str:
+    """Returns the **host** to which the scripting process is connected.
+
+    Example:
+        ```pycon
+        >>> print(AdminControl.getHost())
+        myHost.internal.cloud
+        ```
+
+    !!! abstract "See also"
+        - [`AdminControl.getCell()`][wsadmin_type_hints.AdminControl.getCell]
+        - [`AdminControl.getNode()`][wsadmin_type_hints.AdminControl.getNode]
+        - [`AdminControl.getPort()`][wsadmin_type_hints.AdminControl.getPort]
+        - [`AdminControl.getType()`][wsadmin_type_hints.AdminControl.getType]
+    """
 
 
 def getMBeanCount(*args: Any) -> Any:  # undocumented
