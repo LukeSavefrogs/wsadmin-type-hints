@@ -2469,12 +2469,136 @@ in the online server documentation this is <strong>not present</strong>.</p>
 
 
 <h2 id="wsadmin_type_hints.core.AdminConfig.createUsingTemplate" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createUsingTemplate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createUsingTemplate</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">template</span><span class="p">)</span></code>
 
 <a href="#wsadmin_type_hints.core.AdminConfig.createUsingTemplate" class="headerlink" title="Anchor link to this section for reference">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
+  
+      <p>Creates a new configuration object of the given type
+using the specified template as the basis.</p>
+<p>The specified attributes override settings in the template.</p>
+<p>The template parameter is a configuration ID of an existing object.
+This object can be either a template object, returned by using the
+<code>AdminConfig.listTemplates()</code> method, or any other existing object
+of the correct type.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>type</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The type of the configuration object that will be created.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_types.ObjectType" href="../../typing_objects/object_types/#wsadmin_type_hints.typing_objects.object_types.ObjectType">_ObjectType</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>parent</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The configuration ID of the parent object.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">_ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>attributes</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>A list of attributes to add to the new configuration object. 
+Can be either in the string format or in the list format (see <code>attributes</code> for more information).</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str | <span title="typing.List">_List</span>[<span title="typing.List">_List</span>[str]]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>template</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The configuration ID of the template object.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">_ConfigurationObjectName</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>new_object</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The newly created configuration object.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName" href="../../typing_objects/object_name/#wsadmin_type_hints.typing_objects.object_name.ConfigurationObjectName">_ConfigurationObjectName</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-pycon highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">provider</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">getid</span><span class="p">(</span><span class="s1">&#39;/JDBCProvider:myProvider/&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">template</span> <span class="o">=</span> <span class="n">AdminConfig</span><span class="o">.</span><span class="n">listTemplates</span><span class="p">(</span><span class="s1">&#39;DataSource&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Oracle JDBC Driver DataSource&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">AdminConfig</span><span class="o">.</span><span class="n">createUsingTemplate</span><span class="p">(</span><span class="s1">&#39;DataSource&#39;</span><span class="p">,</span> <span class="n">provider</span><span class="p">,</span> <span class="s1">&#39;[[name ds1]]&#39;</span><span class="p">,</span> <span class="n">template</span><span class="p">))</span>
+<span class="go">ds1(cells/myCell|resources.xml#DataSource_1699530172743)</span>
+</code></pre></div>
+</details>      <div class="admonition abstract">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.listTemplates"><code>AdminConfig.listTemplates()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.create"><code>AdminConfig.create()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.modify"><code>AdminConfig.modify()</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#wsadmin_type_hints.core.AdminConfig.remove"><code>AdminConfig.remove()</code></a></li>
+</ul>
+</div>
 
   </div>
 
@@ -5087,11 +5211,11 @@ Instead, it will contain only the first line (<em><code>WASX7193I</code></em>):
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-05T21:32:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-09T11:51:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-09</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-05T21:32:02+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-11-09T11:51:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-11-09</span>
       
     
   </small>
