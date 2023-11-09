@@ -244,8 +244,41 @@ def createDocument(document_uri: str, filename: str, /) -> _Any:
     ...
 
 
-def createUsingTemplate(*args: _Any) -> _Any:  # undocumented
-    ...
+def createUsingTemplate(type: _ObjectType, parent: _ConfigurationObjectName, attributes: _Union[str, _List[_List[str]]], template: _ConfigurationObjectName) -> _ConfigurationObjectName:
+    """ Creates a new configuration object of the given type
+    using the specified template as the basis.
+    
+    The specified attributes override settings in the template.
+
+    The template parameter is a configuration ID of an existing object.
+    This object can be either a template object, returned by using the
+    `AdminConfig.listTemplates()` method, or any other existing object
+    of the correct type.
+
+    Args:
+        type (_ObjectType): The type of the configuration object that will be created.
+        parent (_ConfigurationObjectName): The configuration ID of the parent object.
+        attributes (str | _List[_List[str]]): A list of attributes to add to the new configuration object. 
+            Can be either in the string format or in the list format (see `attributes` for more information).
+        template (_ConfigurationObjectName): The configuration ID of the template object.
+
+    Returns:
+        new_object(_ConfigurationObjectName): The newly created configuration object.
+
+    Example:
+        ```pycon
+        >>> provider = AdminConfig.getid('/JDBCProvider:myProvider/')
+        >>> template = AdminConfig.listTemplates('DataSource', '"Oracle JDBC Driver DataSource').splitlines()[0]
+        >>> print(AdminConfig.createUsingTemplate('DataSource', provider, '[[name ds1]]', template))
+        ds1(cells/myCell|resources.xml#DataSource_1699530172743)
+        ```
+    
+    !!! abstract "See also"
+        - [`AdminConfig.listTemplates()`][wsadmin_type_hints.AdminConfig.listTemplates]
+        - [`AdminConfig.create()`][wsadmin_type_hints.AdminConfig.create]
+        - [`AdminConfig.modify()`][wsadmin_type_hints.AdminConfig.modify]
+        - [`AdminConfig.remove()`][wsadmin_type_hints.AdminConfig.remove]
+    """
 
 
 def defaults(object_type: _ObjectType, /) -> _MultilineTableWithHeader[str]:
